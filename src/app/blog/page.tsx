@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Finance, Loan & Vehicle Guides | SM Associate',
     description: 'Practical articles for understanding finance, loans, EMIs and vehicle decisions.',
-    images: ['https://www.smassociate.in/blog/og-blog.jpg'],
+    images: ['https://www.smassociate.in/og-blog.jpg'],
   },
 };
 
