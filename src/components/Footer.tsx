@@ -67,7 +67,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="premium-footer-landmark" aria-label="Nellaiappar Temple inspired line-art illustration">
+        <div className="premium-footer-landmark" aria-label="Nellaiappar Temple inspired line-art illustration" role="img">
           <div className="premium-footer-landmark-halo" />
           <svg className="premium-footer-landmark-svg" viewBox="0 0 620 340" fill="none" aria-hidden="true">
             <path className="landmark-main-line" d="M94 276H526" />
@@ -106,6 +106,7 @@ export default function Footer() {
             <span>TIRUNELVELI</span>
           </div>
         </div>
+      </div>
 
       <div className="premium-footer-grid">
         <div className="premium-footer-brand">
