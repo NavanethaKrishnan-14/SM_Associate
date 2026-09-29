@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Loan EMI Calculator | SM Associate',
     description: 'Try different loan amounts, rates and tenures to understand your estimated monthly EMI.',
-    images: ['https://www.smassociate.in/emi-calculator/og-emi-calculator.jpg'],
+    images: ['https://www.smassociate.in/og-emi-calculator.jpg'],
   },
 };
 
