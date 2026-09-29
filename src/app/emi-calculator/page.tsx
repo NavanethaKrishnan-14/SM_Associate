@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://www.smassociate.in/emi-calculator/og-emi-calculator.jpg',
+        url: 'https://www.smassociate.in/og-emi-calculator.jpg',
         width: 1200,
         height: 630,
         alt: 'EMI Calculator from SM Associate',
