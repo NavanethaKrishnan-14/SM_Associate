@@ -3,20 +3,20 @@ import PersonalLoanHero from '@/components/heroes/PersonalLoanHero';
 import PersonalLoanContent from './PersonalLoanContent';
 
 export const metadata: Metadata = {
-  title: 'Instant Personal Loan Up To ₹5 Lakhs | 100% Digital – SM Associate',
-  description: 'Get instant personal loans up to ₹5,00,000 with no collateral. 100% digital process, approval in under 5 minutes. Apply for an emergency or personal loan today.',
+  title: 'Personal Loan in Tirunelveli | Flexible Finance Options',
+  description: 'Explore personal loan options for planned expenses or urgent needs. SM Associate helps you understand eligibility, documents, repayment and the next steps.',
   keywords: 'personal loan online, instant personal loan approval, no collateral personal loan, emergency micro loan, personal loan for salaried and self employed',
   alternates: {
     canonical: 'https://www.smassociate.in/personal-loan',
   },
   openGraph: {
-    title: 'Personal Loans - Instant Approval',
-    description: 'Get unsecured personal loans up to ₹25 lakhs with instant approval and flexible terms',
+    title: 'Personal Loan Options | SM Associate',
+    description: 'Clear guidance for comparing personal loan options before you apply.',
     url: 'https://www.smassociate.in/personal-loan',
     type: 'website',
     images: [
       {
-        url: 'https://smassociate.com/og-personal-loan.jpg',
+        url: 'https://www.smassociate.in/personal-loan/og-personal-loan.jpg',
         width: 1200,
         height: 630,
         alt: 'Personal Loans from SM Associate',
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Personal Loans - Instant Approval',
-    description: 'Get unsecured personal loans up to ₹25 lakhs with instant approval and flexible terms',
-    images: ['https://smassociate.com/og-personal-loan.jpg'],
+    title: 'Personal Loan Options | SM Associate',
+    description: 'Clear guidance for comparing personal loan options before you apply.',
+    images: ['https://www.smassociate.in/personal-loan/og-personal-loan.jpg'],
   },
 };
 
