@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { CSSProperties } from 'react';
@@ -56,54 +57,22 @@ export default function Footer() {
           <p>Loans, vehicles, insurance or resale — tell us what you are planning and we will help you find the right starting point.</p>
         </div>
         <div className="premium-footer-visual">
-          <div className="premium-footer-temple" aria-hidden="true">
-            <svg viewBox="0 0 360 260" role="img">
-              <defs>
-                <linearGradient id="templeGold" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stopColor="#b9892f" />
-                  <stop offset="52%" stopColor="#e0bd67" />
-                  <stop offset="100%" stopColor="#91681f" />
-                </linearGradient>
-                <linearGradient id="templeStone" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stopColor="#cfc8b8" />
-                  <stop offset="100%" stopColor="#f5f0e7" />
-                </linearGradient>
-              </defs>
-              <path d="M30 218h300v14H30z" fill="#ddd4c1" />
-              <path d="M44 204h272v16H44z" fill="#c8baa0" />
-              <path d="M62 192h236v14H62z" fill="url(#templeStone)" />
-              <path d="M82 82h196l-13 28H95z" fill="url(#templeGold)" />
-              <path d="M92 110h176v82H92z" fill="#f1eadf" stroke="#cfbb93" />
-              <path d="M70 82h220l-12-20H82z" fill="#b98b38" />
-              <path d="M93 59h174l-8-16H101z" fill="#d8b35a" />
-              <path d="M112 42h136l-8-14H120z" fill="#c99d43" />
-              <path d="M134 28h92l-6-13h-80z" fill="#b88931" />
-              <path d="M159 15h42v-7h-42z" fill="#a57422" />
-              <path d="M177 8v-8h6v8z" fill="#8f651f" />
-              <path d="M151 68h58l-7 10h-44z" fill="#f2d77e" opacity=".9" />
-              <path d="M150 122h60v70h-60z" fill="#e9e1d4" />
-              <path d="M167 192v-45h26v45z" fill="#8c6a39" />
-              <path d="M118 128v64h18v-64zM224 128v64h18v-64z" fill="#d5c7ae" />
-              <path d="M112 118h136v11H112z" fill="#bda06b" />
-              <g fill="#d8b35a">
-                <circle cx="123" cy="70" r="5" />
-                <circle cx="145" cy="63" r="5" />
-                <circle cx="215" cy="63" r="5" />
-                <circle cx="237" cy="70" r="5" />
-              </g>
-              <g fill="#a77a2b" opacity=".85">
-                <path d="M106 138h8v7h-8zM246 138h8v7h-8zM106 158h8v7h-8zM246 158h8v7h-8zM106 178h8v7h-8zM246 178h8v7h-8z" />
-              </g>
-            </svg>
+          <div className="premium-footer-temple-photo">
+            <Image
+              src="https://commons.wikimedia.org/wiki/Special:FilePath/Nellaiappar_temple_tower.jpg?width=1200"
+              alt="Nellaiappar Temple gopuram in Tirunelveli"
+              fill
+              sizes="(max-width: 900px) 100vw, 420px"
+              className="premium-footer-temple-image"
+            />
           </div>
           <div className="premium-footer-visual-actions">
+            <span className="premium-footer-cta-note">Nellaiappar Temple · Tirunelveli</span>
             <Link href={ROUTES.CONTACT} className="premium-footer-cta">
               Talk to our team
             </Link>
-            <span className="premium-footer-cta-note">Local support · Tirunelveli</span>
           </div>
         </div>
-      </div>
 
       <div className="premium-footer-grid">
         <div className="premium-footer-brand">
