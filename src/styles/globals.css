@@ -5229,3 +5229,58 @@ option {
     padding: 66px 0 !important;
   }
 }
+
+
+/* FINAL FIX — Sell Vehicle text contrast */
+#sell-vehicle-page > div > section:first-child h1,
+#sell-vehicle-page > div > section:first-child h2,
+#sell-vehicle-page > div > section:first-child h3 {
+  color: #f7f6f1 !important;
+  text-shadow: 0 2px 18px rgba(0,0,0,.20);
+}
+
+#sell-vehicle-page > div > section:first-child h1 span {
+  color: var(--page-accent-soft) !important;
+  -webkit-text-fill-color: var(--page-accent-soft) !important;
+  background: none !important;
+}
+
+#sell-vehicle-page > div > section:first-child p {
+  color: #c4cbd1 !important;
+}
+
+#sell-vehicle-page > div > section:first-child .text-emerald-400,
+#sell-vehicle-page > div > section:first-child .text-teal-400 {
+  color: #b9f0e6 !important;
+}
+
+#sell-vehicle-page > div > section:nth-child(2) h2,
+#sell-vehicle-page > div > section:nth-child(2) h3,
+#sell-vehicle-page > div > section:nth-child(2) p {
+  color: var(--text-primary) !important;
+}
+
+#sell-vehicle-page > div > section:nth-child(3) input::placeholder,
+#sell-vehicle-page > div > section:nth-child(3) textarea::placeholder {
+  color: rgba(196,203,209,.68) !important;
+}
+
+#sell-vehicle-page #sell-vehicle-direct-offer input::placeholder,
+#sell-vehicle-page #sell-vehicle-direct-offer textarea::placeholder {
+  color: #6b756f !important;
+  opacity: 1 !important;
+}
+
+#sell-vehicle-page #sell-vehicle-direct-offer [style*="color: rgb(84, 97, 90)"],
+#sell-vehicle-page #sell-vehicle-direct-offer label {
+  color: #4c5953 !important;
+}
+
+#sell-vehicle-page #sell-vehicle-direct-offer input,
+#sell-vehicle-page #sell-vehicle-direct-offer textarea {
+  caret-color: var(--page-accent) !important;
+}
+
+#sell-vehicle-page #sell-vehicle-direct-offer .text-red-600 {
+  color: #a92f2f !important;
+}
