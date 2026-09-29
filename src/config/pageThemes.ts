@@ -33,7 +33,7 @@ export const PAGE_THEME_MAP: PageThemeConfig[] = [
   { path: '/personal-loan', themeName: 'Personal Loan - Steel Blue', theme: 'default', description: 'Personal financing', visual: 'silver' },
   { path: '/two-wheeler-loan', themeName: 'Two Wheeler Loan - Deep Teal', theme: 'car-loan', description: 'Two-wheeler financing', visual: 'teal' },
 
-  { path: '/gold-loan', themeName: 'Gold - Midnight & Gold', theme: 'gold-loan', description: 'Gold-backed finance and resale', visual: 'gold' },
+  { path: '/gold-loan', themeName: 'Gold Resale - Legacy URL', theme: 'gold-loan', description: 'Legacy gold route redirecting to Gold Resale', visual: 'gold' },
   { path: '/sm-gold', themeName: 'SM Gold - Midnight & Gold', theme: 'gold-loan', description: 'SM Gold products and services', visual: 'gold' },
   { path: '/gold-resale', themeName: 'Gold Resale - Midnight & Gold', theme: 'gold-loan', description: 'Gold resale services', visual: 'gold' },
   { path: '/car-resale', themeName: 'Vehicle Resale - Charcoal & Burgundy', theme: 'resale', description: 'Vehicle resale services', visual: 'burgundy' },
