@@ -176,7 +176,7 @@ function SectionHeading({
 }
 
 function formatINR(value: number): string {
-  return '₹' + Math.round(value).toLocaleString('en-IN');
+  return '₹' + Math.max(0, Math.round(value)).toLocaleString('en-IN');
 }
 
 function calculateEMI(principal: number, annualRate: number, months: number): number {
