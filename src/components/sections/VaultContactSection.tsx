@@ -495,7 +495,7 @@ export default function VaultContactSection({
         } as React.CSSProperties
       }
     >
-      <div className="max-w-6xl mx-auto rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden border border-slate-700/30">
+      <div className="max-w-6xl mx-auto rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden border border-slate-700/30 vault-contact-shell">
         <div className="grid grid-cols-1 md:grid-cols-[minmax(300px,40%)_22px_minmax(340px,1fr)] min-h-[640px]">
           {/* ---------- LEFT: VAULT PANEL ---------- */}
           <div
@@ -638,7 +638,7 @@ export default function VaultContactSection({
 
           {/* ---------- RIGHT: FORM PANEL ---------- */}
           <div
-            className="p-8 sm:p-10 lg:p-12 flex flex-col justify-center"
+            className="p-8 sm:p-10 lg:p-12 flex flex-col justify-center vault-form-panel"
             style={{ backgroundColor: t.cream, color: t.ink }}
           >
             {!submitted ? (
@@ -660,7 +660,7 @@ export default function VaultContactSection({
                   </p>
                 </div>
 
-                <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5 max-w-lg">
+                <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5 max-w-lg vault-contact-form">
                   <input
                     type="text"
                     tabIndex={-1}
