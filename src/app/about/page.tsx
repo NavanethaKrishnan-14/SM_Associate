@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://www.smassociate.in/about/og-about.jpg',
+        url: 'https://www.smassociate.in/og-about.jpg',
         width: 1200,
         height: 630,
         alt: 'About SM Associate',
