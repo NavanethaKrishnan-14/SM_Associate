@@ -6176,3 +6176,168 @@ option {
     line-height: 1.04 !important;
   }
 }
+
+
+/* =========================================================
+   FINAL FIX — Contact form text visibility
+   ========================================================= */
+
+/* Shared VaultContactSection form: force readable ink on the light panel.
+   These overrides intentionally outrank the global .site-page dark-form rules. */
+.vault-form-panel {
+  color: var(--ink) !important;
+  background: var(--cream) !important;
+}
+
+.vault-form-panel h3,
+.vault-form-panel label {
+  color: var(--ink-soft) !important;
+}
+
+.vault-form-panel h3 {
+  color: var(--ink) !important;
+}
+
+.vault-form-panel .vault-contact-form input,
+.vault-form-panel .vault-contact-form textarea,
+.vault-form-panel .vault-contact-form select {
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  background: transparent !important;
+  border-color: var(--cream-line) !important;
+  caret-color: var(--gold) !important;
+}
+
+.vault-form-panel .vault-contact-form input::placeholder,
+.vault-form-panel .vault-contact-form textarea::placeholder,
+.vault-form-panel .vault-contact-form select::placeholder {
+  color: color-mix(in srgb, var(--ink-soft) 76%, white 24%) !important;
+  -webkit-text-fill-color: color-mix(in srgb, var(--ink-soft) 76%, white 24%) !important;
+  opacity: 1 !important;
+}
+
+.vault-form-panel .vault-contact-form input:focus,
+.vault-form-panel .vault-contact-form textarea:focus,
+.vault-form-panel .vault-contact-form select:focus {
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  background: rgba(255,255,255,.18) !important;
+  border-color: var(--gold) !important;
+  outline: none !important;
+  box-shadow: 0 1px 0 var(--gold) !important;
+}
+
+.vault-form-panel .vault-contact-form label {
+  color: var(--ink-soft) !important;
+}
+
+.vault-form-panel .vault-contact-form label span {
+  color: var(--gold) !important;
+}
+
+.vault-form-panel .vault-contact-form .cursor-pointer {
+  color: var(--ink-soft) !important;
+  background-color: transparent !important;
+  border-color: var(--cream-line) !important;
+}
+
+.vault-form-panel .vault-contact-form .cursor-pointer:has(input:checked) {
+  color: var(--ink) !important;
+  border-color: var(--gold) !important;
+  background-color: var(--radio-bg) !important;
+}
+
+.vault-form-panel .vault-contact-form .cursor-pointer:hover {
+  color: var(--ink) !important;
+  border-color: var(--gold) !important;
+}
+
+.vault-form-panel .vault-contact-form input[type="radio"] {
+  accent-color: var(--gold) !important;
+}
+
+.vault-form-panel .vault-contact-form .text-red-600 {
+  color: #a92f2f !important;
+}
+
+.vault-form-panel .vault-contact-form .submit-message {
+  color: #166534 !important;
+}
+
+/* Contact page's Vault form gets slightly stronger contrast and a cleaner hierarchy. */
+#contact-page .vault-form-panel {
+  border-left: 1px solid rgba(84,97,90,.10);
+}
+
+#contact-page .vault-form-panel .vault-contact-form {
+  margin-top: 28px !important;
+}
+
+#contact-page .vault-form-panel .vault-contact-form input,
+#contact-page .vault-form-panel .vault-contact-form textarea {
+  font-size: 15px !important;
+  line-height: 1.55 !important;
+  min-height: 40px;
+}
+
+#contact-page .vault-form-panel .vault-contact-form textarea {
+  min-height: 82px;
+}
+
+#contact-page .vault-form-panel .vault-contact-form label {
+  font-size: 11px !important;
+  letter-spacing: .08em;
+}
+
+#contact-page .vault-form-panel > div > .items-center.justify-between {
+  align-items: flex-start !important;
+  gap: 24px !important;
+}
+
+#contact-page .vault-form-panel > div > .items-center.justify-between > div,
+#contact-page .vault-form-panel > div > .items-center.justify-between > p {
+  min-width: 0;
+}
+
+#contact-page .vault-form-panel > div > .items-center.justify-between > p {
+  color: var(--ink-soft) !important;
+}
+
+/* Sell Vehicle's separate form uses the same readable light-form rules. */
+#sell-vehicle-page > div > section:nth-child(3) .bg-white {
+  color: #0f172a !important;
+}
+
+#sell-vehicle-page > div > section:nth-child(3) form label,
+#sell-vehicle-page > div > section:nth-child(3) form h3 {
+  color: #334155 !important;
+}
+
+#sell-vehicle-page > div > section:nth-child(3) form input,
+#sell-vehicle-page > div > section:nth-child(3) form textarea,
+#sell-vehicle-page > div > section:nth-child(3) form select {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+
+#sell-vehicle-page > div > section:nth-child(3) form input::placeholder,
+#sell-vehicle-page > div > section:nth-child(3) form textarea::placeholder {
+  color: #64748b !important;
+  -webkit-text-fill-color: #64748b !important;
+  opacity: 1 !important;
+}
+
+#sell-vehicle-page > div > section:nth-child(3) form select option {
+  color: #0f172a !important;
+  background: #ffffff !important;
+}
+
+#sell-vehicle-page > div > section:nth-child(3) form input:focus,
+#sell-vehicle-page > div > section:nth-child(3) form textarea:focus,
+#sell-vehicle-page > div > section:nth-child(3) form select:focus {
+  border-color: var(--page-accent) !important;
+  outline: 2px solid color-mix(in srgb, var(--page-accent) 18%, transparent) !important;
+  box-shadow: none !important;
+}
