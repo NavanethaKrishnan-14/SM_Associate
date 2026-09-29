@@ -196,7 +196,7 @@ export default function VehicleDetailPage({ params }: { params: { id: string } }
   const productSchema = vehicle ? generateProductSchema(vehicle) : null;
 
   return (
-    <>
+    <div id="vehicle-detail-page" className="site-page page-vehicle-detail">
       {productSchema && (
         <script
           type="application/ld+json"
@@ -204,6 +204,6 @@ export default function VehicleDetailPage({ params }: { params: { id: string } }
         />
       )}
       <VehicleDetailClient params={params} />
-    </>
+    </div>
   );
 }
