@@ -1,1 +1,1 @@
-export { default } from './GoldResaleContent';
+export { default } from '@/app/gold-resale/GoldResaleContent';
