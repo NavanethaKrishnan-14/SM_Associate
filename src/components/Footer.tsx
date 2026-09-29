@@ -67,45 +67,37 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="premium-footer-journey" aria-label="SM Associate finance and mobility journey">
-          <div className="premium-footer-journey-grid" />
-          <div className="premium-footer-journey-glow" />
+        <div className="premium-footer-signature" aria-label="SM Associate premium brand signature">
+          <div className="premium-footer-signature-orbit premium-footer-signature-orbit-one" />
+          <div className="premium-footer-signature-orbit premium-footer-signature-orbit-two" />
+          <div className="premium-footer-signature-orbit premium-footer-signature-orbit-three" />
 
-          <div className="premium-footer-journey-copy">
-            <span>SM ASSOCIATE</span>
-            <strong>Your next move, clearly.</strong>
+          <div className="premium-footer-signature-core">
+            <span className="premium-footer-signature-glow">SM</span>
+            <span className="premium-footer-signature-wordmark">ASSOCIATE</span>
           </div>
 
-          <svg className="premium-footer-journey-path" viewBox="0 0 620 250" fill="none" aria-hidden="true">
-            <path className="journey-track" d="M64 180C155 42 230 42 307 126C372 196 432 194 556 58" />
-            <path className="journey-highlight" d="M64 180C155 42 230 42 307 126" />
-          </svg>
-
-          <div className="premium-footer-journey-node journey-node-one">
+          <div className="premium-footer-signature-detail premium-footer-signature-detail-one">
             <span>01</span>
-            <strong>PLAN</strong>
-            <small>Understand</small>
+            <strong>FINANCE</strong>
           </div>
-          <div className="premium-footer-journey-node journey-node-two">
+          <div className="premium-footer-signature-detail premium-footer-signature-detail-two">
             <span>02</span>
-            <strong>CHOOSE</strong>
-            <small>Compare</small>
-          </div>
-          <div className="premium-footer-journey-node journey-node-three">
-            <span>03</span>
-            <strong>MOVE</strong>
-            <small>Take the next step</small>
+            <strong>MOBILITY</strong>
           </div>
 
-          <div className="premium-footer-journey-meta">
-            <span>FINANCE</span>
+          <div className="premium-footer-signature-axis" />
+          <div className="premium-footer-signature-crosshair">
+            <span />
             <i />
-            <span>MOBILITY</span>
+          </div>
+
+          <div className="premium-footer-signature-bottom">
+            <span>EST. TIRUNELVELI</span>
             <i />
-            <span>TIRUNELVELI</span>
+            <span>MOVE WITH CLARITY</span>
           </div>
         </div>
-      </div>
 
       <div className="premium-footer-grid">
         <div className="premium-footer-brand">
