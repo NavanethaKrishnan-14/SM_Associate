@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://www.smassociate.in/sell-vehicle/og-sell-vehicle.jpg',
+        url: 'https://www.smassociate.in/og-sell-vehicle.jpg',
         width: 1200,
         height: 630,
         alt: 'Sell Your Vehicle at SM Associate',
