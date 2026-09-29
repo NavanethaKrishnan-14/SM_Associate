@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { CSSProperties } from 'react';
-import { Facebook, Linkedin, Mail, MapPin, Phone, ShieldCheck, Sparkles, Twitter } from 'lucide-react';
+import { Facebook, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
 import { COMPANY_INFO, ROUTES } from '@/lib/constants';
 import { getVisualThemeForPath } from '@/config/pageThemes';
 
@@ -67,40 +67,22 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="premium-footer-feature-card">
-          <div className="premium-footer-feature-top">
-            <div className="premium-footer-feature-icon">
-              <Sparkles size={19} />
-            </div>
-            <span>SM ASSOCIATE · TIRUNELVELI</span>
+        <div className="premium-footer-editorial-art" aria-hidden="true">
+          <span className="premium-footer-art-vertical">TIRUNELVELI · 2026</span>
+          <div className="premium-footer-art-grid" />
+          <div className="premium-footer-art-ring premium-footer-art-ring-one" />
+          <div className="premium-footer-art-ring premium-footer-art-ring-two" />
+          <div className="premium-footer-art-ring premium-footer-art-ring-three" />
+          <div className="premium-footer-art-monogram">SM</div>
+          <div className="premium-footer-art-orbit-dot premium-footer-art-orbit-dot-one" />
+          <div className="premium-footer-art-orbit-dot premium-footer-art-orbit-dot-two" />
+          <div className="premium-footer-art-caption">
+            <span>FINANCE</span>
+            <i />
+            <span>MOBILITY</span>
           </div>
-
-          <div className="premium-footer-feature-title">Finance + Mobility</div>
-          <p>One place for clear guidance across loans, vehicles, insurance and resale.</p>
-
-          <div className="premium-footer-feature-divider" />
-
-          <div className="premium-footer-feature-stats">
-            <div>
-              <strong>500+</strong>
-              <span>Customers</span>
-            </div>
-            <div>
-              <strong>100+</strong>
-              <span>Vehicles</span>
-            </div>
-            <div>
-              <ShieldCheck size={17} />
-              <span>Trusted support</span>
-            </div>
-          </div>
-
-          <div className="premium-footer-feature-location">
-            <MapPin size={14} />
-            <span>Serving Tirunelveli and nearby customers</span>
-          </div>
+          <div className="premium-footer-art-location">SOUTH TAMIL NADU</div>
         </div>
-      </div>
 
       <div className="premium-footer-grid">
         <div className="premium-footer-brand">
