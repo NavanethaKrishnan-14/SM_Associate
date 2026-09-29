@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useMemo, useState } from 'react';
+import { useMemo, useState, type ReactNode } from 'react';
 import {
   ArrowRight,
   ArrowUpRight,
@@ -89,7 +89,7 @@ const reasons = [
 ];
 
 function ServiceGlyph({ icon }: { icon: ServiceIconName }) {
-  const paths: Record<ServiceIconName, React.ReactNode> = {
+  const paths: Record<ServiceIconName, ReactNode> = {
     home: (
       <>
         <path d="M3 11.5 12 4l9 7.5" />
@@ -159,7 +159,7 @@ function SectionHeading({
   align = 'left',
 }: {
   eyebrow: string;
-  title: React.ReactNode;
+  title: ReactNode;
   description: string;
   dark?: boolean;
   align?: 'left' | 'center';
