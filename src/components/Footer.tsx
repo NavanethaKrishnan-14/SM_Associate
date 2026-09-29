@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { CSSProperties } from 'react';
-import { ArrowUpRight, Facebook, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
+import { Facebook, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
 import { COMPANY_INFO, ROUTES } from '@/lib/constants';
 import { getVisualThemeForPath } from '@/config/pageThemes';
 
@@ -57,7 +57,7 @@ export default function Footer() {
         </div>
         <div className="premium-footer-cta-wrap">
           <Link href={ROUTES.CONTACT} className="premium-footer-cta">
-            Talk to our team <ArrowUpRight size={18} />
+            Talk to our team 
           </Link>
           <span className="premium-footer-cta-note">Local support · Tirunelveli</span>
         </div>
@@ -83,21 +83,21 @@ export default function Footer() {
         <div className="premium-footer-col">
           <span className="premium-footer-label">SERVICES</span>
           {serviceLinks.map((item) => (
-            <Link key={item.label} href={item.href}>{item.label}<ArrowUpRight size={13} /></Link>
+            <Link key={item.label} href={item.href}>{item.label}</Link>
           ))}
         </div>
 
         <div className="premium-footer-col">
           <span className="premium-footer-label">AUTOMOTIVE</span>
           {vehicleLinks.map((item) => (
-            <Link key={item.label} href={item.href}>{item.label}<ArrowUpRight size={13} /></Link>
+            <Link key={item.label} href={item.href}>{item.label}</Link>
           ))}
         </div>
 
         <div className="premium-footer-col">
           <span className="premium-footer-label">COMPANY</span>
           {companyLinks.map((item) => (
-            <Link key={item.label} href={item.href}>{item.label}<ArrowUpRight size={13} /></Link>
+            <Link key={item.label} href={item.href}>{item.label}</Link>
           ))}
         </div>
 
@@ -112,7 +112,7 @@ export default function Footer() {
       <div className="premium-footer-bottom">
         <span>© {year} SM Associate & Cars. All rights reserved.</span>
         <span>Finance · Mobility · Customer-first service</span>
-        <button type="button" onClick={scrollToTop}>Back to top <ArrowUpRight size={15} /></button>
+        <button type="button" onClick={scrollToTop}>Back to top </button>
       </div>
     </footer>
   );
