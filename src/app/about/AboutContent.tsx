@@ -32,7 +32,8 @@ export default function AboutContent() {
               animate={{ opacity: 1, x: 0 }}
               transition={isMounted ? { duration: 0.6 } : { duration: 0 }}
             >
-              <h1 className="text-4xl font-bold text-navy mb-6">Our Story</h1>
+              <h1 className="text-4xl font-bold text-navy mb-3">Our Journey</h1>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal mb-6">From local trust to finance & mobility support</p>
               <p className="text-gray-700 mb-4 leading-relaxed">
                 SM Associate was founded with a clear vision: to make finance and mobility accessible to everyone in Tirunelveli and surrounding areas.
                 We believe that financial decisions shouldn&apos;t be complicated, and vehicle ownership should be within reach for everyone.
@@ -57,8 +58,8 @@ export default function AboutContent() {
             >
               <div className="relative h-[440px] w-full">
                 <Image
-                  src="/about/office.jpg"
-                  alt="SM Associate Office in Tirunelveli and Advisory Team"
+                  src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1600&auto=format&fit=crop"
+                  alt="Business team collaborating on a shared journey and financial growth strategy"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
