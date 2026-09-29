@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Car Loan Guidance | SM Associate',
     description: 'Understand car finance options for new and pre-owned vehicles with clear local guidance.',
-    images: ['https://www.smassociate.in/car-loan/og-car-loan.jpg'],
+    images: ['https://www.smassociate.in/og-car-loan.jpg'],
   },
 };
 
