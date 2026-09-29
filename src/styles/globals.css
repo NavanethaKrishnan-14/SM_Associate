@@ -4765,7 +4765,6 @@ textarea:focus-visible {
 /* FINAL FIX — Single site font */
 :root {
   --font-site: var(--font-manrope), 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-display: var(--font-manrope), 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 html,
