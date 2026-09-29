@@ -153,7 +153,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
     };
   }
 
-  const baseUrl = 'https://smassociate.com';
+  const baseUrl = 'https://www.smassociate.in';
   const url = `${baseUrl}/vehicles/${params.id}`;
   
   const title = `${vehicle.year} ${vehicle.brand} ${vehicle.model} - ${vehicle.price} | Pre-owned Car on Sale`;
