@@ -33,9 +33,9 @@ export const metadata: Metadata = {
 
 export default function HomeLoanPage() {
   return (
-    <>
+    <div id="home-loan-page" className="site-page page-home-loan">
       <HomeLoanHero />
       <HomeLoanContent />
-    </>
+    </div>
   );
 }
