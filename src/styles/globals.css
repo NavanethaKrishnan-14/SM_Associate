@@ -4918,3 +4918,314 @@ option {
     transition: none !important;
   }
 }
+
+
+/* FINAL FIX — Sell Vehicle page alignment + visual polish */
+#sell-vehicle-page {
+  --sell-surface: #102535;
+  --sell-surface-2: #0d202f;
+  --sell-line: rgba(255,255,255,.10);
+  --sell-copy: #c4cbd1;
+  --sell-muted: #83919d;
+}
+
+/* Hero: consistent page rhythm and controlled text width */
+#sell-vehicle-page > div > section:first-child {
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+  padding: 108px 0 92px !important;
+  background:
+    radial-gradient(circle at 78% 22%, rgba(216,139,154,.14), transparent 25%),
+    radial-gradient(circle at 14% 86%, rgba(79,201,183,.08), transparent 26%),
+    linear-gradient(135deg, #06131f 0%, #0a1d2a 55%, #07131f 100%) !important;
+  border-bottom: 1px solid var(--sell-line);
+}
+
+#sell-vehicle-page > div > section:first-child > div {
+  width: min(1180px, calc(100% - 32px)) !important;
+  margin-inline: auto !important;
+}
+
+#sell-vehicle-page > div > section:first-child h1 {
+  max-width: 780px !important;
+  margin-bottom: 18px !important;
+}
+
+#sell-vehicle-page > div > section:first-child p {
+  max-width: 680px !important;
+  color: var(--sell-copy) !important;
+  line-height: 1.72 !important;
+}
+
+/* How it works: even columns, centered connector, consistent vertical rhythm */
+#sell-vehicle-page > div > section:nth-child(2) {
+  padding: 82px 0 !important;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(79,201,183,.035), transparent 24%),
+    #07131f !important;
+  color: var(--text-primary) !important;
+}
+
+#sell-vehicle-page > div > section:nth-child(2) > div {
+  width: min(1080px, calc(100% - 32px)) !important;
+  margin-inline: auto !important;
+  max-width: none !important;
+}
+
+#sell-vehicle-page > div > section:nth-child(2) h2 {
+  margin-bottom: 42px !important;
+  text-align: left !important;
+  color: var(--text-primary) !important;
+}
+
+#sell-vehicle-page > div > section:nth-child(2) .grid {
+  gap: 20px !important;
+}
+
+#sell-vehicle-page > div > section:nth-child(2) .grid > div {
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#sell-vehicle-page > div > section:nth-child(2) .grid > div > .text-center {
+  width: 100%;
+  max-width: 220px;
+}
+
+#sell-vehicle-page > div > section:nth-child(2) .grid > div h3 {
+  min-height: 2.8em;
+  color: var(--text-primary) !important;
+  line-height: 1.3 !important;
+}
+
+#sell-vehicle-page > div > section:nth-child(2) .grid > div p {
+  min-height: 3.4em;
+  color: var(--sell-copy) !important;
+  line-height: 1.65 !important;
+}
+
+#sell-vehicle-page > div > section:nth-child(2) .grid > div > .relative > div:last-child {
+  background: var(--page-accent) !important;
+  opacity: .65;
+}
+
+/* Legacy form block: straighten width, spacing and field alignment */
+#sell-vehicle-page > div > section:nth-child(3) {
+  padding: 86px 0 !important;
+  background: #0b1b29 !important;
+}
+
+#sell-vehicle-page > div > section:nth-child(3) > div {
+  width: min(100% - 32px, 980px) !important;
+  margin-inline: auto !important;
+  max-width: none !important;
+}
+
+#sell-vehicle-page > div > section:nth-child(3) > div > div {
+  width: 100%;
+  background: #102535 !important;
+  border: 1px solid var(--sell-line) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 24px 70px rgba(0,0,0,.22) !important;
+  color: var(--text-primary) !important;
+}
+
+#sell-vehicle-page > div > section:nth-child(3) > div > div h2,
+#sell-vehicle-page > div > section:nth-child(3) > div > div h3 {
+  color: var(--text-primary) !important;
+}
+
+#sell-vehicle-page > div > section:nth-child(3) > div > div label {
+  color: #b9c3ca !important;
+}
+
+#sell-vehicle-page > div > section:nth-child(3) > div > div input,
+#sell-vehicle-page > div > section:nth-child(3) > div > div select,
+#sell-vehicle-page > div > section:nth-child(3) > div > div textarea {
+  background: #0d202f !important;
+  border-color: rgba(255,255,255,.12) !important;
+  color: var(--text-primary) !important;
+}
+
+#sell-vehicle-page > div > section:nth-child(3) > div > div input::placeholder,
+#sell-vehicle-page > div > section:nth-child(3) > div > div textarea::placeholder {
+  color: rgba(196,203,209,.42) !important;
+}
+
+/* Information strip */
+#sell-vehicle-page > div > section:nth-child(4) {
+  padding: 34px 0 72px !important;
+  background: #0b1b29 !important;
+}
+
+#sell-vehicle-page > div > section:nth-child(4) > div {
+  width: min(100% - 32px, 980px) !important;
+  margin-inline: auto !important;
+  max-width: none !important;
+}
+
+#sell-vehicle-page > div > section:nth-child(4) > div > div {
+  align-items: flex-start !important;
+  padding: 18px 20px !important;
+  border-color: color-mix(in srgb, var(--page-accent) 24%, transparent) !important;
+  background: #102535 !important;
+  color: var(--sell-copy) !important;
+}
+
+#sell-vehicle-page > div > section:nth-child(4) h3 {
+  color: var(--text-primary) !important;
+}
+
+/* Direct buyer offer: fix desktop split proportions and header alignment */
+#sell-vehicle-page #sell-vehicle-direct-offer {
+  padding: 92px 24px !important;
+  background: #07131f !important;
+}
+
+#sell-vehicle-page #sell-vehicle-direct-offer > .max-w-6xl {
+  width: min(1180px, 100%) !important;
+  max-width: none !important;
+  margin-inline: auto !important;
+  border-color: rgba(255,255,255,.10) !important;
+  border-radius: 26px !important;
+}
+
+#sell-vehicle-page #sell-vehicle-direct-offer > .max-w-6xl > .grid {
+  grid-template-columns: minmax(340px, 0.78fr) 20px minmax(0, 1.22fr) !important;
+  min-height: 670px !important;
+}
+
+#sell-vehicle-page #sell-vehicle-direct-offer > .max-w-6xl > .grid > div:first-child {
+  min-width: 0;
+  padding: 52px !important;
+}
+
+#sell-vehicle-page #sell-vehicle-direct-offer > .max-w-6xl > .grid > div:last-child {
+  min-width: 0;
+  padding: 52px !important;
+  justify-content: flex-start !important;
+}
+
+#sell-vehicle-page #sell-vehicle-direct-offer > .max-w-6xl > .grid > div:last-child > div {
+  width: 100%;
+  max-width: none !important;
+}
+
+#sell-vehicle-page #sell-vehicle-direct-offer > .max-w-6xl > .grid > div:last-child .items-center.justify-between {
+  align-items: flex-start !important;
+  gap: 28px !important;
+}
+
+#sell-vehicle-page #sell-vehicle-direct-offer > .max-w-6xl > .grid > div:last-child .items-center.justify-between > div {
+  flex: 1 1 52%;
+  min-width: 0;
+}
+
+#sell-vehicle-page #sell-vehicle-direct-offer > .max-w-6xl > .grid > div:last-child .items-center.justify-between > p {
+  flex: 1 1 48%;
+  max-width: 310px !important;
+  margin: 6px 0 0 !important;
+}
+
+/* Form rows: equal columns and consistent field baseline */
+#sell-vehicle-page #sell-vehicle-direct-offer form {
+  width: 100% !important;
+  max-width: none !important;
+  margin-top: 26px !important;
+  gap: 20px !important;
+}
+
+#sell-vehicle-page #sell-vehicle-direct-offer form .grid {
+  align-items: end !important;
+}
+
+#sell-vehicle-page #sell-vehicle-direct-offer form input,
+#sell-vehicle-page #sell-vehicle-direct-offer form textarea {
+  min-width: 0;
+}
+
+#sell-vehicle-page #sell-vehicle-direct-offer form .flex.flex-wrap.items-center {
+  align-items: flex-start !important;
+}
+
+#sell-vehicle-page #sell-vehicle-direct-offer form button[type="submit"] {
+  white-space: nowrap;
+}
+
+/* FAQ and testimonials: keep their own components aligned to the same page width */
+#sell-vehicle-page .faq-unified-container,
+#sell-vehicle-page > div > section:last-child .max-w-6xl {
+  width: min(1180px, calc(100% - 32px)) !important;
+  max-width: none !important;
+  margin-inline: auto !important;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  #sell-vehicle-page #sell-vehicle-direct-offer > .max-w-6xl > .grid {
+    grid-template-columns: 1fr !important;
+    min-height: 0 !important;
+  }
+
+  #sell-vehicle-page #sell-vehicle-direct-offer > .max-w-6xl > .grid > div:first-child,
+  #sell-vehicle-page #sell-vehicle-direct-offer > .max-w-6xl > .grid > div:last-child {
+    padding: 36px 30px !important;
+  }
+
+  #sell-vehicle-page #sell-vehicle-direct-offer > .max-w-6xl > .grid > div:last-child .items-center.justify-between {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  #sell-vehicle-page #sell-vehicle-direct-offer > .max-w-6xl > .grid > div:last-child .items-center.justify-between > p {
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  #sell-vehicle-page > div > section:nth-child(2) h2 {
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 560px) {
+  #sell-vehicle-page > div > section:first-child {
+    min-height: 390px;
+    padding: 88px 0 70px !important;
+  }
+
+  #sell-vehicle-page > div > section:first-child > div,
+  #sell-vehicle-page > div > section:nth-child(2) > div,
+  #sell-vehicle-page > div > section:nth-child(3) > div,
+  #sell-vehicle-page > div > section:nth-child(4) > div,
+  #sell-vehicle-page .faq-unified-container {
+    width: min(100% - 24px, 680px) !important;
+  }
+
+  #sell-vehicle-page #sell-vehicle-direct-offer {
+    padding: 70px 12px !important;
+  }
+
+  #sell-vehicle-page #sell-vehicle-direct-offer > .max-w-6xl > .grid > div:first-child,
+  #sell-vehicle-page #sell-vehicle-direct-offer > .max-w-6xl > .grid > div:last-child {
+    padding: 28px 22px !important;
+  }
+
+  #sell-vehicle-page #sell-vehicle-direct-offer > .max-w-6xl {
+    border-radius: 20px !important;
+  }
+
+  #sell-vehicle-page #sell-vehicle-direct-offer form {
+    gap: 18px !important;
+  }
+
+  #sell-vehicle-page > div > section:nth-child(2) {
+    padding: 68px 0 !important;
+  }
+
+  #sell-vehicle-page > div > section:nth-child(3) {
+    padding: 66px 0 !important;
+  }
+}
