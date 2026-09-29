@@ -3,20 +3,20 @@ import HomeLoanHero from '@/components/heroes/HomeLoanHero';
 import HomeLoanContent from './HomeLoanContent';
 
 export const metadata: Metadata = {
-  title: 'Home Loan in Tirunelveli | Rates From 6.5% p.a. – SM Associate',
-  description: 'Apply for a home loan with SM Associate — rates from 6.5% p.a., tenure up to 30 years, quick approval in 24-48 hours & up to ₹1.5L tax benefit. Apply online today.',
+  title: 'Home Loan in Tirunelveli | Housing Finance Guidance',
+  description: 'Planning to buy, build or renovate a home? Explore home loan options with SM Associate and get clear guidance on eligibility, documents, EMI and the application process.',
   keywords: 'home loan interest rates, home loan online apply, affordable housing loan India, home loan eligibility calculator, low interest home loan Tamil Nadu',
   alternates: {
     canonical: 'https://www.smassociate.in/home-loan',
   },
   openGraph: {
-    title: 'Home Loans - Affordable Housing Finance from 6.5%',
-    description: 'Build your dream home with flexible financing and competitive interest rates',
+    title: 'Home Loan Guidance | SM Associate',
+    description: 'Practical support for understanding home loan options, documents and the application journey.',
     url: 'https://www.smassociate.in/home-loan',
     type: 'website',
     images: [
       {
-        url: 'https://smassociate.com/og-home-loan.jpg',
+        url: 'https://www.smassociate.in/home-loan/og-home-loan.jpg',
         width: 1200,
         height: 630,
         alt: 'Home Loans from SM Associate',
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Home Loans - Affordable Housing Finance from 6.5%',
-    description: 'Build your dream home with flexible financing and competitive interest rates',
-    images: ['https://smassociate.com/og-home-loan.jpg'],
+    title: 'Home Loan Guidance | SM Associate',
+    description: 'Practical support for understanding home loan options, documents and the application journey.',
+    images: ['https://www.smassociate.in/home-loan/og-home-loan.jpg'],
   },
 };
 
