@@ -52,20 +52,19 @@ export default function Footer() {
       style={footerStyle}
     >
       <div className="premium-footer-top">
-        <div>
+        <div className="premium-footer-cta-content">
           <span className="premium-footer-kicker">READY FOR THE NEXT MOVE?</span>
           <h2>Good decisions start with a clear conversation.</h2>
           <p>
             Loans, vehicles, insurance or resale — tell us what you are planning and we will
             help you find the right starting point.
           </p>
-        </div>
-
-        <div className="premium-footer-cta-wrap">
-          <Link href={ROUTES.CONTACT} className="premium-footer-cta">
-            Talk to our team
-          </Link>
-          <span className="premium-footer-cta-note">Local support · Tirunelveli</span>
+          <div className="premium-footer-cta-wrap">
+            <Link href={ROUTES.CONTACT} className="premium-footer-cta">
+              Talk to our team
+            </Link>
+            <span className="premium-footer-cta-note">Local support · Tirunelveli</span>
+          </div>
         </div>
       </div>
 
