@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import GoldResaleHero from '@/components/heroes/GoldResaleHero';
-import GoldResaleContent from '@/app/gold-loan/GoldResaleContent';
+import GoldResaleContent from './GoldResaleContent';
 
 export const metadata: Metadata = {
   title: 'Gold Resale in Tirunelveli | Transparent Gold Valuation | SM Associate',
