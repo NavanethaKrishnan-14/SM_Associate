@@ -6,7 +6,7 @@ import { useMemo, useState } from 'react';
 import {
   ArrowRight,
   ArrowUpRight,
-  BadgeCheck,
+  CheckCircle,
   Bike,
   BookOpen,
   Briefcase,
@@ -24,7 +24,7 @@ import {
   MessageCircle,
   Phone,
   ShieldCheck,
-  Sparkles,
+  Star,
   Star,
   TrendingUp,
   User,
@@ -79,7 +79,7 @@ const workflow = [
   { step: '01', title: 'Tell us what you need', description: 'Choose a loan, vehicle, insurance or resale service.', icon: FileText },
   { step: '02', title: 'Share the essentials', description: 'Give us the details needed to understand your requirement.', icon: Wallet },
   { step: '03', title: 'Get guided', description: 'Our team helps you understand options, documents and next steps.', icon: Headphones },
-  { step: '04', title: 'Move forward', description: 'Complete your financing or vehicle transaction with clarity.', icon: BadgeCheck },
+  { step: '04', title: 'Move forward', description: 'Complete your financing or vehicle transaction with clarity.', icon: CheckCircle },
 ];
 
 const reasons = [
@@ -213,7 +213,7 @@ function TrustStrip() {
   const items = [
     { icon: ShieldCheck, label: 'Clear communication', value: 'Every step explained' },
     { icon: Clock, label: 'Quick response', value: 'Local assistance' },
-    { icon: BadgeCheck, label: 'Practical options', value: 'Finance + mobility' },
+    { icon: CheckCircle, label: 'Practical options', value: 'Finance + mobility' },
     { icon: Sparkles, label: 'Customer-first', value: 'Built around you' },
   ];
   return (
