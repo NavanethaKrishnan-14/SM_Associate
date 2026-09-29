@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div id="about-page" className="site-page page-about" className="w-full overflow-x-hidden">
+    <div id="about-page" className="site-page page-about w-full overflow-x-hidden">
       <AboutHero />
       <AboutContent />
     </div>
