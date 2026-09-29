@@ -5284,3 +5284,52 @@ option {
 #sell-vehicle-page #sell-vehicle-direct-offer .text-red-600 {
   color: #a92f2f !important;
 }
+
+
+/* FINAL FIX — Sell Vehicle hero text clarity */
+#sell-vehicle-page > div > section:first-child {
+  isolation: isolate;
+}
+
+#sell-vehicle-page > div > section:first-child > div {
+  position: relative;
+  z-index: 3;
+}
+
+#sell-vehicle-page > div > section:first-child .inline-flex {
+  color: #f0c4cc !important;
+  background: rgba(216,139,154,.12) !important;
+  border-color: rgba(240,196,204,.34) !important;
+  text-shadow: 0 1px 10px rgba(0,0,0,.28);
+}
+
+#sell-vehicle-page > div > section:first-child h1 {
+  color: #ffffff !important;
+  text-shadow: 0 3px 24px rgba(0,0,0,.34);
+  font-weight: 900 !important;
+}
+
+#sell-vehicle-page > div > section:first-child h1 span {
+  display: inline-block;
+  color: #f3d2d8 !important;
+  -webkit-text-fill-color: #f3d2d8 !important;
+  background: none !important;
+  text-shadow: 0 2px 18px rgba(216,139,154,.20);
+}
+
+#sell-vehicle-page > div > section:first-child p {
+  color: #e0e5e8 !important;
+  font-weight: 500 !important;
+  text-shadow: 0 2px 14px rgba(0,0,0,.28);
+}
+
+@media (max-width: 560px) {
+  #sell-vehicle-page > div > section:first-child .inline-flex {
+    font-size: .78rem !important;
+  }
+
+  #sell-vehicle-page > div > section:first-child p {
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+  }
+}
