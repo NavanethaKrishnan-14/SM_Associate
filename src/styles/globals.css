@@ -3151,3 +3151,25 @@ textarea:focus-visible {
     radial-gradient(circle at 84% 4%, var(--page-accent-glow), transparent 26%),
     var(--background-primary) !important;
 }
+
+
+/* Hero trust stats — match the premium dark Hero, never white */
+#home-v3 .home-v3-hero-trust div {
+  background: linear-gradient(145deg, rgba(255,255,255,.075), rgba(255,255,255,.025)) !important;
+  border: 1px solid rgba(255,255,255,.12) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 12px 28px rgba(0,0,0,.12) !important;
+  backdrop-filter: blur(10px);
+}
+
+#home-v3 .home-v3-hero-trust div:hover {
+  background: linear-gradient(145deg, rgba(214,179,90,.12), rgba(255,255,255,.035)) !important;
+  border-color: rgba(214,179,90,.28) !important;
+}
+
+#home-v3 .home-v3-hero-trust strong {
+  color: #fff !important;
+}
+
+#home-v3 .home-v3-hero-trust span {
+  color: rgba(255,255,255,.58) !important;
+}
