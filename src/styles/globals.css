@@ -1957,3 +1957,70 @@ button, a { transition: transform .22s ease, background-color .22s ease, border-
     flex-wrap: wrap;
   }
 }
+
+
+/* Header interaction refinement — no persistent outlines, hover only */
+.premium-nav-link {
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.premium-nav-link[aria-current="page"] {
+  background: transparent !important;
+  color: inherit !important;
+  box-shadow: none !important;
+}
+
+.premium-nav-link:hover,
+.premium-nav-link:focus-visible {
+  background: rgba(197,163,91,.11) !important;
+  color: var(--premium-gold) !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+.premium-header-page .premium-nav-link:hover,
+.premium-header-home.premium-header-scrolled .premium-nav-link:hover {
+  color: var(--premium-burgundy) !important;
+  background: rgba(106,44,57,.08) !important;
+}
+
+.premium-icon-link,
+.premium-icon-link:focus,
+.premium-icon-link:focus-visible {
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.premium-icon-link:hover,
+.premium-icon-link:focus-visible {
+  background: rgba(197,163,91,.11) !important;
+  border: 0 !important;
+  color: var(--premium-gold) !important;
+  transform: translateY(-1px);
+}
+
+.premium-header-page .premium-icon-link:hover,
+.premium-header-home.premium-header-scrolled .premium-icon-link:hover {
+  background: rgba(106,44,57,.08) !important;
+  color: var(--premium-burgundy) !important;
+}
+
+.premium-mobile-toggle,
+.premium-mobile-toggle:focus,
+.premium-mobile-toggle:focus-visible {
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.premium-mobile-toggle:hover,
+.premium-mobile-toggle:focus-visible {
+  background: rgba(197,163,91,.11) !important;
+  color: var(--premium-gold) !important;
+}
