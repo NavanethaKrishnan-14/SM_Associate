@@ -45,7 +45,7 @@ export default function Header() {
       submenu: [
         { label: 'Home Loan', href: ROUTES.HOME_LOAN, icon: Home },
         { label: 'Car Loan', href: ROUTES.CAR_LOAN, icon: Car },
-        { label: 'Gold Loan', href: ROUTES.GOLD_LOAN, icon: Coins },
+        { label: 'Gold Resale', href: ROUTES.GOLD_RESALE, icon: Coins },
         { label: 'Personal Loan', href: ROUTES.PERSONAL_LOAN, icon: User },
         { label: 'Business Loan', href: ROUTES.BUSINESS_LOAN, icon: Briefcase },
         { label: 'Two Wheeler Insurance', href: ROUTES.TWO_WHEELER_INSURANCE, icon: ShieldCheck },
@@ -111,7 +111,7 @@ export default function Header() {
               {item.submenu && (
                 <div className="premium-nav-dropdown">
                   <div className="premium-nav-dropdown-head">
-                    <span>FINANCE & PROTECTION</span>
+                    <span>FINANCE & MOBILITY</span>
                     <span>06 SERVICES</span>
                   </div>
                   <div className="premium-nav-dropdown-grid">
