@@ -5896,3 +5896,283 @@ option {
     font-size: clamp(2.55rem, 12vw, 4rem) !important;
   }
 }
+
+
+/* =========================================================
+   FINAL FIX — Actual Hero Components: readability + polish
+   ========================================================= */
+
+#about-page > :first-child,
+#blog-page > :first-child,
+#business-loan-page > :first-child,
+#car-loan-page > :first-child,
+#car-resale-page > :first-child,
+#contact-page > :first-child,
+#emi-page > :first-child,
+#gold-loan-page > :first-child,
+#home-loan-page > :first-child,
+#loans-page > :first-child,
+#personal-loan-page > :first-child,
+#two-wheeler-insurance-page > :first-child,
+#vehicle-marketplace-page > :first-child {
+  position: relative;
+  isolation: isolate;
+  min-height: 520px !important;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 82% 16%, color-mix(in srgb, var(--page-accent) 16%, transparent), transparent 30%),
+    radial-gradient(circle at 12% 82%, color-mix(in srgb, var(--page-secondary) 8%, transparent), transparent 28%),
+    linear-gradient(135deg, #050e17 0%, #091b29 54%, #06131f 100%) !important;
+  color: #f7f6f1 !important;
+}
+
+/* Subtle technical grid gives every hero the same premium language. */
+#about-page > :first-child::after,
+#blog-page > :first-child::after,
+#business-loan-page > :first-child::after,
+#car-loan-page > :first-child::after,
+#car-resale-page > :first-child::after,
+#contact-page > :first-child::after,
+#emi-page > :first-child::after,
+#gold-loan-page > :first-child::after,
+#home-loan-page > :first-child::after,
+#loans-page > :first-child::after,
+#personal-loan-page > :first-child::after,
+#two-wheeler-insurance-page > :first-child::after,
+#vehicle-marketplace-page > :first-child::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: .26;
+  background-image:
+    linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, black, transparent 92%);
+}
+
+/* All hero headings */
+#about-page > :first-child h1,
+#blog-page > :first-child h1,
+#business-loan-page > :first-child h1,
+#car-loan-page > :first-child h1,
+#car-resale-page > :first-child h1,
+#contact-page > :first-child h1,
+#emi-page > :first-child h1,
+#gold-loan-page > :first-child h1,
+#home-loan-page > :first-child h1,
+#loans-page > :first-child h1,
+#personal-loan-page > :first-child h1,
+#two-wheeler-insurance-page > :first-child h1,
+#vehicle-marketplace-page > :first-child h1 {
+  color: #ffffff !important;
+  text-shadow: 0 3px 30px rgba(0,0,0,.40);
+  font-weight: 900 !important;
+  letter-spacing: -.045em !important;
+}
+
+/* Highlighted words must stay solid and readable — no low-contrast transparent gradients. */
+#about-page > :first-child h1 span,
+#blog-page > :first-child h1 span,
+#business-loan-page > :first-child h1 span,
+#car-loan-page > :first-child h1 span,
+#car-resale-page > :first-child h1 span,
+#contact-page > :first-child h1 span,
+#emi-page > :first-child h1 span,
+#gold-loan-page > :first-child h1 span,
+#home-loan-page > :first-child h1 span,
+#loans-page > :first-child h1 span,
+#personal-loan-page > :first-child h1 span,
+#two-wheeler-insurance-page > :first-child h1 span,
+#vehicle-marketplace-page > :first-child h1 span {
+  color: var(--page-accent-soft) !important;
+  -webkit-text-fill-color: var(--page-accent-soft) !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  text-shadow: 0 2px 18px var(--page-accent-glow);
+}
+
+/* Supporting copy */
+#about-page > :first-child p,
+#blog-page > :first-child p,
+#business-loan-page > :first-child p,
+#car-loan-page > :first-child p,
+#car-resale-page > :first-child p,
+#contact-page > :first-child p,
+#emi-page > :first-child p,
+#gold-loan-page > :first-child p,
+#home-loan-page > :first-child p,
+#loans-page > :first-child p,
+#personal-loan-page > :first-child p,
+#two-wheeler-insurance-page > :first-child p,
+#vehicle-marketplace-page > :first-child p {
+  color: #d2dae0 !important;
+  text-shadow: 0 1px 14px rgba(0,0,0,.24);
+}
+
+/* Hero cards / stats: one consistent elevated surface. */
+#about-page > :first-child [class*="rounded-xl"],
+#about-page > :first-child [class*="rounded-2xl"],
+#about-page > :first-child [class*="rounded-3xl"],
+#blog-page > :first-child [class*="rounded-xl"],
+#blog-page > :first-child [class*="rounded-2xl"],
+#business-loan-page > :first-child [class*="rounded-xl"],
+#business-loan-page > :first-child [class*="rounded-2xl"],
+#car-loan-page > :first-child [class*="rounded-xl"],
+#car-loan-page > :first-child [class*="rounded-2xl"],
+#car-resale-page > :first-child [class*="rounded-xl"],
+#car-resale-page > :first-child [class*="rounded-2xl"],
+#contact-page > :first-child [class*="rounded-xl"],
+#contact-page > :first-child [class*="rounded-2xl"],
+#emi-page > :first-child [class*="rounded-xl"],
+#emi-page > :first-child [class*="rounded-2xl"],
+#gold-loan-page > :first-child [class*="rounded-xl"],
+#gold-loan-page > :first-child [class*="rounded-2xl"],
+#home-loan-page > :first-child [class*="rounded-xl"],
+#home-loan-page > :first-child [class*="rounded-2xl"],
+#loans-page > :first-child [class*="rounded-xl"],
+#loans-page > :first-child [class*="rounded-2xl"],
+#personal-loan-page > :first-child [class*="rounded-xl"],
+#personal-loan-page > :first-child [class*="rounded-2xl"],
+#two-wheeler-insurance-page > :first-child [class*="rounded-xl"],
+#two-wheeler-insurance-page > :first-child [class*="rounded-2xl"],
+#vehicle-marketplace-page > :first-child [class*="rounded-xl"],
+#vehicle-marketplace-page > :first-child [class*="rounded-2xl"] {
+  border-color: rgba(255,255,255,.10) !important;
+}
+
+/* Buttons + highlighted controls */
+#about-page > :first-child a[class*="bg-gradient"],
+#blog-page > :first-child a[class*="bg-gradient"],
+#business-loan-page > :first-child a[class*="bg-gradient"],
+#car-loan-page > :first-child a[class*="bg-gradient"],
+#car-resale-page > :first-child a[class*="bg-gradient"],
+#contact-page > :first-child a[class*="bg-gradient"],
+#emi-page > :first-child a[class*="bg-gradient"],
+#gold-loan-page > :first-child a[class*="bg-gradient"],
+#home-loan-page > :first-child a[class*="bg-gradient"],
+#loans-page > :first-child a[class*="bg-gradient"],
+#personal-loan-page > :first-child a[class*="bg-gradient"],
+#two-wheeler-insurance-page > :first-child a[class*="bg-gradient"],
+#vehicle-marketplace-page > :first-child a[class*="bg-gradient"] {
+  color: #07131f !important;
+  text-shadow: none !important;
+}
+
+/* Hero accent icons and markers. */
+#about-page > :first-child svg,
+#blog-page > :first-child svg,
+#business-loan-page > :first-child svg,
+#car-loan-page > :first-child svg,
+#car-resale-page > :first-child svg,
+#contact-page > :first-child svg,
+#emi-page > :first-child svg,
+#gold-loan-page > :first-child svg,
+#home-loan-page > :first-child svg,
+#loans-page > :first-child svg,
+#personal-loan-page > :first-child svg,
+#two-wheeler-insurance-page > :first-child svg,
+#vehicle-marketplace-page > :first-child svg {
+  max-width: 100%;
+}
+
+/* Vehicles hero search control */
+#vehicle-marketplace-page > :first-child input {
+  color: #ffffff !important;
+  caret-color: var(--page-accent) !important;
+  border-color: rgba(255,255,255,.12) !important;
+}
+
+#vehicle-marketplace-page > :first-child input::placeholder {
+  color: rgba(226,232,236,.64) !important;
+}
+
+/* Keep the Sell Vehicle hero's previously fixed contrast intact. */
+#sell-vehicle-page > div > section:first-child {
+  color: #f7f6f1 !important;
+}
+
+#sell-vehicle-page > div > section:first-child h1 {
+  color: #ffffff !important;
+}
+
+#sell-vehicle-page > div > section:first-child h1 span {
+  color: #f3d2d8 !important;
+  -webkit-text-fill-color: #f3d2d8 !important;
+}
+
+/* Home hero — same text clarity without changing its existing layout. */
+#home-v3 .home-v3-hero h1 {
+  color: #ffffff !important;
+  text-shadow: 0 3px 30px rgba(0,0,0,.42);
+}
+
+#home-v3 .home-v3-hero h1 span {
+  color: #f2dfa3 !important;
+  -webkit-text-fill-color: #f2dfa3 !important;
+  background: none !important;
+  background-clip: initial !important;
+  -webkit-background-clip: initial !important;
+}
+
+#home-v3 .home-v3-hero-lead {
+  color: #d3dbe0 !important;
+  text-shadow: 0 1px 14px rgba(0,0,0,.24);
+}
+
+@media (max-width: 900px) {
+  #about-page > :first-child,
+  #blog-page > :first-child,
+  #business-loan-page > :first-child,
+  #car-loan-page > :first-child,
+  #car-resale-page > :first-child,
+  #contact-page > :first-child,
+  #emi-page > :first-child,
+  #gold-loan-page > :first-child,
+  #home-loan-page > :first-child,
+  #loans-page > :first-child,
+  #personal-loan-page > :first-child,
+  #two-wheeler-insurance-page > :first-child,
+  #two-wheeler-insurance-page > :first-child,
+  #vehicle-marketplace-page > :first-child {
+    min-height: 500px !important;
+  }
+}
+
+@media (max-width: 560px) {
+  #about-page > :first-child,
+  #blog-page > :first-child,
+  #business-loan-page > :first-child,
+  #car-loan-page > :first-child,
+  #car-resale-page > :first-child,
+  #contact-page > :first-child,
+  #emi-page > :first-child,
+  #gold-loan-page > :first-child,
+  #home-loan-page > :first-child,
+  #loans-page > :first-child,
+  #personal-loan-page > :first-child,
+  #two-wheeler-insurance-page > :first-child,
+  #vehicle-marketplace-page > :first-child {
+    min-height: 0 !important;
+  }
+
+  #about-page > :first-child h1,
+  #blog-page > :first-child h1,
+  #business-loan-page > :first-child h1,
+  #car-loan-page > :first-child h1,
+  #car-resale-page > :first-child h1,
+  #contact-page > :first-child h1,
+  #emi-page > :first-child h1,
+  #gold-loan-page > :first-child h1,
+  #home-loan-page > :first-child h1,
+  #loans-page > :first-child h1,
+  #personal-loan-page > :first-child h1,
+  #two-wheeler-insurance-page > :first-child h1,
+  #vehicle-marketplace-page > :first-child h1 {
+    font-size: clamp(2.3rem, 11vw, 4rem) !important;
+    line-height: 1.04 !important;
+  }
+}
