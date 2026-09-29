@@ -3750,3 +3750,43 @@ textarea:focus-visible {
     align-content: start !important;
   }
 }
+
+
+/* FINAL FIX — Footer CTA below description */
+.premium-footer-top {
+  grid-template-columns: 1fr !important;
+  align-items: start !important;
+}
+
+.premium-footer-cta-content {
+  max-width: 820px;
+}
+
+.premium-footer-cta-wrap {
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-start !important;
+  justify-items: start !important;
+  align-content: start !important;
+  gap: 9px !important;
+  margin-top: 22px;
+}
+
+.premium-footer-cta {
+  width: fit-content;
+}
+
+.premium-footer-cta-note {
+  white-space: nowrap;
+}
+
+@media (max-width: 560px) {
+  .premium-footer-cta-wrap {
+    margin-top: 18px;
+  }
+
+  .premium-footer-cta {
+    width: 100%;
+    text-align: center;
+  }
+}
