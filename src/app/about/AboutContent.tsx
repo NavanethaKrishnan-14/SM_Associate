@@ -58,7 +58,7 @@ export default function AboutContent() {
             >
               <div className="relative h-[440px] w-full">
                 <Image
-                  src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1600&auto=format&fit=crop"
+                  src="/about/office.jpg"
                   alt="Business team collaborating on a shared journey and financial growth strategy"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
