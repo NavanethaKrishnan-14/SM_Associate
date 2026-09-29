@@ -28,11 +28,11 @@ const loanProducts = [
   },
   {
     icon: Coins,
-    title: 'Gold Loan',
-    subtitle: 'Turn Gold into Cash',
-    description: 'Get fair market value for your gold jewellery with quick approvals and transparent valuation.',
-    shortFeatures: ['Fair valuation', 'Quick cash', 'Secure storage'],
-    route: ROUTES.GOLD_LOAN
+    title: 'Gold Resale',
+    subtitle: 'Sell Gold with Clarity',
+    description: 'Explore transparent valuation and guided resale support for eligible gold items.',
+    shortFeatures: ['Clear valuation', 'Resale support', 'Secure handling'],
+    route: ROUTES.GOLD_RESALE
   },
   {
     icon: Wallet,
@@ -79,8 +79,8 @@ export default function LoansContent() {
           >
             <h2 className="text-3xl font-bold text-navy mb-6">Choose the Right Loan for You</h2>
             <p className="text-gray-700 mb-4">
-              SM Associate offers a diverse range of loan products to meet every financial need. Whether you&apos;re buying a home, vehicle, or need personal funds, 
-              we have the perfect financing solution for you.
+              SM Associate brings together financing options and related services for major financial and mobility needs. Whether you&apos;re planning a home purchase, vehicle finance, or gold resale, 
+              you can explore the relevant service and get guided support.
             </p>
             <p className="text-gray-700">
               Each loan type is designed with flexibility, competitive rates, and customer-centric terms. Browse our products below to learn more.
@@ -143,7 +143,7 @@ export default function LoansContent() {
       {/* Comparison Section */}
       <section className="py-20 bg-white">
         <div className="container-padded max-w-5xl">
-          <h2 className="text-4xl font-bold text-navy mb-12 text-center">Quick Comparison</h2>
+          <h2 className="text-4xl font-bold text-navy mb-12 text-center">Quick Loan Comparison</h2>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
@@ -151,7 +151,6 @@ export default function LoansContent() {
                   <th className="text-left py-4 px-4 text-navy font-bold">Feature</th>
                   <th className="text-center py-4 px-4 text-navy font-bold">Home Loan</th>
                   <th className="text-center py-4 px-4 text-navy font-bold">Car Loan</th>
-                  <th className="text-center py-4 px-4 text-navy font-bold">Gold Loan</th>
                   <th className="text-center py-4 px-4 text-navy font-bold">Personal Loan</th>
                 </tr>
               </thead>
@@ -160,14 +159,12 @@ export default function LoansContent() {
                   <td className="py-4 px-4 text-navy font-semibold">Max Amount</td>
                   <td className="py-4 px-4 text-center">₹1 Cr+</td>
                   <td className="py-4 px-4 text-center">₹50 Lakh</td>
-                  <td className="py-4 px-4 text-center">₹10 Lakh</td>
                   <td className="py-4 px-4 text-center">₹25 Lakh</td>
                 </tr>
                 <tr className="border-b border-gray-200">
                   <td className="py-4 px-4 text-navy font-semibold">Min Rate</td>
                   <td className="py-4 px-4 text-center">6.5%</td>
                   <td className="py-4 px-4 text-center">7.2%</td>
-                  <td className="py-4 px-4 text-center">8.5%</td>
                   <td className="py-4 px-4 text-center">10%</td>
                 </tr>
                 <tr className="border-b border-gray-200">
@@ -175,12 +172,10 @@ export default function LoansContent() {
                   <td className="py-4 px-4 text-center">30 years</td>
                   <td className="py-4 px-4 text-center">7 years</td>
                   <td className="py-4 px-4 text-center">5 years</td>
-                  <td className="py-4 px-4 text-center">5 years</td>
                 </tr>
                 <tr>
                   <td className="py-4 px-4 text-navy font-semibold">Collateral</td>
                   <td className="py-4 px-4 text-center">Property</td>
-                  <td className="py-4 px-4 text-center">Vehicle</td>
                   <td className="py-4 px-4 text-center">Vehicle</td>
                   <td className="py-4 px-4 text-center">None</td>
                 </tr>
@@ -259,7 +254,6 @@ export default function LoansContent() {
         reasonOptions={[
           { value: 'home_loan', label: 'Home Loan (from 6.5%)' },
           { value: 'car_loan', label: 'Car Loan (from 7.2%)' },
-          { value: 'gold_loan', label: 'Gold Loan' },
           { value: 'personal_loan', label: 'Personal Loan (from 7.9%)' },
           { value: 'business_loan', label: 'Business Loan (from 9.0%)' },
         ]}
