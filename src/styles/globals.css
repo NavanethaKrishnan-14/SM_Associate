@@ -4880,3 +4880,41 @@ option {
 #home-v3 .home-v3-faq-answer {
   font-size: 13px !important;
 }
+
+
+/* FINAL FIX — FAQ accordion animation shared with the homepage */
+#home-v3 .home-v3-faq-answer-wrap,
+.faq-unified-answer-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    grid-template-rows .28s cubic-bezier(.22,1,.36,1),
+    opacity .2s ease;
+}
+
+#home-v3 .home-v3-faq-answer-wrap.is-open,
+.faq-unified-answer-wrap.is-open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+#home-v3 .home-v3-faq-answer-wrap > .home-v3-faq-answer,
+.faq-unified-answer-wrap > .faq-unified-answer {
+  min-height: 0;
+}
+
+#home-v3 .home-v3-faq-item button > svg,
+.faq-unified-item .faq-unified-chevron {
+  transition: transform .25s ease, color .25s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #home-v3 .home-v3-faq-answer-wrap,
+  .faq-unified-answer-wrap,
+  #home-v3 .home-v3-faq-item button > svg,
+  .faq-unified-item .faq-unified-chevron {
+    transition: none !important;
+  }
+}
