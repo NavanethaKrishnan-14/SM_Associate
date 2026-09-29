@@ -3202,3 +3202,24 @@ textarea:focus-visible {
 #home-v3 .home-v3-reasons-grid .home-v3-reason-card p {
   color: var(--text-secondary) !important;
 }
+
+
+/* FINAL FIX — Why SM Associate cards: single unified surface */
+#home-v3 .home-v3-reasons-grid .home-v3-reason-card,
+#home-v3 .home-v3-reasons-grid .home-v3-reason-card:nth-child(1),
+#home-v3 .home-v3-reasons-grid .home-v3-reason-card:nth-child(2),
+#home-v3 .home-v3-reasons-grid .home-v3-reason-card:nth-child(3),
+#home-v3 .home-v3-reasons-grid .home-v3-reason-card:nth-child(4) {
+  background: #102535 !important;
+  color: var(--text-primary) !important;
+  border: 1px solid rgba(255,255,255,.10) !important;
+  box-shadow: var(--shadow-soft) !important;
+}
+
+#home-v3 .home-v3-reasons-grid .home-v3-reason-card h3 {
+  color: var(--text-primary) !important;
+}
+
+#home-v3 .home-v3-reasons-grid .home-v3-reason-card p {
+  color: var(--text-secondary) !important;
+}
