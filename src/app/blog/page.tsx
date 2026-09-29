@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   return (
-    <div>
+    <div id="blog-page" className="site-page page-blog">
       <BlogHero />
       <BlogContent />
     </div>
