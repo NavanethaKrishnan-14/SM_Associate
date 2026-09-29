@@ -9,12 +9,12 @@ import {
   BadgeCheck,
   Bike,
   BookOpen,
-  BriefcaseBusiness,
+  Briefcase,
   Calculator,
   Car,
   Check,
   ChevronDown,
-  CircleDollarSign,
+  Coins,
   Clock3,
   FileCheck2,
   HandCoins,
@@ -27,7 +27,7 @@ import {
   Sparkles,
   Star,
   TrendingUp,
-  UserRound,
+  User,
   WalletCards,
   Zap,
 } from 'lucide-react';
@@ -63,9 +63,9 @@ interface VehicleCard {
 const serviceCards: ServiceCard[] = [
   { title: 'Home Loan', description: 'Plan your home purchase, construction or renovation with structured financing guidance.', href: ROUTES.HOME_LOAN, tag: 'Property', icon: Home, tone: 'gold' },
   { title: 'Car Loan', description: 'Finance a new or pre-owned car with a smoother application journey.', href: ROUTES.CAR_LOAN, tag: 'Mobility', icon: Car, tone: 'teal' },
-  { title: 'Gold Loan', description: 'Get practical assistance around gold-backed funding and redemption needs.', href: ROUTES.GOLD_LOAN, tag: 'Secure', icon: CircleDollarSign, tone: 'gold' },
-  { title: 'Personal Loan', description: 'Flexible personal funding for planned expenses and important moments.', href: ROUTES.PERSONAL_LOAN, tag: 'Flexible', icon: UserRound, tone: 'teal' },
-  { title: 'Business Loan', description: 'Support working capital, expansion and day-to-day business requirements.', href: ROUTES.BUSINESS_LOAN, tag: 'Business', icon: BriefcaseBusiness, tone: 'navy' },
+  { title: 'Gold Loan', description: 'Get practical assistance around gold-backed funding and redemption needs.', href: ROUTES.GOLD_LOAN, tag: 'Secure', icon: Coins, tone: 'gold' },
+  { title: 'Personal Loan', description: 'Flexible personal funding for planned expenses and important moments.', href: ROUTES.PERSONAL_LOAN, tag: 'Flexible', icon: User, tone: 'teal' },
+  { title: 'Business Loan', description: 'Support working capital, expansion and day-to-day business requirements.', href: ROUTES.BUSINESS_LOAN, tag: 'Business', icon: Briefcase, tone: 'navy' },
   { title: 'Two Wheeler Insurance', description: 'Choose protection options for everyday riding and peace of mind.', href: ROUTES.TWO_WHEELER_INSURANCE, tag: 'Protection', icon: ShieldCheck, tone: 'teal' },
 ];
 
