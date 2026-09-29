@@ -554,7 +554,25 @@ function Insights() {
 }
 
 function FAQ() {
-  const items = FAQ_DATA.home.items.slice(0, 6);
+  const items = [
+    ...FAQ_DATA.home.items.slice(0, 6),
+    {
+      question: 'Can SM Associate help me compare finance options?',
+      answer: 'Yes. Our team can help you understand available finance options, compare key terms and identify the documents and next steps relevant to your requirement.',
+    },
+    {
+      question: 'Do you provide support for used vehicle purchases?',
+      answer: 'Yes. You can explore listed vehicles and speak with our team about vehicle details, financing assistance and the next steps for a pre-owned vehicle purchase.',
+    },
+    {
+      question: 'Can I get help with vehicle insurance?',
+      answer: 'Yes. We provide assistance with vehicle insurance requirements and can guide you through the available options based on your vehicle and coverage needs.',
+    },
+    {
+      question: 'How can I speak with the SM Associate team?',
+      answer: 'Use the Contact page, phone or WhatsApp options on the website to start a conversation with the SM Associate team in Tirunelveli.',
+    },
+  ];
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
