@@ -20,6 +20,7 @@ export type FAQCategory =
   | 'contact'
   | 'blog'
   | 'blogDetail'
+  | 'goldResale'
   | 'privacyPolicy'
   | 'termsConditions'
   | 'disclaimer';
@@ -592,6 +593,45 @@ export const FAQ_DATA: Record<FAQCategory, {
       {
         question: 'Where can I read more related articles?',
         answer: 'Explore our full library in the Blog section for interconnected guides on credit scores, home mortgages, vehicle resale, and personal finance.',
+      },
+    ],
+  },
+
+  goldResale: {
+    title: 'Gold Resale FAQs',
+    subtitle: 'Clear answers about valuation, verification, the resale process, and what to expect before you sell.',
+    items: [
+      {
+        question: 'How does gold resale work?',
+        answer: 'You bring eligible gold items for assessment, receive valuation guidance, review the proposed transaction details, and complete the required verification before the sale is finalized.',
+      },
+      {
+        question: 'Is gold resale the same as taking a gold loan?',
+        answer: 'No. Gold resale is a sale of eligible gold items. A gold loan involves pledging gold as security for borrowing. The Gold Resale page is for customers who want to explore selling their gold.',
+      },
+      {
+        question: 'How is the resale value of gold determined?',
+        answer: 'The value can depend on factors such as purity, weight, the type of item, and the applicable market conditions at the time of assessment. The final transaction value is confirmed after evaluation.',
+      },
+      {
+        question: 'What should I bring for a gold valuation?',
+        answer: 'Bring the gold items you want assessed and a valid identity document. Purchase or ownership information and payment details may also be requested depending on the transaction.',
+      },
+      {
+        question: 'Can I ask questions before deciding to sell?',
+        answer: 'Yes. You can discuss the valuation approach, verification requirements, and transaction details with the SM Associate team before deciding whether to proceed.',
+      },
+      {
+        question: 'How long does the gold resale process take?',
+        answer: 'The time can vary depending on the items, verification, and transaction requirements. The team will explain the expected steps and timing during your enquiry.',
+      },
+      {
+        question: 'Do you accept all types of gold items?',
+        answer: 'Eligibility can depend on the item and the assessment requirements. Share the type of gold you have with the team so they can confirm whether it can be considered for resale.',
+      },
+      {
+        question: 'Where can I enquire about gold resale?',
+        answer: 'You can submit the Gold Resale enquiry form on this page or contact SM Associate in Tirunelveli to discuss your gold valuation requirements.',
       },
     ],
   },
