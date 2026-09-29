@@ -1,3 +1,4 @@
+import { BLOG_POSTS } from '@/lib/constants';
 import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -115,5 +116,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  return staticRoutes;
+  const blogRoutes: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
+    url: baseUrl + '/blog/' + post.slug,
+    lastModified: new Date('2026-09-29'),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
+  return [...staticRoutes, ...blogRoutes];
 }
