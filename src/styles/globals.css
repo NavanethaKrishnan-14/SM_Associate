@@ -3459,3 +3459,125 @@ textarea:focus-visible {
     padding: 0 17px 18px 63px;
   }
 }
+
+
+/* FINAL FIX — Footer CTA visual panel with temple */
+.premium-footer-top {
+  grid-template-columns: minmax(0,1.25fr) minmax(360px,.75fr);
+  align-items: stretch;
+  gap: 48px;
+}
+
+.premium-footer-visual {
+  min-height: 310px;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: 26px;
+  background: #fff !important;
+  color: #0b1726;
+  box-shadow: 0 22px 55px rgba(0,0,0,.24);
+}
+
+.premium-footer-visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 72% 28%, rgba(214,179,90,.16), transparent 34%),
+    linear-gradient(145deg, rgba(255,255,255,.98), rgba(241,237,228,.96));
+  pointer-events: none;
+}
+
+.premium-footer-temple {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: end center;
+  padding: 20px 22px 0;
+}
+
+.premium-footer-temple svg {
+  width: min(100%, 360px);
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 14px 18px rgba(67,51,24,.12));
+}
+
+.premium-footer-visual-actions {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 0 22px 22px;
+}
+
+.premium-footer-cta-wrap {
+  justify-items: end;
+}
+
+.premium-footer-visual .premium-footer-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 14px 22px;
+  border-radius: 14px;
+  background: #0b1726 !important;
+  color: #fff !important;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 900;
+  box-shadow: 0 12px 26px rgba(11,23,38,.18);
+}
+
+.premium-footer-visual .premium-footer-cta:hover {
+  background: #d6b35a !important;
+  color: #07131f !important;
+  transform: translateY(-2px);
+}
+
+.premium-footer-visual .premium-footer-cta-note {
+  color: #718094 !important;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .premium-footer-top {
+    grid-template-columns: 1fr;
+  }
+
+  .premium-footer-visual {
+    min-height: 290px;
+  }
+}
+
+@media (max-width: 560px) {
+  .premium-footer-visual {
+    min-height: 250px;
+    border-radius: 22px;
+  }
+
+  .premium-footer-temple {
+    padding: 12px 12px 0;
+  }
+
+  .premium-footer-visual-actions {
+    padding: 0 14px 14px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .premium-footer-visual .premium-footer-cta {
+    width: 100%;
+  }
+
+  .premium-footer-visual .premium-footer-cta-note {
+    text-align: center;
+  }
+}
