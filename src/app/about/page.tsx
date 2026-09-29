@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'About SM Associate',
     description: 'Get to know SM Associate, our local approach and the services we provide across finance and mobility.',
-    images: ['https://www.smassociate.in/about/og-about.jpg'],
+    images: ['https://www.smassociate.in/og-about.jpg'],
   },
 };
 
