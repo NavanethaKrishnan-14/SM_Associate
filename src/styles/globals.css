@@ -2024,3 +2024,45 @@ button, a { transition: transform .22s ease, background-color .22s ease, border-
   background: rgba(197,163,91,.11) !important;
   color: var(--premium-gold) !important;
 }
+
+
+/* Header hover — color only, no hover box */
+.premium-nav-link:hover,
+.premium-nav-link:focus-visible {
+  background: transparent !important;
+  color: var(--premium-gold) !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+.premium-header-page .premium-nav-link:hover,
+.premium-header-home.premium-header-scrolled .premium-nav-link:hover {
+  background: transparent !important;
+  color: var(--premium-burgundy) !important;
+}
+
+.premium-icon-link:hover,
+.premium-icon-link:focus-visible {
+  background: transparent !important;
+  border: 0 !important;
+  color: var(--premium-gold) !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.premium-header-page .premium-icon-link:hover,
+.premium-header-home.premium-header-scrolled .premium-icon-link:hover {
+  background: transparent !important;
+  color: var(--premium-burgundy) !important;
+}
+
+.premium-mobile-toggle:hover,
+.premium-mobile-toggle:focus-visible {
+  background: transparent !important;
+  color: var(--premium-gold) !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
