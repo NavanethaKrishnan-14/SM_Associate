@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div>
+    <div id="contact-page" className="site-page page-contact">
       <ContactHero />
       <ContactContent />
     </div>
