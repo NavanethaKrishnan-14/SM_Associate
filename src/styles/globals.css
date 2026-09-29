@@ -3128,3 +3128,26 @@ textarea:focus-visible {
     min-height: 46px;
   }
 }
+
+
+/* Dynamic detail pages use the same premium visual language. */
+#vehicle-detail-page {
+  --page-accent: #d88b9a;
+  --page-accent-soft: #f0c4cc;
+  --page-accent-glow: rgba(216,139,154,.17);
+  --page-secondary: #d6b35a;
+}
+
+#blog-detail-page {
+  --page-accent: #d6b35a;
+  --page-accent-soft: #f2dfa3;
+  --page-accent-glow: rgba(214,179,90,.19);
+  --page-secondary: #4fc9b7;
+}
+
+#vehicle-detail-page,
+#blog-detail-page {
+  background:
+    radial-gradient(circle at 84% 4%, var(--page-accent-glow), transparent 26%),
+    var(--background-primary) !important;
+}
