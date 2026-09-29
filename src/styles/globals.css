@@ -1405,3 +1405,27 @@ button, a { transition: transform .22s ease, background-color .22s ease, border-
   #home-v3 .home-v3-hero-copy h1 { font-size:clamp(2.8rem, 13vw, 4.2rem) !important; }
   #home-v3 .home-v3-hero-trust { grid-template-columns:1fr; }
 }
+
+
+/* Final token harmonization for legacy page components. */
+[data-theme] {
+  --primary-color: var(--premium-midnight);
+  --primary-light: var(--premium-midnight-2);
+  --primary-dark: #040c14;
+  --accent-color: var(--premium-gold);
+  --accent-light: var(--premium-gold-soft);
+  --accent-soft: rgba(197,163,91,.12);
+  --accent-hover: #a88743;
+  --accent-secondary: var(--premium-teal);
+  --accent-tertiary: var(--premium-steel);
+  --background-color: var(--premium-ivory);
+  --surface-color: var(--premium-white);
+  --surface-dark: var(--premium-paper);
+  --text-dark: var(--premium-ink);
+  --text-dark-secondary: var(--premium-muted);
+  --header-bg: transparent;
+  --footer-bg: var(--premium-midnight);
+  --footer-color: #fff;
+  --button-bg: var(--premium-gold);
+  --button-text: var(--premium-midnight);
+}
