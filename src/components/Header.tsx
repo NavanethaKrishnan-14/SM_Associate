@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState, type CSSProperties } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { LucideIcon } from 'lucide-react';
@@ -70,13 +70,34 @@ export default function Header() {
 
   const isHome = pathname === ROUTES.HOME;
 
+  const pageTheme = pathname.startsWith(ROUTES.CONTACT)
+    ? { name: 'teal', accent: '#4fc9b7', soft: '#b9f0e6' }
+    : pathname.startsWith(ROUTES.ABOUT)
+      ? { name: 'gold', accent: '#d6b35a', soft: '#f2dfa3' }
+      : pathname.startsWith(ROUTES.VEHICLES) || pathname.startsWith(ROUTES.CAR_RESALE)
+        ? { name: 'burgundy', accent: '#d88b9a', soft: '#f0c4cc' }
+        : pathname.startsWith(ROUTES.GOLD_LOAN)
+          ? { name: 'gold', accent: '#d6b35a', soft: '#f2dfa3' }
+          : pathname.startsWith(ROUTES.BUSINESS_LOAN) || pathname.startsWith(ROUTES.TWO_WHEELER_INSURANCE) || pathname.startsWith(ROUTES.LOANS)
+            ? { name: 'teal', accent: '#4fc9b7', soft: '#b9f0e6' }
+            : pathname.startsWith(ROUTES.EMI_CALCULATOR)
+              ? { name: 'gold', accent: '#d6b35a', soft: '#f2dfa3' }
+              : { name: 'gold', accent: '#d6b35a', soft: '#f2dfa3' };
+
+  const themeStyle = {
+    '--header-accent': pageTheme.accent,
+    '--header-accent-soft': pageTheme.soft,
+  } as CSSProperties;
+
   return (
     <header
       className={[
         'premium-header',
         isHome ? 'premium-header-home' : 'premium-header-page',
         isScrolled ? 'premium-header-scrolled' : 'premium-header-top',
+        `premium-header-theme-${pageTheme.name}`,
       ].join(' ')}
+      style={themeStyle}
     >
       <div className="premium-header-inner">
         <Link href={ROUTES.HOME} className="premium-brand" aria-label="SM Associate home">
