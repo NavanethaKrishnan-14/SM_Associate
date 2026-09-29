@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { CSSProperties } from 'react';
-import { Facebook, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
+import { Facebook, Linkedin, Mail, MapPin, Phone, ShieldCheck, Sparkles, Twitter } from 'lucide-react';
 import { COMPANY_INFO, ROUTES } from '@/lib/constants';
 import { getVisualThemeForPath } from '@/config/pageThemes';
 
@@ -64,6 +64,40 @@ export default function Footer() {
               Talk to our team
             </Link>
             <span className="premium-footer-cta-note">Local support · Tirunelveli</span>
+          </div>
+        </div>
+
+        <div className="premium-footer-feature-card">
+          <div className="premium-footer-feature-top">
+            <div className="premium-footer-feature-icon">
+              <Sparkles size={19} />
+            </div>
+            <span>SM ASSOCIATE · TIRUNELVELI</span>
+          </div>
+
+          <div className="premium-footer-feature-title">Finance + Mobility</div>
+          <p>One place for clear guidance across loans, vehicles, insurance and resale.</p>
+
+          <div className="premium-footer-feature-divider" />
+
+          <div className="premium-footer-feature-stats">
+            <div>
+              <strong>500+</strong>
+              <span>Customers</span>
+            </div>
+            <div>
+              <strong>100+</strong>
+              <span>Vehicles</span>
+            </div>
+            <div>
+              <ShieldCheck size={17} />
+              <span>Trusted support</span>
+            </div>
+          </div>
+
+          <div className="premium-footer-feature-location">
+            <MapPin size={14} />
+            <span>Serving Tirunelveli and nearby customers</span>
           </div>
         </div>
       </div>
