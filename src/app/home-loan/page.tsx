@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Home Loan Guidance | SM Associate',
     description: 'Practical support for understanding home loan options, documents and the application journey.',
-    images: ['https://www.smassociate.in/home-loan/og-home-loan.jpg'],
+    images: ['https://www.smassociate.in/og-home-loan.jpg'],
   },
 };
 
