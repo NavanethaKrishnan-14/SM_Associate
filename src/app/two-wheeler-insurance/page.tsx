@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Two Wheeler Insurance | SM Associate',
     description: 'Straightforward guidance for two wheeler insurance and renewal.',
-    images: ['https://www.smassociate.in/two-wheeler-insurance/og-business-loan.jpg'],
+    images: ['https://www.smassociate.in/og-business-loan.jpg'],
   },
 };
 
