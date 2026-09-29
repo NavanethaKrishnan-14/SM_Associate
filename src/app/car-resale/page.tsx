@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Vehicle Resale | SM Associate',
     description: 'A practical way to start a used vehicle resale enquiry in Tirunelveli.',
-    images: ['https://www.smassociate.in/car-resale/og-car-resale.jpg'],
+    images: ['https://www.smassociate.in/og-car-resale.jpg'],
   },
 };
 
