@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Loan Options | SM Associate',
     description: 'Explore loan categories and understand the information you should compare before applying.',
-    images: ['https://www.smassociate.in/loans/og-loans.jpg'],
+    images: ['https://www.smassociate.in/og-loans.jpg'],
   },
 };
 
