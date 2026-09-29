@@ -3976,3 +3976,19 @@ textarea:focus-visible {
     grid-column: 1 / -1;
   }
 }
+
+
+/* FINAL FIX — Footer CTA uses the same section accent color */
+.premium-footer .premium-footer-cta {
+  background: var(--footer-accent) !important;
+  color: #07131f !important;
+  border: 0 !important;
+  box-shadow: 0 12px 28px var(--footer-accent-glow) !important;
+}
+
+.premium-footer .premium-footer-cta:hover {
+  background: var(--footer-accent-soft) !important;
+  color: #07131f !important;
+  box-shadow: 0 16px 34px var(--footer-accent-glow) !important;
+  transform: translateY(-2px);
+}
