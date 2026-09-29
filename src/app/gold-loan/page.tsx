@@ -33,9 +33,9 @@ export const metadata: Metadata = {
 
 export default function GoldLoanPage() {
   return (
-    <>
+    <div id="gold-loan-page" className="site-page page-gold-loan">
       <GoldLoanHero />
       <GoldLoanContent />
-    </>
+    </div>
   );
 }
