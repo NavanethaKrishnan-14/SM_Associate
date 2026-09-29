@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <div>
+    <div id="privacy-page" className="site-page page-privacy">
       {/* Hero Section */}
       <section className="bg-gradient-navy text-white py-16">
         <div className="container-padded max-w-4xl">
