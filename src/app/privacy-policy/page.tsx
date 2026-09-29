@@ -6,16 +6,16 @@ export const metadata: Metadata = {
   description: 'Read SM Associate privacy policy. Understand how we collect, use, and protect your personal data. Your privacy is our priority. Last updated January 2024.',
   keywords: 'privacy policy, data protection, personal data, privacy statement',
   alternates: {
-    canonical: 'https://smassociate.com/privacy-policy',
+    canonical: 'https://www.smassociate.in/privacy-policy',
   },
   openGraph: {
     title: 'Privacy Policy - SM Associate',
     description: 'Data protection and privacy policy for SM Associate',
-    url: 'https://smassociate.com/privacy-policy',
+    url: 'https://www.smassociate.in/privacy-policy',
     type: 'website',
     images: [
       {
-        url: 'https://smassociate.com/og-image.jpg',
+        url: 'https://www.smassociate.in/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Privacy Policy - SM Associate',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Privacy Policy - SM Associate',
     description: 'Data protection and privacy policy for SM Associate',
-    images: ['https://smassociate.com/og-image.jpg'],
+    images: ['https://www.smassociate.in/og-image.jpg'],
   },
 };
 
