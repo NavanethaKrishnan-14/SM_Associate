@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import type { CSSProperties } from 'react';
 import { ArrowUpRight, Facebook, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
 import { COMPANY_INFO, ROUTES } from '@/lib/constants';
 
@@ -50,7 +51,7 @@ export default function Footer() {
   const footerStyle = {
     '--footer-accent': footerTheme.accent,
     '--footer-accent-soft': footerTheme.soft,
-  } as React.CSSProperties;
+  } as CSSProperties;
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
