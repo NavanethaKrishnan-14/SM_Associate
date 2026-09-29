@@ -212,7 +212,7 @@ export default function BlogContent() {
 
                       {/* Description */}
                       <p className="text-gray-700 text-sm mb-4">
-                        Discover insights and tips about {post.category.toLowerCase()}. Read our latest article to stay informed.
+                        {post.excerpt}
                       </p>
 
                       {/* Read More Link */}
