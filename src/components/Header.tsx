@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import type { LucideIcon } from 'lucide-react';
 import {
   ArrowUpRight,
   Bike,
@@ -20,13 +21,23 @@ import {
 } from 'lucide-react';
 import { ROUTES } from '@/lib/constants';
 
+type NavigationItem = {
+  label: string;
+  href: string;
+  submenu?: Array<{
+    label: string;
+    href: string;
+    icon: LucideIcon;
+  }>;
+};
+
 export default function Header() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const menuItems = useMemo(() => [
+  const menuItems = useMemo<NavigationItem[]>(() => [
     { label: 'Home', href: ROUTES.HOME },
     {
       label: 'Services',
