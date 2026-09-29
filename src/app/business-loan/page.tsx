@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 export default function BusinessLoanPage() {
   return (
-    <div>
+    <div id="business-loan-page" className="site-page page-business-loan">
       <BusinessLoanHero />
       <BusinessLoanContent />
     </div>
