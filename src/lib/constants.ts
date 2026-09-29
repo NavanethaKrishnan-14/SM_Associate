@@ -370,12 +370,16 @@ export const BLOG_POSTS = [
 
 // Colors
 export const COLORS = {
-  navy: '#0F172A',
-  darkBlue: '#1E3A8A',
-  teal: '#14B8A6',
-  cyan: '#06B6D4',
-  gold: '#F59E0B',
-  lightGrey: '#F1F5F9',
+  midnight: '#07131F',
+  ink: '#111A23',
+  ivory: '#FBFAF6',
+  paper: '#F1F2EE',
+  gold: '#C5A35B',
+  goldSoft: '#E8D8AD',
+  steel: '#718293',
+  teal: '#138878',
+  tealSoft: '#DCEFEA',
+  burgundy: '#6A2C39',
   white: '#FFFFFF',
 };
 
