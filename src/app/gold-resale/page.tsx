@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Gold Resale | SM Associate',
     description: 'A clear, local approach to gold valuation and resale.',
-    images: ['https://www.smassociate.in/gold-resale/og-gold-resale.jpg'],
+    images: ['https://www.smassociate.in/og-gold-resale.jpg'],
   },
 };
 
