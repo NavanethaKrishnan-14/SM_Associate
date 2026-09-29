@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { ArrowUpRight, Facebook, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
 import { COMPANY_INFO, ROUTES } from '@/lib/constants';
 
@@ -31,12 +32,30 @@ const companyLinks = [
 ];
 
 export default function Footer() {
+  const pathname = usePathname();
   const year = new Date().getFullYear();
+
+  const footerTheme = pathname.startsWith(ROUTES.CONTACT)
+    ? { name: 'teal', accent: '#4fc9b7', soft: '#b9f0e6' }
+    : pathname.startsWith(ROUTES.ABOUT)
+      ? { name: 'gold', accent: '#d6b35a', soft: '#f2dfa3' }
+      : pathname.startsWith(ROUTES.VEHICLES) || pathname.startsWith(ROUTES.CAR_RESALE)
+        ? { name: 'burgundy', accent: '#d88b9a', soft: '#f0c4cc' }
+        : pathname.startsWith(ROUTES.GOLD_LOAN)
+          ? { name: 'gold', accent: '#d6b35a', soft: '#f2dfa3' }
+          : pathname.startsWith(ROUTES.BUSINESS_LOAN) || pathname.startsWith(ROUTES.TWO_WHEELER_INSURANCE) || pathname.startsWith(ROUTES.LOANS)
+            ? { name: 'teal', accent: '#4fc9b7', soft: '#b9f0e6' }
+            : { name: 'gold', accent: '#d6b35a', soft: '#f2dfa3' };
+
+  const footerStyle = {
+    '--footer-accent': footerTheme.accent,
+    '--footer-accent-soft': footerTheme.soft,
+  } as React.CSSProperties;
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   return (
-    <footer className="premium-footer">
+    <footer className={`premium-footer premium-footer-theme-${footerTheme.name}`} style={footerStyle}>
       <div className="premium-footer-top">
         <div>
           <span className="premium-footer-kicker">READY FOR THE NEXT MOVE?</span>
