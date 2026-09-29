@@ -7,7 +7,7 @@ import type { LucideIcon } from 'lucide-react';
 import {
   ArrowUpRight,
   Bike,
-  BriefcaseBusiness,
+  Briefcase,
   Car,
   ChevronDown,
   Coins,
@@ -16,7 +16,7 @@ import {
   MessageCircle,
   Phone,
   ShieldCheck,
-  UserRound,
+  User,
   X,
 } from 'lucide-react';
 import { ROUTES } from '@/lib/constants';
@@ -46,8 +46,8 @@ export default function Header() {
         { label: 'Home Loan', href: ROUTES.HOME_LOAN, icon: Home },
         { label: 'Car Loan', href: ROUTES.CAR_LOAN, icon: Car },
         { label: 'Gold Loan', href: ROUTES.GOLD_LOAN, icon: Coins },
-        { label: 'Personal Loan', href: ROUTES.PERSONAL_LOAN, icon: UserRound },
-        { label: 'Business Loan', href: ROUTES.BUSINESS_LOAN, icon: BriefcaseBusiness },
+        { label: 'Personal Loan', href: ROUTES.PERSONAL_LOAN, icon: User },
+        { label: 'Business Loan', href: ROUTES.BUSINESS_LOAN, icon: Briefcase },
         { label: 'Two Wheeler Insurance', href: ROUTES.TWO_WHEELER_INSURANCE, icon: ShieldCheck },
       ],
     },
