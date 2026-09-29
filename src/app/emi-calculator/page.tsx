@@ -33,9 +33,9 @@ export const metadata: Metadata = {
 
 export default function EMICalculatorPage() {
   return (
-    <>
+    <div id="emi-page" className="site-page page-emi">
       <EMICalculatorHero />
       <EMICalculatorContent />
-    </>
+    </div>
   );
 }
