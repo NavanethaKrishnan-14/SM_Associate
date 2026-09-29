@@ -10,7 +10,7 @@ import { getVisualThemeForPath } from '@/config/pageThemes';
 const serviceLinks = [
   { label: 'Home Loan', href: ROUTES.HOME_LOAN },
   { label: 'Car Loan', href: ROUTES.CAR_LOAN },
-  { label: 'Gold Loan', href: ROUTES.GOLD_LOAN },
+  { label: 'Gold Resale', href: ROUTES.GOLD_RESALE },
   { label: 'Personal Loan', href: ROUTES.PERSONAL_LOAN },
   { label: 'Business Loan', href: ROUTES.BUSINESS_LOAN },
   { label: 'Two Wheeler Insurance', href: ROUTES.TWO_WHEELER_INSURANCE },
