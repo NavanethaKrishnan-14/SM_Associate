@@ -7,7 +7,6 @@ import {
   ArrowRight,
   ArrowUpRight,
   BadgeCheck,
-  BadgeCheckIcon,
   Bike,
   BookOpen,
   BriefcaseBusiness,
@@ -210,7 +209,7 @@ function TrustStrip() {
   const items = [
     { icon: ShieldCheck, label: 'Clear communication', value: 'Every step explained' },
     { icon: Clock3, label: 'Quick response', value: 'Local assistance' },
-    { icon: BadgeCheckIcon, label: 'Practical options', value: 'Finance + mobility' },
+    { icon: BadgeCheck, label: 'Practical options', value: 'Finance + mobility' },
     { icon: Sparkles, label: 'Customer-first', value: 'Built around you' },
   ];
   return (
