@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://www.smassociate.in/home-loan/og-home-loan.jpg',
+        url: 'https://www.smassociate.in/og-home-loan.jpg',
         width: 1200,
         height: 630,
         alt: 'Home Loans from SM Associate',
