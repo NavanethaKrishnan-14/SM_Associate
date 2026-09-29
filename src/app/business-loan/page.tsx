@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Business Loan Guidance | SM Associate',
     description: 'Understand business finance options, documentation and the application journey.',
-    images: ['https://www.smassociate.in/business-loan/og-business-loan.jpg'],
+    images: ['https://www.smassociate.in/og-business-loan.jpg'],
   },
 };
 
