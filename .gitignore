@@ -1,2 +1,7 @@
 node_modules
 .next
+
+# Local/generated files
+*.log
+*.tsbuildinfo
+lint-output.json
