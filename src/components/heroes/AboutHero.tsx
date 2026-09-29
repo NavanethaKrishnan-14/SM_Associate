@@ -8,33 +8,6 @@ import { ROUTES } from '@/lib/constants';
 import AnimatedNumber from '@/components/AnimatedNumber';
 
 export default function AboutHero() {
-  const teamMembers = [
-    {
-      id: 1,
-      role: 'Founder & CEO',
-      gradient: 'from-teal-600 to-cyan-600',
-      image: '/team/member-1.jpg',
-    },
-    {
-      id: 2,
-      role: 'Lead Advisor',
-      gradient: 'from-cyan-600 to-blue-600',
-      image: '/team/member-2.jpg',
-    },
-    {
-      id: 3,
-      role: 'Finance Head',
-      gradient: 'from-blue-600 to-slate-600',
-      image: '/team/member-3.jpg',
-    },
-    {
-      id: 4,
-      role: 'Operations Head',
-      gradient: 'from-slate-600 to-teal-600',
-      image: '/team/member-4.jpg',
-    },
-  ];
-
   const coreValues = [
     {
       icon: Target,
@@ -87,12 +60,6 @@ export default function AboutHero() {
       y: 0,
       transition: { duration: 0.6, ease: 'easeOut' },
     },
-  };
-
-  const teamCardVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } },
-    hover: { y: -10, transition: { duration: 0.3 } },
   };
 
   return (
@@ -182,55 +149,47 @@ export default function AboutHero() {
             </motion.div>
           </motion.div>
 
-          {/* Right - Team Grid */}
+          {/* Right - Journey Image Gallery */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="grid grid-cols-2 gap-4"
           >
-            {teamMembers.map((member, index) => (
+            {[
+              {
+                src: 'https://images.pexels.com/photos/36765719/pexels-photo-36765719/free-photo-of-business-meeting-with-professional-team-in-office.jpeg?auto=compress&dpr=1&w=1200',
+                alt: 'Professional business meeting in a modern office',
+              },
+              {
+                src: 'https://images.pexels.com/photos/7433865/pexels-photo-7433865.jpeg?auto=compress&dpr=1&w=1200',
+                alt: 'Business team reviewing financial strategy together',
+              },
+              {
+                src: 'https://images.pexels.com/photos/8068833/pexels-photo-8068833.jpeg?auto=compress&dpr=1&w=1200',
+                alt: 'Professionals collaborating on business planning',
+              },
+              {
+                src: 'https://images.pexels.com/photos/8518660/pexels-photo-8518660.jpeg?auto=compress&dpr=1&w=1200',
+                alt: 'Professional team working together in an office',
+              },
+            ].map((image, index) => (
               <motion.div
-                key={member.id}
-                custom={index}
-                variants={teamCardVariants}
-                initial="hidden"
-                animate="visible"
-                whileHover="hover"
-                transition={{ delay: index * 0.1 + 0.4 }}
-                className="group"
+                key={image.src}
+                initial={{ opacity: 0, y: 18 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.08, duration: 0.45 }}
+                className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-slate-800/60 shadow-lg group"
               >
-                <div className={`relative h-56 sm:h-64 bg-gradient-to-br ${member.gradient} rounded-2xl overflow-hidden border border-white/10 cursor-pointer shadow-lg group`}>
-                  <Image
-                    src={member.image}
-                    alt={`${member.role} - SM Associate Leadership Team`}
-                    fill
-                    priority={index < 2}
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                  />
-
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
-
-                  {/* Always visible clean bottom role label */}
-                  <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 z-10">
-                    <p className="text-white font-bold text-xs sm:text-sm drop-shadow-md">{member.role}</p>
-                  </div>
-
-                  {/* Shine Effect */}
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                    animate={{
-                      x: [-100, 100],
-                    }}
-                    transition={{
-                      duration: 3,
-                      delay: index * 0.2,
-                      repeat: Infinity,
-                      repeatDelay: 2,
-                    }}
-                  />
-                </div>
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  priority={index < 2}
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
               </motion.div>
             ))}
           </motion.div>
