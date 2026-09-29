@@ -44,7 +44,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode; initialTheme?:
     }
 
     // Trigger any theme-related side effects
-    document.documentElement.style.colorScheme = theme.includes('gold') ? 'light' : 'dark';
+    document.documentElement.style.colorScheme = 'light';
   }, [theme, mounted]);
 
   return (
