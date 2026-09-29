@@ -83,6 +83,7 @@ export default function Footer() {
           </div>
           <div className="premium-footer-art-location">SOUTH TAMIL NADU</div>
         </div>
+      </div>
 
       <div className="premium-footer-grid">
         <div className="premium-footer-brand">
