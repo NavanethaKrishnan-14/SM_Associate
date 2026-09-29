@@ -5333,3 +5333,566 @@ option {
     line-height: 1.7 !important;
   }
 }
+
+
+/* =========================================================
+   FINAL FIX — Unified Premium Hero System
+   Applies consistent hero contrast, spacing and alignment
+   across all non-home page hero / top-intro sections.
+   ========================================================= */
+
+#about-page > section:first-child,
+#blog-page > section:first-child,
+#business-loan-page > section:first-child,
+#car-loan-page > section:first-child,
+#contact-page > section:first-child,
+#emi-page > section:first-child,
+#gold-loan-page > section:first-child,
+#home-loan-page > section:first-child,
+#personal-loan-page > section:first-child,
+#two-wheeler-insurance-page > div > section:first-child,
+#loans-page > div > section:first-child,
+#car-resale-page > div > section:first-child,
+#vehicle-detail-page > div > section:nth-child(2),
+#blog-detail-page > div > section:nth-child(2) {
+  position: relative;
+  overflow: hidden;
+  padding: 88px 0 !important;
+  background:
+    radial-gradient(circle at 84% 18%, color-mix(in srgb, var(--page-accent) 14%, transparent), transparent 28%),
+    radial-gradient(circle at 12% 86%, color-mix(in srgb, var(--page-secondary) 8%, transparent), transparent 26%),
+    linear-gradient(135deg, #06131f 0%, #0a1e2b 54%, #07131f 100%) !important;
+  color: var(--text-primary) !important;
+  border-top: 1px solid rgba(255,255,255,.035);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+#about-page > section:first-child::before,
+#blog-page > section:first-child::before,
+#business-loan-page > section:first-child::before,
+#car-loan-page > section:first-child::before,
+#contact-page > section:first-child::before,
+#emi-page > section:first-child::before,
+#gold-loan-page > section:first-child::before,
+#home-loan-page > section:first-child::before,
+#personal-loan-page > section:first-child::before,
+#two-wheeler-insurance-page > div > section:first-child::before,
+#loans-page > div > section:first-child::before,
+#car-resale-page > div > section:first-child::before,
+#vehicle-detail-page > div > section:nth-child(2)::before,
+#blog-detail-page > div > section:nth-child(2)::before {
+  content: '';
+  position: absolute;
+  width: 440px;
+  height: 440px;
+  right: -180px;
+  top: -220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--page-accent) 12%, transparent), transparent 68%);
+  filter: blur(12px);
+  pointer-events: none;
+}
+
+#about-page > section:first-child > div,
+#blog-page > section:first-child > div,
+#business-loan-page > section:first-child > div,
+#car-loan-page > section:first-child > div,
+#contact-page > section:first-child > div,
+#emi-page > section:first-child > div,
+#gold-loan-page > section:first-child > div,
+#home-loan-page > section:first-child > div,
+#personal-loan-page > section:first-child > div,
+#two-wheeler-insurance-page > div > section:first-child > div,
+#loans-page > div > section:first-child > div,
+#car-resale-page > div > section:first-child > div,
+#vehicle-detail-page > div > section:nth-child(2) > div,
+#blog-detail-page > div > section:nth-child(2) > div {
+  position: relative;
+  z-index: 2;
+  width: min(1180px, calc(100% - 32px)) !important;
+  max-width: 1180px !important;
+  margin-inline: auto !important;
+}
+
+/* Hero typography */
+#about-page > section:first-child h1,
+#blog-page > section:first-child h1,
+#business-loan-page > section:first-child h1,
+#business-loan-page > section:first-child h2,
+#car-loan-page > section:first-child h1,
+#car-loan-page > section:first-child h2,
+#gold-loan-page > section:first-child h1,
+#gold-loan-page > section:first-child h2,
+#home-loan-page > section:first-child h1,
+#home-loan-page > section:first-child h2,
+#personal-loan-page > section:first-child h1,
+#personal-loan-page > section:first-child h2,
+#two-wheeler-insurance-page > div > section:first-child h1,
+#two-wheeler-insurance-page > div > section:first-child h2,
+#loans-page > div > section:first-child h1,
+#loans-page > div > section:first-child h2,
+#car-resale-page > div > section:first-child h1,
+#car-resale-page > div > section:first-child h2,
+#contact-page > section:first-child h1,
+#contact-page > section:first-child h2,
+#emi-page > section:first-child h1,
+#emi-page > section:first-child h2,
+#vehicle-detail-page > div > section:nth-child(2) h1,
+#vehicle-detail-page > div > section:nth-child(2) h2,
+#blog-detail-page > div > section:nth-child(2) h1,
+#blog-detail-page > div > section:nth-child(2) h2 {
+  color: #ffffff !important;
+  font-weight: 900 !important;
+  letter-spacing: -.045em !important;
+  text-shadow: 0 3px 24px rgba(0,0,0,.34);
+}
+
+#about-page > section:first-child h1,
+#business-loan-page > section:first-child h1,
+#car-loan-page > section:first-child h1,
+#gold-loan-page > section:first-child h1,
+#home-loan-page > section:first-child h1,
+#personal-loan-page > section:first-child h1,
+#two-wheeler-insurance-page > div > section:first-child h1,
+#vehicle-detail-page > div > section:nth-child(2) h1,
+#blog-detail-page > div > section:nth-child(2) h1 {
+  font-size: clamp(2.75rem, 5.2vw, 5rem) !important;
+  line-height: 1.02 !important;
+}
+
+#blog-page > section:first-child h1,
+#loans-page > div > section:first-child h2,
+#contact-page > section:first-child h2,
+#emi-page > section:first-child h2,
+#car-resale-page > div > section:first-child h2 {
+  font-size: clamp(2.45rem, 4.6vw, 4.2rem) !important;
+  line-height: 1.05 !important;
+}
+
+#about-page > section:first-child p,
+#business-loan-page > section:first-child p,
+#car-loan-page > section:first-child p,
+#gold-loan-page > section:first-child p,
+#home-loan-page > section:first-child p,
+#personal-loan-page > section:first-child p,
+#two-wheeler-insurance-page > div > section:first-child p,
+#loans-page > div > section:first-child p,
+#contact-page > section:first-child p,
+#emi-page > section:first-child p,
+#car-resale-page > div > section:first-child p,
+#vehicle-detail-page > div > section:nth-child(2) p,
+#blog-detail-page > div > section:nth-child(2) p {
+  color: #cbd3d8 !important;
+  line-height: 1.75 !important;
+  text-shadow: 0 1px 12px rgba(0,0,0,.20);
+}
+
+/* Product hero header blocks */
+#business-loan-page > section:first-child .mb-12,
+#car-loan-page > section:first-child .mb-12,
+#gold-loan-page > section:first-child .mb-12,
+#home-loan-page > section:first-child .mb-12,
+#personal-loan-page > section:first-child .mb-12,
+#two-wheeler-insurance-page > div > section:first-child .mb-12 {
+  position: relative;
+  max-width: 880px;
+  padding: 26px 28px 28px;
+  margin-bottom: 30px !important;
+  border-left: 2px solid var(--page-accent);
+  border-radius: 0 20px 20px 0;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--page-accent) 6%, rgba(255,255,255,.025)), transparent 82%);
+}
+
+#business-loan-page > section:first-child .mb-12 [class*="w-16"][class*="h-16"],
+#car-loan-page > section:first-child .mb-12 [class*="w-16"][class*="h-16"],
+#gold-loan-page > section:first-child .mb-12 [class*="w-16"][class*="h-16"],
+#home-loan-page > section:first-child .mb-12 [class*="w-16"][class*="h-16"],
+#personal-loan-page > section:first-child .mb-12 [class*="w-16"][class*="h-16"],
+#two-wheeler-insurance-page > div > section:first-child .mb-12 [class*="w-16"][class*="h-16"] {
+  flex: 0 0 auto;
+  border-radius: 18px !important;
+  background: color-mix(in srgb, var(--page-accent) 18%, #102535) !important;
+  box-shadow: 0 14px 34px rgba(0,0,0,.24), inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+#business-loan-page > section:first-child .mb-12 [class*="w-16"][class*="h-16"] svg,
+#car-loan-page > section:first-child .mb-12 [class*="w-16"][class*="h-16"] svg,
+#gold-loan-page > section:first-child .mb-12 [class*="w-16"][class*="h-16"] svg,
+#home-loan-page > section:first-child .mb-12 [class*="w-16"][class*="h-16"] svg,
+#personal-loan-page > section:first-child .mb-12 [class*="w-16"][class*="h-16"] svg,
+#two-wheeler-insurance-page > div > section:first-child .mb-12 [class*="w-16"][class*="h-16"] svg {
+  color: #ffffff !important;
+}
+
+#business-loan-page > section:first-child .mb-12 .text-teal,
+#car-loan-page > section:first-child .mb-12 .text-teal,
+#gold-loan-page > section:first-child .mb-12 .text-teal,
+#home-loan-page > section:first-child .mb-12 .text-teal,
+#personal-loan-page > section:first-child .mb-12 .text-teal,
+#two-wheeler-insurance-page > div > section:first-child .mb-12 .text-emerald-600 {
+  color: var(--page-accent-soft) !important;
+  text-shadow: 0 2px 14px color-mix(in srgb, var(--page-accent) 24%, transparent);
+}
+
+/* Feature / info content inside product heroes */
+#business-loan-page > section:first-child .grid,
+#car-loan-page > section:first-child .grid,
+#gold-loan-page > section:first-child .grid,
+#home-loan-page > section:first-child .grid,
+#personal-loan-page > section:first-child .grid,
+#two-wheeler-insurance-page > div > section:first-child .grid {
+  color: var(--text-secondary);
+}
+
+#business-loan-page > section:first-child .grid span,
+#car-loan-page > section:first-child .grid span,
+#gold-loan-page > section:first-child .grid span,
+#home-loan-page > section:first-child .grid span,
+#personal-loan-page > section:first-child .grid span,
+#two-wheeler-insurance-page > div > section:first-child .grid span {
+  color: #cbd3d8 !important;
+}
+
+#business-loan-page > section:first-child .grid svg,
+#car-loan-page > section:first-child .grid svg,
+#gold-loan-page > section:first-child .grid svg,
+#home-loan-page > section:first-child .grid svg,
+#personal-loan-page > section:first-child .grid svg {
+  color: var(--page-secondary) !important;
+}
+
+/* Blog + centered overview hero */
+#blog-page > section:first-child .text-center {
+  max-width: 900px;
+  margin-inline: auto !important;
+}
+
+#blog-page > section:first-child .grid > div {
+  background: rgba(255,255,255,.055) !important;
+  border-color: rgba(255,255,255,.11) !important;
+  box-shadow: 0 16px 40px rgba(0,0,0,.18);
+}
+
+#blog-page > section:first-child .grid > div p {
+  color: #cbd3d8 !important;
+}
+
+/* About split hero */
+#about-page > section:first-child .grid {
+  align-items: center;
+  gap: 64px !important;
+}
+
+#about-page > section:first-child .grid > div:first-child {
+  max-width: 650px;
+}
+
+#about-page > section:first-child .grid > div:last-child {
+  overflow: hidden;
+  border-radius: 26px !important;
+  border: 1px solid rgba(255,255,255,.10) !important;
+  background: #102535 !important;
+  box-shadow: 0 28px 72px rgba(0,0,0,.28);
+}
+
+#about-page > section:first-child .grid > div:last-child > div {
+  height: 480px !important;
+}
+
+#about-page > section:first-child .text-gray-700 {
+  color: #cbd3d8 !important;
+}
+
+/* Loans intro hero */
+#loans-page > div > section:first-child > div {
+  text-align: center;
+}
+
+#loans-page > div > section:first-child > div > div {
+  max-width: 860px !important;
+  margin-inline: auto !important;
+}
+
+#loans-page > div > section:first-child > div > div h2 {
+  margin-bottom: 20px !important;
+}
+
+#loans-page > div > section:first-child > div > div p {
+  font-size: 16px !important;
+}
+
+/* Car resale intro area */
+#car-resale-page > div > section:first-child {
+  background:
+    radial-gradient(circle at 80% 16%, rgba(216,139,154,.13), transparent 26%),
+    radial-gradient(circle at 14% 80%, rgba(79,201,183,.07), transparent 25%),
+    linear-gradient(135deg,#06131f,#0b1e2a 54%,#07131f) !important;
+}
+
+#car-resale-page > div > section:first-child .grid > div {
+  color: #cbd3d8;
+}
+
+#car-resale-page > div > section:first-child h3 {
+  color: #ffffff !important;
+}
+
+/* Contact top cards */
+#contact-page > section:first-child {
+  padding: 72px 0 !important;
+}
+
+#contact-page > section:first-child .grid {
+  gap: 16px !important;
+}
+
+#contact-page > section:first-child .grid > div {
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.025)) !important;
+  border: 1px solid rgba(255,255,255,.11) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 18px 46px rgba(0,0,0,.20);
+}
+
+#contact-page > section:first-child .grid > div h3 {
+  color: #ffffff !important;
+}
+
+#contact-page > section:first-child .grid > div p,
+#contact-page > section:first-child .grid > div a {
+  color: #cbd3d8 !important;
+}
+
+#contact-page > section:first-child .grid > div [class*="w-12"][class*="h-12"] {
+  background: color-mix(in srgb, var(--page-accent) 20%, #102535) !important;
+  box-shadow: 0 10px 24px rgba(0,0,0,.18);
+}
+
+/* EMI calculator hero */
+#emi-page > section:first-child > div {
+  position: relative;
+}
+
+#emi-page > section:first-child .bg-white {
+  background: #102535 !important;
+  border-color: rgba(255,255,255,.10) !important;
+  color: var(--text-primary) !important;
+  box-shadow: 0 24px 68px rgba(0,0,0,.24) !important;
+}
+
+#emi-page > section:first-child .text-gray-700,
+#emi-page > section:first-child .text-gray-500 {
+  color: #cbd3d8 !important;
+}
+
+#emi-page > section:first-child label {
+  color: #d6dde1 !important;
+}
+
+#emi-page > section:first-child [class*="text-teal"] {
+  color: var(--page-accent-soft) !important;
+}
+
+/* Vehicle marketplace hero */
+#vehicle-marketplace-page > div:first-child {
+  min-height: min(760px, 100vh) !important;
+  padding-top: 86px !important;
+  padding-bottom: 72px !important;
+  background:
+    radial-gradient(circle at 76% 16%, rgba(216,139,154,.16), transparent 27%),
+    radial-gradient(circle at 16% 82%, rgba(79,201,183,.08), transparent 25%),
+    linear-gradient(135deg,#06131f 0%,#0b1d2a 55%,#07131f 100%) !important;
+}
+
+#vehicle-marketplace-page > div:first-child h1 {
+  max-width: 820px;
+  margin-inline: auto;
+  color: #ffffff !important;
+  text-shadow: 0 3px 28px rgba(0,0,0,.38);
+}
+
+#vehicle-marketplace-page > div:first-child h1 span {
+  color: #f0c4cc !important;
+  -webkit-text-fill-color: #f0c4cc !important;
+  background: none !important;
+}
+
+#vehicle-marketplace-page > div:first-child p {
+  color: #dbe2e6 !important;
+}
+
+#vehicle-marketplace-page > div:first-child .text-rose-400,
+#vehicle-marketplace-page > div:first-child .text-rose-500,
+#vehicle-marketplace-page > div:first-child .text-pink-300 {
+  color: #f0c4cc !important;
+}
+
+#vehicle-marketplace-page > div:first-child input {
+  color: #ffffff !important;
+}
+
+#vehicle-marketplace-page > div:first-child input::placeholder {
+  color: rgba(219,226,230,.58) !important;
+}
+
+/* Vehicle + blog detail heroes */
+#vehicle-detail-page > div > section:first-child,
+#blog-detail-page > div > section:first-child {
+  background: #06131f !important;
+  border-color: rgba(255,255,255,.06) !important;
+}
+
+#vehicle-detail-page > div > section:nth-child(2) .grid {
+  align-items: center;
+  gap: 44px !important;
+}
+
+#vehicle-detail-page > div > section:nth-child(2) .bg-gray-50 {
+  background: #102535 !important;
+  border-color: rgba(255,255,255,.10) !important;
+}
+
+#vehicle-detail-page > div > section:nth-child(2) .text-gray-600,
+#vehicle-detail-page > div > section:nth-child(2) .text-gray-800 {
+  color: #cbd3d8 !important;
+}
+
+#vehicle-detail-page > div > section:nth-child(2) .text-teal {
+  color: var(--page-accent-soft) !important;
+}
+
+#blog-detail-page > div > section:nth-child(2) {
+  padding: 94px 0 !important;
+}
+
+#blog-detail-page > div > section:nth-child(2) .text-gray-600 {
+  color: #cbd3d8 !important;
+}
+
+#blog-detail-page > div > section:nth-child(2) .bg-teal\/20 {
+  background: color-mix(in srgb, var(--page-accent) 15%, transparent) !important;
+  color: var(--page-accent-soft) !important;
+}
+
+/* Global hero focus treatment */
+#about-page > section:first-child a,
+#blog-page > section:first-child a,
+#business-loan-page > section:first-child a,
+#car-loan-page > section:first-child a,
+#contact-page > section:first-child a,
+#emi-page > section:first-child a,
+#gold-loan-page > section:first-child a,
+#home-loan-page > section:first-child a,
+#personal-loan-page > section:first-child a,
+#two-wheeler-insurance-page > div > section:first-child a,
+#loans-page > div > section:first-child a,
+#car-resale-page > div > section:first-child a,
+#vehicle-detail-page > div > section:nth-child(2) a,
+#blog-detail-page > div > section:nth-child(2) a {
+  transition: color .22s ease, background-color .22s ease, border-color .22s ease, transform .22s ease, box-shadow .22s ease;
+}
+
+@media (max-width: 900px) {
+  #about-page > section:first-child,
+  #blog-page > section:first-child,
+  #business-loan-page > section:first-child,
+  #car-loan-page > section:first-child,
+  #contact-page > section:first-child,
+  #emi-page > section:first-child,
+  #gold-loan-page > section:first-child,
+  #home-loan-page > section:first-child,
+  #personal-loan-page > section:first-child,
+  #two-wheeler-insurance-page > div > section:first-child,
+  #loans-page > div > section:first-child,
+  #car-resale-page > div > section:first-child,
+  #vehicle-detail-page > div > section:nth-child(2),
+  #blog-detail-page > div > section:nth-child(2) {
+    padding: 70px 0 !important;
+  }
+
+  #about-page > section:first-child .grid {
+    gap: 36px !important;
+  }
+
+  #about-page > section:first-child .grid > div:last-child > div {
+    height: 360px !important;
+  }
+
+  #business-loan-page > section:first-child .mb-12,
+  #car-loan-page > section:first-child .mb-12,
+  #gold-loan-page > section:first-child .mb-12,
+  #home-loan-page > section:first-child .mb-12,
+  #personal-loan-page > section:first-child .mb-12,
+  #two-wheeler-insurance-page > div > section:first-child .mb-12 {
+    padding: 22px 20px 24px;
+  }
+
+  #vehicle-marketplace-page > div:first-child {
+    min-height: auto !important;
+    padding-top: 72px !important;
+  }
+}
+
+@media (max-width: 560px) {
+  #about-page > section:first-child,
+  #blog-page > section:first-child,
+  #business-loan-page > section:first-child,
+  #car-loan-page > section:first-child,
+  #contact-page > section:first-child,
+  #emi-page > section:first-child,
+  #gold-loan-page > section:first-child,
+  #home-loan-page > section:first-child,
+  #personal-loan-page > section:first-child,
+  #two-wheeler-insurance-page > div > section:first-child,
+  #loans-page > div > section:first-child,
+  #car-resale-page > div > section:first-child,
+  #vehicle-detail-page > div > section:nth-child(2),
+  #blog-detail-page > div > section:nth-child(2) {
+    padding: 58px 0 !important;
+  }
+
+  #about-page > section:first-child > div,
+  #blog-page > section:first-child > div,
+  #business-loan-page > section:first-child > div,
+  #car-loan-page > section:first-child > div,
+  #contact-page > section:first-child > div,
+  #emi-page > section:first-child > div,
+  #gold-loan-page > section:first-child > div,
+  #home-loan-page > section:first-child > div,
+  #personal-loan-page > section:first-child > div,
+  #two-wheeler-insurance-page > div > section:first-child > div,
+  #loans-page > div > section:first-child > div,
+  #car-resale-page > div > section:first-child > div,
+  #vehicle-detail-page > div > section:nth-child(2) > div,
+  #blog-detail-page > div > section:nth-child(2) > div {
+    width: min(100% - 24px, 680px) !important;
+  }
+
+  #about-page > section:first-child h1,
+  #business-loan-page > section:first-child h1,
+  #car-loan-page > section:first-child h1,
+  #gold-loan-page > section:first-child h1,
+  #home-loan-page > section:first-child h1,
+  #personal-loan-page > section:first-child h1,
+  #two-wheeler-insurance-page > div > section:first-child h1,
+  #vehicle-detail-page > div > section:nth-child(2) h1,
+  #blog-detail-page > div > section:nth-child(2) h1 {
+    font-size: clamp(2.35rem, 12vw, 3.45rem) !important;
+  }
+
+  #blog-page > section:first-child h1,
+  #loans-page > div > section:first-child h2,
+  #contact-page > section:first-child h2,
+  #emi-page > section:first-child h2,
+  #car-resale-page > div > section:first-child h2 {
+    font-size: clamp(2.05rem, 10vw, 3rem) !important;
+  }
+
+  #vehicle-marketplace-page > div:first-child h1 {
+    font-size: clamp(2.55rem, 12vw, 4rem) !important;
+  }
+}
