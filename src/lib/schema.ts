@@ -7,7 +7,7 @@ export const generateArticleSchema = (article: {
   slug: string;
   category: string;
 }) => {
-  const baseUrl = 'https://smassociate.com';
+  const baseUrl = 'https://www.smassociate.in';
 
   return {
     '@context': 'https://schema.org',
@@ -46,7 +46,7 @@ export const generateProductSchema = (vehicle: {
   price: string;
   description: string;
 }) => {
-  const baseUrl = 'https://smassociate.com';
+  const baseUrl = 'https://www.smassociate.in';
   // Extract numeric price for schema
   const priceValue = vehicle.price.replace(/[₹,]/g, '');
 
