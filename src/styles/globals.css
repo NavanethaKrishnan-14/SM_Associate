@@ -7156,3 +7156,57 @@ option {
     transition: none !important;
   }
 }
+
+
+/* =========================================================
+   Increase Home Hero 3D visual
+   ========================================================= */
+
+@media (min-width: 1051px) {
+  #home-v3 .home-v3-hero-art {
+    height: 620px !important;
+    max-height: 620px !important;
+    max-width: 700px !important;
+    transform: translateY(-28px) scale(1.08) !important;
+    transform-origin: center center !important;
+  }
+
+  #home-v3 .home-v3-device {
+    width: 340px !important;
+    height: 214px !important;
+  }
+
+  #home-v3 .home-v3-orbit-one {
+    width: 490px !important;
+    height: 490px !important;
+    top: 5% !important;
+    right: 5% !important;
+  }
+
+  #home-v3 .home-v3-orbit-two {
+    width: 530px !important;
+    height: 198px !important;
+    top: 29% !important;
+    right: 1% !important;
+  }
+
+  #home-v3 .home-v3-device-back {
+    right: 0% !important;
+    bottom: 12% !important;
+  }
+
+  #home-v3 .home-v3-device-front {
+    right: 10% !important;
+    bottom: 20% !important;
+  }
+
+  #home-v3 .home-v3-scene-ground {
+    bottom: 3% !important;
+  }
+}
+
+@media (min-width: 1250px) {
+  #home-v3 .home-v3-hero-art {
+    transform: translateY(-34px) scale(1.12) !important;
+  }
+}
