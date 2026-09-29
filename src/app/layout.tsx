@@ -80,7 +80,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={manrope.variable}>
       <head>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': [
+                {
+                  ...organizationSchema,
+                  '@id': 'https://www.smassociate.in/#organization',
+                },
+                {
+                  '@type': 'WebSite',
+                  '@id': 'https://www.smassociate.in/#website',
+                  name: 'SM Associate',
+                  url: 'https://www.smassociate.in',
+                  publisher: {
+                    '@id': 'https://www.smassociate.in/#organization',
+                  },
+                },
+              ],
+            }),
+          }}
+        />
       </head>
       <body className={manrope.className}>
         <ThemeProvider>
