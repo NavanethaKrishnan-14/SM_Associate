@@ -4,8 +4,11 @@
   "description": "SM Associate - Finance & Vehicle Marketplace Frontend",
   "private": true,
   "scripts": {
+    "predev": "node scripts/ensure-next-app.js",
     "dev": "next dev",
+    "prebuild": "node scripts/ensure-next-app.js",
     "build": "next build",
+    "prestart": "node scripts/ensure-next-app.js",
     "start": "next start",
     "lint": "next lint",
     "type-check": "tsc --noEmit"
