@@ -232,9 +232,9 @@ export default function HomeLoanContent() {
                   <h4 className="font-bold text-navy group-hover:text-teal transition-colors">Car Loan</h4>
                   <p className="text-sm text-gray-600 mt-1">Finance your dream car</p>
                 </Link>
-                <Link href={ROUTES.BIKE_LOAN} className="p-4 bg-gray-50 rounded-lg hover:bg-teal/10 hover:border-teal border-2 border-transparent transition-all group">
-                  <h4 className="font-bold text-navy group-hover:text-teal transition-colors">Bike Loan</h4>
-                  <p className="text-sm text-gray-600 mt-1">Quick two-wheeler loan</p>
+                <Link href={ROUTES.PERSONAL_LOAN} className="p-4 bg-gray-50 rounded-lg hover:bg-teal/10 hover:border-teal border-2 border-transparent transition-all group">
+                  <h4 className="font-bold text-navy group-hover:text-teal transition-colors">Personal Loan</h4>
+                  <p className="text-sm text-gray-600 mt-1">Quick personal loan</p>
                 </Link>
                 <Link href={ROUTES.PERSONAL_LOAN} className="p-4 bg-gray-50 rounded-lg hover:bg-teal/10 hover:border-teal border-2 border-transparent transition-all group">
                   <h4 className="font-bold text-navy group-hover:text-teal transition-colors">Personal Loan</h4>

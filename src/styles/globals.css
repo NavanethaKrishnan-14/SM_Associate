@@ -2,19 +2,208 @@
 @tailwind components;
 @tailwind utilities;
 
-/* FAQ Section Variables and Mechanics */
+/* ============================================
+   GLOBAL THEME COLOR SYSTEM
+   ============================================ */
+
+/* Default Theme (Home/Primary - Navy & Gold) */
 :root {
+  /* PRIMARY COLOR PALETTE */
+  --primary-color: #071A2B;
+  --primary-light: #12395A;
+  --primary-dark: #0B2239;
+
+  /* ACCENT COLORS */
+  --accent-color: #D4AF37;
+  --accent-light: #F1D77A;
+  --accent-soft: #E8C96A;
+  --accent-hover: #C9A227;
+
+  /* COMPLEMENTARY ACCENT (for additional contrast/depth) */
+  --accent-secondary: #14B8A6;
+  --accent-tertiary: #06B6D4;
+
+  /* BACKGROUNDS */
+  --background-color: #f8fafc;
+  --surface-color: #ffffff;
+  --surface-dark: #f1f5f9;
+
+  /* TEXT COLORS */
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.8);
+  --text-muted: rgba(255, 255, 255, 0.6);
+  --text-dark: #111827;
+  --text-dark-secondary: #6b7280;
+
+  /* BORDERS & DIVIDERS */
+  --border-color: rgba(212, 175, 55, 0.2);
+  --border-accent: rgba(212, 175, 55, 0.3);
+  --border-light: rgba(255, 255, 255, 0.1);
+
+  /* COMPONENT-SPECIFIC */
+  --header-bg: linear-gradient(135deg, #071A2B 0%, #12395A 100%);
+  --header-color: #ffffff;
+  --footer-bg: linear-gradient(135deg, #0B2239 0%, #071A2B 100%);
+  --footer-color: #ffffff;
+  --button-bg: linear-gradient(135deg, #D4AF37 0%, #F1D77A 100%);
+  --button-text: #071A2B;
+  --button-hover-shadow: rgba(212, 175, 55, 0.5);
+
+  /* HERO GRADIENT */
+  --hero-gradient: linear-gradient(135deg, #071A2B 0%, #12395A 100%);
+  --hero-accent-glow: rgba(212, 175, 55, 0.4);
+
+  /* FAQ COLORS (Legacy) */
   --faq-bg: #EEF0F3;
   --faq-line: #D7DBE2;
   --faq-blue: #2F63E0;
   --faq-green: #178F52;
   --faq-ink: #141A24;
   --faq-muted: #636D7C;
+
+  /* FONTS */
   --font-site: var(--font-plus-jakarta-sans), 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: var(--font-site);
   --font-disp: var(--font-site);
   --font-body: var(--font-site);
 }
+
+/* HOME LOAN THEME (Cyan & Teal) */
+[data-theme="home-loan"] {
+  --primary-color: #0f172a;
+  --primary-light: #1e293b;
+  --primary-dark: #020617;
+
+  --accent-color: #06B6D4;
+  --accent-light: #67e8f9;
+  --accent-soft: #22d3ee;
+  --accent-hover: #0891b2;
+
+  --accent-secondary: #14B8A6;
+  --accent-tertiary: #06B6D4;
+
+  --header-bg: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  --button-bg: linear-gradient(135deg, #06B6D4 0%, #14B8A6 100%);
+  --footer-bg: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+  --hero-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  --hero-accent-glow: rgba(6, 182, 212, 0.4);
+  --button-hover-shadow: rgba(6, 182, 212, 0.5);
+}
+
+/* CAR LOAN THEME (Navy & Gold - Same as Default) */
+[data-theme="car-loan"] {
+  --primary-color: #071A2B;
+  --primary-light: #12395A;
+  --primary-dark: #0B2239;
+
+  --accent-color: #D4AF37;
+  --accent-light: #F1D77A;
+  --accent-soft: #E8C96A;
+  --accent-hover: #C9A227;
+
+  --accent-secondary: #14B8A6;
+  --accent-tertiary: #06B6D4;
+
+  --header-bg: linear-gradient(135deg, #071A2B 0%, #12395A 100%);
+  --button-bg: linear-gradient(135deg, #D4AF37 0%, #F1D77A 100%);
+  --footer-bg: linear-gradient(135deg, #0B2239 0%, #071A2B 100%);
+  --hero-gradient: linear-gradient(135deg, #071A2B 0%, #12395A 100%);
+  --hero-accent-glow: rgba(212, 175, 55, 0.4);
+  --button-hover-shadow: rgba(212, 175, 55, 0.5);
+}
+
+/* BUSINESS LOAN THEME (Emerald & Teal) */
+[data-theme="business-loan"] {
+  --primary-color: #020617;
+  --primary-light: #1e3a1f;
+  --primary-dark: #030712;
+
+  --accent-color: #34D399;
+  --accent-light: #6ee7b7;
+  --accent-soft: #a7f3d0;
+  --accent-hover: #059669;
+
+  --accent-secondary: #14B8A6;
+  --accent-tertiary: #06B6D4;
+
+  --header-bg: linear-gradient(135deg, #020617 0%, #1e3a1f 100%);
+  --button-bg: linear-gradient(135deg, #34D399 0%, #14B8A6 100%);
+  --footer-bg: linear-gradient(135deg, #030712 0%, #020617 100%);
+  --hero-gradient: linear-gradient(135deg, #020617 0%, #1e3a1f 100%);
+  --hero-accent-glow: rgba(52, 211, 153, 0.4);
+  --button-hover-shadow: rgba(52, 211, 153, 0.5);
+}
+
+/* GOLD LOAN THEME (Amber & Gold) */
+[data-theme="gold-loan"] {
+  --primary-color: #711f1f;
+  --primary-light: #92400e;
+  --primary-dark: #451a03;
+
+  --accent-color: #FBBF24;
+  --accent-light: #fcd34d;
+  --accent-soft: #fde68a;
+  --accent-hover: #d97706;
+
+  --accent-secondary: #14B8A6;
+  --accent-tertiary: #06B6D4;
+
+  --header-bg: linear-gradient(135deg, #711f1f 0%, #92400e 100%);
+  --button-bg: linear-gradient(135deg, #FBBF24 0%, #fde68a 100%);
+  --footer-bg: linear-gradient(135deg, #451a03 0%, #711f1f 100%);
+  --hero-gradient: linear-gradient(135deg, #711f1f 0%, #92400e 100%);
+  --hero-accent-glow: rgba(251, 191, 36, 0.4);
+  --button-hover-shadow: rgba(251, 191, 36, 0.5);
+  --button-text: #111827;
+}
+
+/* INSURANCE THEME (Navy & Cyan) */
+[data-theme="insurance"] {
+  --primary-color: #0c1829;
+  --primary-light: #1a2f4a;
+  --primary-dark: #051116;
+
+  --accent-color: #06B6D4;
+  --accent-light: #67e8f9;
+  --accent-soft: #a5f3fc;
+  --accent-hover: #0891b2;
+
+  --accent-secondary: #14B8A6;
+  --accent-tertiary: #0ea5e9;
+
+  --header-bg: linear-gradient(135deg, #0c1829 0%, #1a2f4a 100%);
+  --button-bg: linear-gradient(135deg, #06B6D4 0%, #0ea5e9 100%);
+  --footer-bg: linear-gradient(135deg, #051116 0%, #0c1829 100%);
+  --hero-gradient: linear-gradient(135deg, #0c1829 0%, #1a2f4a 100%);
+  --hero-accent-glow: rgba(6, 182, 212, 0.4);
+  --button-hover-shadow: rgba(6, 182, 212, 0.5);
+}
+
+/* RESALE THEME (Navy & Teal) */
+[data-theme="resale"] {
+  --primary-color: #071A2B;
+  --primary-light: #12395A;
+  --primary-dark: #0B2239;
+
+  --accent-color: #14B8A6;
+  --accent-light: #5eead4;
+  --accent-soft: #99f6e4;
+  --accent-hover: #0d9488;
+
+  --accent-secondary: #06B6D4;
+  --accent-tertiary: #14B8A6;
+
+  --header-bg: linear-gradient(135deg, #071A2B 0%, #12395A 100%);
+  --button-bg: linear-gradient(135deg, #14B8A6 0%, #06B6D4 100%);
+  --footer-bg: linear-gradient(135deg, #0B2239 0%, #071A2B 100%);
+  --hero-gradient: linear-gradient(135deg, #071A2B 0%, #12395A 100%);
+  --hero-accent-glow: rgba(20, 184, 166, 0.4);
+  --button-hover-shadow: rgba(20, 184, 166, 0.5);
+}
+
+/* ============================================
+   END THEME COLOR SYSTEM
+   ============================================ */
 
 body {
   font-family: var(--font-site);
@@ -319,7 +508,7 @@ body {
 
 /* Gradient Text */
 .gradient-text {
-  @apply bg-gradient-to-r from-navy to-dark-blue bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-navy to-navy-royal bg-clip-text text-transparent;
 }
 
 /* Accent Gradient */
@@ -368,15 +557,17 @@ body {
   @apply bg-blue-500 text-white;
 }
 
-/* Prevent horizontal overflow */
-html,
+/* Prevent horizontal overflow - but allow sticky header to work */
+html {
+  width: 100%;
+  max-width: 100%;
+}
+
 body {
-  overflow-x: hidden;
   width: 100%;
   max-width: 100%;
 }
 
 #__next {
   width: 100%;
-  overflow-x: hidden;
 }

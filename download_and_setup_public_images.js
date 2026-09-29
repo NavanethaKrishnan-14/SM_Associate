@@ -18,7 +18,6 @@ const copyMap = [
   { src: 'car_i20_blue_1788097649776.jpg', dest: ['vehicles/i20.jpg', 'vehicles/car-2.jpg', 'og-car-resale.jpg'] },
   { src: 'car_city_white_1788097672648.jpg', dest: ['vehicles/city.jpg', 'vehicles/car-3.jpg', 'og-sell-vehicle.jpg'] },
   { src: 'car_creta_grey_1788097694640.jpg', dest: ['vehicles/creta.jpg', 'og-vehicle-default.jpg', 'og-vehicles.jpg'] },
-  { src: 'bike_re_classic_1788097717793.jpg', dest: ['vehicles/classic350.jpg', 'vehicles/bike-1.jpg', 'og-bike-loan.jpg'] },
 ];
 
 copyMap.forEach(({ src, dest }) => {

@@ -4,6 +4,7 @@ import '@/styles/globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import { ThemeProvider } from '@/contexts/ThemeContext';
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -99,13 +100,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
-      <body className={`${plusJakartaSans.className} bg-white overflow-x-hidden`}>
-        <Header />
-        <main className="min-h-screen w-full overflow-x-hidden">
-          {children}
-        </main>
-        <Footer />
-        <WhatsAppButton />
+      <body className={`${plusJakartaSans.className} bg-white`}>
+        <ThemeProvider initialTheme="default">
+          <Header />
+          <main className="w-full">
+            {children}
+          </main>
+          <Footer />
+          <WhatsAppButton />
+        </ThemeProvider>
       </body>
     </html>
   );

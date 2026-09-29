@@ -15,7 +15,7 @@ export const COMPANY_INFO = {
 export const SERVICES = [
   { id: 'home-loan', name: 'Home Loan', description: 'Home Purchase, Construction, Renovation' },
   { id: 'car-loan', name: 'Car Loan', description: 'New & Used Car Finance' },
-  { id: 'bike-loan', name: 'Bike Loan', description: 'New & Used Bike Finance' },
+  { id: 'gold-loan', name: 'Gold Loan', description: 'Gold Resale & Loan Redemption' },
   { id: 'personal-loan', name: 'Personal Loan', description: 'Quick Personal Funds' },
   { id: 'business-loan', name: 'Business Loan', description: 'Expansion & Working Capital' },
   { id: 'two-wheeler-insurance', name: 'Two Wheeler Insurance', description: 'Comprehensive & Third-Party Protection' },
@@ -386,7 +386,7 @@ export const ROUTES = {
   LOANS: '/loans',
   HOME_LOAN: '/home-loan',
   CAR_LOAN: '/car-loan',
-  BIKE_LOAN: '/bike-loan',
+  GOLD_LOAN: '/gold-loan',
   TWO_WHEELER_INSURANCE: '/two-wheeler-insurance',
   PERSONAL_LOAN: '/personal-loan',
   BUSINESS_LOAN: '/business-loan',

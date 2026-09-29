@@ -192,16 +192,27 @@ function FlipCard({ partner }: { partner: typeof partners[0] }) {
 
 export default function Partners() {
   return (
-    <section id="partners" className="relative py-12">
+    <section id="partners" className="relative py-20 bg-navy-dark">
+      {/* Premium background accents */}
+      <div className="absolute inset-0 opacity-30 pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gold-primary rounded-full blur-3xl opacity-15" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gold-primary rounded-full blur-3xl opacity-10" />
+      </div>
+
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading and Description */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6">Our Partners</h2>
+        <div className="text-center mb-16 space-y-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-primary/10 border border-gold-primary/30">
+            <div className="w-2 h-2 bg-gold-primary rounded-full" />
+            <span className="text-gold-primary font-semibold text-sm tracking-wide">OUR TEAM</span>
+          </div>
+
+          <h2 className="text-5xl md:text-6xl font-black text-white mb-4">Our Partners</h2>
           <div className="max-w-2xl mx-auto">
-            <p className="text-gray-600 text-lg leading-relaxed mb-3">
+            <p className="text-white/80 text-lg leading-relaxed mb-3">
               Meet the dedicated team behind SM Associate. Our partners bring years of experience in finance, customer relations, and mobility solutions.
             </p>
-            <p className="text-gray-600 text-lg leading-relaxed">
+            <p className="text-white/80 text-lg leading-relaxed">
               Committed to delivering transparent, reliable, and customer-centric services to help you achieve your financial and mobility goals.
             </p>
           </div>

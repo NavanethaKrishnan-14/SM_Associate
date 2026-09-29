@@ -1,242 +1,266 @@
-import { ChevronRight, Shield, Zap, Award, CheckCircle2 } from 'lucide-react';
+'use client';
+
+import { ChevronRight, Phone, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 import { ROUTES } from '@/lib/constants';
-import AnimatedNumber from '@/components/AnimatedNumber';
-
-const trustIndicators = [
-  { icon: Shield, label: 'Customers', value: '500+' },
-  { icon: Zap, label: 'Vehicles', value: '100+' },
-  { icon: Award, label: 'Fast Process', value: '24-48h' },
-];
-
-const ledgerRows = [
-  { label: 'Home Loan', status: 'Approved' },
-  { label: 'Car Financing', status: '12-mo EMI' },
-  { label: 'Two-Wheeler Loan', status: 'Verified' },
-  { label: 'Pre-Owned Vehicle', status: 'Inspected' },
-  { label: 'Insurance', status: 'Protected' },
-];
-
-const routeStops = ['Apply', 'Verify', 'Approve', 'Drive away'];
 
 export default function HomeHero() {
   return (
-    <section className="relative min-h-[480px] h-auto bg-gradient-navy text-white overflow-hidden pt-4 pb-2">
-      <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-teal rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-cyan rounded-full blur-3xl" />
+    <section 
+      className="relative min-h-screen text-white overflow-hidden pt-8 pb-0"
+      style={{
+        background: 'var(--hero-gradient)',
+      }}
+    >
+      {/* Premium gradient overlays */}
+      <div className="absolute inset-0 opacity-40 pointer-events-none">
+        <div 
+          className="absolute top-0 left-1/4 w-96 h-96 rounded-full blur-3xl opacity-20"
+          style={{
+            backgroundColor: 'var(--accent-color)',
+          }}
+        />
+        <div 
+          className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full blur-3xl opacity-15"
+          style={{
+            backgroundColor: 'var(--accent-color)',
+          }}
+        />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch py-6 sm:py-8 lg:py-10">
-          <div className="animate-fade-up">
-            <div className="inline-block mb-6">
-              <span className="text-teal font-semibold text-lg">Welcome to SM Associate</span>
+      {/* Premium grid pattern background */}
+      <div className="absolute inset-0 opacity-5 pointer-events-none" style={{
+        backgroundImage: 'linear-gradient(var(--border-color) 1px, transparent 1px), linear-gradient(90deg, var(--border-color) 1px, transparent 1px)',
+        backgroundSize: '50px 50px',
+      }} />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-12 md:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[600px]">
+          {/* Left Content */}
+          <div className="space-y-8 animate-fade-up">
+            <div className="space-y-2">
+              <div 
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border mb-4"
+                style={{
+                  backgroundColor: 'var(--accent-soft)',
+                  borderColor: 'var(--border-accent)',
+                }}
+              >
+                <div 
+                  className="w-2 h-2 rounded-full animate-pulse"
+                  style={{
+                    backgroundColor: 'var(--accent-color)',
+                  }}
+                />
+                <span 
+                  className="font-semibold text-sm tracking-wide"
+                  style={{
+                    color: 'var(--accent-color)',
+                  }}
+                >
+                  WELCOME TO PREMIUM FINANCE
+                </span>
+              </div>
+              
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight text-white">
+                Your Trusted Partner for
+                <span 
+                  className="block bg-clip-text text-transparent"
+                  style={{
+                    backgroundImage: `linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%)`,
+                    backgroundClip: 'text',
+                  }}
+                >
+                  Finance & Mobility
+                </span>
+              </h1>
             </div>
 
-            <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-              Finance Made Simple.
-              <br />
-              <span className="bg-gradient-to-r from-teal to-cyan bg-clip-text text-transparent block mt-2 md:mt-4">
-                Dreams Made Achievable
-              </span>
-            </h1>
-
-            <div className="mb-6">
-              <p className="text-lg md:text-lg text-teal font-semibold mb-3">
-                Access home loans, car financing, two-wheeler loans, and premium pre-owned
-                vehicles through one trusted platform. Your journey to financial freedom starts
-                here.
-              </p>
-            </div>
-
-            <p className="text-lg md:text-lg text-gray-200 mb-8 max-w-lg leading-relaxed">
-              SM Associate is Tirunelveli&apos;s trusted finance and vehicle marketplace, helping
-              customers across Tamil Nadu access transparent loans, two-wheeler insurance, and
-              verified pre-owned vehicles — all under one roof. With 500+ customers served, 100+
-              vehicles listed, and a 24-48 hour fast-track loan process, we make financial
-              freedom and vehicle ownership simple, quick, and hassle-free.
+            <p className="text-lg md:text-xl max-w-xl leading-relaxed font-light" style={{ color: 'var(--text-secondary)' }}>
+              Access home loans, car financing, personal loans, gold resale, and premium pre-owned vehicles through one trusted platform. Fast approval in 24-48 hours with transparent rates and minimal paperwork.
             </p>
 
-            <p className="text-base md:text-lg text-gray-200 mb-8 max-w-lg leading-relaxed">
-              From home loans and car loans to personal and business financing, every product is
-              built around transparent rates, minimal paperwork, and a customer-first approach.
-              Explore our services, calculate your EMI instantly, or browse quality-checked
-              vehicles ready for sale.
-            </p>
+            {/* Trust Indicators */}
+            <div className="grid grid-cols-3 gap-4 py-4">
+              {[
+                { stat: '500+', label: 'Happy Customers' },
+                { stat: '100+', label: 'Vehicles Listed' },
+                { stat: '24-48h', label: 'Fast Approval' },
+              ].map((item, idx) => (
+                <div 
+                  key={idx}
+                  className="p-3 rounded-xl border bg-white/5 backdrop-blur-sm"
+                  style={{
+                    borderColor: 'var(--border-accent)',
+                  }}
+                >
+                  <p className="text-3xl font-black" style={{ color: 'var(--accent-color)' }}>{item.stat}</p>
+                  <p className="text-sm font-medium" style={{ color: 'var(--text-muted)' }}>{item.label}</p>
+                </div>
+              ))}
+            </div>
 
-            <div className="flex gap-4 flex-wrap mb-12">
-              <Link
-                href={ROUTES.LOANS}
-                className="px-8 py-4 bg-gradient-to-r from-teal to-cyan text-white font-semibold rounded-xl hover:shadow-2xl transition-all text-lg hover:scale-105 inline-block text-center"
-              >
-                Get Started Today
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <Link href={ROUTES.LOANS} className="group relative overflow-hidden">
+                <button 
+                  className="relative px-8 py-4 font-bold rounded-xl transition-all duration-300 flex items-center justify-center gap-2 w-full sm:w-auto transform hover:scale-105 hover:shadow-[0_0_30px_var(--button-hover-shadow)]"
+                  style={{
+                    background: 'var(--button-bg)',
+                    color: 'var(--button-text)',
+                  }}
+                >
+                  Get Started Today
+                  <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                </button>
               </Link>
-              <Link
-                href={ROUTES.LOANS}
-                className="px-8 py-4 border-2 border-teal text-teal font-semibold rounded-xl hover:bg-teal/10 transition-all flex items-center gap-2 text-lg"
-              >
-                Explore Services
-                <ChevronRight size={20} />
+              
+              <Link href={ROUTES.VEHICLES} className="group">
+                <button 
+                  className="px-8 py-4 border-2 font-bold rounded-xl hover:bg-[var(--accent-soft)] transition-all w-full sm:w-auto flex items-center justify-center gap-2"
+                  style={{
+                    borderColor: 'var(--accent-color)',
+                    color: 'var(--accent-color)',
+                  }}
+                >
+                  Explore Vehicles
+                  <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                </button>
               </Link>
             </div>
 
-            {/* Trust indicators — mobile/tablet only; on desktop these sit under the visual */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:hidden">
-              {trustIndicators.map((indicator, idx) => {
-                const Icon = indicator.icon;
-                return (
-                  <div
-                    key={idx}
-                    className="p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:border-teal/50 transition-colors animate-fade-up"
-                    style={{ animationDelay: `${idx * 100}ms` }}
-                  >
-                    <div className="flex items-center gap-3">
-                      <Icon size={24} className="text-teal flex-shrink-0" />
-                      <div>
-                        <p className="text-sm text-white/90 font-medium">{indicator.label}</p>
-                        <p className="font-semibold text-teal text-sm">
-                          <AnimatedNumber value={indicator.value} />
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
+            {/* Contact Quick Links */}
+            <div className="flex flex-wrap gap-3 pt-4">
+              <a
+                href="tel:+919790219874"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border text-white transition-all hover:bg-[var(--accent-soft)] hover:border-[var(--accent-color)]"
+                style={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                  borderColor: 'var(--border-accent)',
+                }}
+              >
+                <Phone size={18} style={{ color: 'var(--accent-color)' }} />
+                <span className="font-semibold">+91 9790219874</span>
+              </a>
+              <a
+                href="https://wa.me/919790219874"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border text-white transition-all hover:bg-[var(--accent-soft)] hover:border-[var(--accent-color)]"
+                style={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                  borderColor: 'var(--border-accent)',
+                }}
+              >
+                <MessageCircle size={18} style={{ color: 'var(--accent-color)' }} />
+                <span className="font-semibold">WhatsApp</span>
+              </a>
             </div>
           </div>
 
-          {/* ---------- RIGHT VISUAL: Loan & Vehicle Passbook + Journey strip ---------- */}
-          <div className="relative hidden lg:flex lg:flex-col lg:h-full animate-float-slow lg:pt-8 lg:pb-6">
-            <div className="relative flex-1 flex items-center justify-center">
-              <div className="relative w-full max-w-md lg:mt-4">
-                <div className="absolute -inset-12 bg-gradient-to-br from-teal/10 via-transparent to-cyan/10 rounded-3xl blur-3xl" />
-
-                {/* Passbook card */}
-                <div className="relative z-20 bg-[#F3ECDA] text-[#26210F] rounded-lg shadow-2xl pl-8 pr-6 py-6">
-                  {/* stitched stub edge */}
-                  <div
-                    className="absolute left-0 top-3 bottom-3 w-3 border-r border-dashed border-[#D9CFAF]"
+          {/* Right Visual - Premium Hero Image Placeholder */}
+          <div className="hidden lg:flex items-center justify-center relative h-[600px]">
+            <div 
+              className="absolute inset-0 rounded-3xl blur-2xl"
+              style={{
+                backgroundColor: 'var(--accent-light)',
+                opacity: 0.2,
+              }}
+            />
+            
+            {/* Premium card container */}
+            <div 
+              className="relative w-full max-w-md h-96 rounded-3xl overflow-hidden shadow-2xl border backdrop-blur-sm"
+              style={{
+                borderColor: 'var(--border-accent)',
+              }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent" />
+              
+              {/* Placeholder for premium image - replace with actual image */}
+              <div 
+                className="w-full h-full flex flex-col items-center justify-center space-y-4 p-8"
+                style={{
+                  background: `linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%)`,
+                }}
+              >
+                <div className="space-y-4 w-full">
+                  <div 
+                    className="h-32 rounded-2xl border flex items-center justify-center"
                     style={{
-                      backgroundImage:
-                        'repeating-linear-gradient(to bottom, #D9CFAF 0 2px, transparent 2px 9px)',
+                      backgroundColor: 'var(--accent-soft)',
+                      borderColor: 'var(--border-accent)',
                     }}
-                  />
-
-                  {/* ink stamp */}
-                  <div className="absolute -right-4 -top-5 z-10 animate-float-delayed">
-                    <div className="w-24 h-24 rounded-full border-2 border-teal text-teal flex flex-col items-center justify-center text-center -rotate-[14deg] bg-teal/5 font-mono">
-                      <span className="text-sm font-bold leading-none">
-                        <AnimatedNumber value="100%" />
-                      </span>
-                      <span className="text-[10px] font-semibold tracking-wide">VERIFIED</span>
-                      <span className="text-[10px] font-semibold tracking-wide">DOCS</span>
+                  >
+                    <div className="text-center">
+                      <p className="font-black text-3xl" style={{ color: 'var(--accent-color)' }}>PREMIUM</p>
+                      <p className="text-sm font-semibold" style={{ color: 'var(--text-muted)' }}>Finance Solutions</p>
                     </div>
                   </div>
-
-                  {/* header */}
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-[#0A1830] text-teal flex items-center justify-center font-bold text-sm flex-shrink-0">
-                      SM
-                    </div>
-                    <div>
-                      <p className="font-bold text-base leading-tight">SM Associate</p>
-                      <p className="text-[10px] font-mono tracking-widest uppercase text-[#7A7157]">
-                        Loan &amp; Vehicle Passbook
-                      </p>
-                    </div>
+                  
+                  <div className="space-y-3 pt-6">
+                    <div className="h-4 rounded-full w-full" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }} />
+                    <div className="h-4 rounded-full w-5/6" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }} />
+                    <div className="h-4 rounded-full w-4/6" style={{ backgroundColor: 'var(--accent-soft)' }} />
                   </div>
-
-                  <div className="border-t border-dashed border-[#D9CFAF] mb-2" />
-
-                  {/* ledger rows */}
-                  <div>
-                    {ledgerRows.map((row, idx) => (
-                      <div
+                  
+                  <div className="grid grid-cols-2 gap-3 pt-6">
+                    {[
+                      { title: 'Fast', desc: 'Quick Approval' },
+                      { title: 'Secure', desc: '100% Safe' },
+                    ].map((item, idx) => (
+                      <div 
                         key={idx}
-                        className="flex items-center justify-between py-2 text-sm border-b border-dotted border-[#D9CFAF] last:border-b-0"
+                        className="p-4 rounded-lg border"
+                        style={{
+                          backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                          borderColor: 'var(--border-accent)',
+                        }}
                       >
-                        <span className="font-medium text-[#2E2A17]">{row.label}</span>
-                        <span className="flex items-center gap-1 text-xs font-mono text-teal">
-                          <CheckCircle2 size={12} />
-                          {row.status}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* approved amount */}
-                  <div className="border-t border-dashed border-[#D9CFAF] mt-3 pt-3">
-                    <p className="text-2xl font-mono font-bold text-[#26210F]">
-                      <AnimatedNumber value="₹10L+" />
-                    </p>
-                    <p className="text-[10px] uppercase tracking-widest text-[#7A7157]">
-                      Approved instantly
-                    </p>
-                  </div>
-                </div>
-
-                {/* journey / route strip */}
-                <div className="relative z-20 mt-8 px-2">
-                  <div
-                    className="h-[2px] mb-3 mx-2"
-                    style={{
-                      backgroundImage:
-                        'repeating-linear-gradient(to right, rgba(255,255,255,0.35) 0 10px, transparent 10px 18px)',
-                    }}
-                  />
-                  <div className="flex justify-between text-center">
-                    {routeStops.map((stop, idx) => (
-                      <div key={stop} className="flex-1 flex flex-col items-center gap-2">
-                        <div
-                          className={`w-2 h-2 rounded-full ${idx === 0 ? 'bg-teal animate-pulse-soft' : 'bg-white/40'
-                            }`}
-                        />
-                        <span
-                          className={`text-[10px] font-mono uppercase tracking-wide ${idx === 0 ? 'text-teal font-semibold' : 'text-white/60'
-                            }`}
-                        >
-                          {stop}
-                        </span>
+                        <p className="font-bold" style={{ color: 'var(--accent-color)' }}>{item.title}</p>
+                        <p className="text-xs" style={{ color: 'var(--text-muted)' }}>{item.desc}</p>
                       </div>
                     ))}
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* <div className="grid grid-cols-3 gap-4 mt-3">
-              {trustIndicators.map((indicator, idx) => {
-                const Icon = indicator.icon;
-                return (
-                  <div
-                    key={idx}
-                    className="p-4 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:border-teal/50 transition-colors animate-fade-up"
-                    style={{ animationDelay: `${idx * 100}ms` }}
-                  >
-                    <div className="flex items-center gap-3">
-                      <Icon size={24} className="text-teal flex-shrink-0" />
-                      <div>
-                        <p className="text-sm text-white/90 font-medium">{indicator.label}</p>
-                        <p className="font-semibold text-teal text-sm">{indicator.value}</p>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div> */}
+              {/* Floating accent elements */}
+              <div 
+                className="absolute -top-10 -right-10 w-32 h-32 rounded-full blur-2xl opacity-10"
+                style={{
+                  backgroundColor: 'var(--accent-color)',
+                }}
+              />
+              <div 
+                className="absolute -bottom-10 -left-10 w-32 h-32 rounded-full blur-2xl opacity-10"
+                style={{
+                  backgroundColor: 'var(--accent-color)',
+                }}
+              />
+            </div>
           </div>
         </div>
       </div>
 
-      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 translate-x-2 animate-bounce-soft">
-        <div className="flex flex-col items-center gap-2">
-          <p className="text-sm text-white/70">Scroll to explore</p>
-          <div className="w-6 h-10 border-2 border-teal rounded-full flex justify-center">
-            <div className="w-1 h-2 bg-teal rounded-full mt-2 animate-scroll-indicator" />
-          </div>
+      {/* Animated scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 hidden md:flex flex-col items-center gap-2 animate-bounce-soft">
+        <p className="text-sm font-semibold" style={{ color: 'var(--accent-light)' }}>Scroll to explore</p>
+        <div 
+          className="w-6 h-10 rounded-full flex justify-center p-2"
+          style={{
+            borderWidth: '2px',
+            borderColor: 'var(--accent-light)',
+          }}
+        >
+          <div 
+            className="w-1 h-2 rounded-full animate-pulse"
+            style={{
+              backgroundColor: 'var(--accent-color)',
+            }}
+          />
         </div>
-      </div> */}
+      </div>
     </section>
   );
 }

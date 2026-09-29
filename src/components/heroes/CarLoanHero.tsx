@@ -14,12 +14,33 @@ export default function CarLoanHero() {
   ];
 
   return (
-    <section className="relative min-h-[480px] h-auto bg-gradient-to-b from-gray-900 via-blue-900 to-slate-950 text-white overflow-hidden pt-4 pb-2">
-      {/* Dynamic background */}
-      <div className="absolute inset-0 opacity-15">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-cyan-400 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 -left-20 w-80 h-80 bg-blue-500/30 rounded-full blur-3xl"></div>
+    <section 
+      className="relative min-h-[480px] h-auto text-white overflow-hidden pt-4 pb-2"
+      style={{
+        background: 'var(--hero-gradient)',
+      }}
+    >
+      {/* Premium gradient overlays */}
+      <div className="absolute inset-0 opacity-40 pointer-events-none">
+        <div 
+          className="absolute top-0 left-1/4 w-96 h-96 rounded-full blur-3xl opacity-20"
+          style={{
+            backgroundColor: 'var(--accent-color)',
+          }}
+        />
+        <div 
+          className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full blur-3xl opacity-15"
+          style={{
+            backgroundColor: 'var(--accent-color)',
+          }}
+        />
       </div>
+
+      {/* Premium grid pattern background */}
+      <div className="absolute inset-0 opacity-5 pointer-events-none" style={{
+        backgroundImage: 'linear-gradient(var(--border-color) 1px, transparent 1px), linear-gradient(90deg, var(--border-color) 1px, transparent 1px)',
+        backgroundSize: '50px 50px',
+      }} />
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-6 sm:py-8">
@@ -33,16 +54,26 @@ export default function CarLoanHero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-cyan-400/20 rounded-full border border-cyan-400/40"
+              className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full border"
+              style={{
+                backgroundColor: 'var(--accent-soft)',
+                borderColor: 'var(--border-accent)',
+              }}
             >
-              <Car size={18} className="text-cyan-400" />
-              <span className="text-cyan-400 font-semibold text-sm">Premium Car Financing</span>
+              <Car size={18} style={{ color: 'var(--accent-color)' }} />
+              <span className="font-semibold text-sm" style={{ color: 'var(--accent-color)' }}>Premium Car Financing</span>
             </motion.div>
 
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white">
               Get Behind
               <br />
-              <span className="bg-gradient-to-r from-cyan-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
+              <span 
+                className="bg-clip-text text-transparent"
+                style={{
+                  backgroundImage: `linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%)`,
+                  backgroundClip: 'text',
+                }}
+              >
                 The Wheel
               </span>
             </h1>
@@ -53,10 +84,10 @@ export default function CarLoanHero() {
               transition={{ delay: 0.2 }}
               className="mb-6"
             >
-              <p className="text-lg md:text-xl text-cyan-300 font-semibold mb-3">Drive Your Dream Car Today.</p>
+              <p className="text-lg md:text-xl font-semibold mb-3" style={{ color: 'var(--accent-light)' }}>Drive Your Dream Car Today.</p>
             </motion.div>
 
-            <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed max-w-lg">
+            <p className="text-lg md:text-xl mb-8 leading-relaxed max-w-lg" style={{ color: 'var(--text-secondary)' }}>
               Finance your dream car with competitive rates, flexible tenure, and instant approval. Whether new or pre-owned, we make car ownership affordable and accessible.
             </p>
 
@@ -71,11 +102,15 @@ export default function CarLoanHero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 + idx * 0.1 }}
                     whileHover={{ y: -5 }}
-                    className="p-4 bg-gradient-to-br from-cyan-400/20 to-transparent border border-cyan-400/30 rounded-xl hover:border-cyan-400/60 transition-all"
+                    className="p-4 rounded-xl transition-all border hover:border-[var(--accent-color)]"
+                    style={{
+                      backgroundColor: 'var(--accent-soft)',
+                      borderColor: 'var(--border-accent)',
+                    }}
                   >
-                    <Icon size={24} className="text-cyan-400 mb-3" />
-                    <p className="text-sm text-slate-300 font-medium mb-1">{item.label}</p>
-                    <p className="font-semibold text-white text-sm">{item.value}</p>
+                    <Icon size={24} style={{ color: 'var(--accent-color)', marginBottom: '12px' }} />
+                    <p className="text-sm font-medium mb-1" style={{ color: 'var(--text-muted)' }}>{item.label}</p>
+                    <p className="font-semibold text-sm text-white">{item.value}</p>
                   </motion.div>
                 );
               })}
@@ -86,18 +121,28 @@ export default function CarLoanHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="mb-10 p-6 bg-white/5 backdrop-blur border border-white/10 rounded-xl"
+              className="mb-10 p-6 backdrop-blur border rounded-xl"
+              style={{
+                backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                borderColor: 'var(--border-accent)',
+              }}
             >
               <div className="flex justify-between items-start gap-4">
                 <div>
-                  <p className="text-slate-300 text-sm font-medium mb-1">Starting Interest Rate</p>
-                  <div className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent">
+                  <p className="text-sm font-medium mb-1" style={{ color: 'var(--text-muted)' }}>Starting Interest Rate</p>
+                  <div 
+                    className="text-4xl font-bold bg-clip-text text-transparent"
+                    style={{
+                      backgroundImage: `linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%)`,
+                      backgroundClip: 'text',
+                    }}
+                  >
                     <AnimatedNumber value="7.2%" decimals={1} />
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="text-slate-300 text-sm mb-1">No prepayment penalty</p>
-                  <p className="text-teal-400 font-semibold">EMI-friendly terms</p>
+                  <p className="text-sm mb-1" style={{ color: 'var(--text-muted)' }}>No prepayment penalty</p>
+                  <p className="font-semibold" style={{ color: 'var(--accent-color)' }}>EMI-friendly terms</p>
                 </div>
               </div>
             </motion.div>
@@ -111,13 +156,21 @@ export default function CarLoanHero() {
             >
               <Link
                 href={ROUTES.CONTACT}
-                className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-xl hover:shadow-2xl transition-all flex items-center gap-2 text-lg hover:scale-105"
+                className="px-8 py-4 font-semibold rounded-xl transition-all flex items-center gap-2 text-lg hover:scale-105 hover:shadow-[0_0_30px_var(--button-hover-shadow)]"
+                style={{
+                  background: 'var(--button-bg)',
+                  color: 'var(--button-text)',
+                }}
               >
                 Apply for Car Loan
               </Link>
               <Link
                 href={ROUTES.EMI_CALCULATOR}
-                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400/10 transition-all flex items-center gap-2 text-lg"
+                className="px-8 py-4 border-2 font-semibold rounded-xl transition-all flex items-center gap-2 text-lg hover:bg-[var(--accent-soft)]"
+                style={{
+                  borderColor: 'var(--accent-color)',
+                  color: 'var(--accent-color)',
+                }}
               >
                 <span>Check Eligibility</span>
                 <ChevronRight size={20} />
@@ -140,7 +193,13 @@ export default function CarLoanHero() {
               className="relative w-full aspect-square"
             >
               {/* Main card with car visualization */}
-              <div className="w-full h-full bg-gradient-to-br from-cyan-400/15 to-blue-900/30 rounded-3xl border-2 border-cyan-400/40 p-12 flex flex-col justify-center items-center relative overflow-hidden">
+              <div 
+                className="w-full h-full rounded-3xl p-12 flex flex-col justify-center items-center relative overflow-hidden border-2"
+                style={{
+                  background: `linear-gradient(to bottom right, var(--accent-soft), rgba(0, 0, 0, 0.3))`,
+                  borderColor: 'var(--border-accent)',
+                }}
+              >
                 {/* Animated background grid */}
                 <div className="absolute inset-0 opacity-10">
                   <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -149,7 +208,7 @@ export default function CarLoanHero() {
                         <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" strokeWidth="0.5" />
                       </pattern>
                     </defs>
-                    <rect width="100%" height="100%" fill="url(#grid)" stroke="currentColor" className="text-cyan-400" />
+                    <rect width="100%" height="100%" fill="url(#grid)" stroke="currentColor" style={{ color: 'var(--accent-color)' }} />
                   </svg>
                 </div>
 
@@ -159,20 +218,32 @@ export default function CarLoanHero() {
                   transition={{ duration: 6, repeat: Infinity }}
                   className="relative z-10 mb-8"
                 >
-                  <Car size={120} className="text-cyan-400" />
+                  <Car size={120} style={{ color: 'var(--accent-color)' }} />
                 </motion.div>
 
                 {/* Stats */}
                 <div className="text-center">
-                  <h3 className="text-2xl font-bold mb-4">Premium Car Financing</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-white">Premium Car Financing</h3>
                   <div className="grid grid-cols-2 gap-4 w-full">
-                    <div className="p-3 bg-white/10 rounded-lg border border-white/20">
-                      <p className="text-cyan-400 font-bold"><AnimatedNumber value="7.2%" decimals={1} /></p>
-                      <p className="text-xs text-slate-200 font-medium">Interest Rate</p>
+                    <div 
+                      className="p-3 rounded-lg border"
+                      style={{
+                        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                        borderColor: 'var(--border-accent)',
+                      }}
+                    >
+                      <p className="font-bold" style={{ color: 'var(--accent-color)' }}><AnimatedNumber value="7.2%" decimals={1} /></p>
+                      <p className="text-xs font-medium" style={{ color: 'var(--text-muted)' }}>Interest Rate</p>
                     </div>
-                    <div className="p-3 bg-white/10 rounded-lg border border-white/20">
-                      <p className="text-cyan-400 font-bold"><AnimatedNumber value="7" suffix=" Years" /></p>
-                      <p className="text-xs text-slate-200 font-medium">Max Tenure</p>
+                    <div 
+                      className="p-3 rounded-lg border"
+                      style={{
+                        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                        borderColor: 'var(--border-accent)',
+                      }}
+                    >
+                      <p className="font-bold" style={{ color: 'var(--accent-color)' }}><AnimatedNumber value="7" suffix=" Years" /></p>
+                      <p className="text-xs font-medium" style={{ color: 'var(--text-muted)' }}>Max Tenure</p>
                     </div>
                   </div>
                 </div>
@@ -182,7 +253,11 @@ export default function CarLoanHero() {
               <motion.div
                 animate={{ rotate: [0, 360] }}
                 transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-                className="absolute -bottom-16 -right-16 w-60 h-60 border-2 border-cyan-400/20 rounded-full pointer-events-none"
+                className="absolute -bottom-16 -right-16 w-60 h-60 rounded-full pointer-events-none"
+                style={{
+                  borderWidth: '2px',
+                  borderColor: 'var(--border-accent)',
+                }}
               ></motion.div>
             </motion.div>
           </motion.div>

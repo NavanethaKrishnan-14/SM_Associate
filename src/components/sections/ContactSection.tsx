@@ -25,9 +25,9 @@ export default function ContactSection(props: VaultContactSectionProps) {
       reasonOptions={[
         { value: 'home_loan', label: 'Home Loan' },
         { value: 'car_loan', label: 'Car Loan' },
+        { value: 'gold_loan', label: 'Gold Loan' },
         { value: 'personal_loan', label: 'Personal Loan' },
         { value: 'business_loan', label: 'Business Loan' },
-        { value: 'bike_loan', label: 'Bike Loan' },
         { value: 'insurance', label: 'Insurance' },
         { value: 'vehicle', label: 'Vehicle Resale / Buy' },
         { value: 'other', label: 'Other' },

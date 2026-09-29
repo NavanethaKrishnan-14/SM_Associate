@@ -1,4 +1,4 @@
-export interface FAQItem {
+﻿export interface FAQItem {
   question: string;
   answer: string;
 }
@@ -9,7 +9,6 @@ export type FAQCategory =
   | 'loans'
   | 'homeLoan'
   | 'carLoan'
-  | 'bikeLoan'
   | 'personalLoan'
   | 'businessLoan'
   | 'twoWheelerInsurance'
@@ -41,31 +40,31 @@ export const FAQ_DATA: Record<FAQCategory, {
       },
       {
         question: 'Is my financial data actually secure?',
-        answer: 'Yes — bank-grade AES-256 encryption at rest, TLS in transit, and read-only access for the AI assistant. No third party ever sees raw account numbers; SM Associate itself can\'t either.',
+        answer: 'Yes â€” bank-grade AES-256 encryption at rest, TLS in transit, and read-only access for the AI assistant. No third party ever sees raw account numbers; SM Associate itself can\'t either.',
       },
       {
         question: 'Can I track my investments in real time?',
-        answer: 'Yes — mutual funds, SIPs, and linked brokerage holdings refresh live inside your financial profile, alongside credit score and loan balances, in one view.',
+        answer: 'Yes â€” mutual funds, SIPs, and linked brokerage holdings refresh live inside your financial profile, alongside credit score and loan balances, in one view.',
       },
       {
         question: 'What documents do I need for a loan?',
-        answer: 'PAN and Aadhaar for identity, three months of bank statements, latest salary slips or ITR for the self-employed, and property papers if it\'s a secured loan. Upload once — we reuse it across every application.',
+        answer: 'PAN and Aadhaar for identity, three months of bank statements, latest salary slips or ITR for the self-employed, and property papers if it\'s a secured loan. Upload once â€” we reuse it across every application.',
       },
       {
         question: 'What credit score do I need to qualify?',
-        answer: 'Most partner lenders look for 700+, but SM Finance AI matches you against lenders who work with lower scores too — you\'ll see your realistic options, not just the best-case ones.',
+        answer: 'Most partner lenders look for 700+, but SM Finance AI matches you against lenders who work with lower scores too â€” you\'ll see your realistic options, not just the best-case ones.',
       },
       {
         question: 'Can I list a car or property to sell?',
-        answer: 'Yes — list your car or property in minutes with verified valuation guidance, then track buyer interest from the same dashboard you use for loans and investments.',
+        answer: 'Yes â€” list your car or property in minutes with verified valuation guidance, then track buyer interest from the same dashboard you use for loans and investments.',
       },
       {
         question: 'How fast can I get loan approval?',
-        answer: 'In-principle approval in as little as 4 minutes for pre-verified profiles. Full disbursal timing depends on the lender and document checks, but most personal loans clear within 24–48 hours.',
+        answer: 'In-principle approval in as little as 4 minutes for pre-verified profiles. Full disbursal timing depends on the lender and document checks, but most personal loans clear within 24â€“48 hours.',
       },
       {
         question: 'Can I switch between loan offers before signing?',
-        answer: 'Yes — compare offers side by side and switch lenders anytime before you e-sign. Nothing is locked in until you actually accept a specific offer.',
+        answer: 'Yes â€” compare offers side by side and switch lenders anytime before you e-sign. Nothing is locked in until you actually accept a specific offer.',
       },
     ],
   },
@@ -115,7 +114,7 @@ export const FAQ_DATA: Record<FAQCategory, {
       },
       {
         question: 'Can I apply for a loan if I have an existing EMI running?',
-        answer: 'Yes, as long as your Total Fixed Obligation to Income Ratio (FOIR) is generally below 50–60%. We can also structure a debt consolidation loan to lower your monthly outflow.',
+        answer: 'Yes, as long as your Total Fixed Obligation to Income Ratio (FOIR) is generally below 50â€“60%. We can also structure a debt consolidation loan to lower your monthly outflow.',
       },
       {
         question: 'What is the minimum credit score required to get approved?',
@@ -131,7 +130,7 @@ export const FAQ_DATA: Record<FAQCategory, {
       },
       {
         question: 'How quickly is the loan disbursed into my bank account?',
-        answer: 'Instant personal loans disburse in 4 to 24 hours. Vehicle and business loans typically take 24–48 hours, while secured home loans disburse within 3–5 working days post property legal vetting.',
+        answer: 'Instant personal loans disburse in 4 to 24 hours. Vehicle and business loans typically take 24â€“48 hours, while secured home loans disburse within 3â€“5 working days post property legal vetting.',
       },
       {
         question: 'What happens if my loan application gets rejected by one bank?',
@@ -154,11 +153,11 @@ export const FAQ_DATA: Record<FAQCategory, {
       },
       {
         question: 'Can I avail tax benefits on my home loan?',
-        answer: 'Yes! You can claim up to ₹1.5 Lakhs on principal repayment under Section 80C and up to ₹2 Lakhs on interest paid under Section 24(b) per financial year.',
+        answer: 'Yes! You can claim up to â‚¹1.5 Lakhs on principal repayment under Section 80C and up to â‚¹2 Lakhs on interest paid under Section 24(b) per financial year.',
       },
       {
         question: 'What property documents are required for home loans?',
-        answer: 'Title Deed/Patta, Parent Documents for 30 years, Approved Building Plan/DTCP Approval, Encumbrance Certificate (EC) for 13–30 years, and latest Property Tax receipts.',
+        answer: 'Title Deed/Patta, Parent Documents for 30 years, Approved Building Plan/DTCP Approval, Encumbrance Certificate (EC) for 13â€“30 years, and latest Property Tax receipts.',
       },
       {
         question: 'How does a Home Loan Balance Transfer with Top-Up work?',
@@ -166,11 +165,11 @@ export const FAQ_DATA: Record<FAQCategory, {
       },
       {
         question: 'Can self-employed individuals get a home loan in Tirunelveli?',
-        answer: 'Yes! Self-employed business owners, doctors, and contractors can qualify with 2–3 years of ITR returns, computation of income, GST returns, and audited financial statements.',
+        answer: 'Yes! Self-employed business owners, doctors, and contractors can qualify with 2â€“3 years of ITR returns, computation of income, GST returns, and audited financial statements.',
       },
       {
         question: 'What percentage of the property value can I borrow (LTV)?',
-        answer: 'Banks typically fund up to 80–90% of the agreement value for loans up to ₹30 Lakhs, and up to 75–80% for loan amounts exceeding ₹30 Lakhs.',
+        answer: 'Banks typically fund up to 80â€“90% of the agreement value for loans up to â‚¹30 Lakhs, and up to 75â€“80% for loan amounts exceeding â‚¹30 Lakhs.',
       },
       {
         question: 'Do you help with property valuation and legal scrutiny?',
@@ -193,7 +192,7 @@ export const FAQ_DATA: Record<FAQCategory, {
       },
       {
         question: 'What is the minimum monthly salary required?',
-        answer: 'The minimum monthly take-home salary is ₹15,000 for salaried applicants in tier-2/3 cities like Tirunelveli, and ₹20,000 for metro employees.',
+        answer: 'The minimum monthly take-home salary is â‚¹15,000 for salaried applicants in tier-2/3 cities like Tirunelveli, and â‚¹20,000 for metro employees.',
       },
       {
         question: 'What can I use the personal loan funds for?',
@@ -205,11 +204,11 @@ export const FAQ_DATA: Record<FAQCategory, {
       },
       {
         question: 'Can I get a personal loan if I am self-employed or freelance?',
-        answer: 'Yes, self-employed professionals and business owners can qualify by providing 1–2 years of ITR filings, 6 months of active bank statements, and business registration proof.',
+        answer: 'Yes, self-employed professionals and business owners can qualify by providing 1â€“2 years of ITR filings, 6 months of active bank statements, and business registration proof.',
       },
       {
         question: 'Are there any hidden fees or pre-closure penalties?',
-        answer: 'All processing charges (typically 1–2%) and stamp duties are explicitly listed in your digital sanction letter. Many lenders allow zero foreclosure penalties after 6–12 EMIs.',
+        answer: 'All processing charges (typically 1â€“2%) and stamp duties are explicitly listed in your digital sanction letter. Many lenders allow zero foreclosure penalties after 6â€“12 EMIs.',
       },
       {
         question: 'How do I check my maximum eligible loan amount?',
@@ -224,11 +223,11 @@ export const FAQ_DATA: Record<FAQCategory, {
     items: [
       {
         question: 'What is the maximum financing percentage available for cars?',
-        answer: 'We offer up to 90%–100% on-road financing for brand new cars, and up to 80%–85% of the certified market valuation for pre-owned cars.',
+        answer: 'We offer up to 90%â€“100% on-road financing for brand new cars, and up to 80%â€“85% of the certified market valuation for pre-owned cars.',
       },
       {
         question: 'What is the difference in interest rates for new vs used cars?',
-        answer: 'New car loans generally start from 7.5%–8.5% p.a., while pre-owned car financing starts from 9.5%–11.5% p.a. depending on vehicle age, make, and borrower credit profile.',
+        answer: 'New car loans generally start from 7.5%â€“8.5% p.a., while pre-owned car financing starts from 9.5%â€“11.5% p.a. depending on vehicle age, make, and borrower credit profile.',
       },
       {
         question: 'What is the maximum tenure for a car loan?',
@@ -255,54 +254,13 @@ export const FAQ_DATA: Record<FAQCategory, {
         answer: 'Yes, most partner banks allow partial prepayment or complete foreclosure after 6 to 12 months with minimal nominal charges.',
       },
     ],
-  },
-
-  bikeLoan: {
-    title: 'Frequently Asked Questions',
-    subtitle: 'Ride your dream scooter, commuter, or sports bike with low down payment and same-day delivery.',
-    items: [
-      {
-        question: 'How low can my down payment be for a bike loan?',
-        answer: 'We offer special low-down-payment schemes starting from just 10%–15% (and up to 95% on-road funding on select models for eligible applicants).',
-      },
-      {
-        question: 'How fast can a two-wheeler loan get approved in Tirunelveli?',
-        answer: 'With instant digital KYC and bank statement verification, in-principle approval takes under 15 minutes, allowing you to take delivery the very same day.',
-      },
-      {
-        question: 'Can college students or first-time jobbers get a bike loan?',
-        answer: 'Yes! Students with a working co-applicant (parent or guardian) and first-time salaried employees with at least 3 months of pay credits are readily eligible.',
-      },
-      {
-        question: 'What is the typical repayment tenure for two-wheelers?',
-        answer: 'You can choose convenient repayment options ranging from 12 months up to 36 or 48 months to keep your monthly installment affordable.',
-      },
-      {
-        question: 'Do you finance pre-owned / second-hand two-wheelers?',
-        answer: 'Yes, we provide used two-wheeler financing for verified motorcycles and scooters up to 7–8 years of age with quick inspection and fair interest rates.',
-      },
-      {
-        question: 'Is insurance included in the bike financing package?',
-        answer: 'Yes, mandatory 5-year third-party and 1-year comprehensive insurance, road tax, and registration can all be bundled into the financed amount.',
-      },
-      {
-        question: 'What minimum documents are needed for approval?',
-        answer: 'Simply provide your PAN Card, Aadhaar Card, proof of current residence in Tamil Nadu, and 3 months bank statement.',
-      },
-      {
-        question: 'How do I pay my monthly bike EMIs?',
-        answer: 'EMIs are automated through NACH / e-Mandate auto-debit directly from your salary or savings account on your designated date each month.',
-      },
-    ],
-  },
-
-  businessLoan: {
+  }, businessLoan: {
     title: 'Frequently Asked Questions',
     subtitle: 'Collateral-free working capital, equipment finance, and expansion loans for Tirunelveli businesses.',
     items: [
       {
         question: 'Can I get a business loan without pledging property (unsecured)?',
-        answer: 'Yes! We facilitate collateral-free MSME business loans up to ₹50 Lakhs based on your annual business turnover, banking cash flows, and GST filings.',
+        answer: 'Yes! We facilitate collateral-free MSME business loans up to â‚¹50 Lakhs based on your annual business turnover, banking cash flows, and GST filings.',
       },
       {
         question: 'What is the minimum vintage/history required for business financing?',
@@ -361,7 +319,7 @@ export const FAQ_DATA: Record<FAQCategory, {
       },
       {
         question: 'What is Personal Accident (PA) cover and is it mandatory?',
-        answer: 'PA cover provides ₹15 Lakhs financial protection for the owner-driver in case of accidental death or permanent disability, and is legally mandatory unless you already hold an active standalone PA policy.',
+        answer: 'PA cover provides â‚¹15 Lakhs financial protection for the owner-driver in case of accidental death or permanent disability, and is legally mandatory unless you already hold an active standalone PA policy.',
       },
       {
         question: 'What steps should I take if an accident occurs?',
@@ -380,7 +338,7 @@ export const FAQ_DATA: Record<FAQCategory, {
     items: [
       {
         question: 'What formula is used to calculate loan EMI?',
-        answer: 'EMI is calculated using: E = [P × r × (1 + r)^n] / [(1 + r)^n - 1], where P is Principal, r is Monthly Interest Rate (annual rate / 12 / 100), and n is Total Months.',
+        answer: 'EMI is calculated using: E = [P Ã— r Ã— (1 + r)^n] / [(1 + r)^n - 1], where P is Principal, r is Monthly Interest Rate (annual rate / 12 / 100), and n is Total Months.',
       },
       {
         question: 'What is the difference between Flat Rate and Reducing Balance Interest?',
@@ -396,7 +354,7 @@ export const FAQ_DATA: Record<FAQCategory, {
       },
       {
         question: 'Does the calculator include bank processing fees and insurance?',
-        answer: 'The EMI tool computes the pure monthly installment. Bank processing fees (typically 0.5%–2%) and loan protection insurance are one-time or amortized additions itemized during final sanction.',
+        answer: 'The EMI tool computes the pure monthly installment. Bank processing fees (typically 0.5%â€“2%) and loan protection insurance are one-time or amortized additions itemized during final sanction.',
       },
       {
         question: 'How does choosing a longer tenure affect my total interest paid?',
@@ -731,3 +689,5 @@ export const FAQ_DATA: Record<FAQCategory, {
     ],
   },
 };
+
+

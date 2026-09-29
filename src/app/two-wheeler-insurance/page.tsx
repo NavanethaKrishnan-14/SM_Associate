@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://smassociate.com/og-bike-loan.jpg',
+        url: 'https://smassociate.com/og-business-loan.jpg',
         width: 1200,
         height: 630,
         alt: 'Two Wheeler Insurance Online - SM Associate',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Two Wheeler Insurance Online | SM Associate',
     description: 'Complete bike insurance protection with fast digital policies and cashless claims',
-    images: ['https://smassociate.com/og-bike-loan.jpg'],
+    images: ['https://smassociate.com/og-business-loan.jpg'],
   },
 };
 

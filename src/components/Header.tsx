@@ -1,132 +1,160 @@
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, ChevronDown, Home, Car, Bike, User, Briefcase, Shield } from 'lucide-react';
+import { Menu, X, ChevronDown, Home, Car, Coins, User, Briefcase, Shield, Phone, MessageCircle } from 'lucide-react';
 import { ROUTES } from '@/lib/constants';
-import { getPageTheme } from '@/lib/themeSystem';
+import { useTheme } from '@/contexts/ThemeContext';
+import { getThemeForPath } from '@/config/pageThemes';
 
 export default function Header() {
-  const pathname = usePathname();
-  const theme = getPageTheme(pathname);
-
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
-  const [isMounted, setIsMounted] = useState(false);
+  const pathname = usePathname();
+  const { setTheme } = useTheme();
 
+  // Auto-set theme based on current path
   useEffect(() => {
-    // Ensure hydration matches by setting isMounted on client
-    setIsMounted(true);
-  }, []);
-
-  useEffect(() => {
-    // Only run scroll listener after client mount to prevent hydration mismatch
-    if (!isMounted) return;
-
-    let debounceTimer: NodeJS.Timeout;
-
-    const handleScroll = () => {
-      clearTimeout(debounceTimer);
-      debounceTimer = setTimeout(() => {
-        setIsScrolled(window.scrollY > 50);
-      }, 50);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      clearTimeout(debounceTimer);
-    };
-  }, [isMounted]);
+    const path = pathname === '/' ? '/' : pathname.split('/')[1] ? `/${pathname.split('/')[1]}` : '/';
+    const theme = getThemeForPath(path);
+    setTheme(theme);
+  }, [pathname, setTheme]);
 
   const menuItems = useMemo(() => [
     { label: 'Home', href: ROUTES.HOME },
     {
-      label: 'Loans',
+      label: 'Services',
       href: ROUTES.LOANS,
       submenu: [
         { label: 'Home Loan', href: ROUTES.HOME_LOAN, icon: Home },
         { label: 'Car Loan', href: ROUTES.CAR_LOAN, icon: Car },
-        { label: 'Bike Loan', href: ROUTES.BIKE_LOAN, icon: Bike },
+        { label: 'Gold Loan', href: ROUTES.GOLD_LOAN, icon: Coins },
         { label: 'Personal Loan', href: ROUTES.PERSONAL_LOAN, icon: User },
         { label: 'Business Loan', href: ROUTES.BUSINESS_LOAN, icon: Briefcase },
         { label: 'Two Wheeler Insurance', href: ROUTES.TWO_WHEELER_INSURANCE, icon: Shield },
       ],
     },
-    { label: 'Buy Vehicles', href: ROUTES.VEHICLES },
+    { label: 'Vehicles', href: ROUTES.VEHICLES },
     { label: 'Sell Vehicle', href: ROUTES.CAR_RESALE },
-    { label: 'EMI Calculator', href: ROUTES.EMI_CALCULATOR },
-    { label: 'About Us', href: ROUTES.ABOUT },
+    { label: 'About', href: ROUTES.ABOUT },
     { label: 'Contact', href: ROUTES.CONTACT },
   ], []);
 
   return (
     <header
-      style={{ background: theme.headerBackground }}
-      className={`sticky top-0 z-[9999] transition-all duration-300 w-full overflow-visible ${isScrolled ? theme.headerBgScrolled : theme.headerBg
-        }`}
+      className="sticky top-0 z-[9999] transition-all duration-300 w-full overflow-visible relative"
+      style={{
+        background: 'var(--header-bg)',
+        color: 'var(--header-color)',
+      }}
     >
-      <div className="max-w-7xl mx-auto px-4 w-full overflow-visible">
+      {/* Premium gradient overlays - matching Hero section */}
+      <div className="absolute inset-0 opacity-40 pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full blur-3xl opacity-20" style={{
+          backgroundColor: 'var(--accent-color)',
+        }} />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full blur-3xl opacity-15" style={{
+          backgroundColor: 'var(--accent-color)',
+        }} />
+      </div>
+
+      {/* Premium grid pattern background */}
+      <div className="absolute inset-0 opacity-5 pointer-events-none" style={{
+        backgroundImage: `linear-gradient(rgba(212,175,55,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(212,175,55,.1) 1px, transparent 1px)`,
+        backgroundSize: '50px 50px',
+      }} />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full overflow-visible relative z-10">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href={ROUTES.HOME} className="flex items-center gap-2 flex-shrink-0 min-w-0">
-            <div className={`w-10 h-10 ${theme.logoBadgeBg} rounded-xl flex items-center justify-center shadow-md flex-shrink-0`}>
-              <span className={`${theme.logoBadgeText} font-bold text-lg`}>SM</span>
+          <Link href={ROUTES.HOME} className="flex items-center gap-3 flex-shrink-0 min-w-0">
+            <div 
+              className="w-11 h-11 rounded-lg flex items-center justify-center shadow-lg flex-shrink-0 font-black text-lg"
+              style={{
+                background: 'linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%)',
+                color: 'var(--primary-color)',
+              }}
+            >
+              SM
             </div>
             <div className="hidden sm:block min-w-0">
-              <h1 className={`font-bold text-lg transition-colors ${theme.headerText}`}>
+              <h1 className="font-black text-lg transition-colors" style={{ color: 'var(--header-color)' }}>
                 SM ASSOCIATE
               </h1>
-              <p className="text-xs text-slate-300 font-medium opacity-90">
-                Finance &amp; Mobility
+              <p className="text-xs font-semibold opacity-90 tracking-wide" style={{ color: 'var(--accent-light)' }}>
+                FINANCE & MOBILITY
               </p>
             </div>
           </Link>
 
-          <div className="lg:hidden flex flex-col items-start justify-center min-w-0 flex-1 px-1.5 leading-none">
-            <span className={`font-bold text-[13px] leading-tight truncate ${theme.headerText}`}>
-              SM Associate
-            </span>
-            <span className={`text-[9px] leading-[1.1] tracking-wide opacity-80 ${theme.headerText}`}>
-              Your Finance &amp; Mobility Partner
-            </span>
-          </div>
-
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-1">
             {menuItems.map((item) => (
               <div key={item.label} className="relative group flex-shrink-0">
                 <Link
                   href={item.href}
-                  className={`flex items-center gap-1 font-semibold transition-colors whitespace-nowrap text-sm ${theme.headerText} ${theme.headerHover}`}
+                  className="flex items-center gap-1 font-semibold transition-all whitespace-nowrap text-sm px-4 py-2 rounded-lg"
+                  style={{
+                    color: 'var(--header-color)',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = 'var(--accent-color)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = 'var(--header-color)';
+                  }}
                 >
                   {item.label}
                   {item.submenu && <ChevronDown size={16} aria-hidden="true" />}
                 </Link>
 
-                {/* Submenu */}
+                {/* Premium Submenu */}
                 {item.submenu && (
                   <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                    <div className={`rounded-2xl ${theme.headerSubmenuBg} overflow-hidden shadow-2xl`}>
-                      <div className="grid grid-cols-2 gap-0 w-max">
-                        {item.submenu.map((subitem, idx) => {
+                    <div 
+                      className="backdrop-blur-xl rounded-2xl overflow-hidden shadow-2xl divide-y w-max p-2"
+                      style={{
+                        backgroundColor: 'rgba(var(--primary-color-rgb, 7, 26, 43), 0.95)',
+                        borderColor: 'var(--border-accent)',
+                        borderWidth: '1px',
+                      }}
+                    >
+                      <div className="grid grid-cols-2 gap-0">
+                        {item.submenu.map((subitem) => {
                           const Icon = subitem.icon;
-                          const isLastRow =
-                            idx >= item.submenu!.length - (item.submenu!.length % 2 || 2);
-                          const isLastCol = (idx + 1) % 2 === 0;
                           return (
                             <Link
                               key={subitem.label}
                               href={subitem.href}
-                              className={`group/item flex items-center gap-3 px-6 py-4 ${theme.headerText} ${theme.headerHover} transition-all duration-200 text-sm ${!isLastCol ? 'border-r border-slate-800' : ''
-                                } ${!isLastRow ? 'border-b border-slate-800' : ''} hover:bg-slate-800/80`}
+                              className="group/item flex items-center gap-3 px-5 py-4 transition-all duration-200 text-sm rounded-lg m-1"
+                              style={{ color: 'var(--header-color)' }}
                             >
-                              <div className="p-2 bg-slate-800 group-hover/item:bg-slate-700 rounded-lg transition-colors">
-                                {Icon && <Icon size={18} className="text-white" aria-hidden="true" />}
+                              <div 
+                                className="p-2.5 rounded-lg group-hover/item:transition-colors"
+                                style={{
+                                  backgroundColor: 'var(--primary-color)',
+                                }}
+                              >
+                                {Icon && (
+                                  <Icon 
+                                    size={18} 
+                                    className="group-hover/item:scale-110 transition-transform" 
+                                    style={{ color: 'var(--accent-color)' }}
+                                    aria-hidden="true" 
+                                  />
+                                )}
                               </div>
-                              <span className="font-semibold">{subitem.label}</span>
+                              <span 
+                                className="font-semibold group-hover/item:transition-colors"
+                                onMouseEnter={(e) => {
+                                  e.currentTarget.style.color = 'var(--accent-color)';
+                                }}
+                                onMouseLeave={(e) => {
+                                  e.currentTarget.style.color = 'var(--header-color)';
+                                }}
+                              >
+                                {subitem.label}
+                              </span>
                             </Link>
                           );
                         })}
@@ -138,19 +166,61 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:flex items-center gap-3 flex-shrink-0">
-            <Link
-              href={ROUTES.CONTACT}
-              className={`inline-flex items-center justify-center rounded-xl px-4 py-2.5 text-sm font-semibold transition-colors ${theme.headerButtonBg} ${theme.headerButtonText} whitespace-nowrap`}
+          {/* Premium CTA Buttons */}
+          <div className="hidden md:flex items-center gap-2 flex-shrink-0">
+            <a
+              href="tel:+919790219874"
+              className="p-2.5 rounded-lg transition-all duration-300 flex items-center justify-center"
+              style={{
+                borderColor: 'var(--border-accent)',
+                borderWidth: '1px',
+                color: 'var(--accent-color)',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = 'rgba(212, 175, 55, 0.1)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = 'transparent';
+              }}
+              aria-label="Call us"
             >
-              Quotes
-            </Link>
-            <Link href={ROUTES.LOANS}>
-              <button
-                className={`px-6 py-2.5 ${theme.headerButtonBg} ${theme.headerButtonText} font-semibold rounded-xl hover:shadow-lg transition-all text-sm whitespace-nowrap`}
+              <Phone size={18} />
+            </a>
+            <a
+              href="https://wa.me/919790219874"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 rounded-lg transition-all duration-300 flex items-center justify-center"
+              style={{
+                borderColor: 'var(--border-accent)',
+                borderWidth: '1px',
+                color: 'var(--accent-color)',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = 'rgba(212, 175, 55, 0.1)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = 'transparent';
+              }}
+              aria-label="WhatsApp us"
+            >
+              <MessageCircle size={18} />
+            </a>
+            <Link href={ROUTES.CONTACT}>
+              <button 
+                className="px-6 py-2.5 font-bold rounded-xl transition-all text-sm whitespace-nowrap transform hover:scale-105"
+                style={{
+                  background: 'var(--button-bg)',
+                  color: 'var(--button-text)',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = `0 0 20px var(--button-hover-shadow)`;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
               >
-                Apply Now
+                Contact Us
               </button>
             </Link>
           </div>
@@ -158,7 +228,16 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`lg:hidden p-2 rounded-lg transition-colors flex-shrink-0 ${theme.headerText} hover:bg-slate-800/80`}
+            className="lg:hidden p-2.5 rounded-lg transition-colors flex-shrink-0"
+            style={{
+              color: 'var(--accent-color)',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = 'rgba(212, 175, 55, 0.1)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = 'transparent';
+            }}
             aria-label={isOpen ? 'Close menu' : 'Open menu'}
           >
             {isOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
@@ -167,68 +246,103 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <nav
-            style={{ background: theme.headerBackground }}
-            className={`lg:hidden pb-6 border-t border-slate-800/40 overflow-visible relative z-[9999] ${theme.headerBg}`}
-          >
+          <nav className="lg:hidden pb-6 overflow-visible relative z-[9999]" style={{ borderTopColor: 'var(--border-accent)', borderTopWidth: '1px' }}>
             {menuItems.map((item) => (
               <div key={item.label}>
                 {item.submenu ? (
                   <button
                     onClick={() => setOpenSubmenu(openSubmenu === item.label ? null : item.label)}
-                    className={`w-full text-left px-4 py-3 flex items-center justify-between font-semibold transition-colors ${theme.headerText} ${theme.headerHover}`}
+                    className="w-full text-left px-4 py-3 flex items-center justify-between font-semibold transition-colors"
+                    style={{ color: 'var(--header-color)' }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.color = 'var(--accent-color)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.color = 'var(--header-color)';
+                    }}
                   >
                     {item.label}
                     <ChevronDown
                       size={16}
                       className={`transition-transform ${openSubmenu === item.label ? 'rotate-180' : ''}`}
+                      style={{ color: 'var(--accent-color)' }}
                       aria-hidden="true"
                     />
                   </button>
                 ) : (
                   <Link
                     href={item.href}
-                    className={`w-full text-left px-4 py-3 flex items-center font-semibold transition-colors ${theme.headerText} ${theme.headerHover}`}
-                    onClick={() => setIsOpen(false)}
+                    className="w-full text-left px-4 py-3 flex items-center font-semibold transition-colors"
+                    style={{ color: 'var(--header-color)' }}
                   >
-                    {item.label}
+                    <span onClick={() => setIsOpen(false)}>{item.label}</span>
                   </Link>
                 )}
 
                 {item.submenu && openSubmenu === item.label && (
-                  <div className="pl-4 overflow-visible relative z-[9999] bg-slate-900/90 border-l-2 border-slate-800">
-                    <div className="grid grid-cols-2 gap-2 p-3">
-                      {item.submenu.map((subitem) => {
-                        const Icon = subitem.icon;
-                        return (
-                          <Link
-                            key={subitem.label}
-                            href={subitem.href}
-                            className={`group/mobile flex items-center gap-2 px-3 py-3 rounded-lg transition-all duration-200 text-sm ${theme.headerText} ${theme.headerHover} hover:bg-slate-800`}
+                  <div 
+                    className="pl-4 overflow-visible relative z-[9999] py-2"
+                    style={{
+                      backgroundColor: 'rgba(11, 34, 57, 0.5)',
+                      borderLeftColor: 'var(--border-accent)',
+                      borderLeftWidth: '2px',
+                    }}
+                  >
+                    {item.submenu.map((subitem) => {
+                      const Icon = subitem.icon;
+                      return (
+                        <Link
+                          key={subitem.label}
+                          href={subitem.href}
+                          className="group/mobile flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200 text-sm"
+                          style={{ color: 'var(--header-color)' }}
+                        >
+                          <Icon size={18} style={{ color: 'var(--accent-color)' }} aria-hidden="true" />
+                          <span 
+                            className="font-semibold"
                             onClick={() => {
                               setIsOpen(false);
                               setOpenSubmenu(null);
                             }}
+                            onMouseEnter={(e) => {
+                              e.currentTarget.style.color = 'var(--accent-color)';
+                            }}
+                            onMouseLeave={(e) => {
+                              e.currentTarget.style.color = 'var(--header-color)';
+                            }}
                           >
-                            <div className="p-1.5 bg-slate-800 group-hover/mobile:bg-slate-700 rounded transition-colors">
-                              {Icon && <Icon size={16} className="text-white" aria-hidden="true" />}
-                            </div>
-                            <span className="font-semibold">{subitem.label}</span>
-                          </Link>
-                        );
-                      })}
-                    </div>
+                            {subitem.label}
+                          </span>
+                        </Link>
+                      );
+                    })}
                   </div>
                 )}
               </div>
             ))}
-            <div className="px-4 mt-4">
-              <Link
-                href={ROUTES.LOANS}
-                onClick={() => setIsOpen(false)}
-                className={`block text-center w-full py-3 ${theme.headerButtonBg} ${theme.headerButtonText} font-semibold rounded-xl shadow-md transition-all`}
+            <div className="px-4 mt-4 space-y-2">
+              <a
+                href="https://wa.me/919790219874"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-center w-full py-3 font-bold rounded-lg shadow-md transition-all"
+                style={{
+                  background: 'var(--button-bg)',
+                  color: 'var(--button-text)',
+                }}
               >
-                Apply Now
+                WhatsApp Us
+              </a>
+              <Link
+                href={ROUTES.CONTACT}
+                className="block text-center w-full py-3 font-semibold rounded-lg transition-all"
+                style={{
+                  borderColor: 'var(--accent-color)',
+                  borderWidth: '1px',
+                  color: 'var(--accent-color)',
+                }}
+              >
+                <span onClick={() => setIsOpen(false)}>Contact Us</span>
               </Link>
             </div>
           </nav>

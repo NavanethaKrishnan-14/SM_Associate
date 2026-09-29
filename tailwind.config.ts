@@ -77,32 +77,61 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'navy': '#0F172A',
-        'dark-blue': '#1E3A8A',
+        'navy': '#071A2B',
+        'navy-dark': '#0B2239',
+        'navy-royal': '#12395A',
+        'gold-primary': '#D4AF37',
+        'gold-light': '#F1D77A',
+        'gold-soft': '#E8C96A',
+        'dark-text': '#111827',
+        'muted-text': '#64748B',
+        'off-white': '#F7F8FA',
         'teal': '#14B8A6',
         'cyan': '#06B6D4',
-        'gold': '#F59E0B',
       },
       fontFamily: {
         sans: ['Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
         mono: ['Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
       },
       backgroundImage: {
-        'gradient-navy': 'linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%)',
+        'gradient-navy': 'linear-gradient(135deg, #071A2B 0%, #0B2239 100%)',
+        'gradient-navy-accent': 'linear-gradient(135deg, #071A2B 0%, #12395A 100%)',
+        'gradient-gold': 'linear-gradient(135deg, #D4AF37 0%, #F1D77A 100%)',
         'gradient-accent': 'linear-gradient(135deg, #14B8A6 0%, #06B6D4 100%)',
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
+        'float-delayed': 'float 7s ease-in-out infinite 1s',
+        'float-slow': 'float 8s ease-in-out infinite',
         'slide-in': 'slide-in 0.5s ease-out',
+        'fade-up': 'fade-up 0.6s ease-out',
+        'pulse-soft': 'pulse-soft 2s ease-in-out infinite',
+        'bounce-soft': 'bounce-soft 2s ease-in-out infinite',
       },
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-20px)' },
         },
+        'float-delayed': {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
         'slide-in': {
           '0%': { transform: 'translateX(-100%)', opacity: '0' },
           '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+        'fade-up': {
+          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        'pulse-soft': {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.5' },
+        },
+        'bounce-soft': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
         },
       },
       typography: {

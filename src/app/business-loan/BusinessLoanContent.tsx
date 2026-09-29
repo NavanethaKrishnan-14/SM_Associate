@@ -302,11 +302,11 @@ export default function BusinessLoanContent() {
                 <p className="text-sm text-gray-600 mt-1">Finance your dream car</p>
               </Link>
               <Link
-                href={ROUTES.BIKE_LOAN}
+                href={ROUTES.PERSONAL_LOAN}
                 className="p-4 bg-gray-50 rounded-lg hover:bg-teal/10 hover:border-teal border-2 border-transparent transition-all group"
               >
-                <h4 className="font-bold text-navy group-hover:text-teal transition-colors">Bike Loan</h4>
-                <p className="text-sm text-gray-600 mt-1">Quick bike financing</p>
+                <h4 className="font-bold text-navy group-hover:text-teal transition-colors">Personal Loan</h4>
+                <p className="text-sm text-gray-600 mt-1">Quick personal funds</p>
               </Link>
               <Link
                 href={ROUTES.PERSONAL_LOAN}

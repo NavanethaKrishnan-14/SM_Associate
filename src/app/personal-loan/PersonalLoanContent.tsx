@@ -265,18 +265,18 @@ export default function PersonalLoanContent() {
                 <p className="text-sm text-gray-600 mt-1">Finance your dream car</p>
               </Link>
               <Link
-                href={ROUTES.BIKE_LOAN}
+                href={ROUTES.PERSONAL_LOAN}
                 className="p-4 bg-gray-50 rounded-lg hover:bg-teal/10 hover:border-teal border-2 border-transparent transition-all group"
               >
-                <h4 className="font-bold text-navy group-hover:text-teal transition-colors">Bike Loan</h4>
-                <p className="text-sm text-gray-600 mt-1">Quick bike financing</p>
+                <h4 className="font-bold text-navy group-hover:text-teal transition-colors">Personal Loan</h4>
+                <p className="text-sm text-gray-600 mt-1">Quick personal funds</p>
               </Link>
               <Link
-                href={ROUTES.BUSINESS_LOAN}
-                className="p-4 bg-gray-50 rounded-lg hover:bg-teal/10 hover:border-teal border-2 border-transparent transition-all group"
+                href={ROUTES.GOLD_LOAN}
+                className="p-4 bg-gray-50 rounded-lg hover:bg-amber-50 hover:border-amber-500 border-2 border-transparent transition-all group"
               >
-                <h4 className="font-bold text-navy group-hover:text-teal transition-colors">Business Loan</h4>
-                <p className="text-sm text-gray-600 mt-1">Grow your business</p>
+                <h4 className="font-bold text-navy group-hover:text-amber-700 transition-colors">Gold Loan</h4>
+                <p className="text-sm text-gray-600 mt-1">Turn gold into cash</p>
               </Link>
             </div>
           </div>

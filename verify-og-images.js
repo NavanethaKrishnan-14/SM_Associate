@@ -44,7 +44,6 @@ const REQUIRED_IMAGES = [
 const RECOMMENDED_IMAGES = [
   'og-car-loan.jpg',
   'og-home-loan.jpg',
-  'og-bike-loan.jpg',
   'og-personal-loan.jpg',
   'og-business-loan.jpg',
   'og-loans.jpg',

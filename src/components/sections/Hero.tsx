@@ -32,7 +32,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-lg">
-              Home loans, car loans, bike loans and quality pre-owned vehicles — all under one trusted platform.
+              Home loans, car loans, gold services and quality pre-owned vehicles — all under one trusted platform.
             </p>
 
             {/* CTA Buttons */}

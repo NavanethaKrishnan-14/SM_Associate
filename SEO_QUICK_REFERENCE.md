@@ -22,20 +22,19 @@ All SEO issues have been fixed across 22 page files. Your website now has:
 4. About - `/src/app/about/page.tsx`
 5. Car Loan - `/src/app/car-loan/page.tsx`
 6. Home Loan - `/src/app/home-loan/page.tsx`
-7. Bike Loan - `/src/app/bike-loan/page.tsx`
-8. Personal Loan - `/src/app/personal-loan/page.tsx`
-9. Business Loan - `/src/app/business-loan/page.tsx`
-10. Loans Overview - `/src/app/loans/page.tsx`
-11. Vehicles - `/src/app/vehicles/page.tsx`
-12. Car Resale - `/src/app/car-resale/page.tsx`
-13. Sell Vehicle - `/src/app/sell-vehicle/page.tsx`
-14. Blog - `/src/app/blog/page.tsx`
-15. Contact - `/src/app/contact/page.tsx`
-16. EMI Calculator - `/src/app/emi-calculator/page.tsx`
-17. Privacy Policy - `/src/app/privacy-policy/page.tsx`
-18. Terms & Conditions - `/src/app/terms-conditions/page.tsx`
-19. Disclaimer - `/src/app/disclaimer/page.tsx`
-20. Root Layout - `/src/app/layout.tsx` (enhanced structured data)
+7. Personal Loan - `/src/app/personal-loan/page.tsx`
+8. Business Loan - `/src/app/business-loan/page.tsx`
+9. Loans Overview - `/src/app/loans/page.tsx`
+10. Vehicles - `/src/app/vehicles/page.tsx`
+11. Car Resale - `/src/app/car-resale/page.tsx`
+12. Sell Vehicle - `/src/app/sell-vehicle/page.tsx`
+13. Blog - `/src/app/blog/page.tsx`
+14. Contact - `/src/app/contact/page.tsx`
+15. EMI Calculator - `/src/app/emi-calculator/page.tsx`
+16. Privacy Policy - `/src/app/privacy-policy/page.tsx`
+17. Terms & Conditions - `/src/app/terms-conditions/page.tsx`
+18. Disclaimer - `/src/app/disclaimer/page.tsx`
+19. Root Layout - `/src/app/layout.tsx` (enhanced structured data)
 
 ---
 
@@ -81,7 +80,6 @@ You need to create/add these images to `/public/` directory:
 **Service-Specific Images:**
 - `og-car-loan.jpg`
 - `og-home-loan.jpg`
-- `og-bike-loan.jpg`
 - `og-personal-loan.jpg`
 - `og-business-loan.jpg`
 - `og-blog.jpg`

@@ -31,14 +31,21 @@ const categories = [
 
 export default function VehicleMarketplace() {
   return (
-    <section className="py-12 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal/10 text-teal text-xs font-bold uppercase tracking-wider mb-3">
-            <Sparkles size={14} /> Buy, Sell &amp; Finance
+    <section className="py-20 bg-navy-dark relative overflow-hidden">
+      {/* Premium background accents */}
+      <div className="absolute inset-0 opacity-30 pointer-events-none">
+        <div className="absolute top-0 right-1/3 w-96 h-96 bg-gold-primary rounded-full blur-3xl opacity-15" />
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gold-primary rounded-full blur-3xl opacity-10" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16 space-y-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-primary/10 border border-gold-primary/30">
+            <Sparkles size={16} className="text-gold-primary" />
+            <span className="text-gold-primary font-semibold text-sm tracking-wide">BUY, SELL &amp; FINANCE</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold text-navy mb-4">Find Your Next Vehicle or Sell Yours</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-5xl md:text-6xl font-black text-white mb-4">Find Your Next Vehicle or Sell Yours</h2>
+          <p className="text-white/80 text-xl max-w-2xl mx-auto">
             Explore verified cars and bikes with guaranteed documentation, easy financing, and instant resale assistance.
           </p>
         </div>
@@ -49,52 +56,52 @@ export default function VehicleMarketplace() {
             return (
               <div
                 key={idx}
-                className="rounded-2xl p-8 bg-gray-50 border border-gray-100 hover:border-teal/30 hover:shadow-xl transition-all flex flex-col justify-between"
+                className="rounded-2xl p-8 bg-navy/40 backdrop-blur-sm border border-gold-primary/20 hover:border-gold-primary/50 hover:shadow-xl hover:shadow-gold-primary/20 transition-all flex flex-col justify-between group"
               >
                 <div>
-                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-r ${cat.gradient} flex items-center justify-center text-white mb-6 shadow-md`}>
-                    <Icon size={28} />
+                  <div className={`w-14 h-14 rounded-2xl bg-gradient-gold flex items-center justify-center text-navy mb-6 shadow-md group-hover:scale-110 transition-transform`}>
+                    <Icon size={28} className="font-bold" />
                   </div>
                   <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-xl font-bold text-navy">{cat.title}</h3>
-                    <span className="text-xs font-bold text-teal bg-teal/10 px-2.5 py-1 rounded-full">{cat.count}</span>
+                    <h3 className="text-xl font-bold text-white">{cat.title}</h3>
+                    <span className="text-xs font-bold text-navy bg-gradient-gold px-2.5 py-1 rounded-full">{cat.count}</span>
                   </div>
-                  <p className="text-gray-600 text-sm mb-6 leading-relaxed">{cat.desc}</p>
+                  <p className="text-white/80 text-sm mb-6 leading-relaxed">{cat.desc}</p>
                 </div>
 
                 <Link
                   href={cat.href}
-                  className="inline-flex items-center justify-between px-5 py-3 rounded-xl bg-white border border-gray-200 text-navy font-semibold text-sm hover:bg-teal hover:text-white hover:border-teal transition-all group shadow-sm"
+                  className="inline-flex items-center justify-between px-5 py-3 rounded-xl bg-gold-primary text-navy font-semibold text-sm hover:shadow-lg hover:shadow-gold-primary/50 transition-all group/link shadow-md transform hover:scale-105"
                 >
                   <span>Explore Now</span>
-                  <ArrowUpRight size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  <ArrowUpRight size={18} className="group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
                 </Link>
               </div>
             );
           })}
         </div>
 
-        <div className="rounded-2xl bg-gradient-navy p-8 md:p-10 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+        <div className="rounded-2xl bg-gradient-navy-accent p-8 md:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl border border-gold-primary/20">
           <div className="max-w-2xl">
-            <div className="flex items-center gap-2 text-teal text-sm font-bold mb-2">
+            <div className="flex items-center gap-2 text-gold-primary text-sm font-bold mb-2">
               <ShieldCheck size={18} /> Direct Sale &amp; RC Transfer Included
             </div>
-            <h3 className="text-2xl md:text-3xl font-bold mb-2">Looking to Sell Your Used Car or Bike?</h3>
-            <p className="text-gray-300 text-sm leading-relaxed">
+            <h3 className="text-3xl md:text-4xl font-bold mb-2">Looking to Sell Your Used Car or Bike?</h3>
+            <p className="text-white/80 text-base leading-relaxed">
               Get an instant valuation online, doorstep vehicle inspection, free RC transfer, and instant payment into your bank account.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto flex-shrink-0">
             <Link
               href={ROUTES.SELL_VEHICLE}
-              className="px-6 py-3 bg-gradient-to-r from-teal to-cyan text-white font-bold rounded-xl hover:shadow-lg transition-all text-center text-sm inline-flex items-center justify-center gap-2"
+              className="px-6 py-3 bg-gradient-gold text-navy font-bold rounded-xl hover:shadow-lg hover:shadow-gold-primary/50 transition-all text-center text-sm inline-flex items-center justify-center gap-2 transform hover:scale-105"
             >
               <span>Instant Valuation</span>
               <ChevronRight size={16} />
             </Link>
             <Link
               href={ROUTES.CAR_RESALE}
-              className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-colors text-center text-sm border border-white/20"
+              className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-colors text-center text-sm border border-gold-primary/30 hover:border-gold-primary/50"
             >
               Learn More
             </Link>

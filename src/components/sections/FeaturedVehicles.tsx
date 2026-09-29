@@ -1,5 +1,7 @@
+'use client';
+
 import Image from 'next/image';
-import { Fuel, Calendar, MapPin, ChevronRight, ShieldCheck, Zap } from 'lucide-react';
+import { Fuel, Calendar, MapPin, ChevronRight, ShieldCheck, Zap, Phone, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 import { ROUTES } from '@/lib/constants';
 
@@ -14,7 +16,6 @@ const featuredVehicles = [
     transmission: 'Manual',
     location: 'Tirunelveli',
     badge: 'Certified',
-    tagColor: 'from-teal to-cyan',
     image: '/vehicles/swift.jpg',
   },
   {
@@ -27,7 +28,6 @@ const featuredVehicles = [
     transmission: 'Automatic',
     location: 'Tirunelveli',
     badge: 'Popular',
-    tagColor: 'from-blue-600 to-indigo-600',
     image: '/vehicles/i20.jpg',
   },
   {
@@ -40,97 +40,160 @@ const featuredVehicles = [
     transmission: 'Automatic',
     location: 'Tirunelveli',
     badge: 'Top Rated',
-    tagColor: 'from-amber-500 to-orange-500',
     image: '/vehicles/city.jpg',
   },
 ];
 
 export default function FeaturedVehicles() {
   return (
-    <section className="py-12 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
-          <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal/10 text-teal text-xs font-bold uppercase tracking-wider mb-3">
-              <Zap size={14} aria-hidden="true" /> Quality Assured
+    <section className="py-20 bg-gradient-navy-accent relative overflow-hidden">
+      {/* Premium background */}
+      <div className="absolute inset-0 opacity-40 pointer-events-none">
+        <div className="absolute top-0 right-1/3 w-96 h-96 bg-gold-primary rounded-full blur-3xl opacity-15" />
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gold-primary rounded-full blur-3xl opacity-10" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+          <div className="space-y-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-primary/10 border border-gold-primary/30">
+              <Zap size={16} className="text-gold-primary" aria-hidden="true" />
+              <span className="text-gold-primary font-semibold text-sm tracking-wide">PREMIUM VEHICLES</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-navy">Featured Pre-Owned Vehicles</h2>
-            <p className="text-gray-600 mt-2">Curated selection of premium vehicles with 100% verified inspection report</p>
+            
+            <h2 className="text-5xl md:text-6xl font-black text-white leading-tight">
+              Featured Pre-Owned
+              <span className="block bg-gradient-gold bg-clip-text text-transparent">Vehicles</span>
+            </h2>
+            
+            <p className="text-xl text-white/80 max-w-xl leading-relaxed">
+              Handpicked selection of verified, quality-assured vehicles ready for your next journey
+            </p>
           </div>
 
-          <div className="mt-4 md:mt-0">
-            <Link href={ROUTES.VEHICLES} className="inline-flex items-center gap-2 font-bold text-teal hover:text-cyan transition-colors">
-              <span>View All Inventory</span>
-              <ChevronRight size={18} aria-hidden="true" />
-            </Link>
-          </div>
+          <Link 
+            href={ROUTES.VEHICLES} 
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-gold text-navy font-bold rounded-xl hover:shadow-lg hover:shadow-gold-primary/50 transition-all transform hover:scale-105 whitespace-nowrap h-fit"
+          >
+            <span>Browse All Vehicles</span>
+            <ChevronRight size={20} aria-hidden="true" />
+          </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          {featuredVehicles.map((vehicle) => (
+        {/* Vehicles Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {featuredVehicles.map((vehicle, idx) => (
             <div
               key={vehicle.id}
-              className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all border border-gray-100 flex flex-col justify-between group"
+              className="group relative h-full bg-navy/40 backdrop-blur-sm rounded-3xl overflow-hidden border border-gold-primary/20 hover:border-gold-primary/50 shadow-lg hover:shadow-2xl hover:shadow-gold-primary/30 transition-all duration-300 hover:-translate-y-3 cursor-pointer flex flex-col"
+              style={{ animationDelay: `${idx * 100}ms` }}
+              onClick={() => window.location.href = `${ROUTES.VEHICLES}/${vehicle.id}`}
             >
-              <div>
-                {/* Vehicle Image Container */}
-                <div className="h-52 w-full relative overflow-hidden bg-slate-900">
-                  <Image
-                    src={vehicle.image}
-                    alt={`${vehicle.year} ${vehicle.brand} ${vehicle.model} - Quality Verified Pre-Owned Vehicle`}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30 pointer-events-none" />
+              {/* Vehicle Image Container */}
+              <div className="h-64 w-full relative overflow-hidden bg-navy">
+                <Image
+                  src={vehicle.image}
+                  alt={`${vehicle.year} ${vehicle.brand} ${vehicle.model} - Premium Pre-Owned Vehicle`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                
+                {/* Premium overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-transparent to-black/20 group-hover:from-navy/70 transition-all" />
 
-                  {/* Top Badges */}
-                  <div className="absolute top-3 left-3 right-3 flex justify-between items-center z-10">
-                    <span className={`px-3 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r ${vehicle.tagColor} shadow-md`}>
-                      {vehicle.badge}
-                    </span>
-                    <span className="flex items-center gap-1 text-xs text-white font-semibold bg-black/60 backdrop-blur-sm px-2.5 py-1 rounded-full border border-teal-500/40">
-                      <ShieldCheck size={14} className="text-teal" aria-hidden="true" /> Verified
-                    </span>
+                {/* Top Badges */}
+                <div className="absolute top-4 left-4 right-4 flex justify-between items-start z-10 gap-3">
+                  <span className="px-4 py-2 rounded-lg text-sm font-bold text-navy bg-gradient-gold shadow-lg">
+                    {vehicle.badge}
+                  </span>
+                  <span className="flex items-center gap-2 text-xs text-white font-semibold bg-navy/60 backdrop-blur-md px-3 py-2 rounded-lg border border-gold-primary/50">
+                    <ShieldCheck size={16} className="text-gold-primary" aria-hidden="true" />
+                    <span>Verified</span>
+                  </span>
+                </div>
+
+                {/* Bottom overlay text */}
+                <div className="absolute bottom-4 left-4 right-4 z-10">
+                  <p className="text-gold-light text-xs font-bold uppercase tracking-widest mb-1">
+                    {vehicle.brand}
+                  </p>
+                  <h3 className="text-white text-2xl font-black drop-shadow-lg">
+                    {vehicle.model}
+                  </h3>
+                </div>
+              </div>
+              {/* Vehicle Details */}
+              <div className="p-6 space-y-4 flex-1 flex flex-col">
+                {/* Price */}
+                <div className="pb-4 border-b border-gold-primary/20">
+                  <p className="text-4xl font-black text-gold-primary">
+                    {vehicle.price}
+                  </p>
+                </div>
+
+                {/* Specs Grid */}
+                <div className="grid grid-cols-3 gap-3">
+                  <div className="p-3 rounded-lg bg-navy/40 border border-gold-primary/20 text-center">
+                    <Calendar size={18} className="text-gold-primary mx-auto mb-1" aria-hidden="true" />
+                    <p className="text-xs text-white/70 font-semibold">{vehicle.year}</p>
                   </div>
-
-                  {/* Bottom Image Title Overlay */}
-                  <div className="absolute bottom-3 left-4 right-4 z-10">
-                    <span className="text-teal text-xs font-bold uppercase tracking-wider block">
-                      {vehicle.brand}
-                    </span>
-                    <h3 className="text-white text-lg font-bold leading-tight drop-shadow-sm">{vehicle.model}</h3>
+                  <div className="p-3 rounded-lg bg-navy/40 border border-gold-primary/20 text-center">
+                    <Fuel size={18} className="text-gold-primary mx-auto mb-1" aria-hidden="true" />
+                    <p className="text-xs text-white/70 font-semibold">{vehicle.fuelType}</p>
+                  </div>
+                  <div className="p-3 rounded-lg bg-navy/40 border border-gold-primary/20 text-center">
+                    <MapPin size={18} className="text-gold-primary mx-auto mb-1" aria-hidden="true" />
+                    <p className="text-xs text-white/70 font-semibold">{vehicle.location}</p>
                   </div>
                 </div>
 
-                <div className="p-6">
-                  <p className="text-2xl font-black text-teal mb-4">{vehicle.price}</p>
+                {/* Transmission */}
+                <div className="py-3 px-4 rounded-lg bg-gold-primary/10 border border-gold-primary/30">
+                  <p className="text-sm text-white font-semibold">
+                    <span className="text-gold-primary">Transmission:</span> {vehicle.transmission}
+                  </p>
+                </div>
 
-                  <div className="grid grid-cols-3 gap-2 py-3 border-y border-gray-100 text-xs text-gray-600 mb-6">
-                    <div className="flex items-center gap-1.5">
-                      <Calendar size={15} className="text-teal" aria-hidden="true" />
-                      <span>{vehicle.year}</span>
-                    </div>
-                    <div className="flex items-center gap-1.5">
-                      <Fuel size={15} className="text-teal" aria-hidden="true" />
-                      <span>{vehicle.fuelType}</span>
-                    </div>
-                    <div className="flex items-center gap-1.5">
-                      <MapPin size={15} className="text-teal" aria-hidden="true" />
-                      <span>{vehicle.location}</span>
-                    </div>
-                  </div>
+                {/* CTA Buttons */}
+                <div className="grid grid-cols-2 gap-3 mt-auto pt-2">
+                  <button className="py-3 px-4 bg-gradient-gold text-navy font-bold rounded-lg hover:shadow-lg transition-all text-sm text-center transform hover:scale-105">
+                    View Details
+                  </button>
+                  <a
+                    href="https://wa.me/919790219874"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="py-3 px-4 border-2 border-gold-primary text-gold-primary font-bold rounded-lg hover:bg-gold-primary/20 transition-all text-sm text-center flex items-center justify-center gap-2"
+                  >
+                    <MessageCircle size={16} />
+                    WhatsApp
+                  </a>
                 </div>
               </div>
 
-              <div className="px-6 pb-6">
-                <Link href={`/vehicles/${vehicle.id}`} className="w-full py-2.5 px-4 bg-gradient-to-r from-teal to-cyan text-white font-semibold rounded-xl hover:shadow-lg transition-all flex items-center justify-center gap-2 text-sm text-center">
-                  <span>View Full Details</span>
-                  <ChevronRight size={16} aria-hidden="true" />
-                </Link>
-              </div>
+              {/* Corner accent */}
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gold-primary/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
           ))}
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="mt-16 text-center">
+          <div className="inline-flex flex-col items-center gap-4 p-8 rounded-2xl bg-navy/40 backdrop-blur-sm border border-gold-primary/20">
+            <p className="text-lg text-white font-semibold max-w-xl">
+              Looking for the perfect vehicle? Our team is ready to help you find exactly what you need.
+            </p>
+            <a
+              href="tel:+919790219874"
+              className="px-8 py-3 bg-gradient-gold text-navy font-bold rounded-lg hover:shadow-lg transition-all inline-flex items-center gap-2 transform hover:scale-105"
+            >
+              <Phone size={18} />
+              Call Now
+            </a>
+          </div>
         </div>
       </div>
     </section>

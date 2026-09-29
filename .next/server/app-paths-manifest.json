@@ -1,4 +1,25 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/contact/route": "app/api/contact/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/blog/[slug]/page": "app/blog/[slug]/page.js",
+  "/car-loan/page": "app/car-loan/page.js",
+  "/car-resale/page": "app/car-resale/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/disclaimer/page": "app/disclaimer/page.js",
+  "/emi-calculator/page": "app/emi-calculator/page.js",
+  "/gold-loan/page": "app/gold-loan/page.js",
+  "/home-loan/page": "app/home-loan/page.js",
+  "/loans/page": "app/loans/page.js",
+  "/about/page": "app/about/page.js",
   "/page": "app/page.js",
-  "/contact/page": "app/contact/page.js"
+  "/personal-loan/page": "app/personal-loan/page.js",
+  "/privacy-policy/page": "app/privacy-policy/page.js",
+  "/sell-vehicle/page": "app/sell-vehicle/page.js",
+  "/terms-conditions/page": "app/terms-conditions/page.js",
+  "/blog/page": "app/blog/page.js",
+  "/two-wheeler-insurance/page": "app/two-wheeler-insurance/page.js",
+  "/vehicles/page": "app/vehicles/page.js",
+  "/business-loan/page": "app/business-loan/page.js",
+  "/vehicles/[id]/page": "app/vehicles/[id]/page.js"
 }

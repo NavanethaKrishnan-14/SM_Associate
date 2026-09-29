@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Home, Car, Bike, Wallet, Briefcase, Shield, ChevronRight, CheckCircle, Zap, TrendingUp } from 'lucide-react';
+import { Home, Car, Coins, Wallet, Briefcase, Shield, ChevronRight, CheckCircle, Zap, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { ROUTES } from '@/lib/constants';
@@ -27,12 +27,12 @@ const loanProducts = [
     route: ROUTES.CAR_LOAN
   },
   {
-    icon: Bike,
-    title: 'Bike Loan',
-    subtitle: 'Easy Two-Wheeler Finance',
-    description: 'Quick and hassle-free financing for new and used bikes at attractive rates.',
-    shortFeatures: ['Quick approval', 'Low fees', 'Fast disbursement'],
-    route: ROUTES.BIKE_LOAN
+    icon: Coins,
+    title: 'Gold Loan',
+    subtitle: 'Turn Gold into Cash',
+    description: 'Get fair market value for your gold jewellery with quick approvals and transparent valuation.',
+    shortFeatures: ['Fair valuation', 'Quick cash', 'Secure storage'],
+    route: ROUTES.GOLD_LOAN
   },
   {
     icon: Wallet,
@@ -151,7 +151,7 @@ export default function LoansContent() {
                   <th className="text-left py-4 px-4 text-navy font-bold">Feature</th>
                   <th className="text-center py-4 px-4 text-navy font-bold">Home Loan</th>
                   <th className="text-center py-4 px-4 text-navy font-bold">Car Loan</th>
-                  <th className="text-center py-4 px-4 text-navy font-bold">Bike Loan</th>
+                  <th className="text-center py-4 px-4 text-navy font-bold">Gold Loan</th>
                   <th className="text-center py-4 px-4 text-navy font-bold">Personal Loan</th>
                 </tr>
               </thead>
@@ -259,9 +259,9 @@ export default function LoansContent() {
         reasonOptions={[
           { value: 'home_loan', label: 'Home Loan (from 6.5%)' },
           { value: 'car_loan', label: 'Car Loan (from 7.2%)' },
+          { value: 'gold_loan', label: 'Gold Loan' },
           { value: 'personal_loan', label: 'Personal Loan (from 7.9%)' },
           { value: 'business_loan', label: 'Business Loan (from 9.0%)' },
-          { value: 'bike_loan', label: 'Two-Wheeler Loan' },
         ]}
         defaultReason="home_loan"
         valueLabel="Total Loan Amount Required"

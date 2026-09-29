@@ -48,7 +48,6 @@ export default function EMICalculatorContent() {
   const calculatorFeatures = [
     'Home Loan EMI Calculator',
     'Car Loan EMI Calculator',
-    'Bike Loan EMI Calculator',
     'Personal Loan EMI Calculator',
     'Business Loan EMI Calculator'
   ];

@@ -245,28 +245,6 @@ export default function TwoWheelerInsuranceContent() {
                 </Link>
               </motion.div>
 
-              {/* Bike Loan Link */}
-              <motion.div
-                initial={false}
-                viewport={{ once: true }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-                className="p-6 rounded-2xl bg-gradient-to-r from-teal-500/5 to-emerald-500/5 border border-teal-500/20 flex flex-col justify-between"
-              >
-                <div>
-                  <Bike size={28} className="text-teal-600 mb-3" />
-                  <h4 className="text-lg font-bold text-navy mb-2">Two Wheeler Loans</h4>
-                  <p className="text-xs text-gray-600 mb-4">Looking to buy a new bike? Get quick bike finance up to 100% value.</p>
-                </div>
-                <Link
-                  href={ROUTES.BIKE_LOAN}
-                  className="inline-flex items-center justify-between px-4 py-2.5 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 text-white font-semibold rounded-xl text-xs hover:shadow-lg transition-all"
-                >
-                  <span>Explore Bike Loans</span>
-                  <ChevronRight size={16} />
-                </Link>
-              </motion.div>
-
               {/* Browse Pre-owned Bikes */}
               <motion.div
                 initial={false}
@@ -294,13 +272,6 @@ export default function TwoWheelerInsuranceContent() {
             <div className="pt-12 border-t border-gray-200">
               <h3 className="text-2xl font-bold text-navy mb-8">Explore Other Finance &amp; Loan Solutions</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <Link
-                  href={ROUTES.BIKE_LOAN}
-                  className="p-4 bg-gray-50 rounded-xl hover:bg-emerald-500/10 hover:border-emerald-500 border-2 border-transparent transition-all group"
-                >
-                  <h4 className="font-bold text-navy group-hover:text-emerald-600 transition-colors">Bike Loan</h4>
-                  <p className="text-sm text-gray-600 mt-1">Easy 2-wheeler finance</p>
-                </Link>
                 <Link
                   href={ROUTES.HOME_LOAN}
                   className="p-4 bg-gray-50 rounded-xl hover:bg-emerald-500/10 hover:border-emerald-500 border-2 border-transparent transition-all group"

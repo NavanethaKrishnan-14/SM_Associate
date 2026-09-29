@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{\"components\\\\sections\\\\Testimonials.tsx -> react-fast-marquee\":{\"id\":\"components\\\\sections\\\\Testimonials.tsx -> react-fast-marquee\",\"files\":[\"static/chunks/_app-pages-browser_node_modules_react-fast-marquee_dist_index_js.js\"]}}"
+self.__REACT_LOADABLE_MANIFEST='{"components\\\\sections\\\\Testimonials.tsx -> react-fast-marquee":{"id":1772,"files":["static/chunks/772.ec58ae2558a3e084.js"]}}';

@@ -240,33 +240,6 @@ export const PAGE_THEMES: Record<string, PageTheme> = {
   },
 
   // ──────────────────────────────────────────────────────────────────────────
-  // BIKE LOAN (/bike-loan) · Radiant Orange & Fire Red
-  // ──────────────────────────────────────────────────────────────────────────
-  '/bike-loan': {
-    id: 'bike-loan',
-    headerBg: 'border-b border-orange-800/50',
-    headerBgScrolled: 'shadow-2xl border-b border-orange-700/60',
-    headerBackground: 'linear-gradient(135deg, #7c2d12 0%, #c2410c 50%, #991b1b 100%)',
-    headerText: 'text-white',
-    headerHover: 'hover:text-orange-200',
-    headerSubmenuBg: 'bg-orange-950 border border-orange-800/60 shadow-2xl',
-    headerButtonBg: 'bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 hover:shadow-orange-500/50',
-    headerButtonText: 'text-white',
-    logoBadgeBg: 'bg-orange-500',
-    logoBadgeText: 'text-white',
-
-    footerBg: 'bg-[#431407]',
-    footerBackground: 'linear-gradient(135deg, #431407 0%, #7c2d12 50%, #991b1b 100%)',
-    footerText: 'text-orange-100/90',
-    footerHeadingText: 'text-white',
-    footerAccentText: 'text-orange-400',
-    footerHoverText: 'hover:text-orange-300',
-    footerBorder: 'border-orange-900/50',
-    footerSocialBg: 'bg-orange-900/80 border border-orange-700/50 hover:bg-orange-500',
-    footerSocialIcon: 'text-white',
-  },
-
-  // ──────────────────────────────────────────────────────────────────────────
   // CAR LOAN (/car-loan) · Electric Blue & Cyan
   // ──────────────────────────────────────────────────────────────────────────
   '/car-loan': {
@@ -290,6 +263,33 @@ export const PAGE_THEMES: Record<string, PageTheme> = {
     footerHoverText: 'hover:text-cyan-300',
     footerBorder: 'border-blue-800/50',
     footerSocialBg: 'bg-blue-900/60 border border-blue-700/50 hover:bg-cyan-500',
+    footerSocialIcon: 'text-white',
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // GOLD LOAN (/gold-loan) · Luxurious Gold & Amber
+  // ──────────────────────────────────────────────────────────────────────────
+  '/gold-loan': {
+    id: 'gold-loan',
+    headerBg: 'border-b border-amber-800/50',
+    headerBgScrolled: 'shadow-2xl border-b border-amber-700/60',
+    headerBackground: 'linear-gradient(135deg, #78350f 0%, #b45309 50%, #92400e 100%)',
+    headerText: 'text-white',
+    headerHover: 'hover:text-amber-200',
+    headerSubmenuBg: 'bg-amber-950 border border-amber-800/60 shadow-2xl',
+    headerButtonBg: 'bg-gradient-to-r from-amber-400 to-yellow-500 hover:shadow-amber-500/50',
+    headerButtonText: 'text-white',
+    logoBadgeBg: 'bg-amber-500',
+    logoBadgeText: 'text-white',
+
+    footerBg: 'bg-[#451a03]',
+    footerBackground: 'linear-gradient(135deg, #451a03 0%, #78350f 50%, #92400e 100%)',
+    footerText: 'text-amber-100/90',
+    footerHeadingText: 'text-white',
+    footerAccentText: 'text-amber-400',
+    footerHoverText: 'hover:text-amber-300',
+    footerBorder: 'border-amber-900/50',
+    footerSocialBg: 'bg-amber-900/80 border border-amber-700/50 hover:bg-amber-500',
     footerSocialIcon: 'text-white',
   },
 
@@ -495,11 +495,11 @@ export function getPageTheme(pathname: string): PageTheme {
   if (cleanPath.startsWith('/contact')) {
     return PAGE_THEMES['/contact'];
   }
-  if (cleanPath.startsWith('/bike-loan')) {
-    return PAGE_THEMES['/bike-loan'];
-  }
   if (cleanPath.startsWith('/car-loan')) {
     return PAGE_THEMES['/car-loan'];
+  }
+  if (cleanPath.startsWith('/gold-loan')) {
+    return PAGE_THEMES['/gold-loan'];
   }
   if (cleanPath.startsWith('/business-loan')) {
     return PAGE_THEMES['/business-loan'];

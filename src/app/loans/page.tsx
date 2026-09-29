@@ -3,8 +3,8 @@ import LoansHero from '@/components/heroes/LoansHero';
 import LoansContent from './LoansContent';
 
 export const metadata: Metadata = {
-  title: 'All Types of Loans - Home, Car, Bike, Personal & Business | SM',
-  description: 'Compare all types of loans: Home loans, Car loans, Bike loans, Personal loans, Business loans. Understand features, interest rates, eligibility. Choose the perfect financing solution.',
+  title: 'All Types of Loans - Home, Car, Personal & Business | SM',
+  description: 'Compare all types of loans: Home loans, Car loans, Personal loans, Business loans. Understand features, interest rates, eligibility. Choose the perfect financing solution.',
   keywords: 'types of loans, loan comparison, personal finance, financial solutions, different loans, best loans',
   alternates: {
     canonical: 'https://smassociate.com/loans',

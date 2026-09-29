@@ -37,7 +37,6 @@ These images improve SEO and social engagement:
 |-----------|-------|------------------|
 | og-car-loan.jpg | Car Loan page | Car image + loan offer |
 | og-home-loan.jpg | Home Loan page | House image + loan terms |
-| og-bike-loan.jpg | Bike Loan page | Motorcycle image + loan info |
 | og-personal-loan.jpg | Personal Loan page | Person/money image |
 | og-business-loan.jpg | Business Loan page | Business/growth theme |
 | og-blog.jpg | Blog listing page | Blog/reading theme |
@@ -97,7 +96,6 @@ All images should be placed in:
 ├── og-vehicle-default.jpg (CRITICAL)
 ├── og-car-loan.jpg (Recommended)
 ├── og-home-loan.jpg (Recommended)
-├── og-bike-loan.jpg (Recommended)
 ├── og-personal-loan.jpg (Recommended)
 ├── og-business-loan.jpg (Recommended)
 ├── og-blog.jpg (Recommended)

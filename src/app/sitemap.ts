@@ -30,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/bike-loan`,
+      url: `${baseUrl}/gold-loan`,
       lastModified: new Date('2024-08-24'),
       changeFrequency: 'monthly',
       priority: 0.9,
