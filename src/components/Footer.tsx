@@ -98,6 +98,7 @@ export default function Footer() {
             <span>MOVE WITH CLARITY</span>
           </div>
         </div>
+      </div>
 
       <div className="premium-footer-grid">
         <div className="premium-footer-brand">
