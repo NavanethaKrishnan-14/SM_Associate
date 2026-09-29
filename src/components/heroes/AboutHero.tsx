@@ -35,10 +35,10 @@ export default function AboutHero() {
   ];
 
   const milestones = [
-    { year: '2018', text: 'Company Founded' },
-    { year: '2020', text: '10K Happy Customers' },
-    { year: '2022', text: '100+ Team Members' },
-    { year: '2024', text: '$500M+ Loans Disbursed' },
+    { year: '01', text: 'Understand your requirement' },
+    { year: '02', text: 'Review the available options' },
+    { year: '03', text: 'Prepare the required details' },
+    { year: '04', text: 'Move ahead with clarity' },
   ];
 
   const containerVariants = {
@@ -106,7 +106,7 @@ export default function AboutHero() {
               </span>
             </h1>
             <p className="text-lg text-slate-300 leading-relaxed max-w-3xl mx-auto">
-              Since 2018, we&apos;ve been democratizing finance for millions of Indians. Our mission is simple: make credit accessible, affordable, and transparent for everyone.
+              SM Associate is a Tirunelveli-based finance and mobility business focused on making everyday financial and vehicle decisions easier to understand. We keep the conversation practical, explain the important details and help customers choose their next step with confidence.
             </p>
           </motion.div>
         </motion.div>
@@ -123,10 +123,10 @@ export default function AboutHero() {
             <motion.div variants={itemVariants} className="space-y-4">
               <h2 className="text-3xl font-bold text-white">Our Journey</h2>
               <p className="text-slate-300 leading-relaxed">
-                We started with a simple belief: financial services should be simple, fast, and accessible to everyone. Founded by a team of fintech experts and credit specialists, SM Associate has grown into India&apos;s most trusted lending platform.
+                Our approach is simple: start with the customer’s actual requirement, explain the available route clearly and avoid unnecessary complexity. We support enquiries across finance, vehicle resale and related mobility services.
               </p>
               <p className="text-slate-300 leading-relaxed">
-                Today, we&apos;re proud to serve over 50,000 customers across 50+ cities, having disbursed more than $500 million in loans. Our advanced AI-powered approval system ensures faster decisions without compromising on security.
+                From our base in Tirunelveli, we work with customers who want straightforward guidance before they apply, buy, sell or compare options. The goal is not to make every decision for you; it is to make the information easier to understand so you can make the decision that fits your situation.
               </p>
             </motion.div>
 
@@ -281,7 +281,7 @@ export default function AboutHero() {
           >
             <h2 className="text-3xl font-bold text-white mb-4">Join Our Community</h2>
             <p className="text-slate-300 mb-8 max-w-xl mx-auto">
-              Thousands of Indians have already achieved their financial goals with us. It&apos;s your turn to start your financial freedom journey.
+              Have a finance, vehicle or resale requirement? Tell us what you are planning and we will help you understand the practical next steps.
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
               <Link
