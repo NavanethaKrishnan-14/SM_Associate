@@ -1,4 +1,4 @@
-﻿export interface FAQItem {
+export interface FAQItem {
   question: string;
   answer: string;
 }
@@ -33,303 +33,92 @@ export const FAQ_DATA: Record<FAQCategory, {
 }> = {
   home: {
     title: 'Frequently Asked Questions',
-    subtitle: 'Got questions about our loan options, vehicle marketplace, or approval process? Find clear answers below.',
+    subtitle: 'Common questions about finance, vehicles, insurance and the process of working with SM Associate.',
     items: [
-      {
-        question: 'How is my EMI actually calculated?',
-        answer: 'We use the reducing-balance method: principal, interest rate, and tenure feed the standard EMI formula. Every payment first clears interest, then chips away at principal.',
-      },
-      {
-        question: 'Is my financial data actually secure?',
-        answer: 'Yes â€” bank-grade AES-256 encryption at rest, TLS in transit, and read-only access for the AI assistant. No third party ever sees raw account numbers; SM Associate itself can\'t either.',
-      },
-      {
-        question: 'Can I track my investments in real time?',
-        answer: 'Yes â€” mutual funds, SIPs, and linked brokerage holdings refresh live inside your financial profile, alongside credit score and loan balances, in one view.',
-      },
-      {
-        question: 'What documents do I need for a loan?',
-        answer: 'PAN and Aadhaar for identity, three months of bank statements, latest salary slips or ITR for the self-employed, and property papers if it\'s a secured loan. Upload once â€” we reuse it across every application.',
-      },
-      {
-        question: 'What credit score do I need to qualify?',
-        answer: 'Most partner lenders look for 700+, but SM Finance AI matches you against lenders who work with lower scores too â€” you\'ll see your realistic options, not just the best-case ones.',
-      },
-      {
-        question: 'Can I list a car or property to sell?',
-        answer: 'Yes â€” list your car or property in minutes with verified valuation guidance, then track buyer interest from the same dashboard you use for loans and investments.',
-      },
-      {
-        question: 'How fast can I get loan approval?',
-        answer: 'In-principle approval in as little as 4 minutes for pre-verified profiles. Full disbursal timing depends on the lender and document checks, but most personal loans clear within 24â€“48 hours.',
-      },
-      {
-        question: 'Can I switch between loan offers before signing?',
-        answer: 'Yes â€” compare offers side by side and switch lenders anytime before you e-sign. Nothing is locked in until you actually accept a specific offer.',
-      },
+      { question: 'What services does SM Associate provide?', answer: 'We help customers explore loan options, vehicle resale, two wheeler insurance and related finance enquiries. The right service depends on your requirement and eligibility.' },
+      { question: 'Can I speak with someone before I apply?', answer: 'Yes. Contact the team first, explain what you need and ask what information or documents may be useful before you submit an application.' },
+      { question: 'What documents might I need for a loan?', answer: 'Depending on the lender and loan type, you may be asked for identity proof, address proof, income information, bank statements and other supporting documents.' },
+      { question: 'Can I use the EMI calculator before applying?', answer: 'Yes. Try different loan amounts, rates and repayment periods to understand the estimated monthly payment before you decide how much to borrow.' },
+      { question: 'Do loan rates and eligibility stay the same for everyone?', answer: 'No. Rates, eligibility, tenure, fees and approval decisions can vary by lender, applicant profile, loan type and other factors.' },
+      { question: 'Do you also help with used vehicles?', answer: 'Yes. You can browse available vehicles or start a resale enquiry and get guidance on the information you should check before buying or selling.' },
     ],
   },
 
   about: {
     title: 'Frequently Asked Questions',
-    subtitle: 'Learn more about our Tirunelveli team, our partner banking network, and our commitment to you.',
+    subtitle: 'A little more about SM Associate and how our local team works with customers.',
     items: [
-      {
-        question: 'Who is SM Associate and where are you located?',
-        answer: 'SM Associate is a premier financial brokerage and certified pre-owned vehicle advisory headquartered at No 183 E4, Nellaiapper High Road, Thirunagar, Tirunelveli Junction, Tamil Nadu.',
-      },
-      {
-        question: 'Which banks and NBFCs do you partner with?',
-        answer: 'We partner with over 25+ top public, private banks and RBI-registered NBFCs including HDFC, ICICI, SBI, Axis, Bajaj Finserv, Tata Capital, and Cholamandalam to bring you lowest rates.',
-      },
-      {
-        question: 'Are your consultation and loan matching services free?',
-        answer: 'Yes! Our initial advisory, loan comparison, and vehicle search guidance are 100% free with no hidden upfront consultation fees.',
-      },
-      {
-        question: 'How do you ensure transparency in vehicle & loan deals?',
-        answer: 'Every loan sanction letter comes directly from the partner bank with itemized APR, processing fee, and tenure. For vehicles, we provide full inspection reports and genuine service logs.',
-      },
-      {
-        question: 'Can I visit your office in person for assistance?',
-        answer: 'Absolutely! Our Tirunelveli office is open Monday to Saturday from 9:00 AM to 6:00 PM. You can walk in or book a dedicated appointment with our senior loan and automotive advisors.',
-      },
-      {
-        question: 'Do you offer doorstep support across Tirunelveli district?',
-        answer: 'Yes, for property inspections, document pickup, physical vehicle evaluations, and loan agreement sign-offs, our field executives provide convenient doorstep visits.',
-      },
+      { question: 'Where is SM Associate based?', answer: 'SM Associate is based in Tirunelveli, Tamil Nadu. Office and contact details are available on the Contact page.' },
+      { question: 'How do you approach finance enquiries?', answer: 'We start by understanding the purpose of the finance, the amount involved and the information available, then explain the practical next steps.' },
+      { question: 'Can I visit the office?', answer: 'Yes. Contact the team to confirm the office details and a suitable time before visiting.' },
+      { question: 'Can you guarantee loan approval or a specific rate?', answer: 'No. Approval, rate, tenure and fees are decided by the relevant lender after reviewing the application and documents.' },
+      { question: 'Do you help with vehicle resale as well as finance?', answer: 'Yes. SM Associate works across finance and mobility services, including pre-owned vehicle enquiries and resale support.' },
+      { question: 'How do I start an enquiry?', answer: 'Use the enquiry form or contact the team directly. Tell us what you are planning and we will explain the information needed for the next step.' },
     ],
   },
 
   loans: {
     title: 'Frequently Asked Questions',
-    subtitle: 'Explore our multi-category borrowing options, eligibility checks, and quick disbursal guidelines.',
+    subtitle: 'Understand the basics before comparing home, car and personal finance options.',
     items: [
-      {
-        question: 'What types of loans does SM Associate facilitate?',
-        answer: 'We facilitate Home Loans, Personal Loans, Car Loans (New & Used), Two-Wheeler Loans, Business & MSME Loans, and Machinery/Working Capital loans with custom terms.',
-      },
-      {
-        question: 'How do you find the lowest interest rate for my profile?',
-        answer: 'Our proprietary matching engine evaluates your income, CIBIL score, and tenure requirements against real-time rate grids from 25+ lenders to secure the lowest feasible APR.',
-      },
-      {
-        question: 'Can I apply for a loan if I have an existing EMI running?',
-        answer: 'Yes, as long as your Total Fixed Obligation to Income Ratio (FOIR) is generally below 50â€“60%. We can also structure a debt consolidation loan to lower your monthly outflow.',
-      },
-      {
-        question: 'What is the minimum credit score required to get approved?',
-        answer: 'While 750+ yields the lowest interest rates, we work with specialized lending partners who cater to credit scores between 600 and 749, as well as first-time borrowers.',
-      },
-      {
-        question: 'Is a co-applicant mandatory for loan approval?',
-        answer: 'Not for standard personal or vehicle loans. However, for higher ticket home loans and business loans, adding a working co-applicant significantly boosts eligibility and loan amount.',
-      },
-      {
-        question: 'Can I make partial prepayments or foreclosure before tenure?',
-        answer: 'Yes! For floating-rate retail loans (like home loans), RBI mandates zero foreclosure charges. For fixed-rate loans, charges vary between 0% and 3% depending on the lender.',
-      },
-      {
-        question: 'How quickly is the loan disbursed into my bank account?',
-        answer: 'Instant personal loans disburse in 4 to 24 hours. Vehicle and business loans typically take 24â€“48 hours, while secured home loans disburse within 3â€“5 working days post property legal vetting.',
-      },
-      {
-        question: 'What happens if my loan application gets rejected by one bank?',
-        answer: 'We analyze the exact rejection reason (e.g. documentation mismatch or internal bank policy) and route your application to an alternative lender whose criteria fits your profile.',
-      },
+      { question: 'Which types of loans can I explore?', answer: 'The site covers home loans, car loans, personal loans and business finance. Availability depends on your requirement and applicant profile.' },
+      { question: 'What should I compare before choosing a loan?', answer: 'Compare the interest rate, total repayment cost, tenure, processing charges, prepayment terms, required documents and the monthly EMI.' },
+      { question: 'Can I apply with an existing EMI?', answer: 'An existing EMI does not automatically rule out a new loan. Lenders consider income, current obligations, credit history and repayment capacity.' },
+      { question: 'Is a co-applicant always required?', answer: 'Not always. It depends on the loan type, lender policy and the financial profile of the applicants.' },
+      { question: 'How long does approval take?', answer: 'There is no single timeline for every application. Document checks, property evaluation and lender processes can affect the time required.' },
+      { question: 'What happens after I submit my details?', answer: 'Your requirement and supporting details are reviewed, and the relevant lender confirms the available terms before you proceed.' },
     ],
   },
 
   homeLoan: {
     title: 'Frequently Asked Questions',
-    subtitle: 'Everything you need to know about purchasing, constructing, or transferring your housing loan.',
+    subtitle: 'Useful points to consider when planning a home purchase, construction or renovation.',
     items: [
-      {
-        question: 'What is the starting interest rate for home loans?',
-        answer: 'Home loan interest rates currently start from 6.5% p.a. for salaried professionals with prime credit scores (750+), with flexible terms across leading PSU and private lenders.',
-      },
-      {
-        question: 'What is the maximum repayment tenure available?',
-        answer: 'You can choose repayment tenures up to 30 years (or up to retirement age, whichever is earlier), keeping your monthly EMI burden low and manageable.',
-      },
-      {
-        question: 'Can I avail tax benefits on my home loan?',
-        answer: 'Yes! You can claim up to â‚¹1.5 Lakhs on principal repayment under Section 80C and up to â‚¹2 Lakhs on interest paid under Section 24(b) per financial year.',
-      },
-      {
-        question: 'What property documents are required for home loans?',
-        answer: 'Title Deed/Patta, Parent Documents for 30 years, Approved Building Plan/DTCP Approval, Encumbrance Certificate (EC) for 13â€“30 years, and latest Property Tax receipts.',
-      },
-      {
-        question: 'How does a Home Loan Balance Transfer with Top-Up work?',
-        answer: 'We help you shift your existing high-rate home loan to a lower-rate partner bank, saving lakhs in interest, plus unlock an additional low-interest top-up loan for renovation or personal needs.',
-      },
-      {
-        question: 'Can self-employed individuals get a home loan in Tirunelveli?',
-        answer: 'Yes! Self-employed business owners, doctors, and contractors can qualify with 2â€“3 years of ITR returns, computation of income, GST returns, and audited financial statements.',
-      },
-      {
-        question: 'What percentage of the property value can I borrow (LTV)?',
-        answer: 'Banks typically fund up to 80â€“90% of the agreement value for loans up to â‚¹30 Lakhs, and up to 75â€“80% for loan amounts exceeding â‚¹30 Lakhs.',
-      },
-      {
-        question: 'Do you help with property valuation and legal scrutiny?',
-        answer: 'Yes, our empanelled legal and technical evaluators examine all patta, encumbrance, and DTCP approvals to ensure a 100% dispute-free title before loan sanction.',
-      },
+      { question: 'What can a home loan be used for?', answer: 'Depending on the product, home finance may support a property purchase, construction or eligible renovation. Confirm the permitted use with the lender.' },
+      { question: 'What documents are commonly requested?', answer: 'You may be asked for identity and address proof, income documents, bank statements and property-related papers. The exact list varies.' },
+      { question: 'Can self-employed applicants apply?', answer: 'Yes. Lenders may review income records, tax filings, business information and banking history before making a decision.' },
+      { question: 'How should I choose the repayment period?', answer: 'A longer tenure can reduce the monthly EMI but may increase the total interest paid. Compare the monthly payment with the overall cost.' },
+      { question: 'Can I transfer an existing home loan?', answer: 'Some lenders offer balance-transfer options. Compare the new rate, charges, remaining tenure and total saving before moving.' },
+      { question: 'Are property checks part of the process?', answer: 'For secured home finance, lenders generally review property and legal documents as part of their approval process.' },
     ],
   },
 
   personalLoan: {
     title: 'Frequently Asked Questions',
-    subtitle: 'Transparent terms, zero collateral, and same-day disbursals for all your personal goals.',
+    subtitle: 'Practical questions about using personal finance for planned or unexpected expenses.',
     items: [
-      {
-        question: 'Do I need to submit any collateral or security?',
-        answer: 'No collateral or guarantor is required. Personal loans are 100% unsecured and sanctioned purely based on your income stability and credit history.',
-      },
-      {
-        question: 'How fast can I receive the money in my account?',
-        answer: 'For applicants with digital KYC and net banking verification, funds are sanctioned in under 30 minutes and credited directly to your bank account within 4 to 24 hours.',
-      },
-      {
-        question: 'What is the minimum monthly salary required?',
-        answer: 'The minimum monthly take-home salary is â‚¹15,000 for salaried applicants in tier-2/3 cities like Tirunelveli, and â‚¹20,000 for metro employees.',
-      },
-      {
-        question: 'What can I use the personal loan funds for?',
-        answer: 'There are no end-use restrictions! You can use the funds for wedding expenses, medical emergencies, higher education, home renovation, travel, or debt consolidation.',
-      },
-      {
-        question: 'What is the repayment tenure range?',
-        answer: 'Flexible repayment terms are available from 12 months up to 60 months (5 years), allowing you to pick an EMI that fits comfortably into your monthly budget.',
-      },
-      {
-        question: 'Can I get a personal loan if I am self-employed or freelance?',
-        answer: 'Yes, self-employed professionals and business owners can qualify by providing 1â€“2 years of ITR filings, 6 months of active bank statements, and business registration proof.',
-      },
-      {
-        question: 'Are there any hidden fees or pre-closure penalties?',
-        answer: 'All processing charges (typically 1â€“2%) and stamp duties are explicitly listed in your digital sanction letter. Many lenders allow zero foreclosure penalties after 6â€“12 EMIs.',
-      },
-      {
-        question: 'How do I check my maximum eligible loan amount?',
-        answer: 'You can use our online EMI and eligibility tool or speak with our credit advisor who will calculate your exact borrowing limit based on your net monthly disposable income.',
-      },
+      { question: 'Is a personal loan secured or unsecured?', answer: 'Personal loans are generally unsecured, so they are not normally backed by a specific property or vehicle. The lender still reviews income and repayment capacity.' },
+      { question: 'What can I use a personal loan for?', answer: 'Use cases depend on the lender, but personal finance is commonly considered for education, medical expenses, home improvements or other planned spending.' },
+      { question: 'What affects personal loan eligibility?', answer: 'Income, employment or business stability, existing obligations, credit history and the requested loan amount can all affect eligibility.' },
+      { question: 'Can self-employed people apply?', answer: 'Yes. Self-employed applicants can explore suitable products, with business and income records reviewed by the lender.' },
+      { question: 'How do I keep the EMI manageable?', answer: 'Start with the amount you actually need, compare different tenures and check the estimated EMI against your existing monthly commitments.' },
+      { question: 'Are there processing or prepayment charges?', answer: 'Charges vary by lender and product. Review the official fee schedule and sanction terms before accepting the loan.' },
     ],
   },
 
   carLoan: {
     title: 'Frequently Asked Questions',
-    subtitle: 'Drive home your dream new or pre-owned car with minimal paperwork and instant approvals.',
+    subtitle: 'What to know when arranging finance for a new or pre-owned car.',
     items: [
-      {
-        question: 'What is the maximum financing percentage available for cars?',
-        answer: 'We offer up to 90%â€“100% on-road financing for brand new cars, and up to 80%â€“85% of the certified market valuation for pre-owned cars.',
-      },
-      {
-        question: 'What is the difference in interest rates for new vs used cars?',
-        answer: 'New car loans generally start from 7.5%â€“8.5% p.a., while pre-owned car financing starts from 9.5%â€“11.5% p.a. depending on vehicle age, make, and borrower credit profile.',
-      },
-      {
-        question: 'What is the maximum tenure for a car loan?',
-        answer: 'You can choose repayment tenures up to 7 years (84 months) for new cars, and up to 5 years (60 months) for pre-owned cars.',
-      },
-      {
-        question: 'How does RC hypothecation and endorsement work?',
-        answer: 'Once the loan is disbursed, the RTO endorses the financing bank onto the vehicle Registration Certificate (RC). When the loan is closed, we help you obtain the Bank NOC and Form 35 to cancel hypothecation.',
-      },
-      {
-        question: 'Can I get a car loan for a vehicle bought from an individual seller?',
-        answer: 'Yes! We facilitate private car loan purchases. We carry out an inspection, verify clean RC and insurance papers, and disburse the loan directly to the seller upon ownership transfer.',
-      },
-      {
-        question: 'Can I club accessories, insurance, and road tax in the loan?',
-        answer: 'Yes, our on-road financing packages allow you to include 3-to-5 year motor insurance, RTO road taxes, extended warranty, and authorized accessories into a single manageable EMI.',
-      },
-      {
-        question: 'What documents are required to apply for a car loan?',
-        answer: 'Aadhaar, PAN, 3 months salary slips or 2 years ITR, 6 months bank statement, and the proforma invoice or seller RC copy for used vehicles.',
-      },
-      {
-        question: 'Can I foreclose or prepay my car loan early?',
-        answer: 'Yes, most partner banks allow partial prepayment or complete foreclosure after 6 to 12 months with minimal nominal charges.',
-      },
-    ],
-  }, businessLoan: {
-    title: 'Frequently Asked Questions',
-    subtitle: 'Collateral-free working capital, equipment finance, and expansion loans for Tirunelveli businesses.',
-    items: [
-      {
-        question: 'Can I get a business loan without pledging property (unsecured)?',
-        answer: 'Yes! We facilitate collateral-free MSME business loans up to â‚¹50 Lakhs based on your annual business turnover, banking cash flows, and GST filings.',
-      },
-      {
-        question: 'What is the minimum vintage/history required for business financing?',
-        answer: 'Most partner lenders require at least 1 to 2 years of active business operations with verifiable bank transactions or GST returns.',
-      },
-      {
-        question: 'What types of commercial credit are available?',
-        answer: 'We provide unsecured term loans, overdraft (OD) facilities, cash credit (CC), machinery loans, invoice discounting, and commercial vehicle finance.',
-      },
-      {
-        question: 'What documents do I need to submit for a business loan?',
-        answer: 'Business registration (GST / Udyam / Trade License), last 2 years ITR with computation & balance sheets, 12 months bank statements, and KYC of all partners/directors.',
-      },
-      {
-        question: 'How is my business loan eligibility calculated?',
-        answer: 'Eligibility is primarily calculated using your Debt Service Coverage Ratio (DSCR), average monthly banking turnover, profit margins, and repayment track record.',
-      },
-      {
-        question: 'Are CGTMSE scheme loans supported through your network?',
-        answer: 'Yes, we guide eligible micro and small enterprises through government-backed CGTMSE scheme facilities offering credit guarantee without third-party collateral.',
-      },
-      {
-        question: 'How quickly will the business funds be disbursed?',
-        answer: 'Unsecured business loans are sanctioned and disbursed in 48 to 72 hours once all financial statements and banking APIs are verified.',
-      },
-      {
-        question: 'Can retail shop owners and traders in Tirunelveli apply?',
-        answer: 'Absolutely! Traders, retail shop owners, manufacturers, doctors, and service providers across Tirunelveli and Southern Tamil Nadu are fully eligible.',
-      },
+      { question: 'Can I finance a pre-owned car?', answer: 'Yes, eligible pre-owned vehicles can be financed. The lender may consider the vehicle age, value, condition and documentation.' },
+      { question: 'What documents should I keep ready?', answer: 'Applicants may need identity, address and income documents. Used-vehicle finance can also require registration, insurance and ownership papers.' },
+      { question: 'Does the down payment affect the EMI?', answer: 'Yes. A higher down payment reduces the amount you need to finance, which can lower the estimated EMI.' },
+      { question: 'Can I calculate the EMI before choosing a car?', answer: 'Yes. Use the EMI calculator to test different loan amounts and tenures and compare the result with your budget.' },
+      { question: 'Can a loan be arranged for a private-seller vehicle?', answer: 'Some lenders may finance eligible private-party purchases. Vehicle documents and lender policy need to be checked first.' },
+      { question: 'What should I check before buying a used car?', answer: 'Review registration, ownership history, insurance, service records, accident history and mechanical condition before making a decision.' },
     ],
   },
 
   twoWheelerInsurance: {
     title: 'Frequently Asked Questions',
-    subtitle: 'Instant policy renewal, zero depreciation add-ons, and hassle-free claim settlement support.',
+    subtitle: 'Simple guidance for choosing or renewing two wheeler insurance.',
     items: [
-      {
-        question: 'What is the difference between Third-Party and Comprehensive insurance?',
-        answer: 'Third-Party covers legal liabilities and bodily damage to others (mandatory by law). Comprehensive covers both third-party liabilities AND damages to your own bike from accidents, theft, fire, or natural calamities.',
-      },
-      {
-        question: 'How does the Zero Depreciation (Bumper-to-Bumper) add-on help?',
-        answer: 'With Zero Dep, insurance pays 100% cost of replacing plastic, rubber, fiber, and metal parts without deducting depreciation when repairing after an accident.',
-      },
-      {
-        question: 'Can I transfer my No Claim Bonus (NCB) from my old bike to a new one?',
-        answer: 'Yes! NCB belongs to you (the vehicle owner), not the bike. You can transfer up to 50% accumulated NCB discount onto your new bike insurance policy.',
-      },
-      {
-        question: 'How quickly can I get my expired two-wheeler policy renewed?',
-        answer: 'We generate instant digital policy copy in 2 minutes without physical inspection for recently expired policies, ensuring you stay road-legal and penalty-free.',
-      },
-      {
-        question: 'Do you have cashless garage tie-ups in Tirunelveli?',
-        answer: 'Yes! Our insurance partner network covers 100+ authorized two-wheeler service centers and dealer workshops in Tirunelveli and nearby towns for 100% cashless repairs.',
-      },
-      {
-        question: 'What is Personal Accident (PA) cover and is it mandatory?',
-        answer: 'PA cover provides â‚¹15 Lakhs financial protection for the owner-driver in case of accidental death or permanent disability, and is legally mandatory unless you already hold an active standalone PA policy.',
-      },
-      {
-        question: 'What steps should I take if an accident occurs?',
-        answer: 'Take photos of the damage, inform SM Associate support or the insurer toll-free immediately, avoid moving the bike if severe, and our team will coordinate the surveyor and cashless claim filing.',
-      },
-      {
-        question: 'Can I add roadside assistance (RSA) to my two-wheeler policy?',
-        answer: 'Yes, 24x7 Roadside Assistance covers flat tyre support, on-spot minor repairs, towing, and emergency fuel delivery anywhere in Tamil Nadu.',
-      },
+      { question: 'What is the difference between third-party and comprehensive cover?', answer: 'Third-party cover addresses eligible third-party liabilities. Comprehensive policies can also cover damage to your own vehicle, subject to policy terms and exclusions.' },
+      { question: 'What should I check before renewing?', answer: 'Review policy dates, coverage, insured value, add-ons, exclusions and the details of the vehicle and owner.' },
+      { question: 'Can I compare different insurance options?', answer: 'Yes. Compare coverage, exclusions, add-ons, deductibles and premium rather than looking at price alone.' },
+      { question: 'What documents are usually needed?', answer: 'The registration certificate, previous policy details and basic owner or vehicle information may be requested.' },
+      { question: 'Does a lower premium always mean a better policy?', answer: 'Not necessarily. A lower premium may come with different coverage or exclusions, so read the policy terms carefully.' },
+      { question: 'Can SM Associate help with renewal enquiries?', answer: 'Yes. Share your existing policy and vehicle details and the team can explain what information you should compare.' },
     ],
   },
 
