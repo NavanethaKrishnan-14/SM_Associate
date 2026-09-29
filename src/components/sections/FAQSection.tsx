@@ -91,11 +91,14 @@ export default function FAQSection({
                   <ChevronDown size={18} className={isOpen ? 'faq-unified-chevron is-open' : 'faq-unified-chevron'} />
                 </button>
 
-                {isOpen && (
+                <div
+                  className={`faq-unified-answer-wrap ${isOpen ? 'is-open' : ''}`}
+                  aria-hidden={!isOpen}
+                >
                   <div className="faq-unified-answer">
                     {faq.answer}
                   </div>
-                )}
+                </div>
               </div>
             );
           })}
