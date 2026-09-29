@@ -18,7 +18,6 @@ const serviceLinks = [
 
 const vehicleLinks = [
   { label: 'Browse Cars', href: `${ROUTES.VEHICLES}?type=car` },
-  { label: 'Browse Bikes', href: `${ROUTES.VEHICLES}?type=bike` },
   { label: 'Sell Your Vehicle', href: ROUTES.CAR_RESALE },
   { label: 'EMI Calculator', href: ROUTES.EMI_CALCULATOR },
   { label: 'Finance Solutions', href: ROUTES.LOANS },
