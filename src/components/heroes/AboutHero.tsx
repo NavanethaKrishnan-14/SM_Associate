@@ -158,19 +158,19 @@ export default function AboutHero() {
           >
             {[
               {
-                src: 'https://images.pexels.com/photos/36765719/pexels-photo-36765719/free-photo-of-business-meeting-with-professional-team-in-office.jpeg?auto=compress&dpr=1&w=1200',
+                src: '/about/journey/journey-01.jpg',
                 alt: 'Professional business meeting in a modern office',
               },
               {
-                src: 'https://images.pexels.com/photos/7433865/pexels-photo-7433865.jpeg?auto=compress&dpr=1&w=1200',
+                src: '/about/journey/journey-02.jpg',
                 alt: 'Business team reviewing financial strategy together',
               },
               {
-                src: 'https://images.pexels.com/photos/8068833/pexels-photo-8068833.jpeg?auto=compress&dpr=1&w=1200',
+                src: '/about/journey/journey-03.jpg',
                 alt: 'Professionals collaborating on business planning',
               },
               {
-                src: 'https://images.pexels.com/photos/8518660/pexels-photo-8518660.jpeg?auto=compress&dpr=1&w=1200',
+                src: '/about/journey/journey-04.jpg',
                 alt: 'Professional team working together in an office',
               },
             ].map((image, index) => (
