@@ -19,6 +19,7 @@ import {
   X,
 } from 'lucide-react';
 import { ROUTES } from '@/lib/constants';
+import { getVisualThemeForPath } from '@/config/pageThemes';
 
 type NavigationItem = {
   label: string;
@@ -69,20 +70,7 @@ export default function Header() {
   }, [pathname]);
 
   const isHome = pathname === ROUTES.HOME;
-
-  const pageTheme = pathname.startsWith(ROUTES.CONTACT)
-    ? { name: 'teal', accent: '#4fc9b7', soft: '#b9f0e6' }
-    : pathname.startsWith(ROUTES.ABOUT)
-      ? { name: 'gold', accent: '#d6b35a', soft: '#f2dfa3' }
-      : pathname.startsWith(ROUTES.VEHICLES) || pathname.startsWith(ROUTES.CAR_RESALE)
-        ? { name: 'burgundy', accent: '#d88b9a', soft: '#f0c4cc' }
-        : pathname.startsWith(ROUTES.GOLD_LOAN)
-          ? { name: 'gold', accent: '#d6b35a', soft: '#f2dfa3' }
-          : pathname.startsWith(ROUTES.BUSINESS_LOAN) || pathname.startsWith(ROUTES.TWO_WHEELER_INSURANCE) || pathname.startsWith(ROUTES.LOANS)
-            ? { name: 'teal', accent: '#4fc9b7', soft: '#b9f0e6' }
-            : pathname.startsWith(ROUTES.EMI_CALCULATOR)
-              ? { name: 'gold', accent: '#d6b35a', soft: '#f2dfa3' }
-              : { name: 'gold', accent: '#d6b35a', soft: '#f2dfa3' };
+  const pageTheme = getVisualThemeForPath(pathname);
 
   const themeStyle = {
     '--header-accent': pageTheme.accent,
