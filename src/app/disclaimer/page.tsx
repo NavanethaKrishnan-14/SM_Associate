@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 
 export default function DisclaimerPage() {
   return (
-    <div>
+    <div id="disclaimer-page" className="site-page page-disclaimer">
       {/* Hero Section */}
       <section className="bg-gradient-navy text-white py-16">
         <div className="container-padded max-w-4xl">
