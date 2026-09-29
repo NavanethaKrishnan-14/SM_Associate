@@ -31,5 +31,9 @@ export const metadata: Metadata = {
 };
 
 export default function SellVehiclePage() {
-  return (\n    <div id="sell-vehicle-page" className="site-page page-sell-vehicle">\n      <SellVehicleContent />\n    </div>\n  );
+  return (
+    <div id="sell-vehicle-page" className="site-page page-sell-vehicle">
+      <SellVehicleContent />
+    </div>
+  );
 }
