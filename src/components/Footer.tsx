@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import type { CSSProperties } from 'react';
 import { ArrowUpRight, Facebook, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
 import { COMPANY_INFO, ROUTES } from '@/lib/constants';
+import { getVisualThemeForPath } from '@/config/pageThemes';
 
 const serviceLinks = [
   { label: 'Home Loan', href: ROUTES.HOME_LOAN },
@@ -36,21 +37,12 @@ export default function Footer() {
   const pathname = usePathname();
   const year = new Date().getFullYear();
 
-  const footerTheme = pathname.startsWith(ROUTES.CONTACT)
-    ? { name: 'teal', accent: '#4fc9b7', soft: '#b9f0e6' }
-    : pathname.startsWith(ROUTES.ABOUT)
-      ? { name: 'gold', accent: '#d6b35a', soft: '#f2dfa3' }
-      : pathname.startsWith(ROUTES.VEHICLES) || pathname.startsWith(ROUTES.CAR_RESALE)
-        ? { name: 'burgundy', accent: '#d88b9a', soft: '#f0c4cc' }
-        : pathname.startsWith(ROUTES.GOLD_LOAN)
-          ? { name: 'gold', accent: '#d6b35a', soft: '#f2dfa3' }
-          : pathname.startsWith(ROUTES.BUSINESS_LOAN) || pathname.startsWith(ROUTES.TWO_WHEELER_INSURANCE) || pathname.startsWith(ROUTES.LOANS)
-            ? { name: 'teal', accent: '#4fc9b7', soft: '#b9f0e6' }
-            : { name: 'gold', accent: '#d6b35a', soft: '#f2dfa3' };
+  const footerTheme = getVisualThemeForPath(pathname);
 
   const footerStyle = {
     '--footer-accent': footerTheme.accent,
-    '--footer-accent-soft': footerTheme.soft,
+    '--footer-accent-soft': footerTheme.accentSoft,
+    '--footer-accent-glow': footerTheme.accentGlow,
   } as CSSProperties;
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
