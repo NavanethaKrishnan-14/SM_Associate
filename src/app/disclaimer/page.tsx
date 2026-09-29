@@ -6,16 +6,16 @@ export const metadata: Metadata = {
   description: 'Important disclaimer about SM Associate services. No guarantees on loan approval, interest rates, or vehicle availability. Read before using our services.',
   keywords: 'disclaimer, legal disclaimer, important notice, SM Associate',
   alternates: {
-    canonical: 'https://smassociate.com/disclaimer',
+    canonical: 'https://www.smassociate.in/disclaimer',
   },
   openGraph: {
     title: 'Disclaimer - SM Associate',
     description: 'Important legal information and disclaimers',
-    url: 'https://smassociate.com/disclaimer',
+    url: 'https://www.smassociate.in/disclaimer',
     type: 'website',
     images: [
       {
-        url: 'https://smassociate.com/og-image.jpg',
+        url: 'https://www.smassociate.in/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Disclaimer - SM Associate',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Disclaimer - SM Associate',
     description: 'Important legal information and disclaimers',
-    images: ['https://smassociate.com/og-image.jpg'],
+    images: ['https://www.smassociate.in/og-image.jpg'],
   },
 };
 
