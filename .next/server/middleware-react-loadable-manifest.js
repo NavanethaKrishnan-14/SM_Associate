@@ -1,1 +1,0 @@
-self.__REACT_LOADABLE_MANIFEST='{"components\\\\sections\\\\Testimonials.tsx -> react-fast-marquee":{"id":1772,"files":["static/chunks/772.ec58ae2558a3e084.js"]}}';
