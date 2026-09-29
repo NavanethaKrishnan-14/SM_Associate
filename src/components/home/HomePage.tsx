@@ -589,7 +589,12 @@ function FAQ() {
                   <strong>{item.question}</strong>
                   <ChevronDown size={18} className={open ? 'rotate-180' : ''} />
                 </button>
-                {open && <div className="home-v3-faq-answer">{item.answer}</div>}
+                <div
+                  className={'home-v3-faq-answer-wrap ' + (open ? 'is-open' : '')}
+                  aria-hidden={!open}
+                >
+                  <div className="home-v3-faq-answer">{item.answer}</div>
+                </div>
               </div>
             );
           })}
