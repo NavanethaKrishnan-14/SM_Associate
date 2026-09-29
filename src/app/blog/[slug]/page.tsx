@@ -70,7 +70,7 @@ export default function BlogDetailPage({ params }: { params: { slug: string } })
   }) : null;
 
   return (
-    <>
+    <div id="blog-detail-page" className="site-page page-blog-detail">
       {articleSchema && (
         <script
           type="application/ld+json"
@@ -78,6 +78,6 @@ export default function BlogDetailPage({ params }: { params: { slug: string } })
         />
       )}
       <BlogDetailClient params={params} />
-    </>
+    </div>
   );
 }
