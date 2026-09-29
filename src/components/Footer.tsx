@@ -67,46 +67,44 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="premium-footer-landmark" aria-label="Nellaiappar Temple inspired line-art illustration" role="img">
-          <div className="premium-footer-landmark-halo" />
-          <svg className="premium-footer-landmark-svg" viewBox="0 0 620 340" fill="none" aria-hidden="true">
-            <path className="landmark-main-line" d="M94 276H526" />
-            <path className="landmark-main-line" d="M112 262H508" />
-            <path className="landmark-main-line" d="M134 248H486" />
-            <path className="landmark-main-line" d="M150 248V178H470V248" />
-            <path className="landmark-main-line" d="M168 178V158H452V178" />
-            <path className="landmark-main-line" d="M185 158V140H435V158" />
+        <div className="premium-footer-journey" aria-label="SM Associate finance and mobility journey">
+          <div className="premium-footer-journey-grid" />
+          <div className="premium-footer-journey-glow" />
 
-            <path className="landmark-accent-line" d="M196 140L205 122L214 140M406 140L415 122L424 140" />
-            <path className="landmark-accent-line" d="M215 122L225 104L235 122M385 122L395 104L405 122" />
-            <path className="landmark-accent-line" d="M240 104L250 86L260 104M360 104L370 86L380 104" />
+          <div className="premium-footer-journey-copy">
+            <span>SM ASSOCIATE</span>
+            <strong>Your next move, clearly.</strong>
+          </div>
 
-            <path className="landmark-main-line" d="M266 86L276 68L286 86M334 86L344 68L354 86" />
-            <path className="landmark-accent-line" d="M290 68L300 48L310 68M310 48L320 30L330 48M330 48L340 30L350 48" />
-
-            <path className="landmark-main-line" d="M300 30H340" />
-            <path className="landmark-main-line" d="M320 30V16" />
-            <circle className="landmark-accent-dot" cx="320" cy="12" r="4" />
-
-            <path className="landmark-main-line" d="M172 248V202H208V248M412 248V202H448V248" />
-            <path className="landmark-main-line" d="M268 248V204C268 190 279 178 294 178C309 178 320 190 320 204V248" />
-            <path className="landmark-main-line" d="M320 248V204C320 190 331 178 346 178C361 178 372 190 372 204V248" />
-
-            <path className="landmark-main-line" d="M146 230H474" />
-            <path className="landmark-accent-line" d="M156 216H464M165 201H455" />
-            <path className="landmark-accent-line" d="M185 182H225M395 182H435" />
-
-            <path className="landmark-secondary-line" d="M74 282C138 268 190 292 252 282C314 272 370 292 432 282C482 274 530 286 562 276" />
-            <path className="landmark-secondary-line" d="M82 296C150 284 206 306 268 296C330 286 390 306 452 296C500 288 536 298 556 292" />
+          <svg className="premium-footer-journey-path" viewBox="0 0 620 250" fill="none" aria-hidden="true">
+            <path className="journey-track" d="M64 180C155 42 230 42 307 126C372 196 432 194 556 58" />
+            <path className="journey-highlight" d="M64 180C155 42 230 42 307 126" />
           </svg>
 
-          <div className="premium-footer-landmark-label">
-            <span>NELLAIAPPAR TEMPLE</span>
+          <div className="premium-footer-journey-node journey-node-one">
+            <span>01</span>
+            <strong>PLAN</strong>
+            <small>Understand</small>
+          </div>
+          <div className="premium-footer-journey-node journey-node-two">
+            <span>02</span>
+            <strong>CHOOSE</strong>
+            <small>Compare</small>
+          </div>
+          <div className="premium-footer-journey-node journey-node-three">
+            <span>03</span>
+            <strong>MOVE</strong>
+            <small>Take the next step</small>
+          </div>
+
+          <div className="premium-footer-journey-meta">
+            <span>FINANCE</span>
+            <i />
+            <span>MOBILITY</span>
             <i />
             <span>TIRUNELVELI</span>
           </div>
         </div>
-      </div>
 
       <div className="premium-footer-grid">
         <div className="premium-footer-brand">
