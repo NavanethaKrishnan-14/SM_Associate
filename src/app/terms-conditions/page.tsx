@@ -6,16 +6,16 @@ export const metadata: Metadata = {
   description: 'Review SM Associate terms and conditions for website usage and services. Understand your rights and obligations. Legal agreement for using our platform.',
   keywords: 'terms and conditions, terms of service, legal agreement, website terms',
   alternates: {
-    canonical: 'https://smassociate.com/terms-conditions',
+    canonical: 'https://www.smassociate.in/terms-conditions',
   },
   openGraph: {
     title: 'Terms & Conditions - SM Associate',
     description: 'Legal terms and conditions for SM Associate services',
-    url: 'https://smassociate.com/terms-conditions',
+    url: 'https://www.smassociate.in/terms-conditions',
     type: 'website',
     images: [
       {
-        url: 'https://smassociate.com/og-image.jpg',
+        url: 'https://www.smassociate.in/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Terms & Conditions - SM Associate',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Terms & Conditions - SM Associate',
     description: 'Legal terms and conditions for SM Associate services',
-    images: ['https://smassociate.com/og-image.jpg'],
+    images: ['https://www.smassociate.in/og-image.jpg'],
   },
 };
 
