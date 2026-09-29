@@ -3246,3 +3246,216 @@ textarea:focus-visible {
     grid-template-columns: 1fr !important;
   }
 }
+
+
+/* FINAL FIX — Unified FAQ system across every FAQ section */
+.faq-unified-section {
+  position: relative;
+  width: 100%;
+  padding: 88px 24px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 88% 8%, rgba(214,179,90,.07), transparent 24%),
+    radial-gradient(circle at 12% 92%, rgba(79,201,183,.055), transparent 24%),
+    #07131f !important;
+  color: #f7f6f1 !important;
+}
+
+.faq-unified-container {
+  position: relative;
+  z-index: 2;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.faq-unified-heading {
+  max-width: 760px;
+  margin: 0 auto 44px;
+  text-align: center;
+}
+
+.faq-unified-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 16px;
+  color: #d6b35a;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.faq-unified-eyebrow span {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #d6b35a;
+  box-shadow: 0 0 18px rgba(214,179,90,.35);
+}
+
+.faq-unified-heading h2 {
+  margin: 0;
+  color: #f7f6f1 !important;
+  font-size: clamp(2rem, 4vw, 3.7rem) !important;
+  line-height: 1.05;
+  letter-spacing: -.035em;
+}
+
+.faq-unified-heading p {
+  margin: 15px auto 0;
+  max-width: 680px;
+  color: #c4cbd1 !important;
+  font-size: clamp(.98rem, 1.4vw, 1.12rem);
+  line-height: 1.75;
+}
+
+.faq-unified-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 16px;
+}
+
+.faq-unified-item {
+  overflow: hidden;
+  align-self: start;
+  background: #102535 !important;
+  border: 1px solid rgba(255,255,255,.10) !important;
+  border-radius: 18px;
+  box-shadow: 0 12px 34px rgba(0,0,0,.18);
+  transition: border-color .22s ease, box-shadow .22s ease, transform .22s ease;
+}
+
+.faq-unified-item:hover {
+  border-color: rgba(214,179,90,.30) !important;
+  box-shadow: 0 18px 42px rgba(0,0,0,.24);
+  transform: translateY(-2px);
+}
+
+.faq-unified-item.is-open {
+  border-color: rgba(79,201,183,.28) !important;
+  background: #102535 !important;
+}
+
+.faq-unified-item button {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 36px minmax(0,1fr) 28px;
+  align-items: center;
+  gap: 10px;
+  padding: 19px 20px;
+  background: transparent !important;
+  border: 0;
+  color: #f7f6f1 !important;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq-unified-item button:focus-visible {
+  outline: 2px solid rgba(214,179,90,.75);
+  outline-offset: -2px;
+  border-radius: 17px;
+}
+
+.faq-unified-number {
+  color: #d6b35a;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+.faq-unified-item strong {
+  color: #f7f6f1 !important;
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 800;
+}
+
+.faq-unified-chevron {
+  color: #aebac3;
+  transition: transform .25s ease, color .25s ease;
+}
+
+.faq-unified-chevron.is-open {
+  transform: rotate(180deg);
+  color: #4fc9b7;
+}
+
+.faq-unified-answer {
+  padding: 0 20px 20px 66px;
+  color: #c4cbd1 !important;
+  font-size: 12px;
+  line-height: 1.78;
+}
+
+.faq-unified-footer {
+  margin-top: 34px;
+  text-align: center;
+  color: #83919d !important;
+  font-size: 13px;
+}
+
+.faq-unified-footer p {
+  margin: 0;
+  color: #83919d !important;
+}
+
+.faq-unified-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 4px;
+  color: #4fc9b7 !important;
+  font-weight: 800;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.faq-unified-footer a:hover {
+  color: #f2dfa3 !important;
+}
+
+.faq-unified-glow {
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  filter: blur(70px);
+  pointer-events: none;
+  opacity: .4;
+}
+
+.faq-unified-glow-one {
+  top: -160px;
+  right: -80px;
+  background: rgba(214,179,90,.10);
+}
+
+.faq-unified-glow-two {
+  bottom: -180px;
+  left: -100px;
+  background: rgba(79,201,183,.08);
+}
+
+@media (max-width: 760px) {
+  .faq-unified-section {
+    padding: 70px 16px;
+  }
+
+  .faq-unified-heading {
+    margin-bottom: 30px;
+  }
+
+  .faq-unified-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .faq-unified-item button {
+    padding: 17px;
+  }
+
+  .faq-unified-answer {
+    padding: 0 17px 18px 63px;
+  }
+}
