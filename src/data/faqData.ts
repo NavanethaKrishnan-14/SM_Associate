@@ -144,7 +144,7 @@ export const FAQ_DATA: Record<FAQCategory, {
       },
       {
         question: 'Does the calculator include bank processing fees and insurance?',
-        answer: 'The EMI tool computes the pure monthly installment. Processing charges and optional insurance, where applicable, are separate from the EMI calculation and should be checked in the lender's final terms.',
+        answer: 'The EMI tool computes the pure monthly installment. Processing charges and optional insurance, where applicable, are separate from the EMI calculation and should be checked in the lender’s final terms.',
       },
       {
         question: 'How does choosing a longer tenure affect my total interest paid?',
