@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import { CheckCircle, Users, Target, Award } from 'lucide-react';
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Testimonials from '@/components/sections/Testimonials';
 import VaultContactSection from '@/components/sections/VaultContactSection';
@@ -54,17 +53,42 @@ export default function AboutContent() {
               initial={isMounted ? { opacity: 0, x: 50 } : { opacity: 1, x: 0 }}
               animate={{ opacity: 1, x: 0 }}
               transition={isMounted ? { duration: 0.6 } : { duration: 0 }}
-              className="overflow-hidden rounded-2xl border border-teal/20 bg-gradient-to-br from-teal/20 to-cyan/20 shadow-lg"
+              className="grid grid-cols-2 gap-3"
             >
-              <div className="relative h-[440px] w-full">
-                <Image
-                  src="/about/office.jpg"
-                  alt="Business team collaborating on a shared journey and financial growth strategy"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </div>
+              {[
+                {
+                  src: 'https://images.pexels.com/photos/36765719/pexels-photo-36765719/free-photo-of-business-meeting-with-professional-team-in-office.jpeg?auto=compress&dpr=1&w=1200',
+                  alt: 'Professional business meeting in a modern office',
+                },
+                {
+                  src: 'https://images.pexels.com/photos/7433865/pexels-photo-7433865.jpeg?auto=compress&dpr=1&w=1200',
+                  alt: 'Business team reviewing financial strategy together',
+                },
+                {
+                  src: 'https://images.pexels.com/photos/8068833/pexels-photo-8068833.jpeg?auto=compress&dpr=1&w=1200',
+                  alt: 'Diverse professionals collaborating in an office',
+                },
+                {
+                  src: 'https://images.pexels.com/photos/8518660/pexels-photo-8518660.jpeg?auto=compress&dpr=1&w=1200',
+                  alt: 'Professional team working together in an office',
+                },
+              ].map((image, index) => (
+                <motion.div
+                  key={image.src}
+                  initial={{ opacity: 0, y: 18 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.08, duration: 0.45 }}
+                  className="relative overflow-hidden rounded-2xl border border-teal/20 bg-slate-100 shadow-md aspect-[4/3]"
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    loading={index === 0 ? 'eager' : 'lazy'}
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+                </motion.div>
+              ))}
             </motion.div>
           </div>
         </div>
