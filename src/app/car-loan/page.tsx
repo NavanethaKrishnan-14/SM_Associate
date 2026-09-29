@@ -33,9 +33,9 @@ export const metadata: Metadata = {
 
 export default function CarLoanPage() {
   return (
-    <>
+    <div id="car-loan-page" className="site-page page-car-loan">
       <CarLoanHero />
       <CarLoanContent />
-    </>
+    </div>
   );
 }
