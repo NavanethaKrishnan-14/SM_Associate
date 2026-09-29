@@ -4783,3 +4783,100 @@ option {
 .faq-unified-section * {
   font-family: var(--font-site) !important;
 }
+
+
+/* FINAL FIX — Slight typography scale-up */
+/* Header */
+.premium-nav-link {
+  font-size: 13px !important;
+}
+
+.premium-nav-dropdown-head {
+  font-size: 9px !important;
+}
+
+.premium-nav-subitem strong {
+  font-size: 12px !important;
+}
+
+.premium-nav-subitem small {
+  font-size: 10px !important;
+}
+
+.premium-header-cta,
+.premium-footer-cta {
+  font-size: 12px !important;
+}
+
+/* Footer */
+.premium-footer-top p {
+  font-size: 14px !important;
+}
+
+.premium-footer-kicker,
+.premium-footer-label {
+  font-size: 10px !important;
+}
+
+.premium-footer-brand p {
+  font-size: 13px !important;
+}
+
+.premium-footer-logo strong {
+  font-size: 13px !important;
+}
+
+.premium-footer-col > a {
+  font-size: 12px !important;
+}
+
+.premium-footer-contact > a,
+.premium-footer-address {
+  font-size: 12px !important;
+}
+
+.premium-footer-cta-note {
+  font-size: 11px !important;
+}
+
+.premium-footer-bottom {
+  font-size: 10px !important;
+}
+
+.premium-footer-bottom button {
+  font-size: 11px !important;
+}
+
+/* Home sections */
+#home-v3 .home-v3-heading p,
+#home-v3 .home-v3-section p {
+  font-size: 13px !important;
+  line-height: 1.72 !important;
+}
+
+#home-v3 .home-v3-service-card h3,
+#home-v3 .home-v3-vehicle-body h3,
+#home-v3 .home-v3-process-content h3,
+#home-v3 .home-v3-reason-card h3,
+#home-v3 .home-v3-insight-body h3 {
+  font-size: 16px !important;
+}
+
+#home-v3 .home-v3-service-card p,
+#home-v3 .home-v3-reason-card p,
+#home-v3 .home-v3-testimonial-card p,
+#home-v3 .home-v3-insight-body p {
+  font-size: 12px !important;
+}
+
+#home-v3 .home-v3-testimonial-top strong {
+  font-size: 14px !important;
+}
+
+#home-v3 .home-v3-faq-item button strong {
+  font-size: 14px !important;
+}
+
+#home-v3 .home-v3-faq-answer {
+  font-size: 13px !important;
+}
