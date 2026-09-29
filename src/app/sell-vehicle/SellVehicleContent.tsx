@@ -365,6 +365,7 @@ export default function SellVehicleContent() {
 
       {/* Vaultline Sell Vehicle Contact Section */}
       <VaultContactSection
+        id="sell-vehicle-direct-offer"
         theme="emerald-gold"
         brandTag="SM Associate · Direct Vehicle Sourcing"
         title={
