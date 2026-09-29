@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 
 export default function TermsConditionsPage() {
   return (
-    <div>
+    <div id="terms-page" className="site-page page-terms">
       {/* Hero Section */}
       <section className="bg-gradient-navy text-white py-16">
         <div className="container-padded max-w-4xl">
