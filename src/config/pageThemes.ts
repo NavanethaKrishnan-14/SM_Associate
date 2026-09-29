@@ -1,6 +1,7 @@
 /**
- * Page to Theme Mapping
- * Maps each page/route to its corresponding theme and color palette
+ * Page to theme mapping
+ * Visual accents are centralized here so Header, Footer and page styling
+ * all use the same premium color identity.
  */
 
 import type { ThemeType } from '@/contexts/ThemeContext';
@@ -10,9 +11,7 @@ export interface PageThemeConfig {
   themeName: string;
   theme: ThemeType;
   description: string;
-  accent: string;
-  accentSoft: string;
-  accentGlow: string;
+  visual: 'gold' | 'teal' | 'burgundy' | 'silver';
 }
 
 const VISUAL_THEMES = {
@@ -23,222 +22,57 @@ const VISUAL_THEMES = {
 } as const;
 
 export const PAGE_THEME_MAP: PageThemeConfig[] = [
-  // Home & Main Pages
-  {
-    accent: VISUAL_THEMES.gold.accent,
-    accentSoft: VISUAL_THEMES.gold.accentSoft,
-    accentGlow: VISUAL_THEMES.gold.accentGlow,
-    path: '/',
-    themeName: 'Default - Navy & Gold',
-    theme: 'default',
-    description: 'Home page - Primary brand theme with navy background and gold accents',
-  },
-  {
-    accent: VISUAL_THEMES.gold.accent,
-    accentSoft: VISUAL_THEMES.gold.accentSoft,
-    accentGlow: VISUAL_THEMES.gold.accentGlow,
-    path: '/about',
-    themeName: 'Default - Navy & Gold',
-    theme: 'default',
-    description: 'About page - Company story and values',
-  },
-  {
-    accent: VISUAL_THEMES.gold.accent,
-    accentSoft: VISUAL_THEMES.gold.accentSoft,
-    accentGlow: VISUAL_THEMES.gold.accentGlow,
-    path: '/contact',
-    themeName: 'Default - Navy & Gold',
-    theme: 'default',
-    description: 'Contact page - Get in touch with team',
-  },
+  { path: '/', themeName: 'Home - Navy & Gold', theme: 'default', description: 'Premium home finance and mobility experience', visual: 'gold' },
+  { path: '/about', themeName: 'About - Navy & Gold', theme: 'default', description: 'Company story, values and milestones', visual: 'gold' },
+  { path: '/contact', themeName: 'Contact - Charcoal & Teal', theme: 'default', description: 'Contact and customer support', visual: 'teal' },
 
-  // Loan Services
-  {
-    accent: VISUAL_THEMES.gold.accent,
-    accentSoft: VISUAL_THEMES.gold.accentSoft,
-    accentGlow: VISUAL_THEMES.gold.accentGlow,
-    path: '/home-loan',
-    themeName: 'Home Loan - Cyan & Teal',
-    theme: 'home-loan',
-    description: 'Home loan services - Cyan and teal for modern, trustworthy financing',
-  },
-  {
-    accent: VISUAL_THEMES.gold.accent,
-    accentSoft: VISUAL_THEMES.gold.accentSoft,
-    accentGlow: VISUAL_THEMES.gold.accentGlow,
-    path: '/car-loan',
-    themeName: 'Car Loan - Navy & Gold',
-    theme: 'car-loan',
-    description: 'Car loan services - Navy and gold for premium automotive financing',
-  },
-  {
-    accent: VISUAL_THEMES.gold.accent,
-    accentSoft: VISUAL_THEMES.gold.accentSoft,
-    accentGlow: VISUAL_THEMES.gold.accentGlow,
-    path: '/business-loan',
-    themeName: 'Business Loan - Emerald & Teal',
-    theme: 'business-loan',
-    description: 'Business loan services - Emerald and teal for growth-focused enterprises',
-  },
-  {
-    accent: VISUAL_THEMES.gold.accent,
-    accentSoft: VISUAL_THEMES.gold.accentSoft,
-    accentGlow: VISUAL_THEMES.gold.accentGlow,
-    path: '/personal-loan',
-    themeName: 'Default - Navy & Gold',
-    theme: 'default',
-    description: 'Personal loan services',
-  },
-  {
-    accent: VISUAL_THEMES.gold.accent,
-    accentSoft: VISUAL_THEMES.gold.accentSoft,
-    accentGlow: VISUAL_THEMES.gold.accentGlow,
-    path: '/two-wheeler-loan',
-    themeName: 'Car Loan - Navy & Gold',
-    theme: 'car-loan',
-    description: 'Two-wheeler loan services',
-  },
+  { path: '/loans', themeName: 'Services - Charcoal & Teal', theme: 'default', description: 'Loan service overview', visual: 'teal' },
+  { path: '/home-loan', themeName: 'Home Loan - Navy & Gold', theme: 'home-loan', description: 'Home financing', visual: 'gold' },
+  { path: '/car-loan', themeName: 'Car Loan - Charcoal & Burgundy', theme: 'car-loan', description: 'Automotive financing', visual: 'burgundy' },
+  { path: '/business-loan', themeName: 'Business Loan - Deep Teal', theme: 'business-loan', description: 'Business financing', visual: 'teal' },
+  { path: '/personal-loan', themeName: 'Personal Loan - Steel Blue', theme: 'default', description: 'Personal financing', visual: 'silver' },
+  { path: '/two-wheeler-loan', themeName: 'Two Wheeler Loan - Deep Teal', theme: 'car-loan', description: 'Two-wheeler financing', visual: 'teal' },
 
-  // Gold & Resale
-  {
-    accent: VISUAL_THEMES.gold.accent,
-    accentSoft: VISUAL_THEMES.gold.accentSoft,
-    accentGlow: VISUAL_THEMES.gold.accentGlow,
-    path: '/gold-loan',
-    themeName: 'Gold Loan - Amber & Gold',
-    theme: 'gold-loan',
-    description: 'Gold loan services - Amber and gold for luxury and wealth',
-  },
-  {
-    accent: VISUAL_THEMES.gold.accent,
-    accentSoft: VISUAL_THEMES.gold.accentSoft,
-    accentGlow: VISUAL_THEMES.gold.accentGlow,
-    path: '/sm-gold',
-    themeName: 'Gold Loan - Amber & Gold',
-    theme: 'gold-loan',
-    description: 'SM Gold products and services',
-  },
-  {
-    accent: VISUAL_THEMES.gold.accent,
-    accentSoft: VISUAL_THEMES.gold.accentSoft,
-    accentGlow: VISUAL_THEMES.gold.accentGlow,
-    path: '/car-resale',
-    themeName: 'Vehicle Resale - Navy & Teal',
-    theme: 'resale',
-    description: 'Car resale services - Navy and teal for trusted pre-owned vehicles',
-  },
-  {
-    accent: VISUAL_THEMES.gold.accent,
-    accentSoft: VISUAL_THEMES.gold.accentSoft,
-    accentGlow: VISUAL_THEMES.gold.accentGlow,
-    path: '/gold-resale',
-    themeName: 'Gold Loan - Amber & Gold',
-    theme: 'gold-loan',
-    description: 'Gold resale services',
-  },
+  { path: '/gold-loan', themeName: 'Gold - Midnight & Gold', theme: 'gold-loan', description: 'Gold-backed finance and resale', visual: 'gold' },
+  { path: '/sm-gold', themeName: 'SM Gold - Midnight & Gold', theme: 'gold-loan', description: 'SM Gold products and services', visual: 'gold' },
+  { path: '/gold-resale', themeName: 'Gold Resale - Midnight & Gold', theme: 'gold-loan', description: 'Gold resale services', visual: 'gold' },
+  { path: '/car-resale', themeName: 'Vehicle Resale - Charcoal & Burgundy', theme: 'resale', description: 'Vehicle resale services', visual: 'burgundy' },
 
-  // Insurance
-  {
-    accent: VISUAL_THEMES.gold.accent,
-    accentSoft: VISUAL_THEMES.gold.accentSoft,
-    accentGlow: VISUAL_THEMES.gold.accentGlow,
-    path: '/insurance',
-    themeName: 'Insurance - Navy & Cyan',
-    theme: 'insurance',
-    description: 'Insurance products and services - Navy and cyan for security and protection',
-  },
-  {
-    accent: VISUAL_THEMES.gold.accent,
-    accentSoft: VISUAL_THEMES.gold.accentSoft,
-    accentGlow: VISUAL_THEMES.gold.accentGlow,
-    path: '/two-wheeler-insurance',
-    themeName: 'Insurance - Navy & Cyan',
-    theme: 'insurance',
-    description: 'Two-wheeler insurance coverage',
-  },
+  { path: '/insurance', themeName: 'Insurance - Charcoal & Teal', theme: 'insurance', description: 'Insurance overview', visual: 'teal' },
+  { path: '/two-wheeler-insurance', themeName: 'Two Wheeler Insurance - Charcoal & Teal', theme: 'insurance', description: 'Insurance coverage', visual: 'teal' },
 
-  // Vehicle Marketplace
-  {
-    accent: VISUAL_THEMES.gold.accent,
-    accentSoft: VISUAL_THEMES.gold.accentSoft,
-    accentGlow: VISUAL_THEMES.gold.accentGlow,
-    path: '/vehicles',
-    themeName: 'Vehicle Resale - Navy & Teal',
-    theme: 'resale',
-    description: 'Vehicle marketplace - Browse available vehicles',
-  },
-  {
-    accent: VISUAL_THEMES.gold.accent,
-    accentSoft: VISUAL_THEMES.gold.accentSoft,
-    accentGlow: VISUAL_THEMES.gold.accentGlow,
-    path: '/sell-vehicle',
-    themeName: 'Vehicle Resale - Navy & Teal',
-    theme: 'resale',
-    description: 'Sell your vehicle - List and manage your vehicle',
-  },
+  { path: '/vehicles', themeName: 'Vehicle Marketplace - Charcoal & Burgundy', theme: 'resale', description: 'Used vehicle marketplace', visual: 'burgundy' },
+  { path: '/sell-vehicle', themeName: 'Sell Vehicle - Charcoal & Burgundy', theme: 'resale', description: 'Vehicle resale journey', visual: 'burgundy' },
 
-  // EMI Calculator
-  {
-    accent: VISUAL_THEMES.gold.accent,
-    accentSoft: VISUAL_THEMES.gold.accentSoft,
-    accentGlow: VISUAL_THEMES.gold.accentGlow,
-    path: '/emi-calculator',
-    themeName: 'Default - Navy & Gold',
-    theme: 'default',
-    description: 'EMI calculator tool',
-  },
+  { path: '/emi-calculator', themeName: 'EMI Calculator - Midnight & Gold', theme: 'default', description: 'EMI calculator', visual: 'gold' },
+  { path: '/loan-application', themeName: 'Loan Application - Deep Teal', theme: 'default', description: 'Loan enquiry and application', visual: 'teal' },
+  { path: '/blog', themeName: 'Insights - Navy & Gold', theme: 'default', description: 'Guides and articles', visual: 'gold' },
 
-  // Blog
-  {
-    accent: VISUAL_THEMES.gold.accent,
-    accentSoft: VISUAL_THEMES.gold.accentSoft,
-    accentGlow: VISUAL_THEMES.gold.accentGlow,
-    path: '/blog',
-    themeName: 'Default - Navy & Gold',
-    theme: 'default',
-    description: 'Blog and articles',
-  },
+  { path: '/privacy-policy', themeName: 'Privacy - Midnight & Silver', theme: 'default', description: 'Privacy policy', visual: 'silver' },
+  { path: '/terms-conditions', themeName: 'Terms - Midnight & Silver', theme: 'default', description: 'Terms and conditions', visual: 'silver' },
+  { path: '/disclaimer', themeName: 'Disclaimer - Midnight & Silver', theme: 'default', description: 'Disclaimer', visual: 'silver' },
 ];
 
-/**
- * Get theme for a given path
- */
 export function getThemeForPath(path: string): ThemeType {
-  const config = PAGE_THEME_MAP.find((item) => item.path === path);
-  return config?.theme || 'default';
+  return getConfigForPath(path)?.theme || 'default';
+}
+
+function getConfigForPath(path: string): PageThemeConfig | undefined {
+  return [...PAGE_THEME_MAP]
+    .sort((a, b) => b.path.length - a.path.length)
+    .find((item) => path === item.path || path.startsWith(item.path + '/'));
 }
 
 export function getVisualThemeForPath(path: string) {
-  const normalized = path === '/sell-vehicle' ? '/sell-vehicle' : path;
-  const config = [...PAGE_THEME_MAP]
-    .sort((a, b) => b.path.length - a.path.length)
-    .find((item) => normalized === item.path || normalized.startsWith(item.path + '/'));
-
-  return {
-    name:
-      config?.accent === VISUAL_THEMES.teal.accent
-        ? 'teal'
-        : config?.accent === VISUAL_THEMES.burgundy.accent
-          ? 'burgundy'
-          : config?.accent === VISUAL_THEMES.silver.accent
-            ? 'silver'
-            : 'gold',
-    accent: config?.accent || VISUAL_THEMES.gold.accent,
-    accentSoft: config?.accentSoft || VISUAL_THEMES.gold.accentSoft,
-    accentGlow: config?.accentGlow || VISUAL_THEMES.gold.accentGlow,
-  } as const;
+  const config = getConfigForPath(path);
+  const key = config?.visual || 'gold';
+  return { name: key, ...VISUAL_THEMES[key] } as const;
 }
 
-/**
- * Get all available themes
- */
 export function getAllPageThemes(): PageThemeConfig[] {
   return PAGE_THEME_MAP;
 }
 
-/**
- * Check if path should use a specific theme
- */
 export function isPathWithTheme(path: string, theme: ThemeType): boolean {
   return getThemeForPath(path) === theme;
 }
