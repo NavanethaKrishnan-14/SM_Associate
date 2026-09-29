@@ -15,9 +15,9 @@ import {
   Check,
   ChevronDown,
   Coins,
-  Clock3,
-  FileCheck2,
-  HandCoins,
+  Clock,
+  FileText,
+  Headphones,
   Heart,
   Home,
   Landmark,
@@ -28,7 +28,7 @@ import {
   Star,
   TrendingUp,
   User,
-  WalletCards,
+  Wallet,
   Zap,
 } from 'lucide-react';
 
@@ -76,9 +76,9 @@ const vehicleCards: VehicleCard[] = [
 ];
 
 const workflow = [
-  { step: '01', title: 'Tell us what you need', description: 'Choose a loan, vehicle, insurance or resale service.', icon: FileCheck2 },
-  { step: '02', title: 'Share the essentials', description: 'Give us the details needed to understand your requirement.', icon: WalletCards },
-  { step: '03', title: 'Get guided', description: 'Our team helps you understand options, documents and next steps.', icon: HandCoins },
+  { step: '01', title: 'Tell us what you need', description: 'Choose a loan, vehicle, insurance or resale service.', icon: FileText },
+  { step: '02', title: 'Share the essentials', description: 'Give us the details needed to understand your requirement.', icon: Wallet },
+  { step: '03', title: 'Get guided', description: 'Our team helps you understand options, documents and next steps.', icon: Headphones },
   { step: '04', title: 'Move forward', description: 'Complete your financing or vehicle transaction with clarity.', icon: BadgeCheck },
 ];
 
@@ -88,6 +88,10 @@ const reasons = [
   { title: 'Local support', description: 'Speak with a team that understands customers and vehicle needs in Tirunelveli.', icon: Heart },
   { title: 'Built for real decisions', description: 'Compare amounts, understand EMIs and explore vehicles before you commit.', icon: TrendingUp },
 ];
+
+function ServiceGlyph({ icon: Icon }: { icon: IconType }) {
+  return <Icon size={24} aria-hidden="true" />;
+}
 
 function SectionHeading({
   eyebrow,
@@ -208,7 +212,7 @@ function Hero() {
 function TrustStrip() {
   const items = [
     { icon: ShieldCheck, label: 'Clear communication', value: 'Every step explained' },
-    { icon: Clock3, label: 'Quick response', value: 'Local assistance' },
+    { icon: Clock, label: 'Quick response', value: 'Local assistance' },
     { icon: BadgeCheck, label: 'Practical options', value: 'Finance + mobility' },
     { icon: Sparkles, label: 'Customer-first', value: 'Built around you' },
   ];
@@ -247,7 +251,7 @@ function Services() {
                   <span className="home-v3-service-tag">{service.tag}</span>
                   <ArrowUpRight size={17} className="home-v3-service-arrow" />
                 </div>
-                <div className="home-v3-icon home-v3-service-icon"><Icon size={24} /></div>
+                <div className="home-v3-icon home-v3-service-icon"><ServiceGlyph icon={Icon} /></div>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
                 <div className="home-v3-service-number">0{index + 1}</div>
