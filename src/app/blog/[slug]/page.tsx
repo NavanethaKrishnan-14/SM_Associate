@@ -19,11 +19,11 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     };
   }
 
-  const baseUrl = 'https://smassociate.com';
+  const baseUrl = 'https://www.smassociate.in';
   const url = `${baseUrl}/blog/${post.slug}`;
   
   // Create excerpt from title for description
-  const description = `${post.title}. Read our expert insights on ${post.category.toLowerCase()} from SM Associate. Stay informed with quality financial and vehicle advice.`;
+  const description = post.excerpt;
 
   return {
     title: `${post.title} | SM Associate Blog`,
