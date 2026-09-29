@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Sell Your Vehicle | SM Associate',
     description: 'Start a vehicle resale enquiry with clear guidance on the next steps.',
-    images: ['https://www.smassociate.in/sell-vehicle/og-sell-vehicle.jpg'],
+    images: ['https://www.smassociate.in/og-sell-vehicle.jpg'],
   },
 };
 
