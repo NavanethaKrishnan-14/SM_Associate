@@ -2066,3 +2066,64 @@ button, a { transition: transform .22s ease, background-color .22s ease, border-
   outline: 0 !important;
   box-shadow: none !important;
 }
+
+
+/* Hero right-side card — slightly larger, cleaner and more legible */
+@media (min-width: 1101px) {
+  #home-v3 .home-v3-hero-art {
+    height: 555px !important;
+    max-width: 640px !important;
+    overflow: visible !important;
+  }
+
+  #home-v3 .home-v3-device-back {
+    width: 360px !important;
+    height: 228px !important;
+    right: 1% !important;
+    bottom: 13% !important;
+    padding: 24px !important;
+    z-index: 2 !important;
+    background: linear-gradient(145deg, #fffdf7 0%, #f0eadb 100%) !important;
+    color: var(--home-ink) !important;
+    border: 1px solid rgba(17,26,35,.16) !important;
+    box-shadow: 0 28px 65px rgba(7,19,31,.24), inset 0 1px 0 rgba(255,255,255,.9) !important;
+  }
+
+  #home-v3 .home-v3-device-front {
+    width: 330px !important;
+    height: 208px !important;
+    right: 18% !important;
+    bottom: 24% !important;
+    padding: 23px !important;
+    z-index: 3 !important;
+  }
+
+  #home-v3 .home-v3-device-back .home-v3-device-bar {
+    width: 46% !important;
+    height: 6px !important;
+    margin-bottom: 28px !important;
+  }
+
+  #home-v3 .home-v3-device-back .home-v3-mini-label {
+    color: rgba(17,26,35,.58) !important;
+    font-size: 10px !important;
+    letter-spacing: .19em !important;
+  }
+
+  #home-v3 .home-v3-device-back .home-v3-mini-row span {
+    background: rgba(17,26,35,.10) !important;
+  }
+
+  #home-v3 .home-v3-device-back .home-v3-mini-chart {
+    height: 62px !important;
+    margin-top: 22px !important;
+  }
+
+  #home-v3 .home-v3-device-back .home-v3-mini-chart span {
+    background: linear-gradient(180deg, #c5a35b, rgba(197,163,91,.28)) !important;
+  }
+
+  #home-v3 .home-v3-device-front {
+    box-shadow: 0 30px 70px rgba(7,19,31,.30), inset 0 1px 0 rgba(255,255,255,.12) !important;
+  }
+}
