@@ -7210,3 +7210,20 @@ option {
     transform: translateY(-34px) scale(1.12) !important;
   }
 }
+
+
+/* =========================================================
+   Move Home Hero 3D visual slightly left
+   ========================================================= */
+
+@media (min-width: 1051px) {
+  #home-v3 .home-v3-hero-art {
+    transform: translate(-28px, -28px) scale(1.08) !important;
+  }
+}
+
+@media (min-width: 1250px) {
+  #home-v3 .home-v3-hero-art {
+    transform: translate(-36px, -34px) scale(1.12) !important;
+  }
+}
