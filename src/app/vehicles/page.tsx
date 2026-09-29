@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Pre-owned Vehicles | SM Associate',
     description: 'Explore cars and bikes listed through the SM Associate vehicle marketplace.',
-    images: ['https://www.smassociate.in/vehicles/og-vehicles.jpg'],
+    images: ['https://www.smassociate.in/og-vehicles.jpg'],
   },
 };
 
