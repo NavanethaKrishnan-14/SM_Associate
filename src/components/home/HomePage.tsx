@@ -36,14 +36,14 @@ import { FAQ_DATA } from '@/data/faqData';
 import testimonialData from '@/data/testimonialdata';
 import Partners from '@/components/sections/Partners';
 
-type IconType = typeof Home;
+type ServiceIconName = 'home' | 'car' | 'gold' | 'personal' | 'business' | 'insurance';
 
 interface ServiceCard {
   title: string;
   description: string;
   href: string;
   tag: string;
-  icon: IconType;
+  icon: ServiceIconName;
   tone: 'gold' | 'teal' | 'navy';
 }
 
@@ -60,12 +60,12 @@ interface VehicleCard {
 }
 
 const serviceCards: ServiceCard[] = [
-  { title: 'Home Loan', description: 'Plan your home purchase, construction or renovation with structured financing guidance.', href: ROUTES.HOME_LOAN, tag: 'Property', icon: Home, tone: 'gold' },
-  { title: 'Car Loan', description: 'Finance a new or pre-owned car with a smoother application journey.', href: ROUTES.CAR_LOAN, tag: 'Mobility', icon: Car, tone: 'teal' },
-  { title: 'Gold Loan', description: 'Get practical assistance around gold-backed funding and redemption needs.', href: ROUTES.GOLD_LOAN, tag: 'Secure', icon: Coins, tone: 'gold' },
-  { title: 'Personal Loan', description: 'Flexible personal funding for planned expenses and important moments.', href: ROUTES.PERSONAL_LOAN, tag: 'Flexible', icon: User, tone: 'teal' },
-  { title: 'Business Loan', description: 'Support working capital, expansion and day-to-day business requirements.', href: ROUTES.BUSINESS_LOAN, tag: 'Business', icon: Briefcase, tone: 'navy' },
-  { title: 'Two Wheeler Insurance', description: 'Choose protection options for everyday riding and peace of mind.', href: ROUTES.TWO_WHEELER_INSURANCE, tag: 'Protection', icon: ShieldCheck, tone: 'teal' },
+  { title: 'Home Loan', description: 'Plan your home purchase, construction or renovation with structured financing guidance.', href: ROUTES.HOME_LOAN, tag: 'Property', icon: 'home', tone: 'gold' },
+  { title: 'Car Loan', description: 'Finance a new or pre-owned car with a smoother application journey.', href: ROUTES.CAR_LOAN, tag: 'Mobility', icon: 'car', tone: 'teal' },
+  { title: 'Gold Loan', description: 'Get practical assistance around gold-backed funding and redemption needs.', href: ROUTES.GOLD_LOAN, tag: 'Secure', icon: 'gold', tone: 'gold' },
+  { title: 'Personal Loan', description: 'Flexible personal funding for planned expenses and important moments.', href: ROUTES.PERSONAL_LOAN, tag: 'Flexible', icon: 'personal', tone: 'teal' },
+  { title: 'Business Loan', description: 'Support working capital, expansion and day-to-day business requirements.', href: ROUTES.BUSINESS_LOAN, tag: 'Business', icon: 'business', tone: 'navy' },
+  { title: 'Two Wheeler Insurance', description: 'Choose protection options for everyday riding and peace of mind.', href: ROUTES.TWO_WHEELER_INSURANCE, tag: 'Protection', icon: 'insurance', tone: 'teal' },
 ];
 
 const vehicleCards: VehicleCard[] = [
@@ -88,8 +88,67 @@ const reasons = [
   { title: 'Built for real decisions', description: 'Compare amounts, understand EMIs and explore vehicles before you commit.', icon: TrendingUp },
 ];
 
-function ServiceGlyph({ icon: Icon }: { icon: IconType }) {
-  return <Icon size={24} aria-hidden="true" />;
+function ServiceGlyph({ icon }: { icon: ServiceIconName }) {
+  const paths: Record<ServiceIconName, React.ReactNode> = {
+    home: (
+      <>
+        <path d="M3 11.5 12 4l9 7.5" />
+        <path d="M5.5 10.5V20h13v-9.5" />
+        <path d="M9 20v-5h6v5" />
+      </>
+    ),
+    car: (
+      <>
+        <path d="m5 17-1-5 2-5h12l2 5-1 5" />
+        <path d="M6 12h12" />
+        <circle cx="7" cy="17" r="1.5" />
+        <circle cx="17" cy="17" r="1.5" />
+      </>
+    ),
+    gold: (
+      <>
+        <circle cx="12" cy="12" r="8.5" />
+        <path d="M8.5 12.5h7" />
+        <path d="M10 9.5h4" />
+        <path d="M9.5 15h5" />
+      </>
+    ),
+    personal: (
+      <>
+        <circle cx="12" cy="8" r="3.2" />
+        <path d="M5.5 20c.8-3.6 3-5.5 6.5-5.5s5.7 1.9 6.5 5.5" />
+      </>
+    ),
+    business: (
+      <>
+        <rect x="4" y="7" width="16" height="12" rx="2" />
+        <path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7" />
+        <path d="M4 12h16" />
+      </>
+    ),
+    insurance: (
+      <>
+        <path d="M12 3.5 19 6v5.2c0 4.2-2.6 7.5-7 9.3-4.4-1.8-7-5.1-7-9.3V6l7-2.5Z" />
+        <path d="m9 12 2 2 4-4" />
+      </>
+    ),
+  };
+
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      {paths[icon]}
+    </svg>
+  );
 }
 
 function SectionHeading({
@@ -243,14 +302,13 @@ function Services() {
         />
         <div className="home-v3-services-grid">
           {serviceCards.map((service, index) => {
-            const Icon = service.icon;
             return (
               <Link key={service.title} href={service.href} className={'home-v3-service-card home-v3-tone-' + service.tone}>
                 <div className="home-v3-service-top">
                   <span className="home-v3-service-tag">{service.tag}</span>
                   <ArrowUpRight size={17} className="home-v3-service-arrow" />
                 </div>
-                <div className="home-v3-icon home-v3-service-icon"><ServiceGlyph icon={Icon} /></div>
+                <div className="home-v3-icon home-v3-service-icon"><ServiceGlyph icon={service.icon} /></div>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
                 <div className="home-v3-service-number">0{index + 1}</div>
