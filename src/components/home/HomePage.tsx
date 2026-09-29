@@ -25,7 +25,6 @@ import {
   Phone,
   ShieldCheck,
   Star,
-  Star,
   TrendingUp,
   User,
   Wallet,
