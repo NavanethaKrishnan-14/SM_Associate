@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Personal Loan Options | SM Associate',
     description: 'Clear guidance for comparing personal loan options before you apply.',
-    images: ['https://www.smassociate.in/personal-loan/og-personal-loan.jpg'],
+    images: ['https://www.smassociate.in/og-personal-loan.jpg'],
   },
 };
 
