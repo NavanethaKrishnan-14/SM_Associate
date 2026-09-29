@@ -1535,3 +1535,114 @@ button, a { transition: transform .22s ease, background-color .22s ease, border-
   .premium-404-orbit{width:280px;height:280px;right:-100px;top:20%}
   .premium-404-actions{display:grid;grid-template-columns:1fr}
 }
+
+
+/* Hero refinement — tighter headline + rich/light contrast */
+#home-v3 .home-v3-hero {
+  background:
+    radial-gradient(circle at 78% 18%, rgba(232,216,173,.22), transparent 25%),
+    radial-gradient(circle at 82% 76%, rgba(19,136,120,.16), transparent 27%),
+    linear-gradient(112deg, #050d16 0%, #0a1825 48%, #152a37 68%, #e9e5da 100%) !important;
+  min-height: 720px !important;
+}
+
+#home-v3 .home-v3-hero-copy {
+  position: relative;
+  z-index: 4;
+}
+
+#home-v3 .home-v3-hero-copy h1 {
+  max-width: 760px !important;
+  font-size: clamp(2.7rem, 4.7vw, 4.75rem) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.035em !important;
+  text-wrap: balance;
+}
+
+#home-v3 .home-v3-hero-copy h1 span {
+  display: block;
+  margin-top: .08em;
+  color: var(--home-gold) !important;
+}
+
+#home-v3 .home-v3-hero-lead {
+  max-width: 620px !important;
+  color: rgba(255,255,255,.76) !important;
+}
+
+#home-v3 .home-v3-hero-art {
+  z-index: 3;
+}
+
+#home-v3 .home-v3-orbit {
+  border-color: rgba(7,19,31,.20) !important;
+}
+
+#home-v3 .home-v3-glow-gold {
+  background: rgba(197,163,91,.24) !important;
+}
+
+#home-v3 .home-v3-glow-teal {
+  background: rgba(19,136,120,.20) !important;
+}
+
+#home-v3 .home-v3-device-front {
+  background: linear-gradient(145deg, #162a3a 0%, #0a1723 68%, #172c35 100%) !important;
+  border-color: rgba(255,255,255,.14) !important;
+}
+
+#home-v3 .home-v3-device-back {
+  background: linear-gradient(145deg, #f8f6ef 0%, #e8e4d8 100%) !important;
+  color: var(--home-ink) !important;
+  border-color: rgba(7,19,31,.12) !important;
+}
+
+#home-v3 .home-v3-float {
+  background: rgba(251,250,246,.92) !important;
+  color: var(--home-ink) !important;
+  border-color: rgba(7,19,31,.10) !important;
+}
+
+#home-v3 .home-v3-hero-bottom {
+  background: rgba(251,250,246,.94) !important;
+  border-top: 1px solid rgba(7,19,31,.12) !important;
+  color: var(--home-ink) !important;
+}
+
+#home-v3 .home-v3-hero-bottom-pill,
+#home-v3 .home-v3-hero-bottom-links a {
+  color: var(--home-ink) !important;
+}
+
+#home-v3 .home-v3-hero-bottom-pill svg,
+#home-v3 .home-v3-hero-bottom-links svg {
+  color: var(--home-teal) !important;
+}
+
+#home-v3 .home-v3-eyebrow-hero {
+  color: #ead9ad !important;
+}
+
+@media (max-width: 900px) {
+  #home-v3 .home-v3-hero {
+    min-height: 700px !important;
+    background:
+      radial-gradient(circle at 88% 22%, rgba(232,216,173,.18), transparent 26%),
+      linear-gradient(145deg, #050d16 0%, #0c1c2a 62%, #263b42 100%) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  #home-v3 .home-v3-hero-copy h1 {
+    font-size: clamp(2.45rem, 11vw, 3.55rem) !important;
+    line-height: 1.04 !important;
+  }
+
+  #home-v3 .home-v3-hero-lead {
+    color: rgba(255,255,255,.72) !important;
+  }
+
+  #home-v3 .home-v3-hero-bottom {
+    background: rgba(251,250,246,.97) !important;
+  }
+}
