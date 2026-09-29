@@ -3,20 +3,20 @@ import BusinessLoanHero from '@/components/heroes/BusinessLoanHero';
 import BusinessLoanContent from './BusinessLoanContent';
 
 export const metadata: Metadata = {
-  title: 'Business Loan Up To $500K | Flexible Terms – SM Associate',
-  description: 'Scale your business faster with SM Associate business loans up to $500K. Flexible terms for established businesses across retail, services, tech & more industries.',
+  title: 'Business Loan in Tirunelveli | Working Capital & Growth Finance',
+  description: 'Need finance for working capital, expansion or a new business requirement? Explore business loan options with practical guidance from SM Associate.',
   keywords: 'business loan online, SME business finance, working capital loan, small business loan India, business growth financing',
   alternates: {
     canonical: 'https://www.smassociate.in/business-loan',
   },
   openGraph: {
-    title: 'Business Loans - Expansion & Working Capital',
-    description: 'Financing solutions for business expansion and working capital needs',
+    title: 'Business Loan Guidance | SM Associate',
+    description: 'Understand business finance options, documentation and the application journey.',
     url: 'https://www.smassociate.in/business-loan',
     type: 'website',
     images: [
       {
-        url: 'https://smassociate.com/og-business-loan.jpg',
+        url: 'https://www.smassociate.in/business-loan/og-business-loan.jpg',
         width: 1200,
         height: 630,
         alt: 'Business Loans from SM Associate',
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Business Loans - Expansion & Working Capital',
-    description: 'Financing solutions for business expansion and working capital needs',
-    images: ['https://smassociate.com/og-business-loan.jpg'],
+    title: 'Business Loan Guidance | SM Associate',
+    description: 'Understand business finance options, documentation and the application journey.',
+    images: ['https://www.smassociate.in/business-loan/og-business-loan.jpg'],
   },
 };
 
