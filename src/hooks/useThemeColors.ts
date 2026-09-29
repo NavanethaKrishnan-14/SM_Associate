@@ -5,34 +5,34 @@ export interface ThemeColors {
   primaryColor: string;
   primaryLight: string;
   primaryDark: string;
-  
+
   // Accent colors
   accentColor: string;
   accentLight: string;
   accentSoft: string;
   accentHover: string;
-  
+
   // Secondary accents
   accentSecondary: string;
   accentTertiary: string;
-  
+
   // Backgrounds
   backgroundColor: string;
   surfaceColor: string;
   surfaceDark: string;
-  
+
   // Text colors
   textPrimary: string;
   textSecondary: string;
   textMuted: string;
   textDark: string;
   textDarkSecondary: string;
-  
+
   // Borders
   borderColor: string;
   borderAccent: string;
   borderLight: string;
-  
+
   // Component-specific
   headerBg: string;
   headerColor: string;
@@ -41,50 +41,18 @@ export interface ThemeColors {
   buttonBg: string;
   buttonText: string;
   buttonHoverShadow: string;
-  
+
   // Hero
   heroGradient: string;
   heroAccentGlow: string;
 }
-
-const CSS_VAR_MAP: Record<keyof ThemeColors, string> = {
-  primaryColor: '--primary-color',
-  primaryLight: '--primary-light',
-  primaryDark: '--primary-dark',
-  accentColor: '--accent-color',
-  accentLight: '--accent-light',
-  accentSoft: '--accent-soft',
-  accentHover: '--accent-hover',
-  accentSecondary: '--accent-secondary',
-  accentTertiary: '--accent-tertiary',
-  backgroundColor: '--background-color',
-  surfaceColor: '--surface-color',
-  surfaceDark: '--surface-dark',
-  textPrimary: '--text-primary',
-  textSecondary: '--text-secondary',
-  textMuted: '--text-muted',
-  textDark: '--text-dark',
-  textDarkSecondary: '--text-dark-secondary',
-  borderColor: '--border-color',
-  borderAccent: '--border-accent',
-  borderLight: '--border-light',
-  headerBg: '--header-bg',
-  headerColor: '--header-color',
-  footerBg: '--footer-bg',
-  footerColor: '--footer-color',
-  buttonBg: '--button-bg',
-  buttonText: '--button-text',
-  buttonHoverShadow: '--button-hover-shadow',
-  heroGradient: '--hero-gradient',
-  heroAccentGlow: '--hero-accent-glow',
-};
 
 /**
  * Hook to access theme colors via CSS variables
  * Automatically updates when theme changes
  */
 export const useThemeColors = (): ThemeColors => {
-  const { theme } = useTheme();
+  useTheme();
 
   const getCSSVariableValue = (varName: string): string => {
     if (typeof window === 'undefined') return '';
@@ -131,7 +99,7 @@ export const useThemeColors = (): ThemeColors => {
  * Useful for inline styles and dynamic className generation
  */
 export const useThemeCSSVariables = () => {
-  const { theme } = useTheme();
+  useTheme();
 
   return {
     primaryColor: 'var(--primary-color)',

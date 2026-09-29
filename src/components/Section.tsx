@@ -1,6 +1,6 @@
 import React, { ReactNode, HTMLAttributes } from 'react';
 
-export interface SectionProps extends HTMLAttributes<HTMLDivElement> {
+export interface SectionProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'> {
   children: ReactNode;
   variant?: 'primary' | 'secondary' | 'accent' | 'light';
   padding?: 'sm' | 'md' | 'lg' | 'xl';

@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation';
 import type { LucideIcon } from 'lucide-react';
 import {
   ArrowUpRight,
-  Bike,
   Briefcase,
   Car,
   ChevronDown,

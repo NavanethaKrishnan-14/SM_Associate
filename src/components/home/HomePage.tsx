@@ -6,29 +6,28 @@ import { useMemo, useState, type ReactNode } from 'react';
 import {
   ArrowRight,
   ArrowUpRight,
+  BadgeCheck,
   CheckCircle,
   Bike,
   BookOpen,
-  Briefcase,
   Calculator,
   Car,
   Check,
   ChevronDown,
-  Coins,
   Clock,
   FileText,
   Headphones,
   Heart,
-  Home,
+  HandIcon,
   Landmark,
   MessageCircle,
   Phone,
   ShieldCheck,
   Star,
   TrendingUp,
-  User,
   Wallet,
   Zap,
+  Sparkles,
 } from 'lucide-react';
 
 import { BLOG_POSTS, COMPANY_INFO, ROUTES } from '@/lib/constants';
@@ -434,7 +433,7 @@ function Marketplace() {
             <ArrowUpRight size={20} />
           </Link>
           <Link href={ROUTES.SELL_VEHICLE} className="home-v3-market-card home-v3-market-gold">
-            <div className="home-v3-market-icon"><HandCoins size={25} /></div>
+            <div className="home-v3-market-icon"><HandIcon size={25} /></div>
             <div><span>SELL YOUR VEHICLE</span><h3>Turn your old vehicle into your next move.</h3><p>Start a valuation conversation and get help with the resale journey.</p></div>
             <ArrowUpRight size={20} />
           </Link>

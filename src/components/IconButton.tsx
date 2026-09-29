@@ -1,4 +1,5 @@
-import React, { ButtonHTMLAttributes } from 'lucide-react';
+import React, { type ButtonHTMLAttributes } from 'react';
+import type { LucideIcon } from 'lucide-react';
 
 export interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   icon: React.ReactNode;
@@ -9,7 +10,7 @@ export interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>
 }
 
 export interface ThemedIconProps {
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  icon: LucideIcon;
   size?: number;
   className?: string;
   variant?: 'primary' | 'secondary' | 'accent' | 'light' | 'muted';
@@ -19,12 +20,6 @@ const sizeClasses = {
   sm: 'p-2',
   md: 'p-2.5',
   lg: 'p-3',
-};
-
-const sizeValues = {
-  sm: 16,
-  md: 18,
-  lg: 20,
 };
 
 /**
