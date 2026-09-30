@@ -787,14 +787,14 @@ button, a { transition: transform .22s ease, background-color .22s ease, border-
 }
 .premium-brand-logo {
   display: block;
-  width: 58px;
-  height: 58px;
+  width: 64px;
+  height: 64px;
   flex: 0 0 auto;
   object-fit: contain;
 }
 .premium-footer-logo-image {
-  width: 72px;
-  height: 72px;
+  width: 76px;
+  height: 76px;
 }
 .premium-brand-copy {
   display: grid;
@@ -7236,5 +7236,16 @@ option {
 @media (min-width: 1250px) {
   #home-v3 .home-v3-hero-art {
     transform: translate(-42px, -34px) scale(1.12) !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .premium-brand-logo {
+    width: 54px;
+    height: 54px;
+  }
+  .premium-footer-logo-image {
+    width: 68px;
+    height: 68px;
   }
 }
