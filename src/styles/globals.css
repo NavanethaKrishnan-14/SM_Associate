@@ -792,12 +792,12 @@ button, a { transition: transform .22s ease, background-color .22s ease, border-
   background: transparent;
 }
 .premium-header-logo {
-  width: 216px;
-  height: 72px;
+  width: 230px;
+  height: 59px;
 }
 .premium-footer-logo-image {
-  width: 270px;
-  height: 90px;
+  width: 280px;
+  height: 71px;
 }
 .premium-brand-copy {
   display: grid;
@@ -7255,17 +7255,17 @@ option {
 
 @media (max-width: 1080px) {
   .premium-header-logo {
-    width: 190px;
-    height: 63px;
+    width: 200px;
+    height: 51px;
   }
 }
 @media (max-width: 560px) {
   .premium-header-logo {
-    width: 165px;
-    height: 55px;
+    width: 178px;
+    height: 45px;
   }
   .premium-footer-logo-image {
-    width: 210px;
-    height: 70px;
+    width: 220px;
+    height: 56px;
   }
 }
