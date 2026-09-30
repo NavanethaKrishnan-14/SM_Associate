@@ -1,1 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 250" role="img" aria-labelledby="title"><title id="title">SM Associate</title><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff2b8"/><stop offset=".32" stop-color="#d6a72f"/><stop offset=".7" stop-color="#ffe27a"/><stop offset="1" stop-color="#b77b08"/></linearGradient><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#aaa"/></linearGradient><radialGradient id="b"><stop stop-color="#242424"/><stop offset="1" stop-color="#050505"/></radialGradient></defs><circle cx="125" cy="125" r="108" fill="url(#b)" stroke="url(#g)" stroke-width="9"/><text x="63" y="164" font-family="Georgia,serif" font-size="126" font-weight="700" fill="url(#g)">S</text><text x="118" y="174" font-family="Georgia,serif" font-size="103" font-weight="700" fill="url(#s)">M</text><path d="M40 151 C82 124 130 120 190 85" fill="none" stroke="url(#g)" stroke-width="11" stroke-linecap="round"/><path d="M162 82 l12 -22 12 22 M182 76 l12 -22 12 22" fill="none" stroke="url(#g)" stroke-width="5" stroke-linecap="round"/><text x="250" y="120" font-family="Georgia,serif" font-size="86" font-weight="700" fill="url(#s)" letter-spacing="1">ASSOCIATE</text><path d="M252 141 H900" stroke="url(#g)" stroke-width="3"/><text x="575" y="170" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="4" fill="url(#g)">YOUR GOALS • OUR SUPPORT</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+  <title id="title">SM Associate</title>
+  <desc id="desc">SM Associate with Home Loan, Car Loan, Business Loan, Insurance Renewal and Gold Resale services.</desc>
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF4C4"/>
+      <stop offset="28%" stop-color="#D9A62B"/>
+      <stop offset="52%" stop-color="#FFE07A"/>
+      <stop offset="78%" stop-color="#C08A16"/>
+      <stop offset="100%" stop-color="#FFF1B2"/>
+    </linearGradient>
+    <linearGradient id="white" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="48%" stop-color="#F8F8F8"/>
+      <stop offset="100%" stop-color="#BFC3C8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Transparent background: no rectangle, circle, or dark fill. -->
+  <g transform="translate(24 28)">
+    <!-- SM monogram -->
+    <path d="M14 178 C42 154 70 126 101 98 C128 74 158 57 188 45 C219 33 245 31 270 39
+             C238 47 208 63 184 84 C162 103 151 121 148 141 C145 164 158 182 183 190
+             C213 200 239 194 264 177 C286 162 305 143 318 125"
+          fill="none" stroke="url(#gold)" stroke-width="29" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M146 63 L190 23 L231 63 L280 23 L319 63"
+          fill="none" stroke="url(#white)" stroke-width="27" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M174 64 L209 35 L243 67 L282 35 L315 65"
+          fill="none" stroke="url(#white)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity=".95"/>
+
+    <!-- Minimal car silhouette integrated below the monogram -->
+    <path d="M53 181 C72 160 99 150 128 148 L167 147 C185 147 202 153 215 166
+             L250 169 C261 170 270 179 273 187 L47 187 Z"
+          fill="none" stroke="url(#gold)" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M104 148 L125 126 L165 126 L193 151" fill="none" stroke="url(#gold)" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="91" cy="187" r="13" fill="none" stroke="url(#white)" stroke-width="6"/>
+    <circle cx="227" cy="187" r="13" fill="none" stroke="url(#white)" stroke-width="6"/>
+
+    <!-- Divider -->
+    <rect x="336" y="34" width="3" height="183" rx="1.5" fill="url(#gold)"/>
+
+    <!-- Wordmark -->
+    <text x="382" y="109" font-family="Georgia, 'Times New Roman', serif" font-size="91" font-weight="700"
+          letter-spacing="2" fill="url(#white)">ASSOCIATE</text>
+    <rect x="384" y="127" width="735" height="3" rx="1.5" fill="url(#gold)"/>
+
+    <!-- Services: intentionally compact for header/footer use -->
+    <g font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" letter-spacing="1.3" fill="url(#white)">
+      <text x="392"  y="167">HOME LOAN</text>
+      <text x="540"  y="167">CAR LOAN</text>
+      <text x="663"  y="167">BUSINESS LOAN</text>
+      <text x="830"  y="167">INSURANCE RENEWAL</text>
+      <text x="1048" y="167">GOLD RESALE</text>
+    </g>
+
+    <!-- Fine service separators -->
+    <g fill="url(#gold)">
+      <rect x="520" y="148" width="2" height="27" rx="1"/>
+      <rect x="645" y="148" width="2" height="27" rx="1"/>
+      <rect x="808" y="148" width="2" height="27" rx="1"/>
+      <rect x="1031" y="148" width="2" height="27" rx="1"/>
+    </g>
+
+    <!-- Subtle premium accent -->
+    <path d="M384 198 H1118" stroke="url(#gold)" stroke-width="2" stroke-linecap="round" opacity=".9"/>
+    <circle cx="384" cy="198" r="3" fill="#FFF1B2"/>
+    <circle cx="1118" cy="198" r="3" fill="#FFF1B2"/>
+  </g>
+</svg>
