@@ -92,8 +92,8 @@ export default function Header() {
           <img
             src="/sm-associate-exact.webp"
             alt="SM Associate"
-            width="210"
-            height="53"
+            width="216"
+            height="72"
             className="premium-brand-logo premium-header-logo"
             fetchPriority="high"
           />
