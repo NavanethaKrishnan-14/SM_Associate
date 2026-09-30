@@ -793,11 +793,11 @@ button, a { transition: transform .22s ease, background-color .22s ease, border-
 }
 .premium-header-logo {
   width: 230px;
-  height: 59px;
+  height: 77px;
 }
 .premium-footer-logo-image {
   width: 280px;
-  height: 71px;
+  height: 93px;
 }
 .premium-brand-copy {
   display: grid;

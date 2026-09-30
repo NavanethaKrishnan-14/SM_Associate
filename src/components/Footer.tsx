@@ -103,17 +103,17 @@ export default function Footer() {
         <div className="premium-footer-brand">
           <div className="premium-footer-logo">
             <img
-              src="/sm-associate-site-logo.svg"
+              src="/sm-associate-site-logo.png"
               alt="SM Associate"
               width="280"
-              height="71"
+              height="93"
               className="premium-brand-logo premium-footer-logo-image"
               loading="lazy"
               onError={(event) => {
                 const image = event.currentTarget;
                 if (image.dataset.fallbackApplied) return;
                 image.dataset.fallbackApplied = 'true';
-                image.src = '/sm-associate-mark-new.svg';
+                image.src = '/sm-associate-site-logo.png';
               }}
             />
           </div>
