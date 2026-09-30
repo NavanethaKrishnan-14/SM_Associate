@@ -96,6 +96,12 @@ export default function Header() {
             height="72"
             className="premium-brand-logo premium-header-logo"
             fetchPriority="high"
+            onError={(event) => {
+              const image = event.currentTarget;
+              if (image.dataset.fallbackApplied) return;
+              image.dataset.fallbackApplied = 'true';
+              image.src = '/sm-associate-mark-new.svg';
+            }}
           />
         </Link>
 
