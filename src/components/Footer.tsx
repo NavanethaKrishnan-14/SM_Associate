@@ -105,8 +105,8 @@ export default function Footer() {
             <img
               src="/sm-associate-exact.webp"
               alt="SM Associate"
-              width="250"
-              height="63"
+              width="270"
+              height="90"
               className="premium-brand-logo premium-footer-logo-image"
               loading="lazy"
             />
