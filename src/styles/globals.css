@@ -789,14 +789,16 @@ button, a { transition: transform .22s ease, background-color .22s ease, border-
   display: block;
   flex: 0 0 auto;
   object-fit: contain;
+  background: transparent;
+  mix-blend-mode: screen;
 }
 .premium-header-logo {
-  width: 72px;
-  height: 72px;
+  width: 228px;
+  height: 76px;
 }
 .premium-footer-logo-image {
-  width: 96px;
-  height: 96px;
+  width: 280px;
+  height: 94px;
 }
 .premium-brand-copy {
   display: grid;
@@ -7254,17 +7256,17 @@ option {
 
 @media (max-width: 1080px) {
   .premium-header-logo {
-    width: 64px;
-    height: 64px;
+    width: 200px;
+    height: 67px;
   }
 }
 @media (max-width: 560px) {
   .premium-header-logo {
-    width: 58px;
-    height: 58px;
+    width: 172px;
+    height: 57px;
   }
   .premium-footer-logo-image {
-    width: 82px;
-    height: 82px;
+    width: 220px;
+    height: 74px;
   }
 }
