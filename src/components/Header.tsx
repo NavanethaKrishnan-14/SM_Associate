@@ -90,7 +90,7 @@ export default function Header() {
       <div className="premium-header-inner">
         <Link href={ROUTES.HOME} className="premium-brand" aria-label="SM Associate home">
           <img
-            src="/sm-associate-logo-new.svg"
+            src="/sm-associate-exact.webp"
             alt="SM Associate"
             width="210"
             height="53"
