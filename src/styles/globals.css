@@ -787,14 +787,16 @@ button, a { transition: transform .22s ease, background-color .22s ease, border-
 }
 .premium-brand-logo {
   display: block;
-  width: 64px;
-  height: 64px;
   flex: 0 0 auto;
   object-fit: contain;
 }
+.premium-header-logo {
+  width: 210px;
+  height: 53px;
+}
 .premium-footer-logo-image {
-  width: 76px;
-  height: 76px;
+  width: 250px;
+  height: 63px;
 }
 .premium-brand-copy {
   display: grid;
@@ -7247,5 +7249,22 @@ option {
   .premium-footer-logo-image {
     width: 68px;
     height: 68px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .premium-header-logo {
+    width: 180px;
+    height: 46px;
+  }
+}
+@media (max-width: 560px) {
+  .premium-header-logo {
+    width: 154px;
+    height: 39px;
+  }
+  .premium-footer-logo-image {
+    width: 210px;
+    height: 53px;
   }
 }
