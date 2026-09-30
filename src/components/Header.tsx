@@ -90,18 +90,11 @@ export default function Header() {
       <div className="premium-header-inner">
         <Link href={ROUTES.HOME} className="premium-brand" aria-label="SM Associate home">
           <img
-            src="/sm-associate-site-logo.webp"
+            src="/sm-associate-site-logo.svg"
             alt="SM Associate"
-            width="216"
-            height="72"
+            width="230" height="59"
             className="premium-brand-logo premium-header-logo"
             fetchPriority="high"
-            onError={(event) => {
-              const image = event.currentTarget;
-              if (image.dataset.fallbackApplied) return;
-              image.dataset.fallbackApplied = 'true';
-              image.src = '/sm-associate-mark-new.svg';
-            }}
           />
         </Link>
 
