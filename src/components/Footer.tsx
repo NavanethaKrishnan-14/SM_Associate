@@ -103,10 +103,10 @@ export default function Footer() {
         <div className="premium-footer-brand">
           <div className="premium-footer-logo">
             <img
-              src="/sm-associate-site-logo.webp"
+              src="/sm-associate-site-logo.svg"
               alt="SM Associate"
-              width="270"
-              height="90"
+              width="280"
+              height="71"
               className="premium-brand-logo premium-footer-logo-image"
               loading="lazy"
               onError={(event) => {
