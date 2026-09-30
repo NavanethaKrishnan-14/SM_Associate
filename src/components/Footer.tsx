@@ -103,10 +103,10 @@ export default function Footer() {
         <div className="premium-footer-brand">
           <div className="premium-footer-logo">
             <img
-              src="/sm-associate-logo-round.png"
+              src="/sm-associate-logo-new.svg"
               alt="SM Associate"
-              width="82"
-              height="82"
+              width="250"
+              height="63"
               className="premium-brand-logo premium-footer-logo-image"
               loading="lazy"
             />
