@@ -109,6 +109,12 @@ export default function Footer() {
               height="90"
               className="premium-brand-logo premium-footer-logo-image"
               loading="lazy"
+              onError={(event) => {
+                const image = event.currentTarget;
+                if (image.dataset.fallbackApplied) return;
+                image.dataset.fallbackApplied = 'true';
+                image.src = '/sm-associate-mark-new.svg';
+              }}
             />
           </div>
 
