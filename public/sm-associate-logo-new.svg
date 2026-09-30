@@ -1,41 +1,65 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 260" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
 <title id="title">SM Associate</title>
-<desc id="desc">SM Associate premium finance and mobility logo</desc>
+<desc id="desc">SM Associate circular premium finance and mobility logo</desc>
 <defs>
+  <radialGradient id="bg" cx="50%" cy="42%" r="65%">
+    <stop offset="0" stop-color="#12345a"/>
+    <stop offset=".55" stop-color="#071a2c"/>
+    <stop offset="1" stop-color="#020811"/>
+  </radialGradient>
   <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#f8df9b"/>
-    <stop offset=".28" stop-color="#c5a35b"/>
-    <stop offset=".58" stop-color="#fff0bb"/>
-    <stop offset="1" stop-color="#a77e2f"/>
+    <stop offset="0" stop-color="#fff2b8"/>
+    <stop offset=".22" stop-color="#d7b35d"/>
+    <stop offset=".5" stop-color="#fff0a9"/>
+    <stop offset=".78" stop-color="#b9862f"/>
+    <stop offset="1" stop-color="#f5d77f"/>
   </linearGradient>
-  <linearGradient id="navy" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#122842"/>
-    <stop offset="1" stop-color="#07131f"/>
+  <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#ffffff"/>
+    <stop offset=".55" stop-color="#d9d9d9"/>
+    <stop offset="1" stop-color="#9ea5ad"/>
   </linearGradient>
-  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
-    <feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#000" flood-opacity=".22"/>
+  <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="5" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
   </filter>
 </defs>
+<circle cx="256" cy="256" r="244" fill="#02060b" stroke="url(#gold)" stroke-width="10"/>
+<circle cx="256" cy="256" r="229" fill="url(#bg)" stroke="#0b5cc2" stroke-opacity=".55" stroke-width="2"/>
+<path d="M88 121 C150 68 222 51 286 67" fill="none" stroke="#2b9dff" stroke-opacity=".55" stroke-width="2.5" filter="url(#glow)"/>
+<path d="M100 397 C184 433 309 445 414 392" fill="none" stroke="url(#gold)" stroke-width="13" stroke-linecap="round"/>
+<path d="M96 409 C195 453 319 452 416 397" fill="none" stroke="#1592ff" stroke-opacity=".65" stroke-width="3" stroke-linecap="round"/>
 
-<g filter="url(#shadow)">
-  <circle cx="126" cy="130" r="96" fill="url(#navy)" stroke="url(#gold)" stroke-width="8"/>
-  <circle cx="126" cy="130" r="84" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="1.5"/>
-  <text x="73" y="161" font-family="Georgia, Times New Roman, serif" font-size="112" font-weight="700" fill="url(#gold)">S</text>
-  <text x="125" y="171" font-family="Georgia, Times New Roman, serif" font-size="92" font-weight="700" fill="#fff">M</text>
-  <path d="M56 151 C95 126 143 121 190 92" fill="none" stroke="url(#gold)" stroke-width="11" stroke-linecap="round"/>
-  <path d="M157 83 l10 -18 10 18" fill="none" stroke="url(#gold)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M175 78 l10 -18 10 18" fill="none" stroke="url(#gold)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<g transform="translate(0,-8)">
+  <text x="151" y="219" font-family="Georgia, Times New Roman, serif" font-size="132" font-weight="700" fill="url(#gold)">S</text>
+  <text x="244" y="235" font-family="Georgia, Times New Roman, serif" font-size="112" font-weight="700" fill="url(#silver)">M</text>
+  <path d="M139 234 C188 204 251 197 342 146" fill="none" stroke="url(#gold)" stroke-width="11" stroke-linecap="round"/>
+  <path d="M303 146 l13 -23 13 23" fill="none" stroke="url(#gold)" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M326 139 l13 -23 13 23" fill="none" stroke="url(#gold)" stroke-width="5" stroke-linejoin="round"/>
 </g>
 
-<g transform="translate(252 48)">
-  <text x="0" y="82" font-family="Georgia, Times New Roman, serif" font-size="86" font-weight="700" letter-spacing="1.8" fill="#07131f">ASSOCIATE</text>
-  <path d="M4 104 H760" stroke="url(#gold)" stroke-width="3" stroke-linecap="round"/>
-  <text x="3" y="135" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" letter-spacing="6" fill="#718293">YOUR GOALS  •  OUR SUPPORT</text>
-  <g transform="translate(3 164)">
-    <circle cx="10" cy="9" r="6" fill="#c5a35b"/>
-    <path d="M35 15 L58 0 L81 15" fill="none" stroke="#c5a35b" stroke-width="4" stroke-linecap="round"/>
-    <path d="M44 14 V37 H72 V14" fill="none" stroke="#c5a35b" stroke-width="4" stroke-linejoin="round"/>
-    <text x="98" y="25" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#718293">FINANCE • MOBILITY • SUPPORT</text>
+<text x="256" y="304" text-anchor="middle" font-family="Georgia, Times New Roman, serif" font-size="50" font-weight="700" letter-spacing="1.8" fill="url(#silver)">ASSOCIATE</text>
+<path d="M121 321 H190 M322 321 H391" stroke="url(#gold)" stroke-width="2"/>
+<text x="256" y="339" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="3.6" fill="#f2d77d">YOUR GOALS  OUR SUPPORT</text>
+
+<g transform="translate(94 358)" font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+  <g transform="translate(0 0)">
+    <circle cx="0" cy="0" r="20" fill="#071a2c" stroke="#d7b35d" stroke-width="2"/><path d="M-10 0 L0 -9 L10 0 M-7 -1 V9 H7 V-1" fill="none" stroke="#f4d97d" stroke-width="2.5"/><text y="32" font-size="8.5" fill="#f4f4f4">HOME</text><text y="42" font-size="8.5" fill="#f4f4f4">LOAN</text>
+  </g>
+  <g transform="translate(64 0)">
+    <circle cx="0" cy="0" r="20" fill="#071a2c" stroke="#d7b35d" stroke-width="2"/><rect x="-10" y="-7" width="20" height="15" rx="2" fill="none" stroke="#f4d97d" stroke-width="2.5"/><circle cx="-5" cy="10" r="2" fill="#f4d97d"/><circle cx="5" cy="10" r="2" fill="#f4d97d"/><text y="32" font-size="8.5" fill="#f4f4f4">BUS</text><text y="42" font-size="8.5" fill="#f4f4f4">LOAN</text>
+  </g>
+  <g transform="translate(128 0)">
+    <circle cx="0" cy="0" r="20" fill="#071a2c" stroke="#d7b35d" stroke-width="2"/><path d="M-12 5 L-8 -5 H8 L12 5 Z M-7 5 l2 -5 M7 5 l-2 -5" fill="none" stroke="#f4d97d" stroke-width="2.2"/><circle cx="-7" cy="8" r="2" fill="#f4d97d"/><circle cx="7" cy="8" r="2" fill="#f4d97d"/><text y="32" font-size="8.5" fill="#f4f4f4">CAR</text><text y="42" font-size="8.5" fill="#f4f4f4">LOAN</text>
+  </g>
+  <g transform="translate(192 0)">
+    <circle cx="0" cy="0" r="20" fill="#071a2c" stroke="#d7b35d" stroke-width="2"/><path d="M0 -10 L8 -6 V1 C8 7 4 11 0 13 C-4 11 -8 7 -8 1 V-6 Z" fill="none" stroke="#f4d97d" stroke-width="2.2"/><path d="M-4 1 l3 3 5 -6" fill="none" stroke="#fff" stroke-width="2"/><text y="32" font-size="7.6" fill="#f4f4f4">INSURANCE</text><text y="42" font-size="7.6" fill="#f4f4f4">RENEWAL</text>
+  </g>
+  <g transform="translate(256 0)">
+    <circle cx="0" cy="0" r="20" fill="#071a2c" stroke="#d7b35d" stroke-width="2"/><circle cx="-3" cy="-2" r="5" fill="none" stroke="#f4d97d" stroke-width="2"/><text x="-3" y="2" font-size="7" fill="#f4d97d">₹</text><circle cx="5" cy="7" r="5" fill="none" stroke="#f4d97d" stroke-width="2"/><text x="5" y="9" font-size="7" fill="#f4d97d">₹</text><text y="32" font-size="7.8" fill="#f4f4f4">BUSINESS</text><text y="42" font-size="7.8" fill="#f4f4f4">LOAN</text>
+  </g>
+  <g transform="translate(320 0)">
+    <circle cx="0" cy="0" r="20" fill="#071a2c" stroke="#d7b35d" stroke-width="2"/><path d="M-10 8 V2 M-3 8 V-3 M4 8 V-8 M11 8 V-13" stroke="#f4d97d" stroke-width="3"/><path d="M-11 0 L-4 -5 L3 -3 L10 -11" fill="none" stroke="#fff" stroke-width="1.8"/><text y="32" font-size="7.8" fill="#f4f4f4">FINANCE</text><text y="42" font-size="7.8" fill="#f4f4f4">SOLUTIONS</text>
   </g>
 </g>
 </svg>
