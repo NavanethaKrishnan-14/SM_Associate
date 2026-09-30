@@ -791,12 +791,12 @@ button, a { transition: transform .22s ease, background-color .22s ease, border-
   object-fit: contain;
 }
 .premium-header-logo {
-  width: 210px;
-  height: 53px;
+  width: 72px;
+  height: 72px;
 }
 .premium-footer-logo-image {
-  width: 250px;
-  height: 63px;
+  width: 96px;
+  height: 96px;
 }
 .premium-brand-copy {
   display: grid;
@@ -7254,17 +7254,17 @@ option {
 
 @media (max-width: 1080px) {
   .premium-header-logo {
-    width: 180px;
-    height: 46px;
+    width: 64px;
+    height: 64px;
   }
 }
 @media (max-width: 560px) {
   .premium-header-logo {
-    width: 154px;
-    height: 39px;
+    width: 58px;
+    height: 58px;
   }
   .premium-footer-logo-image {
-    width: 210px;
-    height: 53px;
+    width: 82px;
+    height: 82px;
   }
 }
