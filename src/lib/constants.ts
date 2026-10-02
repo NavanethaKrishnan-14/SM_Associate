@@ -4,6 +4,8 @@ export const COMPANY_INFO = {
   tagline: 'Your Trusted Partner for Finance & Mobility',
   description: 'Professional Finance Services + Vehicle Resale + Financial Assistance Company',
   phone: '+91 9790219874, +91 9047007720',
+  primaryPhone: '+919790219874',
+  secondaryPhone: '+919047007720',
   whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919790219874',
   email: process.env.CONTACT_TO_EMAIL || '',
   supportEmail: process.env.CONTACT_TO_EMAIL || '',
