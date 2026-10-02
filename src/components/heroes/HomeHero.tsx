@@ -131,19 +131,8 @@ export default function HomeHero() {
 
             {/* Contact Quick Links */}
             <div className="flex flex-wrap gap-3 pt-4">
-              <a
-                href="tel:+919790219874"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border text-white transition-all hover:bg-[var(--accent-soft)] hover:border-[var(--accent-color)]"
-                style={{
-                  backgroundColor: 'rgba(255, 255, 255, 0.05)',
-                  borderColor: 'var(--border-accent)',
-                }}
-              >
-                <Phone size={18} style={{ color: 'var(--accent-color)' }} />
-                <span className="font-semibold">+91 97902 19874</span>
-              </a>
-              <span className="group inline-flex items-center gap-2.5 px-3 py-2 rounded-xl border border-white/10 bg-white/5 text-white/80">
-                <Phone size={16} />
+              <span className="group inline-flex items-center gap-2.5 px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-white/80">
+                <Phone size={17} style={{ color: 'var(--accent-color)' }} />
                 <a href="tel:+919790219874" className="font-semibold">+91 97902 19874</a>
                 <span aria-hidden="true">, </span>
                 <a href="tel:+919047007720" className="font-semibold">+91 90470 07720</a>
