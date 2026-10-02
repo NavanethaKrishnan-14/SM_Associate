@@ -186,14 +186,14 @@ export default function Footer() {
 
         <div className="premium-footer-col premium-footer-contact">
           <span className="premium-footer-label">CONTACT</span>
-          <a href="tel:+919790219874">
+          <div className="premium-footer-contact-phone">
             <Phone size={16} />
-            +91 97902 19874
-          </a>
-          <a href="tel:+919047007720">
-            <Phone size={16} />
-            +91 90470 07720
-          </a>
+            <span>
+              <a href="tel:+919790219874">+91 97902 19874</a>
+              <span aria-hidden="true">, </span>
+              <a href="tel:+919047007720">+91 90470 07720</a>
+            </span>
+          </div>
           {COMPANY_INFO.supportEmail && (
             <a href={`mailto:${COMPANY_INFO.supportEmail}`}>
               <Mail size={16} />
