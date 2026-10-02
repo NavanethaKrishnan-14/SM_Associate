@@ -602,7 +602,7 @@ body {
 #home-v3 .home-v3-hero-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:30px}
 #home-v3 .home-v3-hero-trust{display:grid;grid-template-columns:repeat(3,1fr);max-width:640px;gap:10px;margin-top:28px}
 #home-v3 .home-v3-hero-trust div{padding:14px;border:1px solid rgba(255,255,255,.10);border-radius:15px;background:rgba(255,255,255,.04)}#home-v3 .home-v3-hero-trust strong{display:block;color:#fff;font-size:19px}#home-v3 .home-v3-hero-trust span{display:block;margin-top:4px;color:rgba(255,255,255,.38);font-size:9px;font-weight:900;letter-spacing:.11em;text-transform:uppercase}
-#home-v3 .home-v3-hero-art{position:relative;height:610px;perspective:1200px;transform-style:preserve-3d;top:-24px}
+#home-v3 .home-v3-hero-art{position:relative;height:610px;perspective:1200px;transform-style:preserve-3d;top:-42px}
 #home-v3 .home-v3-orbit{position:absolute;border:1px solid rgba(214,179,90,.23);border-radius:50%}.home-v3-orbit-one{width:490px;height:490px;right:3%;top:8%;transform:rotateX(64deg) rotateZ(-23deg);animation:home3-spin 22s linear infinite}.home-v3-orbit-two{width:540px;height:210px;right:-1%;top:29%;border-color:rgba(143,227,214,.16);transform:rotateX(68deg) rotateZ(16deg);animation:home3-spin-rev 30s linear infinite}
 #home-v3 .home-v3-glow{position:absolute;border-radius:50%;filter:blur(48px)}.home-v3-glow-gold{width:250px;height:250px;right:17%;top:18%;background:rgba(214,179,90,.14)}.home-v3-glow-teal{width:150px;height:150px;left:15%;top:20%;background:rgba(25,169,149,.12)}
 #home-v3 .home-v3-device{position:absolute;width:330px;height:210px;border-radius:26px;border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(18px);box-shadow:0 34px 72px rgba(0,0,0,.27),inset 0 1px 0 rgba(255,255,255,.12);transform-style:preserve-3d}
