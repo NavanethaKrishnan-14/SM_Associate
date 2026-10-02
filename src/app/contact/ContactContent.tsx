@@ -129,7 +129,7 @@ export default function ContactContent() {
               scrolling="no"
               marginHeight={0}
               marginWidth={0}
-              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=No%20183%20E4,%20Nellaiapper%20High%20Road,%20Thirunagar,%20Tirunelveli%20Junction,%20Tirunelveli,%20Tamil%20Nadu%20627001&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=No%20182%20E4,%20SPP%20Buildings,%20S.N.%20High%20Road,%20Tirunelveli&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
               title="SM Associate Location"
               style={{ border: 0 }}
             />
