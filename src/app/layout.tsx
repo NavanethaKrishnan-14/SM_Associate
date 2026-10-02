@@ -53,7 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     email: process.env.CONTACT_TO_EMAIL || '',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'No 183 E4, Nellaiapper High Road, Thirunagar',
+      streetAddress: 'No: 182 E4, SPP Buildings, S.N. High Road',
       addressLocality: 'Tirunelveli',
       addressRegion: 'Tamil Nadu',
       postalCode: '627001',
