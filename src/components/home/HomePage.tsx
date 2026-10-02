@@ -257,8 +257,12 @@ function Hero() {
         <div className="home-v3-container home-v3-hero-bottom-inner">
           <div className="home-v3-hero-bottom-pill"><BadgeCheck size={15} /> Local support in Tirunelveli</div>
           <div className="home-v3-hero-bottom-links">
-            <a href="tel:+919790219874"><Phone size={15} /> +91 97902 19874</a>
-            <a href="tel:+919047007720"><Phone size={15} /> +91 90470 07720</a>
+            <span className="home-v3-contact-numbers">
+              <Phone size={15} />
+              <a href="tel:+919790219874">+91 97902 19874</a>
+              <span aria-hidden="true">, </span>
+              <a href="tel:+919047007720">+91 90470 07720</a>
+            </span>
             <a href="https://wa.me/919790219874" target="_blank" rel="noopener noreferrer"><MessageCircle size={15} /> WhatsApp</a>
           </div>
         </div>
@@ -622,8 +626,12 @@ function FinalCTA() {
           <div className="home-v3-final-actions">
             <Link href={ROUTES.CONTACT} className="home-v3-btn home-v3-btn-gold">Talk to SM Associate <ArrowRight size={17} /></Link>
             <div className="home-v3-final-contact">
-              <a href="tel:+919790219874"><Phone size={15} /> +91 97902 19874</a>
-              <a href="tel:+919047007720"><Phone size={15} /> +91 90470 07720</a>
+              <span className="home-v3-contact-numbers">
+                <Phone size={15} />
+                <a href="tel:+919790219874">+91 97902 19874</a>
+                <span aria-hidden="true">, </span>
+                <a href="tel:+919047007720">+91 90470 07720</a>
+              </span>
               <a href={'mailto:' + COMPANY_INFO.supportEmail}><MessageCircle size={15} /> Email us</a>
             </div>
           </div>
