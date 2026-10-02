@@ -12,7 +12,7 @@ export default function ContactContent() {
     {
       icon: Phone,
       title: 'Phone',
-      details: ['+91 9790219874', '+91 9047007720'],
+      details: ['+91 97902 19874, +91 90470 07720'],
       description: 'Available Mon-Sat, 9AM-6PM'
     },
     {
@@ -109,7 +109,7 @@ export default function ContactContent() {
         valueLabel="Approximate Value / Budget"
         valuePlaceholder="e.g. ₹5,00,000"
         phoneLabel="Phone Number"
-        phonePlaceholder="+91 97902 19874"
+        phonePlaceholder="+91 97902 19874, +91 90470 07720"
         messagePlaceholder="Describe what you are looking for, timeline, or question in detail..."
         submitButtonText="Submit Inquiry"
       />
