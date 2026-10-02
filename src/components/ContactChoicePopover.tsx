@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { MessageCircle, Phone, X } from 'lucide-react';
 import { COMPANY_INFO } from '@/lib/constants';
 import { generateWhatsAppUrl } from '@/lib/utils';
@@ -32,13 +33,48 @@ export default function ContactChoicePopover({
   wrapperClassName = '',
 }: ContactChoicePopoverProps) {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const [menuStyle, setMenuStyle] = useState({ top: 0, left: 0 });
+
   const rootRef = useRef<HTMLDivElement | null>(null);
+  const buttonRef = useRef<HTMLButtonElement | null>(null);
+  const menuRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const updateMenuPosition = () => {
+    const button = buttonRef.current;
+    if (!button) return;
+
+    const rect = button.getBoundingClientRect();
+    const menuWidth = 290;
+    const menuHeight = 220;
+    const gap = 12;
+
+    let left = rect.right - menuWidth;
+    left = Math.max(12, Math.min(left, window.innerWidth - menuWidth - 12));
+
+    const spaceBelow = window.innerHeight - rect.bottom;
+    const top =
+      spaceBelow >= menuHeight + gap
+        ? rect.bottom + gap
+        : Math.max(12, rect.top - menuHeight - gap);
+
+    setMenuStyle({ top, left });
+  };
 
   useEffect(() => {
     if (!open) return;
 
+    updateMenuPosition();
+
+    const handleViewportChange = () => updateMenuPosition();
+
     const handlePointerDown = (event: MouseEvent) => {
-      if (!rootRef.current?.contains(event.target as Node)) {
+      const target = event.target as Node;
+      if (!rootRef.current?.contains(target) && !menuRef.current?.contains(target)) {
         setOpen(false);
       }
     };
@@ -49,10 +85,14 @@ export default function ContactChoicePopover({
       }
     };
 
+    window.addEventListener('resize', handleViewportChange);
+    window.addEventListener('scroll', handleViewportChange, true);
     document.addEventListener('mousedown', handlePointerDown);
     document.addEventListener('keydown', handleKeyDown);
 
     return () => {
+      window.removeEventListener('resize', handleViewportChange);
+      window.removeEventListener('scroll', handleViewportChange, true);
       document.removeEventListener('mousedown', handlePointerDown);
       document.removeEventListener('keydown', handleKeyDown);
     };
@@ -61,24 +101,19 @@ export default function ContactChoicePopover({
   const isPhone = type === 'phone';
   const Icon = isPhone ? Phone : MessageCircle;
   const title = isPhone ? 'Choose a number' : 'Choose WhatsApp number';
-  const description = isPhone ? 'Select the number you want to call.' : 'Select the number you want to message.';
+  const description = isPhone
+    ? 'Select the number you want to call.'
+    : 'Select the number you want to message.';
 
-  return (
-    <div ref={rootRef} className={'relative inline-flex ' + wrapperClassName}>
-      <button
-        type="button"
-        className={buttonClassName}
-        onClick={() => setOpen((current) => !current)}
-        aria-label={label ?? title}
-        aria-haspopup="dialog"
-        aria-expanded={open}
-      >
-        <Icon size={18} aria-hidden="true" />
-      </button>
-
-      {open && (
+  const menu = open && mounted
+    ? createPortal(
         <div
-          className="absolute right-0 top-full z-[90] mt-3 w-[290px] overflow-hidden rounded-2xl border border-white/10 bg-[#0A1724] p-4 text-white shadow-2xl"
+          ref={menuRef}
+          className="fixed z-[9999] w-[290px] overflow-hidden rounded-2xl border border-white/10 bg-[#0A1724] p-4 text-white shadow-2xl"
+          style={{
+            top: menuStyle.top,
+            left: menuStyle.left,
+          }}
           role="dialog"
           aria-label={title}
         >
@@ -123,8 +158,27 @@ export default function ContactChoicePopover({
               );
             })}
           </div>
-        </div>
-      )}
-    </div>
+        </div>,
+        document.body,
+      )
+    : null;
+
+  return (
+    <>
+      <div ref={rootRef} className={'relative inline-flex ' + wrapperClassName}>
+        <button
+          ref={buttonRef}
+          type="button"
+          className={buttonClassName}
+          onClick={() => setOpen((current) => !current)}
+          aria-label={label ?? title}
+          aria-haspopup="dialog"
+          aria-expanded={open}
+        >
+          <Icon size={18} aria-hidden="true" />
+        </button>
+      </div>
+      {menu}
+    </>
   );
 }
