@@ -140,7 +140,15 @@ export default function HomeHero() {
                 }}
               >
                 <Phone size={18} style={{ color: 'var(--accent-color)' }} />
-                <span className="font-semibold">+91 9790219874</span>
+                <span className="font-semibold">+91 97902 19874</span>
+              </a>
+              <a
+                href="tel:+919047007720"
+                className="group inline-flex items-center gap-2.5 px-3 py-2 rounded-xl border border-white/10 bg-white/5 text-white/80 hover:bg-white/10 transition-colors"
+                aria-label="Call SM Associate at +91 90470 07720"
+              >
+                <Phone size={16} />
+                <span className="font-semibold">+91 90470 07720</span>
               </a>
               <a
                 href="https://wa.me/919790219874"
