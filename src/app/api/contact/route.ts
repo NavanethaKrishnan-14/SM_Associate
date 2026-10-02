@@ -25,6 +25,17 @@ const isAllowedOrigin = (origin: string | null): boolean => {
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+const escapeHtml = (value: string): string =>
+    value
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+
+const limitText = (value: string, maxLength: number): string =>
+    value.slice(0, maxLength).trim();
+
 export async function POST(request: NextRequest) {
     const origin = request.headers.get('origin');
     if (origin && !isAllowedOrigin(origin)) {
@@ -49,12 +60,12 @@ export async function POST(request: NextRequest) {
     }
 
     const body = payload as Record<string, unknown>;
-    const name = normalizeText(body.name);
-    const email = normalizeText(body.email).toLowerCase();
-    const phone = normalizeText(body.phone);
-    const reason = normalizeText(body.reason);
-    const value = normalizeText(body.value);
-    const message = normalizeText(body.message);
+    const name = limitText(normalizeText(body.name), 120);
+    const email = limitText(normalizeText(body.email).toLowerCase(), 254);
+    const phone = limitText(normalizeText(body.phone), 30);
+    const reason = limitText(normalizeText(body.reason), 80);
+    const value = limitText(normalizeText(body.value), 80);
+    const message = limitText(normalizeText(body.message), 4000);
     const honeypot = normalizeText(body.honeypot);
 
     if (honeypot) {
@@ -112,15 +123,15 @@ export async function POST(request: NextRequest) {
     const htmlBody = `
     <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #0f172a;">
       <h2 style="margin-bottom: 12px;">New contact form inquiry</h2>
-      <p><strong>Reference:</strong> ${reference}</p>
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
-      <p><strong>Subject:</strong> ${formattedReason}</p>
-      <p><strong>Budget / Approximate Value:</strong> ${value || 'Not provided'}</p>
-      <p><strong>Submitted:</strong> ${new Date().toISOString()}</p>
+      <p><strong>Reference:</strong> ${escapeHtml(reference)}</p>
+      <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+      <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+      <p><strong>Phone:</strong> ${escapeHtml(phone || 'Not provided')}</p>
+      <p><strong>Subject:</strong> ${escapeHtml(formattedReason)}</p>
+      <p><strong>Budget / Approximate Value:</strong> ${escapeHtml(value || 'Not provided')}</p>
+      <p><strong>Submitted:</strong> ${escapeHtml(new Date().toISOString())}</p>
       <div style="margin-top: 20px; padding: 12px 16px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; white-space: pre-wrap;">
-        ${message.replace(/\n/g, '<br />')}
+        ${escapeHtml(message).replace(/\n/g, '<br />')}
       </div>
     </div>
   `;
