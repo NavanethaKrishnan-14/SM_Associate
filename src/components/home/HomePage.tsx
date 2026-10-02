@@ -582,7 +582,7 @@ function FAQ() {
       answer: 'Use the Contact page, phone or WhatsApp options on the website to start a conversation with the SM Associate team in Tirunelveli.',
     },
   ];
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState(-1);
 
   return (
     <section className="home-v3-section home-v3-white">
