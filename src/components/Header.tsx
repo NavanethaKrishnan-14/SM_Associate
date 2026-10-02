@@ -138,12 +138,12 @@ export default function Header() {
         </nav>
 
         <div className="premium-header-actions">
-          <a className="premium-icon-link" href="tel:+919790219874" aria-label="Call SM Associate - 97902 19874" title="+91 97902 19874">
+          <div className="premium-header-phone-group" aria-label="SM Associate contact numbers">
             <Phone size={17} />
-          </a>
-          <a className="premium-icon-link" href="tel:+919047007720" aria-label="Call SM Associate - 90470 07720" title="+91 90470 07720">
-            <Phone size={17} />
-          </a>
+            <a href="tel:+919790219874">+91 97902 19874</a>
+            <span aria-hidden="true">, </span>
+            <a href="tel:+919047007720">+91 90470 07720</a>
+          </div>
           <a className="premium-icon-link" href="https://wa.me/919790219874" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp SM Associate">
             <MessageCircle size={17} />
           </a>
@@ -206,12 +206,14 @@ export default function Header() {
           </div>
 
           <div className="premium-mobile-actions">
-            <a href="tel:+919790219874" className="premium-mobile-action">
-              <Phone size={17} /> +91 97902 19874
-            </a>
-            <a href="tel:+919047007720" className="premium-mobile-action">
-              <Phone size={17} /> +91 90470 07720
-            </a>
+            <div className="premium-mobile-action" aria-label="SM Associate contact numbers">
+              <Phone size={17} />
+              <span>
+                <a href="tel:+919790219874">+91 97902 19874</a>
+                <span aria-hidden="true">, </span>
+                <a href="tel:+919047007720">+91 90470 07720</a>
+              </span>
+            </div>
             <a href="https://wa.me/919790219874" target="_blank" rel="noopener noreferrer" className="premium-mobile-action">
               <MessageCircle size={17} /> WhatsApp
             </a>
