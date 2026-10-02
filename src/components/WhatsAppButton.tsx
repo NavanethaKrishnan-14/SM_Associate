@@ -1,6 +1,5 @@
 'use client';
 
-import { MessageCircle } from 'lucide-react';
 import ContactChoicePopover from '@/components/ContactChoicePopover';
 
 export default function WhatsAppButton() {
