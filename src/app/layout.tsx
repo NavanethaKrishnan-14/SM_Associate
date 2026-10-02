@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: 'SM Associate | Finance & Vehicle Marketplace in Tirunelveli, Tamil Nadu',
   description: 'SM Associate offers home, car, bike, personal and business finance solutions, vehicle resale, insurance and local assistance in Tirunelveli.',
   keywords: 'finance company Tirunelveli, home loan Tirunelveli, car loan Tirunelveli, used cars Tirunelveli, vehicle marketplace, SM Associate',
-  icons: { icon: '/sm-associate-mark-new.svg' },
+  icons: { icon: '/sm-associate-site-logo.png' },
   openGraph: {
     title: 'SM Associate — Finance & Mobility',
     description: 'Finance, vehicles and insurance through one trusted local platform.',
@@ -74,7 +74,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       telephone: '+91-9790219874',
       email: process.env.CONTACT_TO_EMAIL || '',
     },
-    sameAs: ['https://www.facebook.com/smassociate', 'https://www.instagram.com/smassociate'],
   };
 
   return (
