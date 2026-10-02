@@ -1061,6 +1061,11 @@ button, a { transition: transform .22s ease, background-color .22s ease, border-
 .premium-footer-col > a { display:flex; align-items:center; justify-content:space-between; gap:10px; color:rgba(255,255,255,.58); text-decoration:none; font-size:11px; line-height:1.4; }
 .premium-footer-col > a:hover { color:var(--premium-gold-soft); transform:translateX(2px); }
 .premium-footer-contact > a { justify-content:flex-start; }
+.premium-footer-contact-phone { display:flex; align-items:center; gap:8px; white-space:nowrap; min-width:0; font-size:10px; line-height:1.3; }
+.premium-footer-contact-phone > svg { color:var(--premium-teal); flex:0 0 auto; }
+.premium-footer-contact-phone > span { display:inline-flex; align-items:center; gap:0; white-space:nowrap; min-width:0; }
+.premium-footer-contact-phone a { color:rgba(255,255,255,.58); text-decoration:none; white-space:nowrap; font-size:10px; }
+.premium-footer-contact-phone a:hover { color:var(--premium-gold-soft); }
 .premium-footer-address { display:flex; align-items:flex-start; gap:9px; color:rgba(255,255,255,.55); font-size:11px; line-height:1.65; }
 .premium-footer-contact > a svg, .premium-footer-address svg { color:var(--premium-teal); flex:0 0 auto; }
 .premium-footer-bottom {
