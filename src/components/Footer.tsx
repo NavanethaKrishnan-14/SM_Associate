@@ -115,10 +115,25 @@ export default function Footer() {
 
           <p>{COMPANY_INFO.description}</p>
 
-          <div className="premium-socials" aria-label="Contact shortcuts">
-            <a href={`https://wa.me/${COMPANY_INFO.whatsappNumber}`} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp SM Associate">
-              <MessageCircle size={17} />
+          <div className="premium-socials" aria-label="Social and contact links">
+            <a
+              href="https://www.facebook.com/profile.php?id=100057608980098"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook SM Associate"
+              title="Facebook"
+            >
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M13.5 21v-8h2.75l.42-3h-3.17V8.08c0-.87.24-1.46 1.51-1.46h1.82V3.94c-.31-.04-1.37-.14-2.6-.14-2.58 0-4.35 1.58-4.35 4.49V10H7.25v3h2.63v8h3.62Z" />
+              </svg>
             </a>
+            <a href={`https://wa.me/${COMPANY_INFO.whatsappNumber}`} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp SM Associate">
             <a href={`tel:${COMPANY_INFO.phone.split(',')[0].replace(/[^0-9+]/g, '')}`} aria-label="Call SM Associate">
               <Phone size={17} />
             </a>
