@@ -34,7 +34,7 @@ const companyLinks = [
 
 export default function Footer() {
   const pathname = usePathname();
-  const year = new Date().getFullYear();
+  const year = 2026;
   const footerTheme = getVisualThemeForPath(pathname);
 
   const footerStyle = {
