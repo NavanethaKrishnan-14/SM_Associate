@@ -112,7 +112,7 @@ export default function ContactChoicePopover({
           ref={menuRef}
           className={
             isWhatsapp
-              ? "fixed z-[9999] w-[310px] overflow-hidden rounded-[22px] border border-[#25D366]/30 bg-[#F7FFF9] text-[#12301C] shadow-[0_22px_55px_rgba(0,0,0,0.24)]"
+              ? "fixed z-[9999] w-[270px] overflow-hidden rounded-[18px] border border-[#25D366]/30 bg-[#F7FFF9] text-[#12301C] shadow-[0_22px_55px_rgba(0,0,0,0.24)]"
               : "fixed z-[9999] w-[290px] overflow-hidden rounded-2xl border border-white/10 bg-[#0A1724] p-4 text-white shadow-2xl"
           }
           style={{
@@ -124,21 +124,21 @@ export default function ContactChoicePopover({
         >
           {isWhatsapp ? (
             <>
-              <div className="bg-gradient-to-br from-[#0F7A3A] to-[#25D366] px-5 py-5 text-white">
+              <div className="bg-gradient-to-br from-[#0F7A3A] to-[#25D366] px-4 py-4 text-white">
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex items-center gap-3">
-                    <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/15 ring-1 ring-white/25">
-                      <MessageCircle size={23} aria-hidden="true" />
+                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/15 ring-1 ring-white/25">
+                      <MessageCircle size={19} aria-hidden="true" />
                     </span>
                     <div>
-                      <p className="text-[15px] font-extrabold tracking-tight">{title}</p>
-                      <p className="mt-1 text-[11px] leading-4 text-white/80">{description}</p>
+                      <p className="text-[13px] font-extrabold tracking-tight">{title}</p>
+                      <p className="mt-1 text-[10px] leading-4 text-white/80">{description}</p>
                     </div>
                   </div>
                   <button
                     type="button"
                     onClick={() => setOpen(false)}
-                    className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
+                    className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
                     aria-label="Close"
                   >
                     <X size={15} />
@@ -146,8 +146,8 @@ export default function ContactChoicePopover({
                 </div>
               </div>
 
-              <div className="p-4">
-                <div className="mb-3 flex items-center justify-between">
+              <div className="p-3">
+                <div className="mb-2 flex items-center justify-between">
                   <span className="text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#64806D]">
                     Available numbers
                   </span>
@@ -167,16 +167,16 @@ export default function ContactChoicePopover({
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => setOpen(false)}
-                        className="group flex items-center gap-3 rounded-2xl border border-[#DDEEE3] bg-white px-3.5 py-3 transition hover:-translate-y-0.5 hover:border-[#25D366] hover:shadow-[0_10px_24px_rgba(37,211,102,0.12)]"
+                        className="group flex items-center gap-3 rounded-2xl border border-[#DDEEE3] bg-white px-3 py-2.5 transition hover:-translate-y-0.5 hover:border-[#25D366] hover:shadow-[0_10px_24px_rgba(37,211,102,0.12)]"
                       >
-                        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#E9FAEE] text-[#18A84B]">
-                          <MessageCircle size={18} aria-hidden="true" />
+                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#E9FAEE] text-[#18A84B]">
+                          <MessageCircle size={16} aria-hidden="true" />
                         </span>
                         <span className="min-w-0 flex-1">
                           <span className="block text-[9px] font-bold uppercase tracking-[0.14em] text-[#7B9583]">
                             WhatsApp
                           </span>
-                          <span className="mt-0.5 block text-sm font-extrabold text-[#183522]">
+                          <span className="mt-0.5 block text-[13px] font-extrabold text-[#183522]">
                             {option.label}
                           </span>
                         </span>
