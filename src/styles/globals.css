@@ -62,7 +62,7 @@
   --faq-muted: #636D7C;
 
   /* FONTS */
-  --font-site: var(--font-fraunces), 'Fraunces', Georgia, serif;
+  --font-site: var(--font-dm-sans), 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: var(--font-site);
   --font-disp: var(--font-site);
   --font-body: var(--font-site);
@@ -221,7 +221,7 @@ img {
   text-align: center;
 }
 
-/* Tailwind font-sans override → Fraunces */
+/* Tailwind font-sans override → DM Sans */
 .font-sans {
   font-family: var(--font-site) !important;
 }
@@ -297,8 +297,8 @@ img {
   }
 }
 
-.font-fraunces {
-  font-family: var(--font-fraunces), 'Fraunces', Georgia, serif;
+.font-fraunces, .font-dm-sans {
+  font-family: var(--font-dm-sans), 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .font-ibm-sans {
@@ -677,7 +677,7 @@ body {
   --premium-radius-md: 18px;
   --premium-shadow: 0 22px 60px rgba(8, 19, 31, 0.10);
   --premium-shadow-soft: 0 10px 30px rgba(8, 19, 31, 0.07);
-  --font-site: var(--font-manrope), 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-site: var(--font-dm-sans), 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --primary-color: var(--premium-midnight);
   --primary-light: var(--premium-midnight-2);
   --primary-dark: #040c14;
@@ -1027,7 +1027,7 @@ button, a { transition: transform .22s ease, background-color .22s ease, border-
   max-width:760px;
   margin:14px 0;
   color:#fff;
-  font-family:var(--font-manrope);
+  font-family:var(--font-dm-sans);
   font-size:clamp(2rem, 4.5vw, 4.1rem);
   line-height:1.02;
   font-weight:400;
@@ -1122,7 +1122,7 @@ button, a { transition: transform .22s ease, background-color .22s ease, border-
 .site-page h1,
 .site-page h2,
 .site-page h3 { color:var(--premium-ink); letter-spacing:-.035em; }
-.site-page h1 { font-family:var(--font-manrope); font-weight:400; }
+.site-page h1 { font-family:var(--font-dm-sans); font-weight:400; }
 .site-page h2 { font-weight:800; }
 .site-page h3 { font-weight:800; }
 .site-page p, .site-page li { color:var(--premium-muted); }
@@ -1291,7 +1291,7 @@ button, a { transition: transform .22s ease, background-color .22s ease, border-
 #home-v3 .home-v3-light { background:var(--home-ivory) !important; }
 #home-v3 .home-v3-soft { background:var(--home-paper) !important; }
 #home-v3 .home-v3-white { background:#fff !important; }
-#home-v3 .home-v3-heading h2 { font-family:var(--font-manrope); font-size:clamp(2.35rem,4vw,4.45rem) !important; font-weight:400 !important; color:var(--home-ink) !important; }
+#home-v3 .home-v3-heading h2 { font-family:var(--font-dm-sans); font-size:clamp(2.35rem,4vw,4.45rem) !important; font-weight:400 !important; color:var(--home-ink) !important; }
 #home-v3 .home-v3-heading p { color:#667581 !important; }
 #home-v3 .home-v3-eyebrow { color:#8c6a2c; letter-spacing:.22em; }
 #home-v3 .home-v3-gradient-text,
@@ -1322,7 +1322,7 @@ button, a { transition: transform .22s ease, background-color .22s ease, border-
   box-shadow:0 0 0 34px rgba(19,136,120,.05), 0 0 0 78px rgba(197,163,91,.035);
 }
 #home-v3 .home-v3-hero-noise { opacity:.20 !important; background-size:96px 96px !important; }
-#home-v3 .home-v3-hero-copy h1 { font-family:var(--font-manrope); font-weight:400 !important; letter-spacing:-.04em !important; font-size:clamp(3.1rem,6vw,6rem) !important; }
+#home-v3 .home-v3-hero-copy h1 { font-family:var(--font-dm-sans); font-weight:400 !important; letter-spacing:-.04em !important; font-size:clamp(3.1rem,6vw,6rem) !important; }
 #home-v3 .home-v3-hero-copy h1 span { background:none !important; color:var(--home-gold) !important; -webkit-text-fill-color:initial !important; }
 #home-v3 .home-v3-hero-lead { color:rgba(255,255,255,.66) !important; }
 #home-v3 .home-v3-hero-trust div { background:rgba(255,255,255,.03) !important; border-color:rgba(255,255,255,.11) !important; }
@@ -1346,7 +1346,7 @@ button, a { transition: transform .22s ease, background-color .22s ease, border-
 #home-v3 .home-v3-service-number { color:rgba(17,26,35,.10) !important; }
 #home-v3 .home-v3-emi-section { background:#e9ece9 !important; }
 #home-v3 .home-v3-emi-shell { background:var(--home-midnight) !important; border-radius:28px !important; box-shadow:none !important; }
-#home-v3 .home-v3-emi-copy h2 { font-family:var(--font-manrope); font-weight:400 !important; }
+#home-v3 .home-v3-emi-copy h2 { font-family:var(--font-dm-sans); font-weight:400 !important; }
 #home-v3 .home-v3-emi-panel { background:#f8f7f2 !important; border:1px solid rgba(255,255,255,.06) !important; box-shadow:none !important; }
 #home-v3 .home-v3-vehicle-grid { gap:22px !important; }
 #home-v3 .home-v3-vehicle-card { border:1px solid rgba(17,26,35,.10) !important; box-shadow:none !important; background:#fff !important; border-radius:24px !important; overflow:hidden; }
@@ -1384,7 +1384,7 @@ button, a { transition: transform .22s ease, background-color .22s ease, border-
 #home-v3 .home-v3-faq-item.is-open { background:#f1f4f0 !important; border-color:var(--home-teal) !important; }
 #home-v3 .home-v3-final-cta { background:#ede8df !important; }
 #home-v3 .home-v3-final-card { background:var(--home-midnight) !important; border-radius:30px !important; box-shadow:none !important; }
-#home-v3 .home-v3-final-card h2 { font-family:var(--font-manrope); font-weight:400 !important; }
+#home-v3 .home-v3-final-card h2 { font-family:var(--font-dm-sans); font-weight:400 !important; }
 #home-v3 .home-v3-final-contact a:hover { color:var(--home-gold) !important; }
 
 /* Legal pages: restrained editorial surface */
@@ -1396,7 +1396,7 @@ button, a { transition: transform .22s ease, background-color .22s ease, border-
 #disclaimer-page section { max-width:980px; margin:0 auto; }
 #privacy-page h1,
 #terms-page h1,
-#disclaimer-page h1 { font-family:var(--font-manrope); font-size:clamp(2.4rem,5vw,4.4rem); font-weight:400; }
+#disclaimer-page h1 { font-family:var(--font-dm-sans); font-size:clamp(2.4rem,5vw,4.4rem); font-weight:400; }
 #privacy-page .prose,
 #terms-page .prose,
 #disclaimer-page .prose { color:var(--premium-muted); line-height:1.85; }
@@ -1497,7 +1497,7 @@ button, a { transition: transform .22s ease, background-color .22s ease, border-
 }
 .premium-404-number{
   margin:14px 0 4px;
-  font-family:var(--font-manrope);
+  font-family:var(--font-dm-sans);
   font-size:clamp(6rem,18vw,11rem);
   line-height:.82;
   color:#fff;
@@ -1507,7 +1507,7 @@ button, a { transition: transform .22s ease, background-color .22s ease, border-
   max-width:650px;
   margin:20px 0 14px;
   color:#fff;
-  font-family:var(--font-manrope);
+  font-family:var(--font-dm-sans);
   font-size:clamp(2rem,4vw,3.7rem);
   line-height:1.04;
   font-weight:400;
@@ -3893,7 +3893,7 @@ textarea:focus-visible {
   z-index: 1;
   margin-top: 24px;
   color: #f7f6f1;
-  font-family: var(--font-manrope);
+  font-family: var(--font-dm-sans);
   font-size: clamp(1.65rem, 2.4vw, 2.45rem);
   line-height: 1.02;
   letter-spacing: -.03em;
@@ -4084,7 +4084,7 @@ textarea:focus-visible {
   z-index: 1;
   color: transparent;
   -webkit-text-stroke: 1px rgba(255,255,255,.24);
-  font-family: var(--font-manrope);
+  font-family: var(--font-dm-sans);
   font-size: clamp(7rem, 14vw, 12rem);
   line-height: .8;
   letter-spacing: -.08em;
@@ -4617,7 +4617,7 @@ textarea:focus-visible {
 }
 
 .premium-footer-signature-glow {
-  font-family: var(--font-manrope);
+  font-family: var(--font-dm-sans);
   font-size: clamp(7rem, 14vw, 12.5rem);
   line-height: .72;
   letter-spacing: -.11em;
@@ -4783,7 +4783,7 @@ textarea:focus-visible {
 
 /* FINAL FIX — Single site font */
 :root {
-  --font-site: var(--font-manrope), 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-site: var(--font-dm-sans), 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 html,
