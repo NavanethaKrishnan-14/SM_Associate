@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { CSSProperties } from 'react';
-import { Facebook, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
+import { Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
 import { COMPANY_INFO, ROUTES } from '@/lib/constants';
 import { getVisualThemeForPath } from '@/config/pageThemes';
 
@@ -18,7 +18,7 @@ const serviceLinks = [
 
 const vehicleLinks = [
   { label: 'Browse Cars', href: `${ROUTES.VEHICLES}?type=car` },
-  { label: 'Sell Your Vehicle', href: ROUTES.CAR_RESALE },
+  { label: 'Sell Your Vehicle', href: ROUTES.SELL_VEHICLE },
   { label: 'EMI Calculator', href: ROUTES.EMI_CALCULATOR },
   { label: 'Finance Solutions', href: ROUTES.LOANS },
 ];
@@ -109,27 +109,24 @@ export default function Footer() {
               height="93"
               className="premium-brand-logo premium-footer-logo-image"
               loading="lazy"
-              onError={(event) => {
-                const image = event.currentTarget;
-                if (image.dataset.fallbackApplied) return;
-                image.dataset.fallbackApplied = 'true';
-                image.src = '/sm-associate-site-logo.png';
-              }}
+
             />
           </div>
 
           <p>{COMPANY_INFO.description}</p>
 
-          <div className="premium-socials">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <Facebook size={17} />
+          <div className="premium-socials" aria-label="Contact shortcuts">
+            <a href={`https://wa.me/${COMPANY_INFO.whatsappNumber}`} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp SM Associate">
+              <MessageCircle size={17} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <Linkedin size={17} />
+            <a href={`tel:${COMPANY_INFO.phone.split(',')[0].replace(/[^0-9+]/g, '')}`} aria-label="Call SM Associate">
+              <Phone size={17} />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              <Twitter size={17} />
-            </a>
+            {COMPANY_INFO.supportEmail && (
+              <a href={`mailto:${COMPANY_INFO.supportEmail}`} aria-label="Email SM Associate">
+                <Mail size={17} />
+              </a>
+            )}
           </div>
         </div>
 
