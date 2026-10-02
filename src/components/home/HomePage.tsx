@@ -258,6 +258,7 @@ function Hero() {
           <div className="home-v3-hero-bottom-pill"><BadgeCheck size={15} /> Local support in Tirunelveli</div>
           <div className="home-v3-hero-bottom-links">
             <a href="tel:+919790219874"><Phone size={15} /> +91 97902 19874</a>
+            <a href="tel:+919047007720"><Phone size={15} /> +91 90470 07720</a>
             <a href="https://wa.me/919790219874" target="_blank" rel="noopener noreferrer"><MessageCircle size={15} /> WhatsApp</a>
           </div>
         </div>
