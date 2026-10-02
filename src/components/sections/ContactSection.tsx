@@ -36,7 +36,7 @@ export default function ContactSection(props: VaultContactSectionProps) {
       valueLabel="Approximate amount / value"
       valuePlaceholder="e.g. ₹10,00,000"
       phoneLabel="Phone number"
-      phonePlaceholder="+91 97902 19874"
+      phonePlaceholder="+91 97902 19874, +91 90470 07720"
       messagePlaceholder="Describe what you need, tenure preference, or vehicle details..."
       submitButtonText="Submit inquiry"
       {...props}
