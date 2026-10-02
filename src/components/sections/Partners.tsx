@@ -7,7 +7,8 @@ import { useState } from 'react';
 const partners = [
   {
     id: 0,
-    name: '[Partner 1 Name]',
+    name: 'selvasebastin D',
+    phone: '9047007720',
     role: 'Co-Founder',
     title: 'Managing Partner',
     bio: 'Experienced in customer relationships, financial assistance and business operations, with a strong focus on delivering transparent and reliable solutions.',
@@ -27,6 +28,7 @@ const partners = [
     color: '#0891b2',
     colorLight: '#67e8f9',
     image: '/partners/partner-2.png',
+    phone: '9790219874',
   },
 ];
 
@@ -163,7 +165,7 @@ function FlipCard({ partner }: { partner: typeof partners[0] }) {
               {[
                 { icon: Linkedin, label: 'LinkedIn', href: '#' },
                 { icon: Mail, label: 'Email', href: '#' },
-                { icon: Phone, label: 'Call', href: '+919790219874' },
+                { icon: Phone, label: 'Call', href: `tel:+91${partner.phone}` },
               ].map(({ icon: Icon, label, href }) => (
                 <a
                   key={label}
