@@ -34,6 +34,7 @@ import { BLOG_POSTS, COMPANY_INFO, ROUTES } from '@/lib/constants';
 import { FAQ_DATA } from '@/data/faqData';
 import testimonialData from '@/data/testimonialdata';
 import Partners from '@/components/sections/Partners';
+import ContactChoicePopover from '@/components/ContactChoicePopover';
 
 type ServiceIconName = 'home' | 'car' | 'gold' | 'personal' | 'business' | 'insurance';
 
@@ -257,13 +258,16 @@ function Hero() {
         <div className="home-v3-container home-v3-hero-bottom-inner">
           <div className="home-v3-hero-bottom-pill"><BadgeCheck size={15} /> Local support in Tirunelveli</div>
           <div className="home-v3-hero-bottom-links">
-            <span className="home-v3-contact-numbers">
-              <Phone size={15} />
-              <a href="tel:+919790219874">+91 97902 19874</a>
-              <span aria-hidden="true">, </span>
-              <a href="tel:+919047007720">+91 90470 07720</a>
-            </span>
-            <a href="https://wa.me/919790219874" target="_blank" rel="noopener noreferrer"><MessageCircle size={15} /> WhatsApp</a>
+            <ContactChoicePopover
+              type="phone"
+              label="Choose a phone number"
+              buttonClassName="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 bg-white text-slate-800 transition hover:border-[var(--accent-primary)] hover:text-[var(--accent-primary)]"
+            />
+            <ContactChoicePopover
+              type="whatsapp"
+              label="Choose a WhatsApp number"
+              buttonClassName="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 bg-white text-slate-800 transition hover:border-[var(--accent-primary)] hover:text-[var(--accent-primary)]"
+            />
           </div>
         </div>
       </div>
