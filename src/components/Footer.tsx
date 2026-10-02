@@ -133,8 +133,20 @@ export default function Footer() {
                 <path d="M13.5 21v-8h2.75l.42-3h-3.17V8.08c0-.87.24-1.46 1.51-1.46h1.82V3.94c-.31-.04-1.37-.14-2.6-.14-2.58 0-4.35 1.58-4.35 4.49V10H7.25v3h2.63v8h3.62Z" />
               </svg>
             </a>
-            <a href={`https://wa.me/${COMPANY_INFO.whatsappNumber}`} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp SM Associate">
-            <a href={`tel:${COMPANY_INFO.phone.split(',')[0].replace(/[^0-9+]/g, '')}`} aria-label="Call SM Associate">
+            <a
+              href={`https://wa.me/${COMPANY_INFO.whatsappNumber}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp SM Associate"
+              title="WhatsApp"
+            >
+              <MessageCircle size={17} />
+            </a>
+            <a
+              href={`tel:${COMPANY_INFO.phone.split(',')[0].replace(/[^0-9+]/g, '')}`}
+              aria-label="Call SM Associate"
+              title="Call"
+            >
               <Phone size={17} />
             </a>
             {COMPANY_INFO.supportEmail && (
