@@ -119,7 +119,7 @@ export default function ContactContent() {
         <div className="container-padded max-w-5xl">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-navy mb-2">Visit Our Head Office</h2>
-            <p className="text-gray-600 text-sm">Nellaiapper High Road, Thirunagar, Tirunelveli, Tamil Nadu</p>
+            <p className="text-gray-600 text-sm">No: 182 E4, SPP Buildings, S.N. High Road, Tirunelveli</p>
           </div>
           <div className="rounded-2xl h-96 overflow-hidden border border-amber-500/20 shadow-xl">
             <iframe
