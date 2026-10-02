@@ -12,13 +12,12 @@ import {
   Coins,
   Home,
   Menu,
-  MessageCircle,
-  Phone,
   ShieldCheck,
   User,
   X,
 } from 'lucide-react';
 import { ROUTES } from '@/lib/constants';
+import ContactChoicePopover from '@/components/ContactChoicePopover';
 import { getVisualThemeForPath } from '@/config/pageThemes';
 
 type NavigationItem = {
@@ -138,15 +137,16 @@ export default function Header() {
         </nav>
 
         <div className="premium-header-actions">
-          <div className="premium-header-phone-group" aria-label="SM Associate contact numbers">
-            <Phone size={17} />
-            <a href="tel:+919790219874">+91 97902 19874</a>
-            <span aria-hidden="true">, </span>
-            <a href="tel:+919047007720">+91 90470 07720</a>
-          </div>
-          <a className="premium-icon-link" href="https://wa.me/919790219874" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp SM Associate">
-            <MessageCircle size={17} />
-          </a>
+          <ContactChoicePopover
+            type="phone"
+            label="Choose a phone number"
+            buttonClassName="premium-icon-link"
+          />
+          <ContactChoicePopover
+            type="whatsapp"
+            label="Choose a WhatsApp number"
+            buttonClassName="premium-icon-link"
+          />
           <Link href={ROUTES.CONTACT} className="premium-header-cta">
             Start a conversation
             <ArrowUpRight size={16} />
@@ -206,17 +206,16 @@ export default function Header() {
           </div>
 
           <div className="premium-mobile-actions">
-            <div className="premium-mobile-action" aria-label="SM Associate contact numbers">
-              <Phone size={17} />
-              <span>
-                <a href="tel:+919790219874">+91 97902 19874</a>
-                <span aria-hidden="true">, </span>
-                <a href="tel:+919047007720">+91 90470 07720</a>
-              </span>
-            </div>
-            <a href="https://wa.me/919790219874" target="_blank" rel="noopener noreferrer" className="premium-mobile-action">
-              <MessageCircle size={17} /> WhatsApp
-            </a>
+            <ContactChoicePopover
+              type="phone"
+              label="Choose a phone number"
+              buttonClassName="premium-icon-link"
+            />
+            <ContactChoicePopover
+              type="whatsapp"
+              label="Choose a WhatsApp number"
+              buttonClassName="premium-icon-link"
+            />
             <Link href={ROUTES.CONTACT} className="premium-mobile-primary">
               Contact SM Associate <ArrowUpRight size={16} />
             </Link>
