@@ -623,6 +623,7 @@ function FinalCTA() {
             <Link href={ROUTES.CONTACT} className="home-v3-btn home-v3-btn-gold">Talk to SM Associate <ArrowRight size={17} /></Link>
             <div className="home-v3-final-contact">
               <a href="tel:+919790219874"><Phone size={15} /> +91 97902 19874</a>
+              <a href="tel:+919047007720"><Phone size={15} /> +91 90470 07720</a>
               <a href={'mailto:' + COMPANY_INFO.supportEmail}><MessageCircle size={15} /> Email us</a>
             </div>
           </div>
