@@ -190,6 +190,10 @@ export default function Footer() {
             <Phone size={16} />
             +91 97902 19874
           </a>
+          <a href="tel:+919047007720">
+            <Phone size={16} />
+            +91 90470 07720
+          </a>
           {COMPANY_INFO.supportEmail && (
             <a href={`mailto:${COMPANY_INFO.supportEmail}`}>
               <Mail size={16} />
