@@ -1,15 +1,15 @@
 import type { Metadata, Viewport } from 'next';
-import { Fraunces } from 'next/font/google';
+import { DM_Sans } from 'next/font/google';
 import '@/styles/globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { ThemeProvider } from '@/contexts/ThemeContext';
 
-const fraunces = Fraunces({
+const dmSans = DM_Sans({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
-  variable: '--font-fraunces',
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-dm-sans',
   display: 'swap',
 });
 
@@ -77,7 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   };
 
   return (
-    <html lang="en" className={fraunces.variable}>
+    <html lang="en" className={dmSans.variable}>
       <head>
         <script
           type="application/ld+json"
@@ -103,7 +103,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className={fraunces.className}>
+      <body className={dmSans.className}>
         <ThemeProvider>
           <Header />
           <main className="site-main">{children}</main>
