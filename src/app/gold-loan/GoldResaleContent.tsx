@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import {
   ArrowRight,
   BadgeCheck,
-  Coins,
   FileCheck2,
   HandCoins,
   Scale,
