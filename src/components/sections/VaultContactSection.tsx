@@ -910,7 +910,7 @@ export default function VaultContactSection({
                       aria-busy={isSubmitting}
                       className="relative text-xs sm:text-sm tracking-wider uppercase font-semibold py-3 px-7 rounded cursor-pointer overflow-hidden transition-all hover:shadow-xl active:translate-y-0.5 group disabled:opacity-70 disabled:cursor-not-allowed"
                       style={{
-                        background: '#C9A227',
+                        background: '#D6B35A',
                         color: '#0A192F',
                         border: '1px solid #E4C158',
                       }}
