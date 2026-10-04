@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { CSSProperties } from 'react';
@@ -102,14 +103,13 @@ export default function Footer() {
       <div className="premium-footer-grid">
         <div className="premium-footer-brand">
           <div className="premium-footer-logo">
-            <img
+            <Image
               src="/sm-associate-site-logo.png"
               alt="SM Associate"
-              width="280"
-              height="93"
+              width={280}
+              height={93}
               className="premium-brand-logo premium-footer-logo-image"
               loading="lazy"
-
             />
           </div>
 
