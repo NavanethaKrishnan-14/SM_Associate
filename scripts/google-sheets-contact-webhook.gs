@@ -48,7 +48,10 @@ function doPost(e) {
     const config = getConfig_();
 
     if (!config.spreadsheetId || !config.token) {
-      return json_({ success: false, message: 'Webhook configuration is incomplete.' });
+      const missing = [];
+      if (!config.spreadsheetId) missing.push('SPREADSHEET_ID');
+      if (!config.token) missing.push('CONTACT_FORM_TOKEN');
+      return json_({ success: false, message: 'Webhook configuration is incomplete: ' + missing.join(', ') });
     }
 
     const suppliedToken = e && e.parameter ? e.parameter.token : '';
