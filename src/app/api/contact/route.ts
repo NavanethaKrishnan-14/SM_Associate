@@ -11,13 +11,23 @@ const normalizeText = (value: unknown): string => {
     return value.replace(/\s+/g, ' ').trim();
 };
 
-const isAllowedOrigin = (origin: string | null): boolean => {
+const isAllowedOrigin = (origin: string | null, requestHost: string | null): boolean => {
     if (!origin) return true;
 
     try {
-        const { hostname } = new URL(origin);
-        const allowedHosts = ['localhost', '127.0.0.1', 'smassociate.in', 'www.smassociate.in'];
-        return allowedHosts.includes(hostname) || hostname.endsWith('.smassociate.in');
+        const { hostname: originHostname } = new URL(origin);
+        const originHost = originHostname.toLowerCase().replace(/^www\./, '');
+        const currentHost = (requestHost || '').split(':')[0].toLowerCase().replace(/^www\./, '');
+
+        // Allow the same-origin request. This covers the production domain,
+        // Vercel preview deployments, and custom domains without opening the API
+        // to arbitrary cross-site origins.
+        if (currentHost && originHost === currentHost) {
+            return true;
+        }
+
+        const allowedHosts = ['localhost', '127.0.0.1', 'smassociate.in'];
+        return allowedHosts.includes(originHost) || originHost.endsWith('.smassociate.in');
     } catch {
         return false;
     }
@@ -81,7 +91,8 @@ const appendToGoogleSheet = async (lead: ContactLead): Promise<void> => {
 
 export async function POST(request: NextRequest) {
     const origin = request.headers.get('origin');
-    if (origin && !isAllowedOrigin(origin)) {
+    const requestHost = request.headers.get('host');
+    if (origin && !isAllowedOrigin(origin, requestHost)) {
         return NextResponse.json({ message: 'Forbidden origin.' }, { status: 403 });
     }
 
