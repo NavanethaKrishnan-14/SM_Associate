@@ -240,6 +240,7 @@ export async function POST(request: NextRequest) {
     };
 
     let sheetsSaved = false;
+    let sheetsError = '';
 
     if (canSaveToSheets) {
         try {
@@ -250,6 +251,7 @@ export async function POST(request: NextRequest) {
                 message: error instanceof Error ? error.message : 'Unknown error',
                 reference,
             });
+            sheetsError = error instanceof Error ? error.message : 'Unknown Google Sheets error';
         }
     }
 
@@ -284,6 +286,7 @@ export async function POST(request: NextRequest) {
   `;
 
     let emailSent = false;
+    let emailError = '';
 
     if (canSendEmail) {
         for (let attempt = 0; attempt < 2 && !emailSent; attempt += 1) {
@@ -304,6 +307,7 @@ export async function POST(request: NextRequest) {
                         reference,
                         attempt: attempt + 1,
                     });
+                    emailError = result.error.message || 'Resend rejected the email.';
                 } else {
                     emailSent = true;
                 }
@@ -313,6 +317,7 @@ export async function POST(request: NextRequest) {
                     reference,
                     attempt: attempt + 1,
                 });
+                emailError = error instanceof Error ? error.message : 'Unknown Resend error';
             }
 
             if (!emailSent && attempt === 0) await wait(350);
@@ -335,7 +340,17 @@ export async function POST(request: NextRequest) {
     });
 
     return NextResponse.json(
-        { message: 'Your request could not be delivered right now. Please try again shortly.' },
+        {
+            message: 'Your request could not be delivered right now. Please try again shortly.',
+            diagnostics: {
+                emailConfigured: canSendEmail,
+                sheetsConfigured: canSaveToSheets,
+                emailSent,
+                sheetsSaved,
+                emailError: emailError || undefined,
+                sheetsError: sheetsError || undefined,
+            },
+        },
         { status: 502 }
     );
 }
