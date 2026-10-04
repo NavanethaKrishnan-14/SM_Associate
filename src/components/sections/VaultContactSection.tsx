@@ -910,19 +910,12 @@ export default function VaultContactSection({
                       aria-busy={isSubmitting}
                       className="relative text-xs sm:text-sm tracking-wider uppercase font-semibold py-3 px-7 rounded cursor-pointer overflow-hidden transition-all hover:shadow-xl active:translate-y-0.5 group disabled:opacity-70 disabled:cursor-not-allowed"
                       style={{
-                        background: '#0A192F',
+                        background: t.vaultBg,
                         color: '#FFFFFF',
-                        border: '1px solid #E4C158',
+                        border: `1px solid ${t.accentBright}`,
                       }}
                     >
                       <span className="relative z-10">{isSubmitting ? 'Sending...' : submitButtonText}</span>
-                      {/* Shimmer sweep effect */}
-                      <span
-                        className="absolute inset-0 -translate-x-[120%] group-hover:translate-x-[120%] transition-transform duration-700 pointer-events-none"
-                        style={{
-                          background: `linear-gradient(100deg, transparent 30%, ${t.accentBright}55 50%, transparent 70%)`,
-                        }}
-                      />
                     </button>
 
                     <p className="text-xs leading-tight max-w-[220px]" style={{ color: t.inkSoft }}>
