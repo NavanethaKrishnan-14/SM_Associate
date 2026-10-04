@@ -3,6 +3,148 @@ import { Resend } from 'resend';
 
 const getResendClient = () => {
     const apiKey = process.env.RESEND_API_KEY?.trim();
+    return apiKey ? new Resend(apiKey) : null;
+};
+
+const normalizeText = (value: unknown): string => {
+    if (typeof value !== 'string') return '';
+    return value.replace(/\s+/g, ' ').trim();
+};
+
+const isAllowedOrigin = (origin: string | null, requestHost: string | null): boolean => {
+    if (!origin) return true;
+
+    try {
+        const { hostname: originHostname } = new URL(origin);
+        const originHost = originHostname.toLowerCase().replace(/^www\./, '');
+        const currentHost = (requestHost || '').split(':')[0].toLowerCase().replace(/^www\./, '');
+
+        if (currentHost && originHost === currentHost) {
+            return true;
+        }
+
+        const allowedHosts = ['localhost', '127.0.0.1', 'smassociate.in'];
+        return allowedHosts.includes(originHost) || originHost.endsWith('.smassociate.in');
+    } catch {
+        return false;
+    }
+};
+
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+const escapeHtml = (value: string): string =>
+    value
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+
+const limitText = (value: string, maxLength: number): string =>
+    value.slice(0, maxLength).trim();
+
+type ContactLead = {
+    reference: string;
+    name: string;
+    email: string;
+    phone: string;
+    reason: string;
+    value: string;
+    message: string;
+    submittedAt: string;
+};
+
+const appendToGoogleSheet = async (lead: ContactLead): Promise<void> => {
+    const webhookUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL?.trim();
+    const webhookToken = process.env.GOOGLE_SHEETS_WEBHOOK_TOKEN?.trim();
+
+    if (!webhookUrl || !webhookToken) {
+        throw new Error('Google Sheets integration is not configured.');
+    }
+
+    const url = new URL(webhookUrl);
+    url.searchParams.set('token', webhookToken);
+
+    const response = await fetch(url.toString(), {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+        },
+        body: JSON.stringify(lead),
+        cache: 'no-store',
+    });
+
+    const data = await response.json().catch(() => ({}));
+
+    if (!response.ok || data?.success !== true) {
+        throw new Error(
+            typeof data?.message === 'string' && data.message
+                ? data.message
+                : 'Google Sheets submission failed.'
+        );
+    }
+};
+
+export async function POST(request: NextRequest) {
+    const origin = request.headers.get('origin');
+    const requestHost = request.headers.get('host');
+
+    if (origin && !isAllowedOrigin(origin, requestHost)) {
+        return NextResponse.json({ message: 'Forbidden origin.' }, { status: 403 });
+    }
+
+    const contentType = request.headers.get('content-type') || '';
+    if (!contentType.includes('application/json')) {
+        return NextResponse.json({ message: 'Invalid request format.' }, { status: 415 });
+    }
+
+    let payload: unknown;
+
+    try {
+        payload = await request.json();
+    } catch {
+        return NextResponse.json(
+            { message: 'Please complete the form and try again.' },
+            { status: 400 }
+        );
+    }
+
+    if (!payload || typeof payload !== 'object') {
+        return NextResponse.json(
+            { message: 'Please complete the form and try again.' },
+            { status: 400 }
+        );
+    }
+
+    const body = payload as Record<string, unknown>;
+    const name = limitText(normalizeText(body.name), 120);
+    const email = limitText(normalizeText(body.email).toLowerCase(), 254);
+    const phone = limitText(normalizeText(body.phone), 30);
+    const reason = limitText(normalizeText(body.reason), 80);
+    const value = limitText(normalizeText(body.value), 80);
+    const message = limitText(normalizeText(body.message), 4000);
+    const honeypot = normalizeText(body.honeypot);
+
+    if (honeypot) {
+        return NextResponse.json({ message: 'Submission rejected.' }, { status: 400 });
+    }
+
+    if (!name || !email || !reason || !message) {
+        return NextResponse.json(
+            { message: 'Please complete all required fields and try again.' },
+            { status: 400 }
+        );
+    }
+
+    if (!emailRegex.test(email)) {
+        return NextResponse.json(
+            { message: 'Please enter a valid email address.' },
+            { status: 400 }
+        );
+    }
+
+    const apiKey = process.env.RESEND_API_KEY?.trim();
     const toEmail = process.env.CONTACT_TO_EMAIL?.trim();
     const fromEmail = process.env.CONTACT_FROM_EMAIL?.trim();
     const resendClient = getResendClient();
@@ -47,8 +189,8 @@ const getResendClient = () => {
         submittedAt,
     };
 
-    // Google Sheets is best-effort so a Sheets outage cannot block the enquiry email.
     let sheetsSaved = false;
+
     if (canSaveToSheets) {
         try {
             await appendToGoogleSheet(lead);
@@ -61,7 +203,6 @@ const getResendClient = () => {
         }
     }
 
-    let emailSent = false;
     const textBody = [
         `Reference: ${reference}`,
         `Name: ${name}`,
@@ -92,6 +233,8 @@ const getResendClient = () => {
     </div>
   `;
 
+    let emailSent = false;
+
     if (canSendEmail) {
         try {
             const result = await resendClient!.emails.send({
@@ -104,7 +247,10 @@ const getResendClient = () => {
             });
 
             if (result.error) {
-                console.error('Resend email send failed.', { error: result.error, reference });
+                console.error('Resend email send failed.', {
+                    error: result.error,
+                    reference,
+                });
             } else {
                 emailSent = true;
             }
