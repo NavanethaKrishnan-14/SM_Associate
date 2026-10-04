@@ -386,9 +386,7 @@ export default function VaultContactSection({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (honeypot.trim()) {
-      return;
-    }
+    if (honeypot.trim()) return;
 
     const newErrors: {
       name?: boolean;
@@ -405,34 +403,44 @@ export default function VaultContactSection({
 
     setErrors(newErrors);
 
-    if (Object.keys(newErrors).length > 0) {
-      return;
-    }
+    if (Object.keys(newErrors).length > 0) return;
 
     setIsSubmitting(true);
     setSubmitMessage('');
 
     try {
-      const response = await fetch('/api/contact', {
+      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY?.trim();
+
+      if (!accessKey) {
+        throw new Error('Contact form is not configured yet. Please try again shortly.');
+      }
+
+      const reference = `SM-${Date.now().toString(36).toUpperCase()}`;
+
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           Accept: 'application/json',
         },
         body: JSON.stringify({
+          access_key: accessKey,
+          subject: '[SM Associate] New Contact Enquiry',
+          from_name: 'SM Associate Website',
           name: name.trim(),
           email: email.trim().toLowerCase(),
           phone: phone.trim(),
           reason,
           value: val.trim(),
           message: message.trim(),
-          honeypot,
+          reference,
+          botcheck: honeypot,
         }),
       });
 
       const data = await response.json().catch(() => ({}));
 
-      if (!response.ok) {
+      if (!response.ok || data?.success !== true) {
         throw new Error(
           typeof data?.message === 'string' && data.message
             ? data.message
@@ -440,8 +448,7 @@ export default function VaultContactSection({
         );
       }
 
-      const nextReference = typeof data?.reference === 'string' && data.reference ? data.reference : 'REF-' + Math.floor(100000 + Math.random() * 900000);
-      setRefCode(nextReference);
+      setRefCode(reference);
       setName('');
       setEmail('');
       setPhone('');
