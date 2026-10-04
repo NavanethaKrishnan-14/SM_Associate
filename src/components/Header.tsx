@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState, type CSSProperties } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { LucideIcon } from 'lucide-react';
@@ -88,12 +89,13 @@ export default function Header() {
     >
       <div className="premium-header-inner">
         <Link href={ROUTES.HOME} className="premium-brand" aria-label="SM Associate home">
-          <img
+          <Image
             src="/sm-associate-site-logo.png"
             alt="SM Associate"
-            width="230" height="77"
+            width={230}
+            height={77}
             className="premium-brand-logo premium-header-logo"
-            fetchPriority="high"
+            priority
           />
         </Link>
 
