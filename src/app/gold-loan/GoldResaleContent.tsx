@@ -5,7 +5,7 @@ import {
   ArrowRight,
   BadgeCheck,
   FileCheck2,
-  HandIcon,
+  Coins,
   Scale,
   ShieldCheck,
   Sparkles,
@@ -33,7 +33,7 @@ const resaleBenefits = [
     description: 'Your gold is handled carefully throughout the assessment and transaction process.',
   },
   {
-    icon: HandIcon,
+    icon: Coins,
     title: 'Resale-focused support',
     description: 'Guidance built around selling gold—not taking a loan against it.',
   },
