@@ -4,7 +4,7 @@ import CarResaleContent from './CarResaleContent';
 
 export const metadata: Metadata = {
   title: 'Sell Your Car or Bike in Tirunelveli | Vehicle Resale Support',
-  description: 'Thinking about selling a used car or bike? Share your vehicle details with SM Associate and get practical guidance on valuation, documents and the resale process.'s marketplace. Get top valuation for your pre-owned car or bike with no middleman & instant approval.',
+  description: "Thinking about selling a used car or bike? Share your vehicle details with SM Associate and get practical guidance on valuation, documents and the resale process. Get top valuation for your pre-owned car or bike with no middleman and instant approval.",
   keywords: 'sell used car online, sell my bike online, car resale value calculator, vehicle resale marketplace, sell car for best price India',
   alternates: {
     canonical: 'https://www.smassociate.in/car-resale',
