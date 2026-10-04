@@ -73,7 +73,7 @@ export default function Header() {
 
   const themeStyle = {
     '--header-accent': pageTheme.accent,
-    '--header-accent-soft': pageTheme.soft,
+    '--header-accent-soft': pageTheme.accentSoft,
   } as CSSProperties;
 
   return (
