@@ -4,7 +4,7 @@ import EMICalculatorContent from './EMICalculatorContent';
 
 export const metadata: Metadata = {
   title: 'EMI Calculator for Home, Car & Personal Loans | SM Associate',
-  description: 'Estimate your monthly EMI by changing the loan amount, interest rate and tenure. Use the calculator to plan a repayment amount that fits your budget.'s free EMI calculator to instantly calculate your monthly loan installment. Adjust loan amount & tenure and apply directly with your results.',
+  description: "Estimate your monthly EMI by changing the loan amount, interest rate and tenure. Use SM Associate's free EMI calculator to instantly calculate your monthly loan installment. Adjust loan amount & tenure and apply directly with your results.",
   keywords: 'loan EMI calculator, home loan EMI calculator, car loan EMI calculator, personal loan EMI calculator, monthly installment calculator',
   alternates: {
     canonical: 'https://www.smassociate.in/emi-calculator',
