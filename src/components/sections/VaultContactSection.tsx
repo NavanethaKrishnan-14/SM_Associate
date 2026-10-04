@@ -910,8 +910,9 @@ export default function VaultContactSection({
                       aria-busy={isSubmitting}
                       className="relative text-xs sm:text-sm tracking-wider uppercase font-semibold py-3 px-7 rounded cursor-pointer overflow-hidden transition-all hover:shadow-xl active:translate-y-0.5 group disabled:opacity-70 disabled:cursor-not-allowed"
                       style={{
-                        background: t.buttonBg,
-                        color: '#FFFFFF',
+                        background: '#C9A227',
+                        color: '#0A192F',
+                        border: '1px solid #E4C158',
                       }}
                     >
                       <span className="relative z-10">{isSubmitting ? 'Sending...' : submitButtonText}</span>
