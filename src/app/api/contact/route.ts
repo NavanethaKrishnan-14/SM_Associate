@@ -75,9 +75,33 @@ const appendToGoogleSheet = async (lead: ContactLead): Promise<void> => {
         cache: 'no-store',
     });
 
-    const data = await response.json().catch(() => ({}));
+    const responseText = await response.text();
+    let data: Record<string, unknown> = {};
 
-    if (!response.ok || data?.success !== true) {
+    try {
+        const parsed = JSON.parse(responseText);
+        if (parsed && typeof parsed === 'object') {
+            data = parsed as Record<string, unknown>;
+        }
+    } catch {
+        // Google Apps Script may return plain text even when the request succeeds.
+    }
+
+    if (!response.ok) {
+        throw new Error(
+            typeof data?.message === 'string' && data.message
+                ? data.message
+                : responseText.trim() || 'Google Sheets submission failed.'
+        );
+    }
+
+    // Accept the common Google Apps Script success formats:
+    // { success: true }, { status: "success" }, { ok: true }, or a successful 2xx response.
+    if (
+        data?.success === false ||
+        data?.ok === false ||
+        (typeof data?.status === 'string' && ['error', 'failed', 'failure'].includes(data.status.toLowerCase()))
+    ) {
         throw new Error(
             typeof data?.message === 'string' && data.message
                 ? data.message
