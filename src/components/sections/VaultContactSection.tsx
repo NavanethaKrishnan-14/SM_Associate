@@ -690,7 +690,7 @@ export default function VaultContactSection({
                           if (errors.name) setErrors((prev) => ({ ...prev, name: false }));
                         }}
                         placeholder="e.g. Ramesh Kumar"
-                        className="w-full bg-transparent border-b-2 py-1.5 px-0.5 text-base outline-none transition-colors"
+                        className="w-full bg-transparent border-b-2 py-1.5 px-0.5 text-base outline-none transition-colors placeholder:text-slate-500"
                         style={{
                           borderColor: errors.name ? '#C1443B' : t.creamLine,
                           color: t.ink,
@@ -950,18 +950,18 @@ export default function VaultContactSection({
                   </svg>
                 </div>
 
-                <h3 className="font-semibold text-2xl sm:text-3xl mb-1 text-inherit">
-                  Transmission Confirmed
+                <h3 className="font-semibold text-2xl sm:text-3xl mb-1" style={{ color: t.ink }}>
+                  Thank you for your request!
                 </h3>
                 <p className="text-sm mb-4" style={{ color: t.inkSoft }}>
-                  Your encrypted request has reached our Tirunelveli desk.
+                  Your request has been received successfully. Our SM Associate team will contact you shortly.
                 </p>
 
                 <div
                   className="text-xs sm:text-sm font-semibold px-3.5 py-2 rounded border border-dashed"
                   style={{
                     borderColor: t.accent,
-                    color: t.accent,
+                    color: t.ink,
                     background: `${t.accent}10`,
                   }}
                 >
@@ -973,8 +973,9 @@ export default function VaultContactSection({
                   onClick={handleReset}
                   className="text-xs uppercase tracking-wider font-semibold py-2 px-4 rounded border transition-colors mt-2"
                   style={{
-                    borderColor: t.inkSoft,
+                    borderColor: t.ink,
                     color: t.ink,
+                    backgroundColor: 'transparent',
                   }}
                 >
                   Submit Another Inquiry
