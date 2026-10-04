@@ -7,8 +7,10 @@ export const COMPANY_INFO = {
   primaryPhone: '+919790219874',
   secondaryPhone: '+919047007720',
   whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919790219874',
-  email: process.env.CONTACT_TO_EMAIL || '',
-  supportEmail: process.env.CONTACT_TO_EMAIL || '',
+  // This value is rendered by client components. Keep it on NEXT_PUBLIC_* so
+  // the server-rendered HTML and browser bundle always receive the same value.
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || '',
+  supportEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || '',
   address: 'No: 182 E4, SPP Buildings, S.N. High Road, Tirunelveli',
   mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.5297885552337!2d77.74028!3d8.74166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b041f5d5d5d5d5d%3A0x5d5d5d5d5d5d5d5d!2sNo%20182%20E4%2C%20SPP%20Buildings%2C%20S.N.%20High%20Road%2C%20Tirunelveli!5e0!3m2!1sen!2sin!4v1234567890',
 };
