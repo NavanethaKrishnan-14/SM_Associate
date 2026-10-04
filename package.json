@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "SM Associate - Finance & Vehicle Marketplace Frontend",
   "private": true,
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "predev": "node scripts/ensure-next-app.js",
     "dev": "next dev",
@@ -18,7 +21,7 @@
     "autoprefixer": "^10.4.16",
     "framer-motion": "^10.16.4",
     "lucide-react": "^0.292.0",
-    "next": "^14.0.0",
+    "next": "14.2.35",
     "postcss": "^8.4.31",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
