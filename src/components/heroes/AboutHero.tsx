@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Target, Heart, Shield, Lightbulb } from 'lucide-react';
 import Link from 'next/link';
@@ -180,12 +181,13 @@ export default function AboutHero() {
                 transition={{ delay: index * 0.08, duration: 0.45 }}
                 className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-slate-800/60 shadow-lg group"
               >
-                <img
+                <Image
                   src={image.src}
                   alt={image.alt}
-                  loading={index < 2 ? 'eager' : 'lazy'}
-                  decoding="async"
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  fill
+                  sizes="(max-width: 1024px) 50vw, 33vw"
+                  priority={index < 2}
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
               </motion.div>
