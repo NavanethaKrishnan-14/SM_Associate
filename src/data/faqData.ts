@@ -116,6 +116,24 @@ export const FAQ_DATA: Record<FAQCategory, {
     ],
   },
 
+
+  businessLoan: {
+    title: 'Frequently Asked Questions',
+    subtitle: 'Common questions about business finance, eligibility, documents and repayment planning.',
+    items: [
+      { question: 'What can a business loan be used for?', answer: 'Depending on the lender and product, business finance may be used for working capital, equipment, expansion, inventory or other eligible business needs.' },
+      { question: 'Who can apply for a business loan?', answer: 'Eligibility depends on the lender and product. Proprietors, partners, companies and other eligible business applicants may be considered based on their financial profile and business records.' },
+      { question: 'What documents are commonly required?', answer: 'Lenders may request identity and address proof, business registration details, bank statements, income or financial records, tax documents and other supporting information.' },
+      { question: 'Does business vintage affect eligibility?', answer: 'Yes. Some lenders consider how long the business has been operating along with turnover, banking history, profitability, existing obligations and credit profile.' },
+      { question: 'Can a self-employed person explore business finance?', answer: 'Yes. Self-employed applicants can explore suitable business finance products, subject to the lender’s eligibility criteria and document requirements.' },
+      { question: 'How should I choose the loan tenure?', answer: 'Choose a tenure that keeps the repayment manageable while considering the total interest and overall cost. A longer tenure can reduce the monthly EMI but may increase total repayment.' },
+      { question: 'Can I compare more than one business finance option?', answer: 'Yes. Compare interest rate, processing charges, tenure, repayment terms, collateral requirements and total repayment before choosing an option.' },
+      { question: 'Is business loan approval guaranteed?', answer: 'No. Final approval, pricing and sanction terms are determined by the relevant lender after reviewing the application, documents and credit profile.' },
+      { question: 'Can I enquire before submitting a formal application?', answer: 'Yes. You can first discuss your business requirement, approximate amount and documents with the team to understand the available next steps.' },
+      { question: 'Can existing business liabilities affect eligibility?', answer: 'Yes. Existing loans and repayment obligations can be considered when the lender assesses cash flow and repayment capacity.' },
+    ],
+  },
+
   carLoan: {
     title: 'Frequently Asked Questions',
     subtitle: 'What to know when arranging finance for a new or pre-owned car.',
