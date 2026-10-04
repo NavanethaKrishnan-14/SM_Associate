@@ -1,6 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
+export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
+
+const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
 const getResendClient = () => {
     const apiKey = process.env.RESEND_API_KEY?.trim();
     return apiKey ? new Resend(apiKey) : null;
@@ -65,15 +70,36 @@ const appendToGoogleSheet = async (lead: ContactLead): Promise<void> => {
     const url = new URL(webhookUrl);
     url.searchParams.set('token', webhookToken);
 
-    const response = await fetch(url.toString(), {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            Accept: 'application/json',
-        },
-        body: JSON.stringify(lead),
-        cache: 'no-store',
-    });
+    let response: Response | null = null;
+    let lastError: unknown = null;
+
+    // Apps Script can occasionally return a transient 5xx/redirect response.
+    // Retry once; the webhook itself is idempotent by reference number.
+    for (let attempt = 0; attempt < 2; attempt += 1) {
+        try {
+            response = await fetch(url.toString(), {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Accept: 'application/json',
+                },
+                body: JSON.stringify(lead),
+                cache: 'no-store',
+                signal: AbortSignal.timeout(10000),
+            });
+
+            if (response.ok || attempt === 1) break;
+        } catch (error) {
+            lastError = error;
+            if (attempt === 1) throw error;
+        }
+
+        await wait(350);
+    }
+
+    if (!response) {
+        throw lastError instanceof Error ? lastError : new Error('Google Sheets webhook did not respond.');
+    }
 
     const responseText = await response.text();
     let data: Record<string, unknown> = {};
@@ -260,29 +286,36 @@ export async function POST(request: NextRequest) {
     let emailSent = false;
 
     if (canSendEmail) {
-        try {
-            const result = await resendClient!.emails.send({
-                from: fromEmail!,
-                to: [toEmail!],
-                replyTo: email,
-                subject: `[SM Associate] ${formattedReason} - ${name}`,
-                text: textBody,
-                html: htmlBody,
-            });
-
-            if (result.error) {
-                console.error('Resend email send failed.', {
-                    error: result.error,
-                    reference,
+        for (let attempt = 0; attempt < 2 && !emailSent; attempt += 1) {
+            try {
+                const result = await resendClient!.emails.send({
+                    from: fromEmail!,
+                    to: [toEmail!],
+                    replyTo: email,
+                    subject: `[SM Associate] ${formattedReason} - ${name}`,
+                    text: textBody,
+                    html: htmlBody,
                 });
-            } else {
-                emailSent = true;
+
+                if (result.error) {
+                    console.error('Resend email send failed.', {
+                        message: result.error.message,
+                        name: result.error.name,
+                        reference,
+                        attempt: attempt + 1,
+                    });
+                } else {
+                    emailSent = true;
+                }
+            } catch (error) {
+                console.error('Contact form email error.', {
+                    message: error instanceof Error ? error.message : 'Unknown error',
+                    reference,
+                    attempt: attempt + 1,
+                });
             }
-        } catch (error) {
-            console.error('Contact form email error.', {
-                message: error instanceof Error ? error.message : 'Unknown error',
-                reference,
-            });
+
+            if (!emailSent && attempt === 0) await wait(350);
         }
     }
 
@@ -292,6 +325,14 @@ export async function POST(request: NextRequest) {
             { status: 200 }
         );
     }
+
+    console.error('Contact form delivery failed in all configured providers.', {
+        reference,
+        emailConfigured: canSendEmail,
+        emailSent,
+        sheetsConfigured: canSaveToSheets,
+        sheetsSaved,
+    });
 
     return NextResponse.json(
         { message: 'Your request could not be delivered right now. Please try again shortly.' },
